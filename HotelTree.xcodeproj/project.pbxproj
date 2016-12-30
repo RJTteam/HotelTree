@@ -13,6 +13,7 @@
 		C3DA383F1E16F5AC00E1AB83 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3DA383D1E16F5AC00E1AB83 /* Main.storyboard */; };
 		C3DA38411E16F5AC00E1AB83 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3DA38401E16F5AC00E1AB83 /* Assets.xcassets */; };
 		C3DA38441E16F5AC00E1AB83 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3DA38421E16F5AC00E1AB83 /* LaunchScreen.storyboard */; };
+		E840004A1E1708AA0076B1F9 /* SearchManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E84000491E1708AA0076B1F9 /* SearchManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		C3DA38401E16F5AC00E1AB83 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C3DA38431E16F5AC00E1AB83 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C3DA38451E16F5AC00E1AB83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E84000481E1708AA0076B1F9 /* SearchManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchManager.h; sourceTree = "<group>"; };
+		E84000491E1708AA0076B1F9 /* SearchManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +61,8 @@
 		C3DA38331E16F5AC00E1AB83 /* HotelTree */ = {
 			isa = PBXGroup;
 			children = (
+				E84000481E1708AA0076B1F9 /* SearchManager.h */,
+				E84000491E1708AA0076B1F9 /* SearchManager.m */,
 				C3DA38371E16F5AC00E1AB83 /* AppDelegate.h */,
 				C3DA38381E16F5AC00E1AB83 /* AppDelegate.m */,
 				C3DA383A1E16F5AC00E1AB83 /* ViewController.h */,
@@ -154,6 +159,7 @@
 				C3DA383C1E16F5AC00E1AB83 /* ViewController.m in Sources */,
 				C3DA38391E16F5AC00E1AB83 /* AppDelegate.m in Sources */,
 				C3DA38361E16F5AC00E1AB83 /* main.m in Sources */,
+				E840004A1E1708AA0076B1F9 /* SearchManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,6 +318,7 @@
 				C3DA384A1E16F5AC00E1AB83 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
