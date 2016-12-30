@@ -13,6 +13,7 @@
 		602086CC1E16F8B600446C44 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 602086CA1E16F8B600446C44 /* Main.storyboard */; };
 		602086CE1E16F8B600446C44 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 602086CD1E16F8B600446C44 /* Assets.xcassets */; };
 		602086D11E16F8B600446C44 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 602086CF1E16F8B600446C44 /* LaunchScreen.storyboard */; };
+		602086DA1E16F97A00446C44 /* suibianjiandewenjina.m in Sources */ = {isa = PBXBuildFile; fileRef = 602086D91E16F97A00446C44 /* suibianjiandewenjina.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		602086CD1E16F8B600446C44 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		602086D01E16F8B600446C44 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		602086D21E16F8B600446C44 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		602086D81E16F97A00446C44 /* suibianjiandewenjina.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = suibianjiandewenjina.h; sourceTree = "<group>"; };
+		602086D91E16F97A00446C44 /* suibianjiandewenjina.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = suibianjiandewenjina.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +70,8 @@
 				602086CF1E16F8B600446C44 /* LaunchScreen.storyboard */,
 				602086D21E16F8B600446C44 /* Info.plist */,
 				602086C11E16F8B600446C44 /* Supporting Files */,
+				602086D81E16F97A00446C44 /* suibianjiandewenjina.h */,
+				602086D91E16F97A00446C44 /* suibianjiandewenjina.m */,
 			);
 			path = HotelTree;
 			sourceTree = "<group>";
@@ -154,6 +159,7 @@
 				602086C91E16F8B600446C44 /* ViewController.m in Sources */,
 				602086C61E16F8B600446C44 /* AppDelegate.m in Sources */,
 				602086C31E16F8B600446C44 /* main.m in Sources */,
+				602086DA1E16F97A00446C44 /* suibianjiandewenjina.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
