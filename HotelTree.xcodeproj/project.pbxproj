@@ -13,6 +13,7 @@
 		6C655BDA1E16FB8700088FAE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C655BD81E16FB8700088FAE /* Main.storyboard */; };
 		6C655BDC1E16FB8700088FAE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C655BDB1E16FB8700088FAE /* Assets.xcassets */; };
 		6C655BDF1E16FB8700088FAE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C655BDD1E16FB8700088FAE /* LaunchScreen.storyboard */; };
+		6C655BE81E16FC3800088FAE /* HotelSearch.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C655BE71E16FC3800088FAE /* HotelSearch.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		6C655BDB1E16FB8700088FAE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6C655BDE1E16FB8700088FAE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6C655BE01E16FB8700088FAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6C655BE61E16FC3800088FAE /* HotelSearch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HotelSearch.h; sourceTree = "<group>"; };
+		6C655BE71E16FC3800088FAE /* HotelSearch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HotelSearch.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +65,8 @@
 				6C655BD31E16FB8700088FAE /* AppDelegate.m */,
 				6C655BD51E16FB8700088FAE /* ViewController.h */,
 				6C655BD61E16FB8700088FAE /* ViewController.m */,
+				6C655BE61E16FC3800088FAE /* HotelSearch.h */,
+				6C655BE71E16FC3800088FAE /* HotelSearch.m */,
 				6C655BD81E16FB8700088FAE /* Main.storyboard */,
 				6C655BDB1E16FB8700088FAE /* Assets.xcassets */,
 				6C655BDD1E16FB8700088FAE /* LaunchScreen.storyboard */,
@@ -153,6 +158,7 @@
 			files = (
 				6C655BD71E16FB8700088FAE /* ViewController.m in Sources */,
 				6C655BD41E16FB8700088FAE /* AppDelegate.m in Sources */,
+				6C655BE81E16FC3800088FAE /* HotelSearch.m in Sources */,
 				6C655BD11E16FB8700088FAE /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
