@@ -11,12 +11,15 @@
 #import "User.h"
 #import "Hotel.h"
 #import "Order.h"
+#import "ImageStoreManager.h"
 
-@interface ModelManager : NSObject
+@interface ModelManager : NSObject<imageStoreManagerDelegate>
 
 //--- init start ---
 +(instancetype)sharedInstance;
-- (BOOL)createDBIfNeeded;
+- (BOOL)createUserDBIfNeeded;
+- (BOOL)createHotelDBIfNeeded;
+- (BOOL)createOrderDBIfNeeded;
 -(void)closeDB;
 //--- init end ---
 
@@ -30,14 +33,14 @@
 
 
 //--- hotelManager start ---
-- (void)createHotel:(NSString *)hotelId hotelName: (NSString *) hotelName hotelLatitude :(NSString*)hotelLatitude hotelLongitude : (NSString *)hotelLongitude hotelAddress: (NSString *)hotelAddress hotelRating : (NSString *) hotelRating hotelPrice: (NSString *)hotelPrice hotelThumb: (NSString *)hotelThumb hotelAvailableDate: (NSArray *)hotelAvailableDate;
+- (BOOL)createHotel:(NSString *)hotelId hotelName: (NSString *) hotelName hotelLatitude :(NSString*)hotelLatitude hotelLongitude : (NSString *)hotelLongitude hotelAddress: (NSString *)hotelAddress hotelRating : (NSString *) hotelRating hotelPrice: (NSString *)hotelPrice hotelThumb: (NSString *)hotelThumb hotelAvailableDate: (NSArray *)hotelAvailableDate;
 
 - (NSArray*)getAllHotel;
 //--- hotelManager end ---
 
 
 //--- orderManager start ---
-- (void)createOrder:(NSString *)orderId checkInDate: (NSDate *) checkInDate checkOutDate :(NSDate*)checkOutDate roomNumber : (NSString *)roomNumber adultNumber: (NSString *)adultNumber childrenNumber : (NSString *) childrenNumber orderStauts: (NSString *)orderStauts userId: (NSString *)userId hotelId: (NSArray *)hotelId;
+- (BOOL)createOrder:(NSString *)orderId checkInDate: (NSDate *) checkInDate checkOutDate :(NSDate*)checkOutDate roomNumber : (NSString *)roomNumber adultNumber: (NSString *)adultNumber childrenNumber : (NSString *) childrenNumber orderStauts: (NSString *)orderStauts userId: (NSString *)userId hotelId: (NSArray *)hotelId;
 
 - (NSArray*)getAllOrderByUserId:(NSString*)userId;
 //--- orderManager end ---

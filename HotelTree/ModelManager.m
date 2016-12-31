@@ -11,7 +11,7 @@
 
 
 @interface ModelManager()
-
+@property(strong,nonatomic)NSString *filePath;
 @end
 
 @implementation ModelManager
@@ -19,7 +19,9 @@
 
 -(instancetype)init{
     if(self = [super init]){
-        [self createDBIfNeeded];
+        [self createUserDBIfNeeded];
+        [self createHotelDBIfNeeded];
+        [self createOrderDBIfNeeded];
     }
     return self;
 }
@@ -38,15 +40,30 @@
 }
 
 
-- (BOOL)createDBIfNeeded{
-    NSString *query = @"create table if not exists user(userId varchar(255)  primary key, password varchar(255) not null);";
-    NSString *userInfoQuery = @"create table if not exists userInfo(userId varchar(255) primary key, userName varchar(255)  not null, firstName varchar(100) not null, lastName varchar(100) not null, email varchar(100), userAddress varchar(255), foreign key(userId) references user(userId));";
-    BOOL result = [[SQLiteManager shareInstance] executeQuery:query];
+- (BOOL)createUserDBIfNeeded{
+    NSString *userDBQuery = @"create table if not exists user(userId varchar(255)  primary key, password varchar(255) not null);";
+    NSString *userInfoDBQuery = @"create table if not exists userInfo(userId varchar(255) primary key, userName varchar(255)  not null, firstName varchar(100) not null, lastName varchar(100) not null, email varchar(100), userAddress varchar(255), foreign key(userId) references user(userId));";
+    BOOL result = [[SQLiteManager shareInstance] executeQuery:userDBQuery];
     if(result){
-        result = [[SQLiteManager shareInstance] executeQuery:userInfoQuery];
+        result = [[SQLiteManager shareInstance] executeQuery:userInfoDBQuery];
     }
     return result;
 }
+
+- (BOOL)createHotelDBIfNeeded{
+    NSString *hotelDBQuery = @"create table if not exists hotel(hotelId varchar(255)  primary key, hotelName varchar(255) not null,hotelAddress varchar(255) not null,hotelLatitude varchar(255) not null,hotelLongitude varchar(255) not null,hotelRating varchar(20) not null,hotelPrice varchar(255) not null,hotelThumb varchar(255) not null,hotelAvailableDate text not null);";
+    BOOL result = [[SQLiteManager shareInstance] executeQuery:hotelDBQuery];
+    return result;
+}
+
+- (BOOL)createOrderDBIfNeeded{
+    NSString *orderDBQuery = @"create table if not exists order(orderId varchar(255)  primary key, checkInDate varchar(255) not null, checkOutDate varchar(255) not null, roomNumber varchar(10) not null, adultNumber varchar(255) not null, childrenNumber varchar(255) not null, orderStauts varchar(10) not null, userId varchar(255) not null, hotelId varchar(255) not null,);";
+    BOOL result = [[SQLiteManager shareInstance] executeQuery:orderDBQuery];
+    return result;
+    
+}
+
+
 
 - (void)createUser:(NSString *)userId password: (NSString *) password userName :(NSString*)userName firstName : (NSString *)firstName lastName: (NSString *)lastName email : (NSString *) email userAddress: (NSString *)userAddress{
     
@@ -62,6 +79,35 @@
     
 }
 
+-(BOOL)createHotel:(NSString *)hotelId hotelName:(NSString *)hotelName hotelLatitude:(NSString *)hotelLatitude hotelLongitude:(NSString *)hotelLongitude hotelAddress:(NSString *)hotelAddress hotelRating:(NSString *)hotelRating hotelPrice:(NSString *)hotelPrice hotelThumb:(NSString *)hotelThumb hotelAvailableDate:(NSArray *)hotelAvailableDate{
+    
+    ImageStoreManager *imageStoreManager = [[ImageStoreManager alloc]init];
+    imageStoreManager.delegate = self;
+    
+    [imageStoreManager imageStore:hotelThumb hotelId:hotelId];
+    
+    NSString *hotelQuery = [NSString stringWithFormat:@"insert into hotel values('%@','%@','%@','%@','%@','%@','%@','%@','%@');", hotelId, hotelName,hotelLatitude,hotelLongitude,hotelAddress,hotelRating,hotelPrice,self.filePath,hotelAvailableDate];
+    
+    //!!!hotelAvailableDate should returned by WebService!!!
+    
+    BOOL result = [[SQLiteManager shareInstance] executeQuery:hotelQuery];
+    
+    return result;
+}
+
+-(void)sendFilePath:(NSString *)filePath{
+    self.filePath = filePath;
+}
+
+-(BOOL)createOrder:(NSString *)orderId checkInDate:(NSDate *)checkInDate checkOutDate:(NSDate *)checkOutDate roomNumber:(NSString *)roomNumber adultNumber:(NSString *)adultNumber childrenNumber:(NSString *)childrenNumber orderStauts:(NSString *)orderStauts userId:(NSString *)userId hotelId:(NSArray *)hotelId{
+    
+    NSString *orderQuery = [NSString stringWithFormat:@"insert into order values('%@','%@','%@','%@','%@','%@','%@','%@','%@');", orderId, checkInDate,checkOutDate,roomNumber,adultNumber,childrenNumber,orderStauts,userId,hotelId];
+    
+    BOOL result = [[SQLiteManager shareInstance] executeQuery:orderQuery];
+    
+    return result;
+}
+
 - (NSArray*)getAllUser{
         NSMutableArray *allUsers = [[NSMutableArray alloc]init];
         NSString *fetchQuery = [NSString stringWithFormat:@"select * from user join userInfo on user.userId = userInfo.userId;"];
@@ -74,6 +120,29 @@
     return allUsers;
 }
 
+-(NSArray*)getAllHotel{
+    NSMutableArray *allHotel = [[NSMutableArray alloc]init];
+    NSString *fetchQuery = [NSString stringWithFormat:@"select * from hotel;"];
+    NSArray *array = [[SQLiteManager shareInstance] executeQueryWithStatement:fetchQuery];
+    
+    for(NSDictionary *dic in array){
+        Hotel *hotel = [[Hotel alloc] initWithDictionary:dic];
+        [allHotel addObject:hotel];
+    }
+    return allHotel;
+}
+
+-(NSArray*)getAllOrderByUserId:(NSString *)userId{
+    NSMutableArray *allOrder = [[NSMutableArray alloc]init];
+    NSString *fetchQuery = [NSString stringWithFormat:@"select * from order where userId = '%@';",userId];
+    NSArray *array = [[SQLiteManager shareInstance] executeQueryWithStatement:fetchQuery];
+    
+    for(NSDictionary *dic in array){
+        Order *order = [[Order alloc] initWithDictionary:dic];
+        [allOrder addObject:order];
+    }
+    return allOrder;
+}
 
 - (BOOL)removeUser:(NSString*)userID{
     NSString *removeQuery = [NSString stringWithFormat:@"delete from user where userId='%@';", userID];

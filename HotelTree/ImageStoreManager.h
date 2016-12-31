@@ -8,6 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
-@interface ImageStoreManager : NSObject
+@protocol imageStoreManagerDelegate <NSObject>
 
+-(void)sendFilePath:(NSString *)filePath;
+
+@end
+
+@interface ImageStoreManager : NSObject
+-(void)imageStore:(NSString*)imageUrl hotelId:(NSString*)hotelId;
+@property (weak ,nonatomic) id<imageStoreManagerDelegate> delegate;
 @end
