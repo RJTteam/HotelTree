@@ -1,16 +1,16 @@
 //
-//  ViewController.h
+//  BookingResult.m
 //  HotelTree
 //
 //  Created by Yangbin on 12/30/16.
 //  Copyright © 2016 com.rjtcompuquest. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "BookingResult.h"
 
-
-@interface ViewController : UIViewController
+@implementation BookingResult
 
 
 @end
+
 

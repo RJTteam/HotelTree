@@ -18,7 +18,7 @@
 @property(nonatomic,strong) NSString* hotelRating;
 @property(nonatomic,strong) NSString* hotelPrice;
 @property(nonatomic,strong) NSString* hotelImages;
-@property(nonatomic,strong) NSString* hotelHotelAvai
+@property(nonatomic,strong) NSString* hotelHotelAvailableRoom;
 
 
 @end

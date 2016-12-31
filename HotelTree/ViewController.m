@@ -17,7 +17,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+//    WebService* service = [WebService sharedInstance];
+//    
+//    //hotelLat=28.6049&hotelLong=77.2235
+//    NSDictionary* dic = @{
+//                          @"mobile":@"55565454",
+//                          @"password":@"7011"
+//                          };
+//    
+//    NSLog(@"%@",[service resetPassword:dic]);
 }
+//http://rjtmobile.com/ansari/ohr/ohrapp/ohr_reset_pass.php?&mobile=55565454&password=7011&newpassword=7012
 
 
 - (void)didReceiveMemoryWarning {

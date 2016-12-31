@@ -14,6 +14,12 @@
 		6C655BDC1E16FB8700088FAE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C655BDB1E16FB8700088FAE /* Assets.xcassets */; };
 		6C655BDF1E16FB8700088FAE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C655BDD1E16FB8700088FAE /* LaunchScreen.storyboard */; };
 		6C655BE81E16FC3800088FAE /* HotelSearch.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C655BE71E16FC3800088FAE /* HotelSearch.m */; };
+		6C655BEC1E16FEB300088FAE /* BookingResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C655BEB1E16FEB300088FAE /* BookingResult.m */; };
+		6C655BF21E18323F00088FAE /* UserLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C655BF11E18323F00088FAE /* UserLogin.m */; };
+		6C655BF51E1832B800088FAE /* UserRegister.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C655BF41E1832B800088FAE /* UserRegister.m */; };
+		6C655BFA1E18355400088FAE /* WebServiceProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C655BF91E18355400088FAE /* WebServiceProvider.m */; };
+		6C655BFD1E1837D000088FAE /* WebService.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C655BFC1E1837D000088FAE /* WebService.m */; };
+		6C655C001E184F6800088FAE /* BookingConfirm.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C655BFF1E184F6800088FAE /* BookingConfirm.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +35,19 @@
 		6C655BE01E16FB8700088FAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6C655BE61E16FC3800088FAE /* HotelSearch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HotelSearch.h; sourceTree = "<group>"; };
 		6C655BE71E16FC3800088FAE /* HotelSearch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HotelSearch.m; sourceTree = "<group>"; };
+		6C655BEA1E16FEB300088FAE /* BookingResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookingResult.h; sourceTree = "<group>"; };
+		6C655BEB1E16FEB300088FAE /* BookingResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookingResult.m; sourceTree = "<group>"; };
+		6C655BF01E18323F00088FAE /* UserLogin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserLogin.h; sourceTree = "<group>"; };
+		6C655BF11E18323F00088FAE /* UserLogin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserLogin.m; sourceTree = "<group>"; };
+		6C655BF31E1832B800088FAE /* UserRegister.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserRegister.h; sourceTree = "<group>"; };
+		6C655BF41E1832B800088FAE /* UserRegister.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserRegister.m; sourceTree = "<group>"; };
+		6C655BF71E1833B400088FAE /* WebCommunicatioin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebCommunicatioin.h; sourceTree = "<group>"; };
+		6C655BF81E18355400088FAE /* WebServiceProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebServiceProvider.h; sourceTree = "<group>"; };
+		6C655BF91E18355400088FAE /* WebServiceProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebServiceProvider.m; sourceTree = "<group>"; };
+		6C655BFB1E1837D000088FAE /* WebService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebService.h; sourceTree = "<group>"; };
+		6C655BFC1E1837D000088FAE /* WebService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebService.m; sourceTree = "<group>"; };
+		6C655BFE1E184F6800088FAE /* BookingConfirm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookingConfirm.h; sourceTree = "<group>"; };
+		6C655BFF1E184F6800088FAE /* BookingConfirm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookingConfirm.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,12 +80,12 @@
 		6C655BCE1E16FB8700088FAE /* HotelTree */ = {
 			isa = PBXGroup;
 			children = (
+				6C655BF61E1832ED00088FAE /* WebManager */,
+				6C655BE91E16FDA100088FAE /* Models */,
 				6C655BD21E16FB8700088FAE /* AppDelegate.h */,
 				6C655BD31E16FB8700088FAE /* AppDelegate.m */,
 				6C655BD51E16FB8700088FAE /* ViewController.h */,
 				6C655BD61E16FB8700088FAE /* ViewController.m */,
-				6C655BE61E16FC3800088FAE /* HotelSearch.h */,
-				6C655BE71E16FC3800088FAE /* HotelSearch.m */,
 				6C655BD81E16FB8700088FAE /* Main.storyboard */,
 				6C655BDB1E16FB8700088FAE /* Assets.xcassets */,
 				6C655BDD1E16FB8700088FAE /* LaunchScreen.storyboard */,
@@ -82,6 +101,35 @@
 				6C655BD01E16FB8700088FAE /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6C655BE91E16FDA100088FAE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				6C655BE61E16FC3800088FAE /* HotelSearch.h */,
+				6C655BE71E16FC3800088FAE /* HotelSearch.m */,
+				6C655BEA1E16FEB300088FAE /* BookingResult.h */,
+				6C655BEB1E16FEB300088FAE /* BookingResult.m */,
+				6C655BFE1E184F6800088FAE /* BookingConfirm.h */,
+				6C655BFF1E184F6800088FAE /* BookingConfirm.m */,
+				6C655BF01E18323F00088FAE /* UserLogin.h */,
+				6C655BF11E18323F00088FAE /* UserLogin.m */,
+				6C655BF31E1832B800088FAE /* UserRegister.h */,
+				6C655BF41E1832B800088FAE /* UserRegister.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		6C655BF61E1832ED00088FAE /* WebManager */ = {
+			isa = PBXGroup;
+			children = (
+				6C655BF71E1833B400088FAE /* WebCommunicatioin.h */,
+				6C655BF81E18355400088FAE /* WebServiceProvider.h */,
+				6C655BF91E18355400088FAE /* WebServiceProvider.m */,
+				6C655BFB1E1837D000088FAE /* WebService.h */,
+				6C655BFC1E1837D000088FAE /* WebService.m */,
+			);
+			name = WebManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -156,9 +204,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6C655BFA1E18355400088FAE /* WebServiceProvider.m in Sources */,
 				6C655BD71E16FB8700088FAE /* ViewController.m in Sources */,
+				6C655BFD1E1837D000088FAE /* WebService.m in Sources */,
 				6C655BD41E16FB8700088FAE /* AppDelegate.m in Sources */,
 				6C655BE81E16FC3800088FAE /* HotelSearch.m in Sources */,
+				6C655BEC1E16FEB300088FAE /* BookingResult.m in Sources */,
+				6C655C001E184F6800088FAE /* BookingConfirm.m in Sources */,
+				6C655BF51E1832B800088FAE /* UserRegister.m in Sources */,
+				6C655BF21E18323F00088FAE /* UserLogin.m in Sources */,
 				6C655BD11E16FB8700088FAE /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
