@@ -15,6 +15,8 @@
 @end
 
 @interface ImageStoreManager : NSObject
+-(instancetype)init;
+-(NSString*)getImageStoreFilePathByHotelId:(NSString*)hotelId;
 -(void)imageStore:(NSString*)imageUrl hotelId:(NSString*)hotelId;
 @property (weak ,nonatomic) id<imageStoreManagerDelegate> delegate;
 @end

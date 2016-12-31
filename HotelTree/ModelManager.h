@@ -40,7 +40,7 @@
 
 
 //--- orderManager start ---
-- (BOOL)createOrder:(NSString *)orderId checkInDate: (NSDate *) checkInDate checkOutDate :(NSDate*)checkOutDate roomNumber : (NSString *)roomNumber adultNumber: (NSString *)adultNumber childrenNumber : (NSString *) childrenNumber orderStauts: (NSString *)orderStauts userId: (NSString *)userId hotelId: (NSArray *)hotelId;
+-(BOOL)createOrder:(NSDate *)checkInDate checkOutDate:(NSDate *)checkOutDate roomNumber:(NSString *)roomNumber adultNumber:(NSString *)adultNumber childrenNumber:(NSString *)childrenNumber orderStauts:(NSString *)orderStauts userId:(NSString *)userId hotelId:(NSString *)hotelId;
 
 - (NSArray*)getAllOrderByUserId:(NSString*)userId;
 //--- orderManager end ---

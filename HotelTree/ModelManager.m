@@ -57,7 +57,7 @@
 }
 
 - (BOOL)createOrderDBIfNeeded{
-    NSString *orderDBQuery = @"create table if not exists order(orderId varchar(255)  primary key, checkInDate varchar(255) not null, checkOutDate varchar(255) not null, roomNumber varchar(10) not null, adultNumber varchar(255) not null, childrenNumber varchar(255) not null, orderStauts varchar(10) not null, userId varchar(255) not null, hotelId varchar(255) not null,);";
+    NSString *orderDBQuery = @"create table if not exists order(hotelId integer primary key autoincrement, checkInDate varchar(255) not null, checkOutDate varchar(255) not null, roomNumber varchar(10) not null, adultNumber varchar(255) not null, childrenNumber varchar(255) not null, orderStauts varchar(10) not null, userId varchar(255) not null, hotelId varchar(255) not null,);";
     BOOL result = [[SQLiteManager shareInstance] executeQuery:orderDBQuery];
     return result;
     
@@ -99,9 +99,9 @@
     self.filePath = filePath;
 }
 
--(BOOL)createOrder:(NSString *)orderId checkInDate:(NSDate *)checkInDate checkOutDate:(NSDate *)checkOutDate roomNumber:(NSString *)roomNumber adultNumber:(NSString *)adultNumber childrenNumber:(NSString *)childrenNumber orderStauts:(NSString *)orderStauts userId:(NSString *)userId hotelId:(NSArray *)hotelId{
+-(BOOL)createOrder:(NSDate *)checkInDate checkOutDate:(NSDate *)checkOutDate roomNumber:(NSString *)roomNumber adultNumber:(NSString *)adultNumber childrenNumber:(NSString *)childrenNumber orderStauts:(NSString *)orderStauts userId:(NSString *)userId hotelId:(NSString *)hotelId{
     
-    NSString *orderQuery = [NSString stringWithFormat:@"insert into order values('%@','%@','%@','%@','%@','%@','%@','%@','%@');", orderId, checkInDate,checkOutDate,roomNumber,adultNumber,childrenNumber,orderStauts,userId,hotelId];
+    NSString *orderQuery = [NSString stringWithFormat:@"insert into order values(NULL,'%@','%@','%@','%@','%@','%@','%@','%@');", checkInDate,checkOutDate,roomNumber,adultNumber,childrenNumber,orderStauts,userId,hotelId];
     
     BOOL result = [[SQLiteManager shareInstance] executeQuery:orderQuery];
     

@@ -22,4 +22,5 @@
 
 - (instancetype)initWithDictionary: (NSDictionary *)dic;
 
+
 @end
