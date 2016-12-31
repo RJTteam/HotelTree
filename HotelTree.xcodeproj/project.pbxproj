@@ -13,7 +13,10 @@
 		602086CC1E16F8B600446C44 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 602086CA1E16F8B600446C44 /* Main.storyboard */; };
 		602086CE1E16F8B600446C44 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 602086CD1E16F8B600446C44 /* Assets.xcassets */; };
 		602086D11E16F8B600446C44 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 602086CF1E16F8B600446C44 /* LaunchScreen.storyboard */; };
-		602086DA1E16F97A00446C44 /* suibianjiandewenjina.m in Sources */ = {isa = PBXBuildFile; fileRef = 602086D91E16F97A00446C44 /* suibianjiandewenjina.m */; };
+		60D70FD61E172CE9003EE019 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 60D70FD11E172CE9003EE019 /* User.m */; };
+		60D70FD71E172CE9003EE019 /* userManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 60D70FD31E172CE9003EE019 /* userManager.m */; };
+		60D70FDD1E172D40003EE019 /* SQLiteManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 60D70FDC1E172D40003EE019 /* SQLiteManager.m */; };
+		60D70FE01E172D75003EE019 /* ImageStoreManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 60D70FDF1E172D75003EE019 /* ImageStoreManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,8 +30,14 @@
 		602086CD1E16F8B600446C44 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		602086D01E16F8B600446C44 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		602086D21E16F8B600446C44 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		602086D81E16F97A00446C44 /* suibianjiandewenjina.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = suibianjiandewenjina.h; sourceTree = "<group>"; };
-		602086D91E16F97A00446C44 /* suibianjiandewenjina.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = suibianjiandewenjina.m; sourceTree = "<group>"; };
+		60D70FD01E172CE9003EE019 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		60D70FD11E172CE9003EE019 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		60D70FD21E172CE9003EE019 /* userManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = userManager.h; sourceTree = "<group>"; };
+		60D70FD31E172CE9003EE019 /* userManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = userManager.m; sourceTree = "<group>"; };
+		60D70FDB1E172D40003EE019 /* SQLiteManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQLiteManager.h; sourceTree = "<group>"; };
+		60D70FDC1E172D40003EE019 /* SQLiteManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQLiteManager.m; sourceTree = "<group>"; };
+		60D70FDE1E172D75003EE019 /* ImageStoreManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageStoreManager.h; sourceTree = "<group>"; };
+		60D70FDF1E172D75003EE019 /* ImageStoreManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageStoreManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +70,7 @@
 		602086C01E16F8B600446C44 /* HotelTree */ = {
 			isa = PBXGroup;
 			children = (
+				60D70FD91E172CFA003EE019 /* SQLManager */,
 				602086C41E16F8B600446C44 /* AppDelegate.h */,
 				602086C51E16F8B600446C44 /* AppDelegate.m */,
 				602086C71E16F8B600446C44 /* ViewController.h */,
@@ -70,8 +80,6 @@
 				602086CF1E16F8B600446C44 /* LaunchScreen.storyboard */,
 				602086D21E16F8B600446C44 /* Info.plist */,
 				602086C11E16F8B600446C44 /* Supporting Files */,
-				602086D81E16F97A00446C44 /* suibianjiandewenjina.h */,
-				602086D91E16F97A00446C44 /* suibianjiandewenjina.m */,
 			);
 			path = HotelTree;
 			sourceTree = "<group>";
@@ -82,6 +90,29 @@
 				602086C21E16F8B600446C44 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		60D70FD91E172CFA003EE019 /* SQLManager */ = {
+			isa = PBXGroup;
+			children = (
+				60D70FDB1E172D40003EE019 /* SQLiteManager.h */,
+				60D70FDC1E172D40003EE019 /* SQLiteManager.m */,
+				60D70FDA1E172D10003EE019 /* DemoModelwithModelManager */,
+			);
+			name = SQLManager;
+			sourceTree = "<group>";
+		};
+		60D70FDA1E172D10003EE019 /* DemoModelwithModelManager */ = {
+			isa = PBXGroup;
+			children = (
+				60D70FDE1E172D75003EE019 /* ImageStoreManager.h */,
+				60D70FDF1E172D75003EE019 /* ImageStoreManager.m */,
+				60D70FD01E172CE9003EE019 /* User.h */,
+				60D70FD11E172CE9003EE019 /* User.m */,
+				60D70FD21E172CE9003EE019 /* userManager.h */,
+				60D70FD31E172CE9003EE019 /* userManager.m */,
+			);
+			name = DemoModelwithModelManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -156,10 +187,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				60D70FD61E172CE9003EE019 /* User.m in Sources */,
 				602086C91E16F8B600446C44 /* ViewController.m in Sources */,
 				602086C61E16F8B600446C44 /* AppDelegate.m in Sources */,
 				602086C31E16F8B600446C44 /* main.m in Sources */,
-				602086DA1E16F97A00446C44 /* suibianjiandewenjina.m in Sources */,
+				60D70FD71E172CE9003EE019 /* userManager.m in Sources */,
+				60D70FDD1E172D40003EE019 /* SQLiteManager.m in Sources */,
+				60D70FE01E172D75003EE019 /* ImageStoreManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -316,6 +350,7 @@
 				602086D71E16F8B600446C44 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
