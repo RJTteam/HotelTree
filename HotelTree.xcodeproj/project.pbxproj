@@ -7,25 +7,65 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		240B4AE0DDDF130530534838 /* Pods_HotelTree.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C92CA96825446B7E2AB3AA9 /* Pods_HotelTree.framework */; };
 		C3DA38361E16F5AC00E1AB83 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DA38351E16F5AC00E1AB83 /* main.m */; };
 		C3DA38391E16F5AC00E1AB83 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DA38381E16F5AC00E1AB83 /* AppDelegate.m */; };
-		C3DA383C1E16F5AC00E1AB83 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DA383B1E16F5AC00E1AB83 /* ViewController.m */; };
 		C3DA383F1E16F5AC00E1AB83 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3DA383D1E16F5AC00E1AB83 /* Main.storyboard */; };
-		C3DA38411E16F5AC00E1AB83 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3DA38401E16F5AC00E1AB83 /* Assets.xcassets */; };
 		C3DA38441E16F5AC00E1AB83 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3DA38421E16F5AC00E1AB83 /* LaunchScreen.storyboard */; };
+		C3DA38511E17538000E1AB83 /* SplashTitleAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DA38501E17538000E1AB83 /* SplashTitleAnimationView.m */; };
+		C3DA385B1E175C6F00E1AB83 /* UIImageView+GIF.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DA385A1E175C6F00E1AB83 /* UIImageView+GIF.m */; };
+		C3DA385E1E175D1800E1AB83 /* splash.gif in Resources */ = {isa = PBXBuildFile; fileRef = C3DA385D1E175D1800E1AB83 /* splash.gif */; };
+		C3DA38671E17627F00E1AB83 /* ResetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DA38601E17627F00E1AB83 /* ResetViewController.m */; };
+		C3DA38681E17627F00E1AB83 /* ForgotPwdVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DA38621E17627F00E1AB83 /* ForgotPwdVC.m */; };
+		C3DA38691E17627F00E1AB83 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DA38641E17627F00E1AB83 /* RegisterViewController.m */; };
+		C3DA386A1E17627F00E1AB83 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DA38661E17627F00E1AB83 /* LoginViewController.m */; };
+		C3DA386E1E1763F800E1AB83 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3DA386B1E1763F800E1AB83 /* FBSDKCoreKit.framework */; };
+		C3DA386F1E1763F800E1AB83 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3DA386C1E1763F800E1AB83 /* FBSDKLoginKit.framework */; };
+		C3DA38701E1763F800E1AB83 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3DA386D1E1763F800E1AB83 /* FBSDKShareKit.framework */; };
+		C3DA38721E17646E00E1AB83 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3DA38711E17646E00E1AB83 /* Bolts.framework */; };
+		C3DA38741E176B1C00E1AB83 /* UIassets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3DA38731E176B1C00E1AB83 /* UIassets.xcassets */; };
+		C3DA38761E176C5A00E1AB83 /* loginBack.gif in Resources */ = {isa = PBXBuildFile; fileRef = C3DA38751E176C5A00E1AB83 /* loginBack.gif */; };
+		C3DA38A61E17737100E1AB83 /* SplashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DA38A41E17737100E1AB83 /* SplashViewController.m */; };
+		C3DA38AB1E17738F00E1AB83 /* title1.png in Resources */ = {isa = PBXBuildFile; fileRef = C3DA38A81E17738F00E1AB83 /* title1.png */; };
+		C3DA38AC1E17738F00E1AB83 /* title2.png in Resources */ = {isa = PBXBuildFile; fileRef = C3DA38A91E17738F00E1AB83 /* title2.png */; };
+		C3DA38AD1E17738F00E1AB83 /* title3.png in Resources */ = {isa = PBXBuildFile; fileRef = C3DA38AA1E17738F00E1AB83 /* title3.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0B6A92A0508B1EB474A6EC72 /* Pods-HotelTree.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HotelTree.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HotelTree/Pods-HotelTree.debug.xcconfig"; sourceTree = "<group>"; };
+		3C92CA96825446B7E2AB3AA9 /* Pods_HotelTree.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HotelTree.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		56D05E330B7EE64E6E7DAEB2 /* Pods-HotelTree.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HotelTree.release.xcconfig"; path = "Pods/Target Support Files/Pods-HotelTree/Pods-HotelTree.release.xcconfig"; sourceTree = "<group>"; };
 		C3DA38311E16F5AC00E1AB83 /* HotelTree.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HotelTree.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3DA38351E16F5AC00E1AB83 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C3DA38371E16F5AC00E1AB83 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C3DA38381E16F5AC00E1AB83 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		C3DA383A1E16F5AC00E1AB83 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		C3DA383B1E16F5AC00E1AB83 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		C3DA383E1E16F5AC00E1AB83 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		C3DA38401E16F5AC00E1AB83 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C3DA38431E16F5AC00E1AB83 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C3DA38451E16F5AC00E1AB83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C3DA384F1E17538000E1AB83 /* SplashTitleAnimationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplashTitleAnimationView.h; sourceTree = "<group>"; };
+		C3DA38501E17538000E1AB83 /* SplashTitleAnimationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SplashTitleAnimationView.m; sourceTree = "<group>"; };
+		C3DA38591E175C6F00E1AB83 /* UIImageView+GIF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+GIF.h"; sourceTree = "<group>"; };
+		C3DA385A1E175C6F00E1AB83 /* UIImageView+GIF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+GIF.m"; sourceTree = "<group>"; };
+		C3DA385D1E175D1800E1AB83 /* splash.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = splash.gif; sourceTree = "<group>"; };
+		C3DA385F1E17627F00E1AB83 /* ResetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResetViewController.h; sourceTree = "<group>"; };
+		C3DA38601E17627F00E1AB83 /* ResetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResetViewController.m; sourceTree = "<group>"; };
+		C3DA38611E17627F00E1AB83 /* ForgotPwdVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForgotPwdVC.h; sourceTree = "<group>"; };
+		C3DA38621E17627F00E1AB83 /* ForgotPwdVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForgotPwdVC.m; sourceTree = "<group>"; };
+		C3DA38631E17627F00E1AB83 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
+		C3DA38641E17627F00E1AB83 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
+		C3DA38651E17627F00E1AB83 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		C3DA38661E17627F00E1AB83 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		C3DA386B1E1763F800E1AB83 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		C3DA386C1E1763F800E1AB83 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		C3DA386D1E1763F800E1AB83 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
+		C3DA38711E17646E00E1AB83 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		C3DA38731E176B1C00E1AB83 /* UIassets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = UIassets.xcassets; sourceTree = "<group>"; };
+		C3DA38751E176C5A00E1AB83 /* loginBack.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = loginBack.gif; sourceTree = "<group>"; };
+		C3DA38A41E17737100E1AB83 /* SplashViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SplashViewController.m; sourceTree = "<group>"; };
+		C3DA38A51E17737100E1AB83 /* SplashViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplashViewController.h; sourceTree = "<group>"; };
+		C3DA38A81E17738F00E1AB83 /* title1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = title1.png; sourceTree = "<group>"; };
+		C3DA38A91E17738F00E1AB83 /* title2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = title2.png; sourceTree = "<group>"; };
+		C3DA38AA1E17738F00E1AB83 /* title3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = title3.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +73,45 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3DA38721E17646E00E1AB83 /* Bolts.framework in Frameworks */,
+				C3DA386E1E1763F800E1AB83 /* FBSDKCoreKit.framework in Frameworks */,
+				C3DA386F1E1763F800E1AB83 /* FBSDKLoginKit.framework in Frameworks */,
+				C3DA38701E1763F800E1AB83 /* FBSDKShareKit.framework in Frameworks */,
+				240B4AE0DDDF130530534838 /* Pods_HotelTree.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0C5A69AC0C3370E23F09137F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C3DA38711E17646E00E1AB83 /* Bolts.framework */,
+				C3DA386B1E1763F800E1AB83 /* FBSDKCoreKit.framework */,
+				C3DA386C1E1763F800E1AB83 /* FBSDKLoginKit.framework */,
+				C3DA386D1E1763F800E1AB83 /* FBSDKShareKit.framework */,
+				3C92CA96825446B7E2AB3AA9 /* Pods_HotelTree.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A279DA5B8C765CBA65D4E1CF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0B6A92A0508B1EB474A6EC72 /* Pods-HotelTree.debug.xcconfig */,
+				56D05E330B7EE64E6E7DAEB2 /* Pods-HotelTree.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		C3DA38281E16F5AC00E1AB83 = {
 			isa = PBXGroup;
 			children = (
 				C3DA38331E16F5AC00E1AB83 /* HotelTree */,
 				C3DA38321E16F5AC00E1AB83 /* Products */,
+				A279DA5B8C765CBA65D4E1CF /* Pods */,
+				0C5A69AC0C3370E23F09137F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,12 +128,15 @@
 			children = (
 				C3DA38371E16F5AC00E1AB83 /* AppDelegate.h */,
 				C3DA38381E16F5AC00E1AB83 /* AppDelegate.m */,
-				C3DA383A1E16F5AC00E1AB83 /* ViewController.h */,
-				C3DA383B1E16F5AC00E1AB83 /* ViewController.m */,
+				C3DA385C1E175C9300E1AB83 /* Controller */,
+				C3DA38581E175BA800E1AB83 /* Animation */,
 				C3DA383D1E16F5AC00E1AB83 /* Main.storyboard */,
-				C3DA38401E16F5AC00E1AB83 /* Assets.xcassets */,
+				C3DA385D1E175D1800E1AB83 /* splash.gif */,
+				C3DA38751E176C5A00E1AB83 /* loginBack.gif */,
 				C3DA38421E16F5AC00E1AB83 /* LaunchScreen.storyboard */,
 				C3DA38451E16F5AC00E1AB83 /* Info.plist */,
+				C3DA38A71E17738F00E1AB83 /* images */,
+				C3DA38731E176B1C00E1AB83 /* UIassets.xcassets */,
 				C3DA38341E16F5AC00E1AB83 /* Supporting Files */,
 			);
 			path = HotelTree;
@@ -74,9 +145,47 @@
 		C3DA38341E16F5AC00E1AB83 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C3DA38591E175C6F00E1AB83 /* UIImageView+GIF.h */,
+				C3DA385A1E175C6F00E1AB83 /* UIImageView+GIF.m */,
 				C3DA38351E16F5AC00E1AB83 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C3DA38581E175BA800E1AB83 /* Animation */ = {
+			isa = PBXGroup;
+			children = (
+				C3DA384F1E17538000E1AB83 /* SplashTitleAnimationView.h */,
+				C3DA38501E17538000E1AB83 /* SplashTitleAnimationView.m */,
+			);
+			name = Animation;
+			sourceTree = "<group>";
+		};
+		C3DA385C1E175C9300E1AB83 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C3DA385F1E17627F00E1AB83 /* ResetViewController.h */,
+				C3DA38601E17627F00E1AB83 /* ResetViewController.m */,
+				C3DA38611E17627F00E1AB83 /* ForgotPwdVC.h */,
+				C3DA38621E17627F00E1AB83 /* ForgotPwdVC.m */,
+				C3DA38631E17627F00E1AB83 /* RegisterViewController.h */,
+				C3DA38641E17627F00E1AB83 /* RegisterViewController.m */,
+				C3DA38651E17627F00E1AB83 /* LoginViewController.h */,
+				C3DA38661E17627F00E1AB83 /* LoginViewController.m */,
+				C3DA38A41E17737100E1AB83 /* SplashViewController.m */,
+				C3DA38A51E17737100E1AB83 /* SplashViewController.h */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		C3DA38A71E17738F00E1AB83 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				C3DA38A81E17738F00E1AB83 /* title1.png */,
+				C3DA38A91E17738F00E1AB83 /* title2.png */,
+				C3DA38AA1E17738F00E1AB83 /* title3.png */,
+			);
+			path = images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -86,9 +195,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C3DA38481E16F5AC00E1AB83 /* Build configuration list for PBXNativeTarget "HotelTree" */;
 			buildPhases = (
+				15E18BECE95BEA444D21D008 /* [CP] Check Pods Manifest.lock */,
 				C3DA382D1E16F5AC00E1AB83 /* Sources */,
 				C3DA382E1E16F5AC00E1AB83 /* Frameworks */,
 				C3DA382F1E16F5AC00E1AB83 /* Resources */,
+				7A4BD7408873C26E7F1E4D5C /* [CP] Embed Pods Frameworks */,
+				D47056555972FB4F65DCC17A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -139,21 +251,80 @@
 			buildActionMask = 2147483647;
 			files = (
 				C3DA38441E16F5AC00E1AB83 /* LaunchScreen.storyboard in Resources */,
-				C3DA38411E16F5AC00E1AB83 /* Assets.xcassets in Resources */,
+				C3DA385E1E175D1800E1AB83 /* splash.gif in Resources */,
+				C3DA38AD1E17738F00E1AB83 /* title3.png in Resources */,
+				C3DA38761E176C5A00E1AB83 /* loginBack.gif in Resources */,
+				C3DA38741E176B1C00E1AB83 /* UIassets.xcassets in Resources */,
+				C3DA38AC1E17738F00E1AB83 /* title2.png in Resources */,
+				C3DA38AB1E17738F00E1AB83 /* title1.png in Resources */,
 				C3DA383F1E16F5AC00E1AB83 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		15E18BECE95BEA444D21D008 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		7A4BD7408873C26E7F1E4D5C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HotelTree/Pods-HotelTree-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D47056555972FB4F65DCC17A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HotelTree/Pods-HotelTree-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C3DA382D1E16F5AC00E1AB83 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C3DA383C1E16F5AC00E1AB83 /* ViewController.m in Sources */,
+				C3DA38681E17627F00E1AB83 /* ForgotPwdVC.m in Sources */,
+				C3DA38511E17538000E1AB83 /* SplashTitleAnimationView.m in Sources */,
 				C3DA38391E16F5AC00E1AB83 /* AppDelegate.m in Sources */,
+				C3DA38671E17627F00E1AB83 /* ResetViewController.m in Sources */,
 				C3DA38361E16F5AC00E1AB83 /* main.m in Sources */,
+				C3DA38A61E17737100E1AB83 /* SplashViewController.m in Sources */,
+				C3DA386A1E17627F00E1AB83 /* LoginViewController.m in Sources */,
+				C3DA385B1E175C6F00E1AB83 /* UIImageView+GIF.m in Sources */,
+				C3DA38691E17627F00E1AB83 /* RegisterViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,9 +442,14 @@
 		};
 		C3DA38491E16F5AC00E1AB83 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0B6A92A0508B1EB474A6EC72 /* Pods-HotelTree.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 6N5G84BXLR;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = HotelTree/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = INCH.HotelTree;
@@ -283,9 +459,14 @@
 		};
 		C3DA384A1E16F5AC00E1AB83 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 56D05E330B7EE64E6E7DAEB2 /* Pods-HotelTree.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 6N5G84BXLR;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = HotelTree/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = INCH.HotelTree;
@@ -312,6 +493,7 @@
 				C3DA384A1E16F5AC00E1AB83 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
