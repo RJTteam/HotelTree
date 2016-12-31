@@ -13,8 +13,10 @@
 		602086CC1E16F8B600446C44 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 602086CA1E16F8B600446C44 /* Main.storyboard */; };
 		602086CE1E16F8B600446C44 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 602086CD1E16F8B600446C44 /* Assets.xcassets */; };
 		602086D11E16F8B600446C44 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 602086CF1E16F8B600446C44 /* LaunchScreen.storyboard */; };
+		60D54B361E181CBC0096583D /* Hotel.m in Sources */ = {isa = PBXBuildFile; fileRef = 60D54B351E181CBC0096583D /* Hotel.m */; };
+		60D54B391E181CC40096583D /* Order.m in Sources */ = {isa = PBXBuildFile; fileRef = 60D54B381E181CC40096583D /* Order.m */; };
 		60D70FD61E172CE9003EE019 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 60D70FD11E172CE9003EE019 /* User.m */; };
-		60D70FD71E172CE9003EE019 /* userManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 60D70FD31E172CE9003EE019 /* userManager.m */; };
+		60D70FD71E172CE9003EE019 /* ModelManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 60D70FD31E172CE9003EE019 /* ModelManager.m */; };
 		60D70FDD1E172D40003EE019 /* SQLiteManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 60D70FDC1E172D40003EE019 /* SQLiteManager.m */; };
 		60D70FE01E172D75003EE019 /* ImageStoreManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 60D70FDF1E172D75003EE019 /* ImageStoreManager.m */; };
 /* End PBXBuildFile section */
@@ -30,10 +32,14 @@
 		602086CD1E16F8B600446C44 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		602086D01E16F8B600446C44 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		602086D21E16F8B600446C44 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		60D54B341E181CBC0096583D /* Hotel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Hotel.h; sourceTree = "<group>"; };
+		60D54B351E181CBC0096583D /* Hotel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Hotel.m; sourceTree = "<group>"; };
+		60D54B371E181CC40096583D /* Order.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Order.h; sourceTree = "<group>"; };
+		60D54B381E181CC40096583D /* Order.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Order.m; sourceTree = "<group>"; };
 		60D70FD01E172CE9003EE019 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		60D70FD11E172CE9003EE019 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
-		60D70FD21E172CE9003EE019 /* userManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = userManager.h; sourceTree = "<group>"; };
-		60D70FD31E172CE9003EE019 /* userManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = userManager.m; sourceTree = "<group>"; };
+		60D70FD21E172CE9003EE019 /* ModelManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModelManager.h; sourceTree = "<group>"; };
+		60D70FD31E172CE9003EE019 /* ModelManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModelManager.m; sourceTree = "<group>"; };
 		60D70FDB1E172D40003EE019 /* SQLiteManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQLiteManager.h; sourceTree = "<group>"; };
 		60D70FDC1E172D40003EE019 /* SQLiteManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQLiteManager.m; sourceTree = "<group>"; };
 		60D70FDE1E172D75003EE019 /* ImageStoreManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageStoreManager.h; sourceTree = "<group>"; };
@@ -97,22 +103,26 @@
 			children = (
 				60D70FDB1E172D40003EE019 /* SQLiteManager.h */,
 				60D70FDC1E172D40003EE019 /* SQLiteManager.m */,
-				60D70FDA1E172D10003EE019 /* DemoModelwithModelManager */,
+				60D70FDA1E172D10003EE019 /* Model */,
 			);
 			name = SQLManager;
 			sourceTree = "<group>";
 		};
-		60D70FDA1E172D10003EE019 /* DemoModelwithModelManager */ = {
+		60D70FDA1E172D10003EE019 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				60D70FDE1E172D75003EE019 /* ImageStoreManager.h */,
 				60D70FDF1E172D75003EE019 /* ImageStoreManager.m */,
+				60D70FD21E172CE9003EE019 /* ModelManager.h */,
+				60D70FD31E172CE9003EE019 /* ModelManager.m */,
 				60D70FD01E172CE9003EE019 /* User.h */,
 				60D70FD11E172CE9003EE019 /* User.m */,
-				60D70FD21E172CE9003EE019 /* userManager.h */,
-				60D70FD31E172CE9003EE019 /* userManager.m */,
+				60D54B341E181CBC0096583D /* Hotel.h */,
+				60D54B351E181CBC0096583D /* Hotel.m */,
+				60D54B371E181CC40096583D /* Order.h */,
+				60D54B381E181CC40096583D /* Order.m */,
 			);
-			name = DemoModelwithModelManager;
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -187,12 +197,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				60D54B391E181CC40096583D /* Order.m in Sources */,
 				60D70FD61E172CE9003EE019 /* User.m in Sources */,
 				602086C91E16F8B600446C44 /* ViewController.m in Sources */,
 				602086C61E16F8B600446C44 /* AppDelegate.m in Sources */,
 				602086C31E16F8B600446C44 /* main.m in Sources */,
-				60D70FD71E172CE9003EE019 /* userManager.m in Sources */,
+				60D70FD71E172CE9003EE019 /* ModelManager.m in Sources */,
 				60D70FDD1E172D40003EE019 /* SQLiteManager.m in Sources */,
+				60D54B361E181CBC0096583D /* Hotel.m in Sources */,
 				60D70FE01E172D75003EE019 /* ImageStoreManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

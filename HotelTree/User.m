@@ -12,13 +12,14 @@
 
 - (instancetype)initWithDictionary: (NSDictionary *)dic{
     if(self = [super init]){
-        _userName = dic[@"username"];
-        _elementId = [dic[@"id"] intValue];
-        _firstName = dic[@"first_name"];
-        _lastName = dic[@"last_name"];
-        _gender = dic[@"gender"];
-        _age = [dic[@"age"] intValue];
+        _userId = dic[@"userId"];
         _password = dic[@"password"];
+        _userName = dic[@"userName"];
+        _firstName = dic[@"firstName"];
+        _lastName = dic[@"lastName"];
+        _email = dic[@"email"];
+        _userAddress = dic[@"userAddress"];
+        
     }
     return self;
 }
