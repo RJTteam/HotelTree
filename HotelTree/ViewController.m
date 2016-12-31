@@ -21,13 +21,16 @@
 //    
 //    //hotelLat=28.6049&hotelLong=77.2235
 //    NSDictionary* dic = @{
+//                          @"name":@"aamir",
+//                          @"email":@"aa@gmail.com",
 //                          @"mobile":@"55565454",
-//                          @"password":@"7011"
+//                          @"password":@"7011",
+//                          @"userAdd":@"Delhi"
 //                          };
 //    
-//    NSLog(@"%@",[service resetPassword:dic]);
+//    NSLog(@"%@",[service returnUserRegister:dic]);
 }
-//http://rjtmobile.com/ansari/ohr/ohrapp/ohr_reset_pass.php?&mobile=55565454&password=7011&newpassword=7012
+//http://rjtmobile.com/ansari/ohr/ohrapp/ohr_reg.php?&name=aamir&email=aa@gmail.com&mobile=55565454&password=7011&userAdd=Delhi
 
 
 - (void)didReceiveMemoryWarning {

@@ -46,7 +46,7 @@
 //    UserRegister* user = [[UserRegister alloc]init];
     
     NSData* output = [self.provider webServiceCall:@"ohr_reg.php" with:dic];
-    id jsonOutput = [NSJSONSerialization JSONObjectWithData:output options:NSJSONReadingAllowFragments error:nil];
+    //id jsonOutput = [NSJSONSerialization JSONObjectWithData:output options:NSJSONReadingMutableLeaves error:nil];
     
 //    NSDictionary* outDic = jsonOutput;
 //    if([outDic objectForKey:@"Error"]){
@@ -58,7 +58,7 @@
 //    }
 //    
 //    return user;
-    NSString* str = jsonOutput;
+    NSString* str = [[NSString alloc]initWithData:output encoding:NSUTF8StringEncoding];
     return str;
 }
 

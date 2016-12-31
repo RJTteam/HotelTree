@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "WebService.h"
+#import "WebServiceProvider.h"
 
 
 @interface ViewController : UIViewController
