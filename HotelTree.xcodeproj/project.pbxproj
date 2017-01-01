@@ -9,13 +9,10 @@
 /* Begin PBXBuildFile section */
 		C3DA38361E16F5AC00E1AB83 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DA38351E16F5AC00E1AB83 /* main.m */; };
 		C3DA38391E16F5AC00E1AB83 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DA38381E16F5AC00E1AB83 /* AppDelegate.m */; };
-		C3DA383C1E16F5AC00E1AB83 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DA383B1E16F5AC00E1AB83 /* SearchViewController.m */; };
+		C3DA383C1E16F5AC00E1AB83 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DA383B1E16F5AC00E1AB83 /* ViewController.m */; };
 		C3DA383F1E16F5AC00E1AB83 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3DA383D1E16F5AC00E1AB83 /* Main.storyboard */; };
 		C3DA38411E16F5AC00E1AB83 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3DA38401E16F5AC00E1AB83 /* Assets.xcassets */; };
 		C3DA38441E16F5AC00E1AB83 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3DA38421E16F5AC00E1AB83 /* LaunchScreen.storyboard */; };
-		E81EA6281E18826C00D5C6A7 /* RequirementViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E81EA6271E18826C00D5C6A7 /* RequirementViewController.m */; };
-		E840004A1E1708AA0076B1F9 /* SearchManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E84000491E1708AA0076B1F9 /* SearchManager.m */; };
-		E84000801E177CE70076B1F9 /* UserSearchResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E840007F1E177CE70076B1F9 /* UserSearchResultViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,18 +20,12 @@
 		C3DA38351E16F5AC00E1AB83 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C3DA38371E16F5AC00E1AB83 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C3DA38381E16F5AC00E1AB83 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		C3DA383A1E16F5AC00E1AB83 /* SearchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
-		C3DA383B1E16F5AC00E1AB83 /* SearchViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
+		C3DA383A1E16F5AC00E1AB83 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		C3DA383B1E16F5AC00E1AB83 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		C3DA383E1E16F5AC00E1AB83 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C3DA38401E16F5AC00E1AB83 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C3DA38431E16F5AC00E1AB83 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C3DA38451E16F5AC00E1AB83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E81EA6261E18826C00D5C6A7 /* RequirementViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequirementViewController.h; sourceTree = "<group>"; };
-		E81EA6271E18826C00D5C6A7 /* RequirementViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RequirementViewController.m; sourceTree = "<group>"; };
-		E84000481E1708AA0076B1F9 /* SearchManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchManager.h; sourceTree = "<group>"; };
-		E84000491E1708AA0076B1F9 /* SearchManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchManager.m; sourceTree = "<group>"; };
-		E840007E1E177CE70076B1F9 /* UserSearchResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserSearchResultViewController.h; sourceTree = "<group>"; };
-		E840007F1E177CE70076B1F9 /* UserSearchResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserSearchResultViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,16 +58,10 @@
 		C3DA38331E16F5AC00E1AB83 /* HotelTree */ = {
 			isa = PBXGroup;
 			children = (
-				E840007E1E177CE70076B1F9 /* UserSearchResultViewController.h */,
-				E840007F1E177CE70076B1F9 /* UserSearchResultViewController.m */,
-				E81EA6261E18826C00D5C6A7 /* RequirementViewController.h */,
-				E81EA6271E18826C00D5C6A7 /* RequirementViewController.m */,
-				E84000481E1708AA0076B1F9 /* SearchManager.h */,
-				E84000491E1708AA0076B1F9 /* SearchManager.m */,
 				C3DA38371E16F5AC00E1AB83 /* AppDelegate.h */,
 				C3DA38381E16F5AC00E1AB83 /* AppDelegate.m */,
-				C3DA383A1E16F5AC00E1AB83 /* SearchViewController.h */,
-				C3DA383B1E16F5AC00E1AB83 /* SearchViewController.m */,
+				C3DA383A1E16F5AC00E1AB83 /* ViewController.h */,
+				C3DA383B1E16F5AC00E1AB83 /* ViewController.m */,
 				C3DA383D1E16F5AC00E1AB83 /* Main.storyboard */,
 				C3DA38401E16F5AC00E1AB83 /* Assets.xcassets */,
 				C3DA38421E16F5AC00E1AB83 /* LaunchScreen.storyboard */,
@@ -166,12 +151,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C3DA383C1E16F5AC00E1AB83 /* SearchViewController.m in Sources */,
-				E84000801E177CE70076B1F9 /* UserSearchResultViewController.m in Sources */,
-				E81EA6281E18826C00D5C6A7 /* RequirementViewController.m in Sources */,
+				C3DA383C1E16F5AC00E1AB83 /* ViewController.m in Sources */,
 				C3DA38391E16F5AC00E1AB83 /* AppDelegate.m in Sources */,
 				C3DA38361E16F5AC00E1AB83 /* main.m in Sources */,
-				E840004A1E1708AA0076B1F9 /* SearchManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,7 +312,6 @@
 				C3DA384A1E16F5AC00E1AB83 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
