@@ -1,0 +1,2143 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		01C7AC28D9B4FA46087139B1C42E2764 /* NSString+Icons.m in Sources */ = {isa = PBXBuildFile; fileRef = D16B76A5C05896AB8304E5E8F78C6FB2 /* NSString+Icons.m */; };
+		04B293CB74CB10C685835CBD7CEE5340 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30A48DB1C8052F1B842C0010D6FE3264 /* Foundation.framework */; };
+		04C27F370851E8E8D45E079F05C525DA /* icon-info@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F016781DC52F3BC7679FE9CE2A49301B /* icon-info@2x.png */; };
+		0585263BE777243BAB3FB7FDE3D6A457 /* CSStickyHeaderFlowLayoutAttributes.m in Sources */ = {isa = PBXBuildFile; fileRef = EF512473DC8D95694FC3F71FD3A7F1FC /* CSStickyHeaderFlowLayoutAttributes.m */; };
+		07C44F7AB9C3311F11ED2104D35BB52F /* UIToolbar+FlatUI.m in Sources */ = {isa = PBXBuildFile; fileRef = D7C60BBE6761E3D0C6795CA68689B1FE /* UIToolbar+FlatUI.m */; };
+		08D2557CF305FFB73CAD373034A4596F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30A48DB1C8052F1B842C0010D6FE3264 /* Foundation.framework */; };
+		09527A4179FF2B4D57B7C77E1C82892A /* YALFoldingTabBarController.h in Headers */ = {isa = PBXBuildFile; fileRef = 89FE2EB080458C33D9642BB7C9E72E41 /* YALFoldingTabBarController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0968524ED4DE8DF7834055C5B6089D72 /* MBProgressHUD-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CCD2528D29CD2503AF113679BF7B18D4 /* MBProgressHUD-dummy.m */; };
+		09D6C1C061263FF12620C2BAD4CD56D4 /* UIStepper+FlatUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 47E020E530E2A743CD63C6C7C0A21BFD /* UIStepper+FlatUI.m */; };
+		0D3D6358B20579739131C2130E4D6235 /* icon-info.png in Resources */ = {isa = PBXBuildFile; fileRef = E1AEACD9ECA4E2D52C27F5B12D8334D5 /* icon-info.png */; };
+		0E3BFC96C6A7CCADAF3DA6C3C80F35EC /* SWActionSheet.h in Headers */ = {isa = PBXBuildFile; fileRef = 7722C51686E306EC30E0101B194B2AF1 /* SWActionSheet.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0F911518B639EDDB31521A96456C50CD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30A48DB1C8052F1B842C0010D6FE3264 /* Foundation.framework */; };
+		10B5BDA1193A5ABD5865175BA022F5D2 /* FoldingTabBar-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0872631F58B081C105D5503A83120893 /* FoldingTabBar-dummy.m */; };
+		11B798742F80890399CB4D80A75675E5 /* TWMessageBarManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 0F611FDAB8D56F1A3B42FFBA1A1943BC /* TWMessageBarManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1215629D558162CE728B27386DA02D1D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30A48DB1C8052F1B842C0010D6FE3264 /* Foundation.framework */; };
+		132DD20D92DF64006F82BE6314B22444 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9584A1F2D6F127A85944AD33BEA278D /* QuartzCore.framework */; };
+		13AFE582A91494D90A0FF2434C095DF4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30A48DB1C8052F1B842C0010D6FE3264 /* Foundation.framework */; };
+		1648AB9E52071D70CD79280AB21C94D1 /* ActionSheetDistancePicker.h in Headers */ = {isa = PBXBuildFile; fileRef = EF888955EC805BA07378FD9CD4E3E61A /* ActionSheetDistancePicker.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		19039C51FE9526BDD9ECC5EC818A92DD /* YALAnimatingTabBarConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = CF9C2EE92A7FB48995DE8B2330C49EED /* YALAnimatingTabBarConstants.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		199D3A62C22D95D1CCC0543B698DCC11 /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 50160A0B1B15C8A7BF652D80B3EEA993 /* Lato-Regular.ttf */; };
+		1A0130E51AF422F68818416677EE6595 /* ActionSheetDatePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = B75CFEEAB2F5599EA724ED2BFBC241BF /* ActionSheetDatePicker.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		1DA5807D9DAF60EBF9BF218B7EBF0201 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85FDCAA1EADCFD367E1698CDE25DE0DF /* UIKit.framework */; };
+		224A85932487353D4FEB41D97AAA1273 /* JVFloatLabeledTextField-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B502EAE03C45F94DA4634322085E2EE0 /* JVFloatLabeledTextField-dummy.m */; };
+		246DD685C951FFF04D55232211F076CD /* ActionSheetDistancePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A4537E726C7411D401773F1B324B960 /* ActionSheetDistancePicker.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		247927BBB9CAA77E5BB6D524BE442837 /* Lato-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 763503BA397872CA7581C6B1B5661C69 /* Lato-Light.ttf */; };
+		2680FB2A9AAFE79796C23A20390CEF45 /* AbstractActionSheetPicker.h in Headers */ = {isa = PBXBuildFile; fileRef = CFB411388CA45E0DD3F0E8FC5DF67420 /* AbstractActionSheetPicker.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		277B7107A41806303867B100AD8EA057 /* FUIButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 64C82697A28F19279F016013ABC91FE7 /* FUIButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2864A54F4B5E0E28BA772871BEDDB484 /* UITextField+Shake.m in Sources */ = {isa = PBXBuildFile; fileRef = 754374A72A2297FE289B2C4CEAF126D1 /* UITextField+Shake.m */; };
+		28A794912ED1E06B05D96DF5ED0AED19 /* MBProgressHUD-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B07C9D7AF1E58B6E3BC30880729482A6 /* MBProgressHUD-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		29C34B43AFA7A1D88AB188801C76E08C /* ActionSheetPicker-3.0-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BC17911BF674A919077C4369055926A1 /* ActionSheetPicker-3.0-dummy.m */; };
+		29CBFCF1B5E74E159A471AED05F7FFE4 /* FUITextField.h in Headers */ = {isa = PBXBuildFile; fileRef = F9DAE1F0BF768E5BFEE4EC3BED98CFD2 /* FUITextField.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2CF987D2DC59DA41EB62817A07B6712B /* JVFloatLabeledTextField-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 741DDD88D3AFA4966245E17D611692ED /* JVFloatLabeledTextField-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2E0FC296EA0550509B056B86DF80ED21 /* TWMessageBarManager-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 01BC141C4FCF2BF193F928722C79B6BE /* TWMessageBarManager-dummy.m */; };
+		2F9C040A5C853D6D925055A88E6C008B /* YALSpringAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 56910A9F8B1676879938004AF38F3F2D /* YALSpringAnimation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		315EEFCFBE95D9EFCBD8BC57E2095C55 /* icon-error.png in Resources */ = {isa = PBXBuildFile; fileRef = 417A4B28C4ECE5D47188769BC34D167E /* icon-error.png */; };
+		35DC0B35AE97EFD533FDC3C99028CC8B /* UIStepper+FlatUI.h in Headers */ = {isa = PBXBuildFile; fileRef = 92F6589113458997A2F4862843661C60 /* UIStepper+FlatUI.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		36A8635ACD8A411AA01830728549B534 /* JVFloatLabeledTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = B7A5C71D922178DCD2EC69CE78C948F4 /* JVFloatLabeledTextView.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		3A3D2DFE234424887CA87ABB47C0515F /* UIBarButtonItem+FlatUI.h in Headers */ = {isa = PBXBuildFile; fileRef = D62F2EA4B55A4B43C940D2714E79C2F2 /* UIBarButtonItem+FlatUI.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3C8D2470783809376BA929A9603C21D9 /* DistancePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C257AB1340E6A14E57CE73ECCEE4959 /* DistancePickerView.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		3C980924C8CFE8C8B6F2A28AF9D054AC /* UINavigationBar+FlatUI.h in Headers */ = {isa = PBXBuildFile; fileRef = 5974D58B6A2C9E84B0D0CB0FEAD2B088 /* UINavigationBar+FlatUI.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3FC285584A4A7DBBA4C1E132634EC97A /* UITabBar+FlatUI.h in Headers */ = {isa = PBXBuildFile; fileRef = 05FCAFFD3381E4F6F4F0F982B5C81C79 /* UITabBar+FlatUI.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		409D8ED54CC607ADAE9416EFD0EADF7D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30A48DB1C8052F1B842C0010D6FE3264 /* Foundation.framework */; };
+		42067963E9E1DC388FAA3A518B53AB10 /* UIPopoverController+FlatUI.h in Headers */ = {isa = PBXBuildFile; fileRef = 31925419C773B731303E663791B3F7CC /* UIPopoverController+FlatUI.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		430E0A46B42F47FF79AE16168D1613E9 /* ActionSheetLocalePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFD5C882B378A1FB61D01084D9D2DC0 /* ActionSheetLocalePicker.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		46A3EDA4B5B50C63DCAF229BBCB8F314 /* FUIPopoverBackgroundView.h in Headers */ = {isa = PBXBuildFile; fileRef = CBAA6E5F18340F8CF8240B6403CD8B68 /* FUIPopoverBackgroundView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		46D5FFCE5EBCB4AC5C395D99E730C7AA /* YALSpringAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = EC1D1E5789A0BBE1FA4F09401D53FCAF /* YALSpringAnimation.m */; };
+		476187CDF55CEE0C4B66ABD3B13FCB81 /* CSStickyHeaderFlowLayout-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 067A276FABE0C706F7AD3EF7CA9A6F66 /* CSStickyHeaderFlowLayout-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		499B276EE19E74DE11DEE12934F93BAD /* FlatUIKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8642A107CA3BEBF9C61CA97086E6D78B /* FlatUIKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4DD7BBF44076B323D23404F29A411A4D /* icon-success@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0075F23DA01F48B960BA28A2C5AC2C7A /* icon-success@2x.png */; };
+		4FE3FDBC52E7F08E80D9276A94461053 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30A48DB1C8052F1B842C0010D6FE3264 /* Foundation.framework */; };
+		557F207112A89E962B4FA3DA95E62BB8 /* UIBarButtonItem+FlatUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D9DCF145266637D1132710EB09DF2B4 /* UIBarButtonItem+FlatUI.m */; };
+		5A79F43BF3D900FD1E8186E93841D280 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85FDCAA1EADCFD367E1698CDE25DE0DF /* UIKit.framework */; };
+		5C0B77991C71BDE850A19F1D1C66BE13 /* CSStickyHeaderFlowLayoutAttributes.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B891BE4942239D103734434314563D7 /* CSStickyHeaderFlowLayoutAttributes.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5C30B14B81DD544C8CBEDC344CE7224E /* Pods-HotelTree-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB8EC0DC2CF4D37517D51FD88582536 /* Pods-HotelTree-dummy.m */; };
+		5D6D6054F82C2555FBF409FA0E5BB3AD /* FUITextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 817706D2BA7EC8E9EDF57E06EE3E7C7C /* FUITextField.m */; };
+		5EFDE5E54556E8C816ED5796F5BB8A8A /* TWMessageBarManager-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FCBD397E422C740791E01BA57BB67F5E /* TWMessageBarManager-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		62255E5D1584217D13F356F89BAC9FDF /* NSString+Icons.h in Headers */ = {isa = PBXBuildFile; fileRef = 8A9AD8B6F64B884D7EB2EC601926FAB9 /* NSString+Icons.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		63991EEBDCB928BC7B8E70759251896F /* icon-error@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 65D185CD07C1766496DB62A599D76C7A /* icon-error@2x.png */; };
+		643184D5DEF202A7F8D64E43D3DD708F /* YALFoldingTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02C9374A40B37BD9339965D24A7669BA /* YALFoldingTabBarController.m */; };
+		65E2EB7E21CF52B33AC4D0569C4349F9 /* FUIAlertView.h in Headers */ = {isa = PBXBuildFile; fileRef = E8207E1A973E95C133D56B6D76741092 /* FUIAlertView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		68B544E41A8477AA16E44E9C0D5F232C /* JVFloatLabeledTextView.h in Headers */ = {isa = PBXBuildFile; fileRef = B91BA045D947A39161D61FB4846B6A80 /* JVFloatLabeledTextView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6C16BD3BCB1B65194E7CEA5CF15AD446 /* ActionSheetMultipleStringPicker.h in Headers */ = {isa = PBXBuildFile; fileRef = EEE46F98C2DF764FB98A211325276BD0 /* ActionSheetMultipleStringPicker.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6D7B8C5BCEF514CCE43E44891B3126C3 /* NSString+TextDirectionality.h in Headers */ = {isa = PBXBuildFile; fileRef = D3211291C5971BA1DB45CC1B4BE1F451 /* NSString+TextDirectionality.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		72B0B27ACF89BE8DD95E4A6607C925D2 /* FUISegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FDA6F711B007B5F3077451434AFA63F /* FUISegmentedControl.m */; };
+		732E8B35C62650A698A3E6496401E4DA /* FUISwitch.h in Headers */ = {isa = PBXBuildFile; fileRef = 671F1FFDBB419A28136DBD09CE819798 /* FUISwitch.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		741983CCBEF01BA7DD62766072E7DD53 /* Pods-HotelTree-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DD882A543BB3460CD9409B96D320FE7A /* Pods-HotelTree-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		765A56E784FF1BA9A7DA3FBF3FF41BED /* CSStickyHeaderFlowLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A2F9F809ED2B7DB31645357B4A84F8F /* CSStickyHeaderFlowLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7730A865D1CC9A82BB61BD1DD10957B9 /* YALAnimatingTabBarConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = FB7A4239D33A78E05121AC03A537A9DC /* YALAnimatingTabBarConstants.m */; };
+		7F9B62B15F30E18DC38110B194EBA18E /* UIFont+FlatUI.h in Headers */ = {isa = PBXBuildFile; fileRef = 0435C6051B094FF1B45510A3216A1F56 /* UIFont+FlatUI.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7FE5BE6EB75843B0598B2FE69D4165EC /* UIImage+FlatUI.m in Sources */ = {isa = PBXBuildFile; fileRef = CFF1A8230926502EA83A2F0277CE02C8 /* UIImage+FlatUI.m */; };
+		80AF743E03C7C5CF6E30C26595CC56A1 /* CAAnimation+YALTabBarViewAnimations.m in Sources */ = {isa = PBXBuildFile; fileRef = AD75F9C9544C12A7A8481672C8F16B99 /* CAAnimation+YALTabBarViewAnimations.m */; };
+		82DB07E1965CC9FFA0340EDA2C5A05A0 /* ActionSheetLocalePicker.h in Headers */ = {isa = PBXBuildFile; fileRef = FB16A3163FDA1A24786FA06A76489E3D /* ActionSheetLocalePicker.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		83678861FC71A2BE986560E60D265F1C /* ActionSheetPicker-3.0-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 15B4481017DA8B8FAC14FFF8A5E0D258 /* ActionSheetPicker-3.0-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8541336BD3FA3A657D91AB19D3975AF4 /* UIColor+FlatUI.h in Headers */ = {isa = PBXBuildFile; fileRef = 83D0E84A99F6D5919FB43158AA94D55F /* UIColor+FlatUI.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		85BA12D4F1115BF8C1BFA8E4DBE79CC6 /* CSStickyHeaderFlowLayout-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D53849AAC2EF0CBE267211F40FAC543 /* CSStickyHeaderFlowLayout-dummy.m */; };
+		897C38C8E3C31950E2E93A4D6937CCC4 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = D83D9217BE65D402F864C228D0C00EFB /* MBProgressHUD.m */; };
+		89914EE77A9E7ABD97C50E880C1F8121 /* UITextField+Shake.h in Headers */ = {isa = PBXBuildFile; fileRef = 15A4A63424E5AA9A32B70000EEB59575 /* UITextField+Shake.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8C314B6FAA78EDAC2A7A82FDFE058806 /* UIProgressView+FlatUI.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B4DD9CF7BDBEBEF002ADE008B291645 /* UIProgressView+FlatUI.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8E21E19BBCA068E4661C503DAEA0E000 /* CATransaction+TransactionWithAnimationsAndCompletion.m in Sources */ = {isa = PBXBuildFile; fileRef = CA2D86A836DFB80CC740DBEE5D23D3B1 /* CATransaction+TransactionWithAnimationsAndCompletion.m */; };
+		8E4FBDBA77DDDFAC490ABE9E28BED06F /* UITabBar+FlatUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EADC3A03C565B0AD0A54A4DEC7E988F /* UITabBar+FlatUI.m */; };
+		8E972E7ADD582B0C1A85FD5ADFE61CED /* FUISwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = CBA3152332EE4DBDD6F23111623E6686 /* FUISwitch.m */; };
+		90CB9CA50A1275E3BAB44A5502C636F1 /* FUICellBackgroundView.h in Headers */ = {isa = PBXBuildFile; fileRef = 852A0376513099448E94B0A5427E58D1 /* FUICellBackgroundView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		90E3389D33DD00DE304548BE9C52C69F /* ActionSheetCustomPicker.h in Headers */ = {isa = PBXBuildFile; fileRef = EB47812B4F2C1F3ED806A3E2DA1BB4B2 /* ActionSheetCustomPicker.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9339894BFFC1FA62DDF64A7DA0433770 /* flat-ui-icons-regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FE7862F919B9D24C32D48FA220C10F7D /* flat-ui-icons-regular.ttf */; };
+		98DF470CA8F6DD132AFAC1398FCD579C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29AA6E4C10206C3EE9ADFA1D694F1143 /* CoreGraphics.framework */; };
+		994F1F07164CE924A946C06310C114F8 /* UITextField+Shake-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BFAE99BF1CAC5716EAF8C743482E991B /* UITextField+Shake-dummy.m */; };
+		9A0FB2C71A306631C00AF04BE4DA3A76 /* NSString+TextDirectionality.m in Sources */ = {isa = PBXBuildFile; fileRef = 07481F570B08A141EB4375B6B2B5E389 /* NSString+TextDirectionality.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		9B2B8491E6B1B8EA1C9ACD37341C726B /* ActionSheetPicker.h in Headers */ = {isa = PBXBuildFile; fileRef = AB70FD016ADB07FD11ADDF88611CA096 /* ActionSheetPicker.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9B867960879FDDD089A9E41F027E13B9 /* AbstractActionSheetPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 535A7C5B1AB9848BA0A10113D21D5F2B /* AbstractActionSheetPicker.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		9BC276383ED044BB0926AFDFD73F928E /* ActionSheetDatePicker.h in Headers */ = {isa = PBXBuildFile; fileRef = BC44ADECA765256E1BB8BBDC964968FF /* ActionSheetDatePicker.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A30F09AD69AC7006A537B69EAB0906E0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85FDCAA1EADCFD367E1698CDE25DE0DF /* UIKit.framework */; };
+		A4DEE5D6EBF55350817AF6906D544FD1 /* Info.plist in Sources */ = {isa = PBXBuildFile; fileRef = B668CDAAAAD356B77655FC99A516425B /* Info.plist */; };
+		A53AC790EB1FCC3DA631897FDEE0FC1B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30A48DB1C8052F1B842C0010D6FE3264 /* Foundation.framework */; };
+		A5BF8DBDD8660DBCFE712657F3D82BDA /* MBProgressHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = FD3C119F7264004DDA7EF31E2E215011 /* MBProgressHUD.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A63861D7A91EEEA1DD71362F36B58C62 /* TWMessageBarManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 74C172A82D2EBDDD4FA0E6E4103FA672 /* TWMessageBarManager.m */; };
+		A93592B2BA35868C7FE6E00A3C727B9F /* YALFoldingTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = A99523F223E5141AD29EAE65ED0989FE /* YALFoldingTabBar.m */; };
+		A9FDE3330428B8220FB31FA0A2AF146E /* FUICellBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 57B05BECCBC0E7B489BA1788D6793D97 /* FUICellBackgroundView.m */; };
+		AA4C8EAFBB981B028BBB967383A46524 /* icon-success.png in Resources */ = {isa = PBXBuildFile; fileRef = C3372E593BADEC7B55BE86108EB3EBD2 /* icon-success.png */; };
+		AA9C0C6673E06CC4E645E0BDCBCCA61E /* FlatUIKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ADE8D0635591F2C064ABE8FBEE984ED /* FlatUIKit-dummy.m */; };
+		AAB5657E30C0E44B44DFDB0010F86E35 /* UIPopoverController+FlatUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 22ACE8FC402BBD604F378B09A27A1D96 /* UIPopoverController+FlatUI.m */; };
+		AE84E0341C26A9B5C8E1501C8E8AAC8F /* ActionSheetCustomPickerDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 3715D08A445B962C77F11D00AAB8F7D8 /* ActionSheetCustomPickerDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEA281A787013B608C7831E9DDACFD3E /* UIFont+FlatUI.m in Sources */ = {isa = PBXBuildFile; fileRef = CBC8355D850AE85FEBFACA40D8B35D76 /* UIFont+FlatUI.m */; };
+		B3C1D0154CF33127F568EC90CD9EBFEA /* YALFoldingTabBar.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CBA8F8FB240EF006A359251E84E4478 /* YALFoldingTabBar.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B50B060E226C59635C4B67FA994144D7 /* UISlider+FlatUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 996A619D7285EA3FC515CB3895D8C4A9 /* UISlider+FlatUI.m */; };
+		B5749E428BFDDB3EDA179FF0B013380D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30A48DB1C8052F1B842C0010D6FE3264 /* Foundation.framework */; };
+		B6B076C50EBCCB5C1DE7D48159A80B64 /* UIImage+FlatUI.h in Headers */ = {isa = PBXBuildFile; fileRef = A8260D6E02191FD20DF460EF3669B1D3 /* UIImage+FlatUI.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B87A8E5FDD58BB5E8B0162EC8FC63152 /* YALTabBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F140D5F7C146EC8AF46328222F69C22 /* YALTabBarItem.m */; };
+		B9679FD962A5F089FAA8359F2E3A27B1 /* UITextField+Shake-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 00EA2D6C8B6ECD378E7C23C6961F2F84 /* UITextField+Shake-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BDBFA441010D34FB51DC32F28314AD8D /* ActionSheetStringPicker.h in Headers */ = {isa = PBXBuildFile; fileRef = F0FFD262DE5213922F6F38D5727EEE85 /* ActionSheetStringPicker.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BDD1261B8BF3BD4D58EDA45AB884897B /* Lato-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 63C52E55A1426B61955B10A455FD47A4 /* Lato-Italic.ttf */; };
+		BF259051002400B9A16B93DD8510A48C /* YALCustomHeightTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 96C1FA138EAB4AF8B33CFC683315C2BF /* YALCustomHeightTabBar.m */; };
+		BFFDA5A32016CE964721B451ED2700CB /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 755FAE73277FCB766461DDF0A4841EC5 /* CoreText.framework */; };
+		C29FFC8DEC649DA95FE2916BE753FEA4 /* YALTabBarItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 8A9042305F1BFEFD033ADEE3771B9725 /* YALTabBarItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C6CB72E223B27A0C2B06910EC0FADF67 /* ActionSheetStringPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 5593155A6A0CEA770F097844F595D92F /* ActionSheetStringPicker.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		CA068FC25E80824549668A53EC9379EC /* DistancePickerView.h in Headers */ = {isa = PBXBuildFile; fileRef = 232DE1D5E72649E528EE4885675FAA5C /* DistancePickerView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CBF4B37EF6A619A0FB3DE682A8ED7DC4 /* YALCustomHeightTabBar.h in Headers */ = {isa = PBXBuildFile; fileRef = B8DE9045BD0B58DFE2E42227F5BC774F /* YALCustomHeightTabBar.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D0CA57562C7915FC1C0A502E19707116 /* UITableViewCell+FlatUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 90B607D3D719E91EDEB98CE606432554 /* UITableViewCell+FlatUI.m */; };
+		D169D54688B8D254B5826D76311538A1 /* CATransaction+TransactionWithAnimationsAndCompletion.h in Headers */ = {isa = PBXBuildFile; fileRef = 8EF13236C2EA3737616ED6D84C4F098E /* CATransaction+TransactionWithAnimationsAndCompletion.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D2D824F17FFD86540CE49319C6E1B001 /* UIToolbar+FlatUI.h in Headers */ = {isa = PBXBuildFile; fileRef = A3BD0C7DEF9D2C6CD2E138CDD5CF43BB /* UIToolbar+FlatUI.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D2F5530BBEF88FB05CEBE926CCCB0B01 /* CAAnimation+YALTabBarViewAnimations.h in Headers */ = {isa = PBXBuildFile; fileRef = 2BE63E83739A186D8BEDCDA9BB2EF670 /* CAAnimation+YALTabBarViewAnimations.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D6305F4FE3FA9C1B8D446EAE97383F89 /* CSStickyHeaderFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 53650E643843D8022EFB8A3A8B572056 /* CSStickyHeaderFlowLayout.m */; };
+		D7B8AB19FF9BFB1D1D62E18CDF4B7D6C /* UITableViewCell+FlatUI.h in Headers */ = {isa = PBXBuildFile; fileRef = 8466354B608E8154036F4496833FC433 /* UITableViewCell+FlatUI.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DA3FBCF3B21EB18151C3BC2645107E0D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9584A1F2D6F127A85944AD33BEA278D /* QuartzCore.framework */; };
+		DA732A6C79E7252A25F23A1497ACD0FD /* ActionSheetMultipleStringPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 44E2C8A15E8187BFA0668EBC2D7BC3A0 /* ActionSheetMultipleStringPicker.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		DE516DEC37CA57C0E368A29FE1C9D2D2 /* FUIButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 623508160711CDC39B53DFDCA7F67E29 /* FUIButton.m */; };
+		DF3210B3451BB6D6A3460A3C617A920A /* UIColor+FlatUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B348BD4969568F46A42F0E7EBE7B3BF /* UIColor+FlatUI.m */; };
+		E049CE807DA7A012BA222DE64920C3D1 /* SWActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 17AABE0DDF95B8F6E544376E04F7F293 /* SWActionSheet.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		E2E30634F3C390BEDFA552FAE81C0D24 /* Lato-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2C0DAF85426645FF284024E9C01F7A33 /* Lato-Bold.ttf */; };
+		E61ED7FAF083B75902728EB20AC4BD92 /* ActionSheetCustomPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = CD1EC673DBFB956F0CE7BEDA4516080C /* ActionSheetCustomPicker.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		E96A76744AF75EA3AB5CF1143E2D87D1 /* UIProgressView+FlatUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 472A9EDC4AD5DC603CBB68ECC0D8BEDD /* UIProgressView+FlatUI.m */; };
+		EA80CFBC3F3ED562D0EA0F2828201266 /* FoldingTabBar-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 47192F1F51399DD1305C9363599FC341 /* FoldingTabBar-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EFFDE961D8196565BBB7871BCDB7A9FA /* FlatUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 952AA59157A2B225C5DC9787702BF91B /* FlatUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F08BAFCDF44D340D8C271DDD345D86CD /* FUISegmentedControl.h in Headers */ = {isa = PBXBuildFile; fileRef = AEBBDA8DCF2970AAC242DA1A4D0AE4DC /* FUISegmentedControl.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F1B2A8510309C2CA4BB69C6D2054FFEB /* FUIPopoverBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE855EB428FF1ABF62F3BB07B79E6998 /* FUIPopoverBackgroundView.m */; };
+		F2C5F382284042577550A3436E0A798B /* UISlider+FlatUI.h in Headers */ = {isa = PBXBuildFile; fileRef = 154FE7241C2F4E1A21D47947A4870B5B /* UISlider+FlatUI.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F3EC47E7FED11EE580F81119C584E445 /* FUIAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FB0D1E7FBC055F49CF208F3F003154A /* FUIAlertView.m */; };
+		F4EBD72886837777AA1E6DF34E9610C9 /* JVFloatLabeledTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = B90A26CC76B4CFC0CCD6114FB5A95267 /* JVFloatLabeledTextField.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		F9115057BD0EF647E0EAF0E014F84635 /* JVFloatLabeledTextField.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C06D946B089F259E625E4F9722F8E93 /* JVFloatLabeledTextField.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F919D7CC8F5E3F73A10DDB3482EB0272 /* FoldingTabBar.h in Headers */ = {isa = PBXBuildFile; fileRef = ADB44DB0C9BC11A79AC3694662E80026 /* FoldingTabBar.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FEE15B32C68F3BFE2AA4DFCC555379C0 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9584A1F2D6F127A85944AD33BEA278D /* QuartzCore.framework */; };
+		FFAEDB37941FC21A782B95E53201B46D /* UINavigationBar+FlatUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E7B337EA66FFDAB5D5C3EE3B3654423 /* UINavigationBar+FlatUI.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		295BAABA18E8457F4ABD38F4604326CD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4C1BEA4CD86D4494B606051FB99E7119;
+			remoteInfo = CSStickyHeaderFlowLayout;
+		};
+		3E8FBF3745F184E2DA65D22EB0A9CA54 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 23EEF3C1D5525ED6D9D5A6414DD81BFA;
+			remoteInfo = FoldingTabBar;
+		};
+		5FFC527A3D3D751391EF800CF94AE539 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B0F1D8B919EFE8BD20DCFBB4BE917267;
+			remoteInfo = TWMessageBarManager;
+		};
+		6C7920F0408EFAEFADA252CB007D795B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0EA69E64579562F4220AC4B365321FCA;
+			remoteInfo = "UITextField+Shake";
+		};
+		C903E8B92E2C8463627AD7AE301BB8DB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 41FA54D12162DAD51D02FC58A2CD5034;
+			remoteInfo = MBProgressHUD;
+		};
+		CD766FBA505B592518ECE30FAA732427 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2A4448146C785C426971111F117D773C;
+			remoteInfo = JVFloatLabeledTextField;
+		};
+		E79FE53EC79DAD7F931C94585AFDCE2A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 965699190112DDBD9B7864D091660DBC;
+			remoteInfo = "ActionSheetPicker-3.0";
+		};
+		EB025093A3D6E837A63A7C5B841CCCDE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D88D87F9C08CC6014A19D5865226133B;
+			remoteInfo = FlatUIKit;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0075F23DA01F48B960BA28A2C5AC2C7A /* icon-success@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; name = "icon-success@2x.png"; path = "Classes/Icons/icon-success@2x.png"; sourceTree = "<group>"; };
+		00EA2D6C8B6ECD378E7C23C6961F2F84 /* UITextField+Shake-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UITextField+Shake-umbrella.h"; sourceTree = "<group>"; };
+		01A030A5DDE99418973C5EBD2879B8FE /* JVFloatLabeledTextField-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JVFloatLabeledTextField-prefix.pch"; sourceTree = "<group>"; };
+		01BC141C4FCF2BF193F928722C79B6BE /* TWMessageBarManager-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TWMessageBarManager-dummy.m"; sourceTree = "<group>"; };
+		02C9374A40B37BD9339965D24A7669BA /* YALFoldingTabBarController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YALFoldingTabBarController.m; path = FoldingTabBar/Controller/FoldingTabBarController/YALFoldingTabBarController.m; sourceTree = "<group>"; };
+		0435C6051B094FF1B45510A3216A1F56 /* UIFont+FlatUI.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIFont+FlatUI.h"; path = "Classes/ios/UIFont+FlatUI.h"; sourceTree = "<group>"; };
+		046681E2AF13D86766DADBB3B7696CBA /* MBProgressHUD-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD-prefix.pch"; sourceTree = "<group>"; };
+		05FCAFFD3381E4F6F4F0F982B5C81C79 /* UITabBar+FlatUI.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UITabBar+FlatUI.h"; path = "Classes/ios/UITabBar+FlatUI.h"; sourceTree = "<group>"; };
+		067A276FABE0C706F7AD3EF7CA9A6F66 /* CSStickyHeaderFlowLayout-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CSStickyHeaderFlowLayout-umbrella.h"; sourceTree = "<group>"; };
+		07481F570B08A141EB4375B6B2B5E389 /* NSString+TextDirectionality.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+TextDirectionality.m"; path = "JVFloatLabeledTextField/JVFloatLabeledTextField/NSString+TextDirectionality.m"; sourceTree = "<group>"; };
+		0872631F58B081C105D5503A83120893 /* FoldingTabBar-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FoldingTabBar-dummy.m"; sourceTree = "<group>"; };
+		0A47A1FBA1DE64010E314DA3168162AA /* Pods-HotelTree.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HotelTree.debug.xcconfig"; sourceTree = "<group>"; };
+		0B348BD4969568F46A42F0E7EBE7B3BF /* UIColor+FlatUI.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIColor+FlatUI.m"; path = "Classes/ios/UIColor+FlatUI.m"; sourceTree = "<group>"; };
+		0C257AB1340E6A14E57CE73ECCEE4959 /* DistancePickerView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DistancePickerView.m; path = Pickers/DistancePickerView.m; sourceTree = "<group>"; };
+		0C5464CADBBB1D37E3DF56EAC820506F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0E7B337EA66FFDAB5D5C3EE3B3654423 /* UINavigationBar+FlatUI.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UINavigationBar+FlatUI.m"; path = "Classes/ios/UINavigationBar+FlatUI.m"; sourceTree = "<group>"; };
+		0F611FDAB8D56F1A3B42FFBA1A1943BC /* TWMessageBarManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TWMessageBarManager.h; path = Classes/TWMessageBarManager.h; sourceTree = "<group>"; };
+		10DE7BDEDF798806BA5E52F2E227EBAA /* MBProgressHUD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = MBProgressHUD.framework; path = MBProgressHUD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		154FE7241C2F4E1A21D47947A4870B5B /* UISlider+FlatUI.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UISlider+FlatUI.h"; path = "Classes/ios/UISlider+FlatUI.h"; sourceTree = "<group>"; };
+		15A4A63424E5AA9A32B70000EEB59575 /* UITextField+Shake.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UITextField+Shake.h"; path = "Source/UITextField+Shake.h"; sourceTree = "<group>"; };
+		15B4481017DA8B8FAC14FFF8A5E0D258 /* ActionSheetPicker-3.0-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ActionSheetPicker-3.0-umbrella.h"; sourceTree = "<group>"; };
+		17AABE0DDF95B8F6E544376E04F7F293 /* SWActionSheet.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SWActionSheet.m; path = Pickers/SWActionSheet.m; sourceTree = "<group>"; };
+		17C819C5E6488A665C9774CF30DDD6CA /* MBProgressHUD.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MBProgressHUD.xcconfig; sourceTree = "<group>"; };
+		1C79FDEAF0AF8DB96D587524742895EA /* CSStickyHeaderFlowLayout.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CSStickyHeaderFlowLayout.xcconfig; sourceTree = "<group>"; };
+		1D571FD4481DA16E5F14353F74D4BF5C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		22ACE8FC402BBD604F378B09A27A1D96 /* UIPopoverController+FlatUI.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIPopoverController+FlatUI.m"; path = "Classes/ios/UIPopoverController+FlatUI.m"; sourceTree = "<group>"; };
+		232DE1D5E72649E528EE4885675FAA5C /* DistancePickerView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DistancePickerView.h; path = Pickers/DistancePickerView.h; sourceTree = "<group>"; };
+		29AA6E4C10206C3EE9ADFA1D694F1143 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
+		2B4DD9CF7BDBEBEF002ADE008B291645 /* UIProgressView+FlatUI.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIProgressView+FlatUI.h"; path = "Classes/ios/UIProgressView+FlatUI.h"; sourceTree = "<group>"; };
+		2BE63E83739A186D8BEDCDA9BB2EF670 /* CAAnimation+YALTabBarViewAnimations.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "CAAnimation+YALTabBarViewAnimations.h"; path = "FoldingTabBar/Category/CAAnimation/CAAnimation+YALTabBarViewAnimations/CAAnimation+YALTabBarViewAnimations.h"; sourceTree = "<group>"; };
+		2C0DAF85426645FF284024E9C01F7A33 /* Lato-Bold.ttf */ = {isa = PBXFileReference; includeInIndex = 1; name = "Lato-Bold.ttf"; path = "Resources/Lato-Bold.ttf"; sourceTree = "<group>"; };
+		2D443EF66A0F07E0C9837C5FB5B83537 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2EDAE2DB63D18C3F459822ACCC2193E0 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2F59F3F6160A820FEF30D09065371F69 /* ActionSheetPicker-3.0-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ActionSheetPicker-3.0-prefix.pch"; sourceTree = "<group>"; };
+		30A48DB1C8052F1B842C0010D6FE3264 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		31925419C773B731303E663791B3F7CC /* UIPopoverController+FlatUI.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIPopoverController+FlatUI.h"; path = "Classes/ios/UIPopoverController+FlatUI.h"; sourceTree = "<group>"; };
+		33D24C25CF5CC4D76628945065C5633D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		35FFF7FCFEB42B381A4CF43DAF2CD0FD /* Pods-HotelTree.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-HotelTree.modulemap"; sourceTree = "<group>"; };
+		3715D08A445B962C77F11D00AAB8F7D8 /* ActionSheetCustomPickerDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ActionSheetCustomPickerDelegate.h; path = Pickers/ActionSheetCustomPickerDelegate.h; sourceTree = "<group>"; };
+		3732AB3A201FFAA30DC5E4B34B99B633 /* ActionSheetPicker_3_0.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = ActionSheetPicker_3_0.framework; path = "ActionSheetPicker-3.0.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		378908305CEF6805EF39C5B138BA35A3 /* CSStickyHeaderFlowLayout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CSStickyHeaderFlowLayout.framework; path = CSStickyHeaderFlowLayout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3EADC3A03C565B0AD0A54A4DEC7E988F /* UITabBar+FlatUI.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UITabBar+FlatUI.m"; path = "Classes/ios/UITabBar+FlatUI.m"; sourceTree = "<group>"; };
+		417A4B28C4ECE5D47188769BC34D167E /* icon-error.png */ = {isa = PBXFileReference; includeInIndex = 1; name = "icon-error.png"; path = "Classes/Icons/icon-error.png"; sourceTree = "<group>"; };
+		43A3A3A6A5E1C634C86D1D999FD14B7A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		44547D11CB08EA54DA90B87DA67306DA /* TWMessageBarManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = TWMessageBarManager.framework; path = TWMessageBarManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		44E2C8A15E8187BFA0668EBC2D7BC3A0 /* ActionSheetMultipleStringPicker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ActionSheetMultipleStringPicker.m; path = Pickers/ActionSheetMultipleStringPicker.m; sourceTree = "<group>"; };
+		4550A60D927479AC52980D893C883A50 /* UITextField+Shake-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UITextField+Shake-prefix.pch"; sourceTree = "<group>"; };
+		47192F1F51399DD1305C9363599FC341 /* FoldingTabBar-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FoldingTabBar-umbrella.h"; sourceTree = "<group>"; };
+		472A9EDC4AD5DC603CBB68ECC0D8BEDD /* UIProgressView+FlatUI.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIProgressView+FlatUI.m"; path = "Classes/ios/UIProgressView+FlatUI.m"; sourceTree = "<group>"; };
+		47E020E530E2A743CD63C6C7C0A21BFD /* UIStepper+FlatUI.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIStepper+FlatUI.m"; path = "Classes/ios/UIStepper+FlatUI.m"; sourceTree = "<group>"; };
+		47E345075BD1252B415BB41398A44010 /* FoldingTabBar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = FoldingTabBar.framework; path = FoldingTabBar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4ADE8D0635591F2C064ABE8FBEE984ED /* FlatUIKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FlatUIKit-dummy.m"; sourceTree = "<group>"; };
+		4C06D946B089F259E625E4F9722F8E93 /* JVFloatLabeledTextField.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JVFloatLabeledTextField.h; path = JVFloatLabeledTextField/JVFloatLabeledTextField/JVFloatLabeledTextField.h; sourceTree = "<group>"; };
+		4CBA8F8FB240EF006A359251E84E4478 /* YALFoldingTabBar.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YALFoldingTabBar.h; path = FoldingTabBar/View/FoldingTabBar/YALFoldingTabBar.h; sourceTree = "<group>"; };
+		50160A0B1B15C8A7BF652D80B3EEA993 /* Lato-Regular.ttf */ = {isa = PBXFileReference; includeInIndex = 1; name = "Lato-Regular.ttf"; path = "Resources/Lato-Regular.ttf"; sourceTree = "<group>"; };
+		535A7C5B1AB9848BA0A10113D21D5F2B /* AbstractActionSheetPicker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AbstractActionSheetPicker.m; path = Pickers/AbstractActionSheetPicker.m; sourceTree = "<group>"; };
+		53650E643843D8022EFB8A3A8B572056 /* CSStickyHeaderFlowLayout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CSStickyHeaderFlowLayout.m; path = Classes/CSStickyHeaderFlowLayout.m; sourceTree = "<group>"; };
+		5565B7391D0A5FD681634B569F0AF681 /* CSStickyHeaderFlowLayout-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CSStickyHeaderFlowLayout-prefix.pch"; sourceTree = "<group>"; };
+		5593155A6A0CEA770F097844F595D92F /* ActionSheetStringPicker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ActionSheetStringPicker.m; path = Pickers/ActionSheetStringPicker.m; sourceTree = "<group>"; };
+		56910A9F8B1676879938004AF38F3F2D /* YALSpringAnimation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YALSpringAnimation.h; path = FoldingTabBar/Animation/YALSpringAnimation/YALSpringAnimation.h; sourceTree = "<group>"; };
+		57B05BECCBC0E7B489BA1788D6793D97 /* FUICellBackgroundView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FUICellBackgroundView.m; path = Classes/ios/FUICellBackgroundView.m; sourceTree = "<group>"; };
+		5974D58B6A2C9E84B0D0CB0FEAD2B088 /* UINavigationBar+FlatUI.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UINavigationBar+FlatUI.h"; path = "Classes/ios/UINavigationBar+FlatUI.h"; sourceTree = "<group>"; };
+		5B891BE4942239D103734434314563D7 /* CSStickyHeaderFlowLayoutAttributes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CSStickyHeaderFlowLayoutAttributes.h; path = Classes/CSStickyHeaderFlowLayoutAttributes.h; sourceTree = "<group>"; };
+		5BE716D16CEAD700CBAF7D518675299F /* Pods-HotelTree.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HotelTree.release.xcconfig"; sourceTree = "<group>"; };
+		5D9DCF145266637D1132710EB09DF2B4 /* UIBarButtonItem+FlatUI.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIBarButtonItem+FlatUI.m"; path = "Classes/ios/UIBarButtonItem+FlatUI.m"; sourceTree = "<group>"; };
+		5FB0D1E7FBC055F49CF208F3F003154A /* FUIAlertView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FUIAlertView.m; path = Classes/ios/FUIAlertView.m; sourceTree = "<group>"; };
+		5FDA6F711B007B5F3077451434AFA63F /* FUISegmentedControl.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FUISegmentedControl.m; path = Classes/ios/FUISegmentedControl.m; sourceTree = "<group>"; };
+		623508160711CDC39B53DFDCA7F67E29 /* FUIButton.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FUIButton.m; path = Classes/ios/FUIButton.m; sourceTree = "<group>"; };
+		637755A73405EDC2D1012D7B7D1CFA75 /* FlatUIKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = FlatUIKit.modulemap; sourceTree = "<group>"; };
+		63C52E55A1426B61955B10A455FD47A4 /* Lato-Italic.ttf */ = {isa = PBXFileReference; includeInIndex = 1; name = "Lato-Italic.ttf"; path = "Resources/Lato-Italic.ttf"; sourceTree = "<group>"; };
+		64C82697A28F19279F016013ABC91FE7 /* FUIButton.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FUIButton.h; path = Classes/ios/FUIButton.h; sourceTree = "<group>"; };
+		65D185CD07C1766496DB62A599D76C7A /* icon-error@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; name = "icon-error@2x.png"; path = "Classes/Icons/icon-error@2x.png"; sourceTree = "<group>"; };
+		671F1FFDBB419A28136DBD09CE819798 /* FUISwitch.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FUISwitch.h; path = Classes/ios/FUISwitch.h; sourceTree = "<group>"; };
+		6F7A80A98D3C6304D7565968E0852311 /* Pods-HotelTree-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-HotelTree-acknowledgements.markdown"; sourceTree = "<group>"; };
+		6FC533BAB1EB27646DE8EAA72ABDDAC6 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6FCEF8AD47F108BA4CBEB8305DC19DBA /* FlatUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = FlatUIKit.framework; path = FlatUIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		741DDD88D3AFA4966245E17D611692ED /* JVFloatLabeledTextField-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JVFloatLabeledTextField-umbrella.h"; sourceTree = "<group>"; };
+		74C172A82D2EBDDD4FA0E6E4103FA672 /* TWMessageBarManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TWMessageBarManager.m; path = Classes/TWMessageBarManager.m; sourceTree = "<group>"; };
+		754374A72A2297FE289B2C4CEAF126D1 /* UITextField+Shake.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UITextField+Shake.m"; path = "Source/UITextField+Shake.m"; sourceTree = "<group>"; };
+		755FAE73277FCB766461DDF0A4841EC5 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/CoreText.framework; sourceTree = DEVELOPER_DIR; };
+		763503BA397872CA7581C6B1B5661C69 /* Lato-Light.ttf */ = {isa = PBXFileReference; includeInIndex = 1; name = "Lato-Light.ttf"; path = "Resources/Lato-Light.ttf"; sourceTree = "<group>"; };
+		7722C51686E306EC30E0101B194B2AF1 /* SWActionSheet.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SWActionSheet.h; path = Pickers/SWActionSheet.h; sourceTree = "<group>"; };
+		7A2F9F809ED2B7DB31645357B4A84F8F /* CSStickyHeaderFlowLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CSStickyHeaderFlowLayout.h; path = Classes/CSStickyHeaderFlowLayout.h; sourceTree = "<group>"; };
+		7AF33D7370634050734597D644827D37 /* TWMessageBarManager.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = TWMessageBarManager.modulemap; sourceTree = "<group>"; };
+		7D53849AAC2EF0CBE267211F40FAC543 /* CSStickyHeaderFlowLayout-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CSStickyHeaderFlowLayout-dummy.m"; sourceTree = "<group>"; };
+		817706D2BA7EC8E9EDF57E06EE3E7C7C /* FUITextField.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FUITextField.m; path = Classes/ios/FUITextField.m; sourceTree = "<group>"; };
+		83D0E84A99F6D5919FB43158AA94D55F /* UIColor+FlatUI.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIColor+FlatUI.h"; path = "Classes/ios/UIColor+FlatUI.h"; sourceTree = "<group>"; };
+		8466354B608E8154036F4496833FC433 /* UITableViewCell+FlatUI.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UITableViewCell+FlatUI.h"; path = "Classes/ios/UITableViewCell+FlatUI.h"; sourceTree = "<group>"; };
+		84DCF495211521A5AF05A7430FFE47C1 /* Pods_HotelTree.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_HotelTree.framework; path = "Pods-HotelTree.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		852A0376513099448E94B0A5427E58D1 /* FUICellBackgroundView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FUICellBackgroundView.h; path = Classes/ios/FUICellBackgroundView.h; sourceTree = "<group>"; };
+		85FDCAA1EADCFD367E1698CDE25DE0DF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		8642A107CA3BEBF9C61CA97086E6D78B /* FlatUIKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FlatUIKit-umbrella.h"; sourceTree = "<group>"; };
+		89FE2EB080458C33D9642BB7C9E72E41 /* YALFoldingTabBarController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YALFoldingTabBarController.h; path = FoldingTabBar/Controller/FoldingTabBarController/YALFoldingTabBarController.h; sourceTree = "<group>"; };
+		8A9042305F1BFEFD033ADEE3771B9725 /* YALTabBarItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YALTabBarItem.h; path = FoldingTabBar/Model/TabBarItem/YALTabBarItem.h; sourceTree = "<group>"; };
+		8A9AD8B6F64B884D7EB2EC601926FAB9 /* NSString+Icons.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+Icons.h"; path = "Classes/ios/NSString+Icons.h"; sourceTree = "<group>"; };
+		8EF13236C2EA3737616ED6D84C4F098E /* CATransaction+TransactionWithAnimationsAndCompletion.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "CATransaction+TransactionWithAnimationsAndCompletion.h"; path = "FoldingTabBar/Category/CATransaction/CATransaction+TransactionWithAnimationsAndCompletion/CATransaction+TransactionWithAnimationsAndCompletion.h"; sourceTree = "<group>"; };
+		90B607D3D719E91EDEB98CE606432554 /* UITableViewCell+FlatUI.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UITableViewCell+FlatUI.m"; path = "Classes/ios/UITableViewCell+FlatUI.m"; sourceTree = "<group>"; };
+		912EB839F2EFBB6365C3500B15D6A3D1 /* Pods-HotelTree-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-HotelTree-frameworks.sh"; sourceTree = "<group>"; };
+		92F6589113458997A2F4862843661C60 /* UIStepper+FlatUI.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIStepper+FlatUI.h"; path = "Classes/ios/UIStepper+FlatUI.h"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93CD3382FCCF9A75FDAB0CDEDEB314E7 /* ActionSheetPicker-3.0.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "ActionSheetPicker-3.0.xcconfig"; sourceTree = "<group>"; };
+		952AA59157A2B225C5DC9787702BF91B /* FlatUIKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FlatUIKit.h; path = Classes/ios/FlatUIKit.h; sourceTree = "<group>"; };
+		96C1FA138EAB4AF8B33CFC683315C2BF /* YALCustomHeightTabBar.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YALCustomHeightTabBar.m; path = FoldingTabBar/View/CustomHeightTabBar/YALCustomHeightTabBar.m; sourceTree = "<group>"; };
+		996A619D7285EA3FC515CB3895D8C4A9 /* UISlider+FlatUI.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UISlider+FlatUI.m"; path = "Classes/ios/UISlider+FlatUI.m"; sourceTree = "<group>"; };
+		99B354371E3622CF5AF80AF897BDBF9F /* Pods-HotelTree-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-HotelTree-acknowledgements.plist"; sourceTree = "<group>"; };
+		9A4537E726C7411D401773F1B324B960 /* ActionSheetDistancePicker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ActionSheetDistancePicker.m; path = Pickers/ActionSheetDistancePicker.m; sourceTree = "<group>"; };
+		9D2D7886FCD87002F6C7986D9D2CB883 /* MBProgressHUD.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = MBProgressHUD.modulemap; sourceTree = "<group>"; };
+		9F140D5F7C146EC8AF46328222F69C22 /* YALTabBarItem.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YALTabBarItem.m; path = FoldingTabBar/Model/TabBarItem/YALTabBarItem.m; sourceTree = "<group>"; };
+		A346262D84D518879E1DBDF723D8EA14 /* Pods-HotelTree-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-HotelTree-resources.sh"; sourceTree = "<group>"; };
+		A3675D7F492803674F79F082FDB99A38 /* CSStickyHeaderFlowLayout.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = CSStickyHeaderFlowLayout.modulemap; sourceTree = "<group>"; };
+		A3BD0C7DEF9D2C6CD2E138CDD5CF43BB /* UIToolbar+FlatUI.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIToolbar+FlatUI.h"; path = "Classes/ios/UIToolbar+FlatUI.h"; sourceTree = "<group>"; };
+		A8260D6E02191FD20DF460EF3669B1D3 /* UIImage+FlatUI.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+FlatUI.h"; path = "Classes/ios/UIImage+FlatUI.h"; sourceTree = "<group>"; };
+		A83BDE20774C8B88A9C4F001114EAAAA /* FoldingTabBar-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FoldingTabBar-prefix.pch"; sourceTree = "<group>"; };
+		A9584A1F2D6F127A85944AD33BEA278D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		A95B1E84A36A0A3D7408E28DC81DB2D7 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A99523F223E5141AD29EAE65ED0989FE /* YALFoldingTabBar.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YALFoldingTabBar.m; path = FoldingTabBar/View/FoldingTabBar/YALFoldingTabBar.m; sourceTree = "<group>"; };
+		AB70FD016ADB07FD11ADDF88611CA096 /* ActionSheetPicker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ActionSheetPicker.h; path = Pickers/ActionSheetPicker.h; sourceTree = "<group>"; };
+		AD75F9C9544C12A7A8481672C8F16B99 /* CAAnimation+YALTabBarViewAnimations.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "CAAnimation+YALTabBarViewAnimations.m"; path = "FoldingTabBar/Category/CAAnimation/CAAnimation+YALTabBarViewAnimations/CAAnimation+YALTabBarViewAnimations.m"; sourceTree = "<group>"; };
+		ADB44DB0C9BC11A79AC3694662E80026 /* FoldingTabBar.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FoldingTabBar.h; path = FoldingTabBar/Resources/FoldingTabBar.h; sourceTree = "<group>"; };
+		AEB8EC0DC2CF4D37517D51FD88582536 /* Pods-HotelTree-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-HotelTree-dummy.m"; sourceTree = "<group>"; };
+		AEBBDA8DCF2970AAC242DA1A4D0AE4DC /* FUISegmentedControl.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FUISegmentedControl.h; path = Classes/ios/FUISegmentedControl.h; sourceTree = "<group>"; };
+		B01650E1A5AF374E074A4E883B5293BA /* UITextField_Shake.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = UITextField_Shake.framework; path = "UITextField+Shake.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B07C9D7AF1E58B6E3BC30880729482A6 /* MBProgressHUD-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD-umbrella.h"; sourceTree = "<group>"; };
+		B4741204895C8F4A69C651FD51E8C23E /* JVFloatLabeledTextField.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = JVFloatLabeledTextField.framework; path = JVFloatLabeledTextField.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B502EAE03C45F94DA4634322085E2EE0 /* JVFloatLabeledTextField-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "JVFloatLabeledTextField-dummy.m"; sourceTree = "<group>"; };
+		B668CDAAAAD356B77655FC99A516425B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = FoldingTabBar/Resources/Info.plist; sourceTree = "<group>"; };
+		B75CFEEAB2F5599EA724ED2BFBC241BF /* ActionSheetDatePicker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ActionSheetDatePicker.m; path = Pickers/ActionSheetDatePicker.m; sourceTree = "<group>"; };
+		B7A5C71D922178DCD2EC69CE78C948F4 /* JVFloatLabeledTextView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JVFloatLabeledTextView.m; path = JVFloatLabeledTextField/JVFloatLabeledTextField/JVFloatLabeledTextView.m; sourceTree = "<group>"; };
+		B8DE9045BD0B58DFE2E42227F5BC774F /* YALCustomHeightTabBar.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YALCustomHeightTabBar.h; path = FoldingTabBar/View/CustomHeightTabBar/YALCustomHeightTabBar.h; sourceTree = "<group>"; };
+		B90A26CC76B4CFC0CCD6114FB5A95267 /* JVFloatLabeledTextField.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JVFloatLabeledTextField.m; path = JVFloatLabeledTextField/JVFloatLabeledTextField/JVFloatLabeledTextField.m; sourceTree = "<group>"; };
+		B91BA045D947A39161D61FB4846B6A80 /* JVFloatLabeledTextView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JVFloatLabeledTextView.h; path = JVFloatLabeledTextField/JVFloatLabeledTextField/JVFloatLabeledTextView.h; sourceTree = "<group>"; };
+		BC17911BF674A919077C4369055926A1 /* ActionSheetPicker-3.0-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ActionSheetPicker-3.0-dummy.m"; sourceTree = "<group>"; };
+		BC44ADECA765256E1BB8BBDC964968FF /* ActionSheetDatePicker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ActionSheetDatePicker.h; path = Pickers/ActionSheetDatePicker.h; sourceTree = "<group>"; };
+		BCFEFA595D82AB84A6804AEE25A10889 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BFAE99BF1CAC5716EAF8C743482E991B /* UITextField+Shake-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UITextField+Shake-dummy.m"; sourceTree = "<group>"; };
+		C33174C5B7CEAD99F40C2E1E89127087 /* TWMessageBarManager.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TWMessageBarManager.xcconfig; sourceTree = "<group>"; };
+		C3372E593BADEC7B55BE86108EB3EBD2 /* icon-success.png */ = {isa = PBXFileReference; includeInIndex = 1; name = "icon-success.png"; path = "Classes/Icons/icon-success.png"; sourceTree = "<group>"; };
+		C602335A93AB889CEDC11E3569730331 /* FlatUIKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FlatUIKit-prefix.pch"; sourceTree = "<group>"; };
+		CA2D86A836DFB80CC740DBEE5D23D3B1 /* CATransaction+TransactionWithAnimationsAndCompletion.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "CATransaction+TransactionWithAnimationsAndCompletion.m"; path = "FoldingTabBar/Category/CATransaction/CATransaction+TransactionWithAnimationsAndCompletion/CATransaction+TransactionWithAnimationsAndCompletion.m"; sourceTree = "<group>"; };
+		CBA3152332EE4DBDD6F23111623E6686 /* FUISwitch.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FUISwitch.m; path = Classes/ios/FUISwitch.m; sourceTree = "<group>"; };
+		CBAA6E5F18340F8CF8240B6403CD8B68 /* FUIPopoverBackgroundView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FUIPopoverBackgroundView.h; path = Classes/ios/FUIPopoverBackgroundView.h; sourceTree = "<group>"; };
+		CBC8355D850AE85FEBFACA40D8B35D76 /* UIFont+FlatUI.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIFont+FlatUI.m"; path = "Classes/ios/UIFont+FlatUI.m"; sourceTree = "<group>"; };
+		CCD2528D29CD2503AF113679BF7B18D4 /* MBProgressHUD-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD-dummy.m"; sourceTree = "<group>"; };
+		CD1EC673DBFB956F0CE7BEDA4516080C /* ActionSheetCustomPicker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ActionSheetCustomPicker.m; path = Pickers/ActionSheetCustomPicker.m; sourceTree = "<group>"; };
+		CE855EB428FF1ABF62F3BB07B79E6998 /* FUIPopoverBackgroundView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FUIPopoverBackgroundView.m; path = Classes/ios/FUIPopoverBackgroundView.m; sourceTree = "<group>"; };
+		CEDAC64B766D7E04728365F8E3A779CF /* UITextField+Shake.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "UITextField+Shake.xcconfig"; sourceTree = "<group>"; };
+		CF9C2EE92A7FB48995DE8B2330C49EED /* YALAnimatingTabBarConstants.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YALAnimatingTabBarConstants.h; path = FoldingTabBar/Constants/YALAnimatingTabBarConstants.h; sourceTree = "<group>"; };
+		CFB411388CA45E0DD3F0E8FC5DF67420 /* AbstractActionSheetPicker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AbstractActionSheetPicker.h; path = Pickers/AbstractActionSheetPicker.h; sourceTree = "<group>"; };
+		CFF1A8230926502EA83A2F0277CE02C8 /* UIImage+FlatUI.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+FlatUI.m"; path = "Classes/ios/UIImage+FlatUI.m"; sourceTree = "<group>"; };
+		D16B76A5C05896AB8304E5E8F78C6FB2 /* NSString+Icons.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+Icons.m"; path = "Classes/ios/NSString+Icons.m"; sourceTree = "<group>"; };
+		D3211291C5971BA1DB45CC1B4BE1F451 /* NSString+TextDirectionality.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+TextDirectionality.h"; path = "JVFloatLabeledTextField/JVFloatLabeledTextField/NSString+TextDirectionality.h"; sourceTree = "<group>"; };
+		D5D995CFD52775CB884F40F3E16BACFA /* FlatUIKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FlatUIKit.xcconfig; sourceTree = "<group>"; };
+		D62F2EA4B55A4B43C940D2714E79C2F2 /* UIBarButtonItem+FlatUI.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIBarButtonItem+FlatUI.h"; path = "Classes/ios/UIBarButtonItem+FlatUI.h"; sourceTree = "<group>"; };
+		D7C60BBE6761E3D0C6795CA68689B1FE /* UIToolbar+FlatUI.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIToolbar+FlatUI.m"; path = "Classes/ios/UIToolbar+FlatUI.m"; sourceTree = "<group>"; };
+		D83D9217BE65D402F864C228D0C00EFB /* MBProgressHUD.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		DD1227AAB3DF4A26ADEA60F5656204CC /* TWMessageBarManager-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TWMessageBarManager-prefix.pch"; sourceTree = "<group>"; };
+		DD882A543BB3460CD9409B96D320FE7A /* Pods-HotelTree-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-HotelTree-umbrella.h"; sourceTree = "<group>"; };
+		DE5AD2B3A2D974153EBF3D21F75E89F5 /* JVFloatLabeledTextField.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = JVFloatLabeledTextField.modulemap; sourceTree = "<group>"; };
+		E1AE62A0506C46B2A4BF3FE6E725CBE3 /* FoldingTabBar.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = FoldingTabBar.modulemap; sourceTree = "<group>"; };
+		E1AEACD9ECA4E2D52C27F5B12D8334D5 /* icon-info.png */ = {isa = PBXFileReference; includeInIndex = 1; name = "icon-info.png"; path = "Classes/Icons/icon-info.png"; sourceTree = "<group>"; };
+		E8207E1A973E95C133D56B6D76741092 /* FUIAlertView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FUIAlertView.h; path = Classes/ios/FUIAlertView.h; sourceTree = "<group>"; };
+		E90EC6D1B5033B7588F327349D926D9A /* UITextField+Shake.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "UITextField+Shake.modulemap"; sourceTree = "<group>"; };
+		EB47812B4F2C1F3ED806A3E2DA1BB4B2 /* ActionSheetCustomPicker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ActionSheetCustomPicker.h; path = Pickers/ActionSheetCustomPicker.h; sourceTree = "<group>"; };
+		EC1D1E5789A0BBE1FA4F09401D53FCAF /* YALSpringAnimation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YALSpringAnimation.m; path = FoldingTabBar/Animation/YALSpringAnimation/YALSpringAnimation.m; sourceTree = "<group>"; };
+		EEE46F98C2DF764FB98A211325276BD0 /* ActionSheetMultipleStringPicker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ActionSheetMultipleStringPicker.h; path = Pickers/ActionSheetMultipleStringPicker.h; sourceTree = "<group>"; };
+		EF512473DC8D95694FC3F71FD3A7F1FC /* CSStickyHeaderFlowLayoutAttributes.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CSStickyHeaderFlowLayoutAttributes.m; path = Classes/CSStickyHeaderFlowLayoutAttributes.m; sourceTree = "<group>"; };
+		EF888955EC805BA07378FD9CD4E3E61A /* ActionSheetDistancePicker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ActionSheetDistancePicker.h; path = Pickers/ActionSheetDistancePicker.h; sourceTree = "<group>"; };
+		F016781DC52F3BC7679FE9CE2A49301B /* icon-info@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; name = "icon-info@2x.png"; path = "Classes/Icons/icon-info@2x.png"; sourceTree = "<group>"; };
+		F0FFD262DE5213922F6F38D5727EEE85 /* ActionSheetStringPicker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ActionSheetStringPicker.h; path = Pickers/ActionSheetStringPicker.h; sourceTree = "<group>"; };
+		F85C0486ACB9C2EB42775999CBC7A17B /* FoldingTabBar.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FoldingTabBar.xcconfig; sourceTree = "<group>"; };
+		F91A7E84B2CE2274304EBE2E74506240 /* JVFloatLabeledTextField.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JVFloatLabeledTextField.xcconfig; sourceTree = "<group>"; };
+		F9DAE1F0BF768E5BFEE4EC3BED98CFD2 /* FUITextField.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FUITextField.h; path = Classes/ios/FUITextField.h; sourceTree = "<group>"; };
+		FB16A3163FDA1A24786FA06A76489E3D /* ActionSheetLocalePicker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ActionSheetLocalePicker.h; path = Pickers/ActionSheetLocalePicker.h; sourceTree = "<group>"; };
+		FB7A4239D33A78E05121AC03A537A9DC /* YALAnimatingTabBarConstants.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YALAnimatingTabBarConstants.m; path = FoldingTabBar/Constants/YALAnimatingTabBarConstants.m; sourceTree = "<group>"; };
+		FC593FE28AB189BE6336CAF7C5275C4A /* ActionSheetPicker-3.0.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "ActionSheetPicker-3.0.modulemap"; sourceTree = "<group>"; };
+		FCBD397E422C740791E01BA57BB67F5E /* TWMessageBarManager-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TWMessageBarManager-umbrella.h"; sourceTree = "<group>"; };
+		FD3C119F7264004DDA7EF31E2E215011 /* MBProgressHUD.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		FE7862F919B9D24C32D48FA220C10F7D /* flat-ui-icons-regular.ttf */ = {isa = PBXFileReference; includeInIndex = 1; name = "flat-ui-icons-regular.ttf"; path = "Resources/flat-ui-icons-regular.ttf"; sourceTree = "<group>"; };
+		FEFD5C882B378A1FB61D01084D9D2DC0 /* ActionSheetLocalePicker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ActionSheetLocalePicker.m; path = Pickers/ActionSheetLocalePicker.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		18C8035A9AEA52DCE9BC498B3CA5E7B8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4FE3FDBC52E7F08E80D9276A94461053 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		382626D02B117ED6557C981BA721AADE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				13AFE582A91494D90A0FF2434C095DF4 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5E402049C863BF5EA9D62EBFF1A1ACEC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				08D2557CF305FFB73CAD373034A4596F /* Foundation.framework in Frameworks */,
+				A30F09AD69AC7006A537B69EAB0906E0 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66076240C2ED6C56B870D99D6432B3F4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0F911518B639EDDB31521A96456C50CD /* Foundation.framework in Frameworks */,
+				5A79F43BF3D900FD1E8186E93841D280 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6E919F9572C05968DC9375DA6DF8CC14 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A53AC790EB1FCC3DA631897FDEE0FC1B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A7DC69493F7FB3FA37117495F4579BDF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5749E428BFDDB3EDA179FF0B013380D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B57774E30FD88AE26F9037E1360E947B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				98DF470CA8F6DD132AFAC1398FCD579C /* CoreGraphics.framework in Frameworks */,
+				1215629D558162CE728B27386DA02D1D /* Foundation.framework in Frameworks */,
+				DA3FBCF3B21EB18151C3BC2645107E0D /* QuartzCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C910B338ADFF1C7F2DB62EA64AF8CA57 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BFFDA5A32016CE964721B451ED2700CB /* CoreText.framework in Frameworks */,
+				409D8ED54CC607ADAE9416EFD0EADF7D /* Foundation.framework in Frameworks */,
+				FEE15B32C68F3BFE2AA4DFCC555379C0 /* QuartzCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F55CD98F7DCCBC1F0799F92387691FCC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04B293CB74CB10C685835CBD7CEE5340 /* Foundation.framework in Frameworks */,
+				132DD20D92DF64006F82BE6314B22444 /* QuartzCore.framework in Frameworks */,
+				1DA5807D9DAF60EBF9BF218B7EBF0201 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		115AB0D9B6868160BE8DFAD14BDD6A1C /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				637755A73405EDC2D1012D7B7D1CFA75 /* FlatUIKit.modulemap */,
+				D5D995CFD52775CB884F40F3E16BACFA /* FlatUIKit.xcconfig */,
+				4ADE8D0635591F2C064ABE8FBEE984ED /* FlatUIKit-dummy.m */,
+				C602335A93AB889CEDC11E3569730331 /* FlatUIKit-prefix.pch */,
+				8642A107CA3BEBF9C61CA97086E6D78B /* FlatUIKit-umbrella.h */,
+				2D443EF66A0F07E0C9837C5FB5B83537 /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/FlatUIKit";
+			sourceTree = "<group>";
+		};
+		20B56609144CE204DFA8221F742B2D76 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D2357B0F38644467A148935873DB46F1 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		32921CD8C87B3F987FE6370204E4FCB4 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				6FC533BAB1EB27646DE8EAA72ABDDAC6 /* Info.plist */,
+				9D2D7886FCD87002F6C7986D9D2CB883 /* MBProgressHUD.modulemap */,
+				17C819C5E6488A665C9774CF30DDD6CA /* MBProgressHUD.xcconfig */,
+				CCD2528D29CD2503AF113679BF7B18D4 /* MBProgressHUD-dummy.m */,
+				046681E2AF13D86766DADBB3B7696CBA /* MBProgressHUD-prefix.pch */,
+				B07C9D7AF1E58B6E3BC30880729482A6 /* MBProgressHUD-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/MBProgressHUD";
+			sourceTree = "<group>";
+		};
+		372966142590D8A6CC72E77B5E731229 /* JVFloatLabeledTextField */ = {
+			isa = PBXGroup;
+			children = (
+				4C06D946B089F259E625E4F9722F8E93 /* JVFloatLabeledTextField.h */,
+				B90A26CC76B4CFC0CCD6114FB5A95267 /* JVFloatLabeledTextField.m */,
+				B91BA045D947A39161D61FB4846B6A80 /* JVFloatLabeledTextView.h */,
+				B7A5C71D922178DCD2EC69CE78C948F4 /* JVFloatLabeledTextView.m */,
+				D3211291C5971BA1DB45CC1B4BE1F451 /* NSString+TextDirectionality.h */,
+				07481F570B08A141EB4375B6B2B5E389 /* NSString+TextDirectionality.m */,
+				9BCD8DB328A46D71F48D8FD3203E97B9 /* Support Files */,
+			);
+			name = JVFloatLabeledTextField;
+			path = JVFloatLabeledTextField;
+			sourceTree = "<group>";
+		};
+		38F24C5095C9369A0A07D79AFAB081B6 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				757864F93EE62CDFA9AEF645B2740B54 /* Pods-HotelTree */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		390C67624F73BEFE9DFD3D32E989C13B /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				FD3C119F7264004DDA7EF31E2E215011 /* MBProgressHUD.h */,
+				D83D9217BE65D402F864C228D0C00EFB /* MBProgressHUD.m */,
+				32921CD8C87B3F987FE6370204E4FCB4 /* Support Files */,
+			);
+			name = MBProgressHUD;
+			path = MBProgressHUD;
+			sourceTree = "<group>";
+		};
+		3FE8C0FDFFB3275E85E3A646E911162D /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				A3675D7F492803674F79F082FDB99A38 /* CSStickyHeaderFlowLayout.modulemap */,
+				1C79FDEAF0AF8DB96D587524742895EA /* CSStickyHeaderFlowLayout.xcconfig */,
+				7D53849AAC2EF0CBE267211F40FAC543 /* CSStickyHeaderFlowLayout-dummy.m */,
+				5565B7391D0A5FD681634B569F0AF681 /* CSStickyHeaderFlowLayout-prefix.pch */,
+				067A276FABE0C706F7AD3EF7CA9A6F66 /* CSStickyHeaderFlowLayout-umbrella.h */,
+				43A3A3A6A5E1C634C86D1D999FD14B7A /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/CSStickyHeaderFlowLayout";
+			sourceTree = "<group>";
+		};
+		46E88065B412347396787A274676D3BA /* ActionSheetPicker-3.0 */ = {
+			isa = PBXGroup;
+			children = (
+				CFB411388CA45E0DD3F0E8FC5DF67420 /* AbstractActionSheetPicker.h */,
+				535A7C5B1AB9848BA0A10113D21D5F2B /* AbstractActionSheetPicker.m */,
+				EB47812B4F2C1F3ED806A3E2DA1BB4B2 /* ActionSheetCustomPicker.h */,
+				CD1EC673DBFB956F0CE7BEDA4516080C /* ActionSheetCustomPicker.m */,
+				3715D08A445B962C77F11D00AAB8F7D8 /* ActionSheetCustomPickerDelegate.h */,
+				BC44ADECA765256E1BB8BBDC964968FF /* ActionSheetDatePicker.h */,
+				B75CFEEAB2F5599EA724ED2BFBC241BF /* ActionSheetDatePicker.m */,
+				EF888955EC805BA07378FD9CD4E3E61A /* ActionSheetDistancePicker.h */,
+				9A4537E726C7411D401773F1B324B960 /* ActionSheetDistancePicker.m */,
+				FB16A3163FDA1A24786FA06A76489E3D /* ActionSheetLocalePicker.h */,
+				FEFD5C882B378A1FB61D01084D9D2DC0 /* ActionSheetLocalePicker.m */,
+				EEE46F98C2DF764FB98A211325276BD0 /* ActionSheetMultipleStringPicker.h */,
+				44E2C8A15E8187BFA0668EBC2D7BC3A0 /* ActionSheetMultipleStringPicker.m */,
+				AB70FD016ADB07FD11ADDF88611CA096 /* ActionSheetPicker.h */,
+				F0FFD262DE5213922F6F38D5727EEE85 /* ActionSheetStringPicker.h */,
+				5593155A6A0CEA770F097844F595D92F /* ActionSheetStringPicker.m */,
+				232DE1D5E72649E528EE4885675FAA5C /* DistancePickerView.h */,
+				0C257AB1340E6A14E57CE73ECCEE4959 /* DistancePickerView.m */,
+				7722C51686E306EC30E0101B194B2AF1 /* SWActionSheet.h */,
+				17AABE0DDF95B8F6E544376E04F7F293 /* SWActionSheet.m */,
+				D28BFF9F81B3D0B42A59183EAD7FFFAA /* Support Files */,
+			);
+			name = "ActionSheetPicker-3.0";
+			path = "ActionSheetPicker-3.0";
+			sourceTree = "<group>";
+		};
+		5CB6A88417AAF7340EA8E0F2051A256C /* FlatUIKit */ = {
+			isa = PBXGroup;
+			children = (
+				952AA59157A2B225C5DC9787702BF91B /* FlatUIKit.h */,
+				E8207E1A973E95C133D56B6D76741092 /* FUIAlertView.h */,
+				5FB0D1E7FBC055F49CF208F3F003154A /* FUIAlertView.m */,
+				64C82697A28F19279F016013ABC91FE7 /* FUIButton.h */,
+				623508160711CDC39B53DFDCA7F67E29 /* FUIButton.m */,
+				852A0376513099448E94B0A5427E58D1 /* FUICellBackgroundView.h */,
+				57B05BECCBC0E7B489BA1788D6793D97 /* FUICellBackgroundView.m */,
+				CBAA6E5F18340F8CF8240B6403CD8B68 /* FUIPopoverBackgroundView.h */,
+				CE855EB428FF1ABF62F3BB07B79E6998 /* FUIPopoverBackgroundView.m */,
+				AEBBDA8DCF2970AAC242DA1A4D0AE4DC /* FUISegmentedControl.h */,
+				5FDA6F711B007B5F3077451434AFA63F /* FUISegmentedControl.m */,
+				671F1FFDBB419A28136DBD09CE819798 /* FUISwitch.h */,
+				CBA3152332EE4DBDD6F23111623E6686 /* FUISwitch.m */,
+				F9DAE1F0BF768E5BFEE4EC3BED98CFD2 /* FUITextField.h */,
+				817706D2BA7EC8E9EDF57E06EE3E7C7C /* FUITextField.m */,
+				8A9AD8B6F64B884D7EB2EC601926FAB9 /* NSString+Icons.h */,
+				D16B76A5C05896AB8304E5E8F78C6FB2 /* NSString+Icons.m */,
+				D62F2EA4B55A4B43C940D2714E79C2F2 /* UIBarButtonItem+FlatUI.h */,
+				5D9DCF145266637D1132710EB09DF2B4 /* UIBarButtonItem+FlatUI.m */,
+				83D0E84A99F6D5919FB43158AA94D55F /* UIColor+FlatUI.h */,
+				0B348BD4969568F46A42F0E7EBE7B3BF /* UIColor+FlatUI.m */,
+				0435C6051B094FF1B45510A3216A1F56 /* UIFont+FlatUI.h */,
+				CBC8355D850AE85FEBFACA40D8B35D76 /* UIFont+FlatUI.m */,
+				A8260D6E02191FD20DF460EF3669B1D3 /* UIImage+FlatUI.h */,
+				CFF1A8230926502EA83A2F0277CE02C8 /* UIImage+FlatUI.m */,
+				5974D58B6A2C9E84B0D0CB0FEAD2B088 /* UINavigationBar+FlatUI.h */,
+				0E7B337EA66FFDAB5D5C3EE3B3654423 /* UINavigationBar+FlatUI.m */,
+				31925419C773B731303E663791B3F7CC /* UIPopoverController+FlatUI.h */,
+				22ACE8FC402BBD604F378B09A27A1D96 /* UIPopoverController+FlatUI.m */,
+				2B4DD9CF7BDBEBEF002ADE008B291645 /* UIProgressView+FlatUI.h */,
+				472A9EDC4AD5DC603CBB68ECC0D8BEDD /* UIProgressView+FlatUI.m */,
+				154FE7241C2F4E1A21D47947A4870B5B /* UISlider+FlatUI.h */,
+				996A619D7285EA3FC515CB3895D8C4A9 /* UISlider+FlatUI.m */,
+				92F6589113458997A2F4862843661C60 /* UIStepper+FlatUI.h */,
+				47E020E530E2A743CD63C6C7C0A21BFD /* UIStepper+FlatUI.m */,
+				05FCAFFD3381E4F6F4F0F982B5C81C79 /* UITabBar+FlatUI.h */,
+				3EADC3A03C565B0AD0A54A4DEC7E988F /* UITabBar+FlatUI.m */,
+				8466354B608E8154036F4496833FC433 /* UITableViewCell+FlatUI.h */,
+				90B607D3D719E91EDEB98CE606432554 /* UITableViewCell+FlatUI.m */,
+				A3BD0C7DEF9D2C6CD2E138CDD5CF43BB /* UIToolbar+FlatUI.h */,
+				D7C60BBE6761E3D0C6795CA68689B1FE /* UIToolbar+FlatUI.m */,
+				BAFBCFAA40B0754F6561FB949C9D801E /* Resources */,
+				115AB0D9B6868160BE8DFAD14BDD6A1C /* Support Files */,
+			);
+			name = FlatUIKit;
+			path = FlatUIKit;
+			sourceTree = "<group>";
+		};
+		757864F93EE62CDFA9AEF645B2740B54 /* Pods-HotelTree */ = {
+			isa = PBXGroup;
+			children = (
+				BCFEFA595D82AB84A6804AEE25A10889 /* Info.plist */,
+				35FFF7FCFEB42B381A4CF43DAF2CD0FD /* Pods-HotelTree.modulemap */,
+				6F7A80A98D3C6304D7565968E0852311 /* Pods-HotelTree-acknowledgements.markdown */,
+				99B354371E3622CF5AF80AF897BDBF9F /* Pods-HotelTree-acknowledgements.plist */,
+				AEB8EC0DC2CF4D37517D51FD88582536 /* Pods-HotelTree-dummy.m */,
+				912EB839F2EFBB6365C3500B15D6A3D1 /* Pods-HotelTree-frameworks.sh */,
+				A346262D84D518879E1DBDF723D8EA14 /* Pods-HotelTree-resources.sh */,
+				DD882A543BB3460CD9409B96D320FE7A /* Pods-HotelTree-umbrella.h */,
+				0A47A1FBA1DE64010E314DA3168162AA /* Pods-HotelTree.debug.xcconfig */,
+				5BE716D16CEAD700CBAF7D518675299F /* Pods-HotelTree.release.xcconfig */,
+			);
+			name = "Pods-HotelTree";
+			path = "Target Support Files/Pods-HotelTree";
+			sourceTree = "<group>";
+		};
+		772266F97EE164A1AF042B6B79FEF594 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				46E88065B412347396787A274676D3BA /* ActionSheetPicker-3.0 */,
+				DB202379A9859BFE41EFB39370084B37 /* CSStickyHeaderFlowLayout */,
+				5CB6A88417AAF7340EA8E0F2051A256C /* FlatUIKit */,
+				DADA77DD7C3E4FA9F3EF88EBC9A17E86 /* FoldingTabBar */,
+				372966142590D8A6CC72E77B5E731229 /* JVFloatLabeledTextField */,
+				390C67624F73BEFE9DFD3D32E989C13B /* MBProgressHUD */,
+				D3E825968DB0408D8D78BCEE061E93A7 /* TWMessageBarManager */,
+				F83ACD33F00316B1BE054B7B9AE52CB0 /* UITextField+Shake */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				20B56609144CE204DFA8221F742B2D76 /* Frameworks */,
+				772266F97EE164A1AF042B6B79FEF594 /* Pods */,
+				CBF9381DDFD952136CD9294F9DE719D5 /* Products */,
+				38F24C5095C9369A0A07D79AFAB081B6 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		9BCD8DB328A46D71F48D8FD3203E97B9 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				33D24C25CF5CC4D76628945065C5633D /* Info.plist */,
+				DE5AD2B3A2D974153EBF3D21F75E89F5 /* JVFloatLabeledTextField.modulemap */,
+				F91A7E84B2CE2274304EBE2E74506240 /* JVFloatLabeledTextField.xcconfig */,
+				B502EAE03C45F94DA4634322085E2EE0 /* JVFloatLabeledTextField-dummy.m */,
+				01A030A5DDE99418973C5EBD2879B8FE /* JVFloatLabeledTextField-prefix.pch */,
+				741DDD88D3AFA4966245E17D611692ED /* JVFloatLabeledTextField-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/JVFloatLabeledTextField";
+			sourceTree = "<group>";
+		};
+		AF99567740C4687E38B0A7CB0524EDDF /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				2EDAE2DB63D18C3F459822ACCC2193E0 /* Info.plist */,
+				E90EC6D1B5033B7588F327349D926D9A /* UITextField+Shake.modulemap */,
+				CEDAC64B766D7E04728365F8E3A779CF /* UITextField+Shake.xcconfig */,
+				BFAE99BF1CAC5716EAF8C743482E991B /* UITextField+Shake-dummy.m */,
+				4550A60D927479AC52980D893C883A50 /* UITextField+Shake-prefix.pch */,
+				00EA2D6C8B6ECD378E7C23C6961F2F84 /* UITextField+Shake-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/UITextField+Shake";
+			sourceTree = "<group>";
+		};
+		BAFBCFAA40B0754F6561FB949C9D801E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FE7862F919B9D24C32D48FA220C10F7D /* flat-ui-icons-regular.ttf */,
+				2C0DAF85426645FF284024E9C01F7A33 /* Lato-Bold.ttf */,
+				63C52E55A1426B61955B10A455FD47A4 /* Lato-Italic.ttf */,
+				763503BA397872CA7581C6B1B5661C69 /* Lato-Light.ttf */,
+				50160A0B1B15C8A7BF652D80B3EEA993 /* Lato-Regular.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		C4070D0084CAA1FE1DC20FA842975491 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				E1AE62A0506C46B2A4BF3FE6E725CBE3 /* FoldingTabBar.modulemap */,
+				F85C0486ACB9C2EB42775999CBC7A17B /* FoldingTabBar.xcconfig */,
+				0872631F58B081C105D5503A83120893 /* FoldingTabBar-dummy.m */,
+				A83BDE20774C8B88A9C4F001114EAAAA /* FoldingTabBar-prefix.pch */,
+				47192F1F51399DD1305C9363599FC341 /* FoldingTabBar-umbrella.h */,
+				0C5464CADBBB1D37E3DF56EAC820506F /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/FoldingTabBar";
+			sourceTree = "<group>";
+		};
+		CBF9381DDFD952136CD9294F9DE719D5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3732AB3A201FFAA30DC5E4B34B99B633 /* ActionSheetPicker_3_0.framework */,
+				378908305CEF6805EF39C5B138BA35A3 /* CSStickyHeaderFlowLayout.framework */,
+				6FCEF8AD47F108BA4CBEB8305DC19DBA /* FlatUIKit.framework */,
+				47E345075BD1252B415BB41398A44010 /* FoldingTabBar.framework */,
+				B4741204895C8F4A69C651FD51E8C23E /* JVFloatLabeledTextField.framework */,
+				10DE7BDEDF798806BA5E52F2E227EBAA /* MBProgressHUD.framework */,
+				84DCF495211521A5AF05A7430FFE47C1 /* Pods_HotelTree.framework */,
+				44547D11CB08EA54DA90B87DA67306DA /* TWMessageBarManager.framework */,
+				B01650E1A5AF374E074A4E883B5293BA /* UITextField_Shake.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D2357B0F38644467A148935873DB46F1 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				29AA6E4C10206C3EE9ADFA1D694F1143 /* CoreGraphics.framework */,
+				755FAE73277FCB766461DDF0A4841EC5 /* CoreText.framework */,
+				30A48DB1C8052F1B842C0010D6FE3264 /* Foundation.framework */,
+				A9584A1F2D6F127A85944AD33BEA278D /* QuartzCore.framework */,
+				85FDCAA1EADCFD367E1698CDE25DE0DF /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		D28BFF9F81B3D0B42A59183EAD7FFFAA /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				FC593FE28AB189BE6336CAF7C5275C4A /* ActionSheetPicker-3.0.modulemap */,
+				93CD3382FCCF9A75FDAB0CDEDEB314E7 /* ActionSheetPicker-3.0.xcconfig */,
+				BC17911BF674A919077C4369055926A1 /* ActionSheetPicker-3.0-dummy.m */,
+				2F59F3F6160A820FEF30D09065371F69 /* ActionSheetPicker-3.0-prefix.pch */,
+				15B4481017DA8B8FAC14FFF8A5E0D258 /* ActionSheetPicker-3.0-umbrella.h */,
+				1D571FD4481DA16E5F14353F74D4BF5C /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/ActionSheetPicker-3.0";
+			sourceTree = "<group>";
+		};
+		D3E825968DB0408D8D78BCEE061E93A7 /* TWMessageBarManager */ = {
+			isa = PBXGroup;
+			children = (
+				0F611FDAB8D56F1A3B42FFBA1A1943BC /* TWMessageBarManager.h */,
+				74C172A82D2EBDDD4FA0E6E4103FA672 /* TWMessageBarManager.m */,
+				FA48837470089299178B64A41A5A770E /* Resources */,
+				F0BDD890EF5C4B1F4341C82B83ACE2E9 /* Support Files */,
+			);
+			name = TWMessageBarManager;
+			path = TWMessageBarManager;
+			sourceTree = "<group>";
+		};
+		DADA77DD7C3E4FA9F3EF88EBC9A17E86 /* FoldingTabBar */ = {
+			isa = PBXGroup;
+			children = (
+				2BE63E83739A186D8BEDCDA9BB2EF670 /* CAAnimation+YALTabBarViewAnimations.h */,
+				AD75F9C9544C12A7A8481672C8F16B99 /* CAAnimation+YALTabBarViewAnimations.m */,
+				8EF13236C2EA3737616ED6D84C4F098E /* CATransaction+TransactionWithAnimationsAndCompletion.h */,
+				CA2D86A836DFB80CC740DBEE5D23D3B1 /* CATransaction+TransactionWithAnimationsAndCompletion.m */,
+				ADB44DB0C9BC11A79AC3694662E80026 /* FoldingTabBar.h */,
+				B668CDAAAAD356B77655FC99A516425B /* Info.plist */,
+				CF9C2EE92A7FB48995DE8B2330C49EED /* YALAnimatingTabBarConstants.h */,
+				FB7A4239D33A78E05121AC03A537A9DC /* YALAnimatingTabBarConstants.m */,
+				B8DE9045BD0B58DFE2E42227F5BC774F /* YALCustomHeightTabBar.h */,
+				96C1FA138EAB4AF8B33CFC683315C2BF /* YALCustomHeightTabBar.m */,
+				4CBA8F8FB240EF006A359251E84E4478 /* YALFoldingTabBar.h */,
+				A99523F223E5141AD29EAE65ED0989FE /* YALFoldingTabBar.m */,
+				89FE2EB080458C33D9642BB7C9E72E41 /* YALFoldingTabBarController.h */,
+				02C9374A40B37BD9339965D24A7669BA /* YALFoldingTabBarController.m */,
+				56910A9F8B1676879938004AF38F3F2D /* YALSpringAnimation.h */,
+				EC1D1E5789A0BBE1FA4F09401D53FCAF /* YALSpringAnimation.m */,
+				8A9042305F1BFEFD033ADEE3771B9725 /* YALTabBarItem.h */,
+				9F140D5F7C146EC8AF46328222F69C22 /* YALTabBarItem.m */,
+				C4070D0084CAA1FE1DC20FA842975491 /* Support Files */,
+			);
+			name = FoldingTabBar;
+			path = FoldingTabBar;
+			sourceTree = "<group>";
+		};
+		DB202379A9859BFE41EFB39370084B37 /* CSStickyHeaderFlowLayout */ = {
+			isa = PBXGroup;
+			children = (
+				7A2F9F809ED2B7DB31645357B4A84F8F /* CSStickyHeaderFlowLayout.h */,
+				53650E643843D8022EFB8A3A8B572056 /* CSStickyHeaderFlowLayout.m */,
+				5B891BE4942239D103734434314563D7 /* CSStickyHeaderFlowLayoutAttributes.h */,
+				EF512473DC8D95694FC3F71FD3A7F1FC /* CSStickyHeaderFlowLayoutAttributes.m */,
+				3FE8C0FDFFB3275E85E3A646E911162D /* Support Files */,
+			);
+			name = CSStickyHeaderFlowLayout;
+			path = CSStickyHeaderFlowLayout;
+			sourceTree = "<group>";
+		};
+		F0BDD890EF5C4B1F4341C82B83ACE2E9 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				A95B1E84A36A0A3D7408E28DC81DB2D7 /* Info.plist */,
+				7AF33D7370634050734597D644827D37 /* TWMessageBarManager.modulemap */,
+				C33174C5B7CEAD99F40C2E1E89127087 /* TWMessageBarManager.xcconfig */,
+				01BC141C4FCF2BF193F928722C79B6BE /* TWMessageBarManager-dummy.m */,
+				DD1227AAB3DF4A26ADEA60F5656204CC /* TWMessageBarManager-prefix.pch */,
+				FCBD397E422C740791E01BA57BB67F5E /* TWMessageBarManager-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/TWMessageBarManager";
+			sourceTree = "<group>";
+		};
+		F83ACD33F00316B1BE054B7B9AE52CB0 /* UITextField+Shake */ = {
+			isa = PBXGroup;
+			children = (
+				15A4A63424E5AA9A32B70000EEB59575 /* UITextField+Shake.h */,
+				754374A72A2297FE289B2C4CEAF126D1 /* UITextField+Shake.m */,
+				AF99567740C4687E38B0A7CB0524EDDF /* Support Files */,
+			);
+			name = "UITextField+Shake";
+			path = "UITextField+Shake";
+			sourceTree = "<group>";
+		};
+		FA48837470089299178B64A41A5A770E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				417A4B28C4ECE5D47188769BC34D167E /* icon-error.png */,
+				65D185CD07C1766496DB62A599D76C7A /* icon-error@2x.png */,
+				E1AEACD9ECA4E2D52C27F5B12D8334D5 /* icon-info.png */,
+				F016781DC52F3BC7679FE9CE2A49301B /* icon-info@2x.png */,
+				C3372E593BADEC7B55BE86108EB3EBD2 /* icon-success.png */,
+				0075F23DA01F48B960BA28A2C5AC2C7A /* icon-success@2x.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		197B7877D5D346F405BDD059EF96DBDC /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28A794912ED1E06B05D96DF5ED0AED19 /* MBProgressHUD-umbrella.h in Headers */,
+				A5BF8DBDD8660DBCFE712657F3D82BDA /* MBProgressHUD.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		43BEF938524B578EC44A43159BF11F6F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B9679FD962A5F089FAA8359F2E3A27B1 /* UITextField+Shake-umbrella.h in Headers */,
+				89914EE77A9E7ABD97C50E880C1F8121 /* UITextField+Shake.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		670E27EB325873D40494735697169E71 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				499B276EE19E74DE11DEE12934F93BAD /* FlatUIKit-umbrella.h in Headers */,
+				EFFDE961D8196565BBB7871BCDB7A9FA /* FlatUIKit.h in Headers */,
+				65E2EB7E21CF52B33AC4D0569C4349F9 /* FUIAlertView.h in Headers */,
+				277B7107A41806303867B100AD8EA057 /* FUIButton.h in Headers */,
+				90CB9CA50A1275E3BAB44A5502C636F1 /* FUICellBackgroundView.h in Headers */,
+				46A3EDA4B5B50C63DCAF229BBCB8F314 /* FUIPopoverBackgroundView.h in Headers */,
+				F08BAFCDF44D340D8C271DDD345D86CD /* FUISegmentedControl.h in Headers */,
+				732E8B35C62650A698A3E6496401E4DA /* FUISwitch.h in Headers */,
+				29CBFCF1B5E74E159A471AED05F7FFE4 /* FUITextField.h in Headers */,
+				62255E5D1584217D13F356F89BAC9FDF /* NSString+Icons.h in Headers */,
+				3A3D2DFE234424887CA87ABB47C0515F /* UIBarButtonItem+FlatUI.h in Headers */,
+				8541336BD3FA3A657D91AB19D3975AF4 /* UIColor+FlatUI.h in Headers */,
+				7F9B62B15F30E18DC38110B194EBA18E /* UIFont+FlatUI.h in Headers */,
+				B6B076C50EBCCB5C1DE7D48159A80B64 /* UIImage+FlatUI.h in Headers */,
+				3C980924C8CFE8C8B6F2A28AF9D054AC /* UINavigationBar+FlatUI.h in Headers */,
+				42067963E9E1DC388FAA3A518B53AB10 /* UIPopoverController+FlatUI.h in Headers */,
+				8C314B6FAA78EDAC2A7A82FDFE058806 /* UIProgressView+FlatUI.h in Headers */,
+				F2C5F382284042577550A3436E0A798B /* UISlider+FlatUI.h in Headers */,
+				35DC0B35AE97EFD533FDC3C99028CC8B /* UIStepper+FlatUI.h in Headers */,
+				3FC285584A4A7DBBA4C1E132634EC97A /* UITabBar+FlatUI.h in Headers */,
+				D7B8AB19FF9BFB1D1D62E18CDF4B7D6C /* UITableViewCell+FlatUI.h in Headers */,
+				D2D824F17FFD86540CE49319C6E1B001 /* UIToolbar+FlatUI.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7168AF4B49EE1459BCE8AC958F7EC526 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2680FB2A9AAFE79796C23A20390CEF45 /* AbstractActionSheetPicker.h in Headers */,
+				90E3389D33DD00DE304548BE9C52C69F /* ActionSheetCustomPicker.h in Headers */,
+				AE84E0341C26A9B5C8E1501C8E8AAC8F /* ActionSheetCustomPickerDelegate.h in Headers */,
+				9BC276383ED044BB0926AFDFD73F928E /* ActionSheetDatePicker.h in Headers */,
+				1648AB9E52071D70CD79280AB21C94D1 /* ActionSheetDistancePicker.h in Headers */,
+				82DB07E1965CC9FFA0340EDA2C5A05A0 /* ActionSheetLocalePicker.h in Headers */,
+				6C16BD3BCB1B65194E7CEA5CF15AD446 /* ActionSheetMultipleStringPicker.h in Headers */,
+				83678861FC71A2BE986560E60D265F1C /* ActionSheetPicker-3.0-umbrella.h in Headers */,
+				9B2B8491E6B1B8EA1C9ACD37341C726B /* ActionSheetPicker.h in Headers */,
+				BDBFA441010D34FB51DC32F28314AD8D /* ActionSheetStringPicker.h in Headers */,
+				CA068FC25E80824549668A53EC9379EC /* DistancePickerView.h in Headers */,
+				0E3BFC96C6A7CCADAF3DA6C3C80F35EC /* SWActionSheet.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9724938FC141852AC9CEB4DD375EAC2B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				476187CDF55CEE0C4B66ABD3B13FCB81 /* CSStickyHeaderFlowLayout-umbrella.h in Headers */,
+				765A56E784FF1BA9A7DA3FBF3FF41BED /* CSStickyHeaderFlowLayout.h in Headers */,
+				5C0B77991C71BDE850A19F1D1C66BE13 /* CSStickyHeaderFlowLayoutAttributes.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B1693C9073C80C3C23D870E146BB68E9 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2CF987D2DC59DA41EB62817A07B6712B /* JVFloatLabeledTextField-umbrella.h in Headers */,
+				F9115057BD0EF647E0EAF0E014F84635 /* JVFloatLabeledTextField.h in Headers */,
+				68B544E41A8477AA16E44E9C0D5F232C /* JVFloatLabeledTextView.h in Headers */,
+				6D7B8C5BCEF514CCE43E44891B3126C3 /* NSString+TextDirectionality.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D24F6409FC8D0E05625C3B73967F2F86 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				741983CCBEF01BA7DD62766072E7DD53 /* Pods-HotelTree-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E8D26E07ED9F340535A6CA4475D523CA /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5EFDE5E54556E8C816ED5796F5BB8A8A /* TWMessageBarManager-umbrella.h in Headers */,
+				11B798742F80890399CB4D80A75675E5 /* TWMessageBarManager.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE03EE48D2193C73336EBA02BE00DF1B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D2F5530BBEF88FB05CEBE926CCCB0B01 /* CAAnimation+YALTabBarViewAnimations.h in Headers */,
+				D169D54688B8D254B5826D76311538A1 /* CATransaction+TransactionWithAnimationsAndCompletion.h in Headers */,
+				EA80CFBC3F3ED562D0EA0F2828201266 /* FoldingTabBar-umbrella.h in Headers */,
+				F919D7CC8F5E3F73A10DDB3482EB0272 /* FoldingTabBar.h in Headers */,
+				19039C51FE9526BDD9ECC5EC818A92DD /* YALAnimatingTabBarConstants.h in Headers */,
+				CBF4B37EF6A619A0FB3DE682A8ED7DC4 /* YALCustomHeightTabBar.h in Headers */,
+				B3C1D0154CF33127F568EC90CD9EBFEA /* YALFoldingTabBar.h in Headers */,
+				09527A4179FF2B4D57B7C77E1C82892A /* YALFoldingTabBarController.h in Headers */,
+				2F9C040A5C853D6D925055A88E6C008B /* YALSpringAnimation.h in Headers */,
+				C29FFC8DEC649DA95FE2916BE753FEA4 /* YALTabBarItem.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		0EA69E64579562F4220AC4B365321FCA /* UITextField+Shake */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 730BAD4F35EBE2A0E849A66B66CB7100 /* Build configuration list for PBXNativeTarget "UITextField+Shake" */;
+			buildPhases = (
+				3CF0A41A85118ADF6019A0F3A06F4677 /* Sources */,
+				382626D02B117ED6557C981BA721AADE /* Frameworks */,
+				43BEF938524B578EC44A43159BF11F6F /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "UITextField+Shake";
+			productName = "UITextField+Shake";
+			productReference = B01650E1A5AF374E074A4E883B5293BA /* UITextField_Shake.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		23EEF3C1D5525ED6D9D5A6414DD81BFA /* FoldingTabBar */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7EF6753966C20C30DEA67F9188B841D6 /* Build configuration list for PBXNativeTarget "FoldingTabBar" */;
+			buildPhases = (
+				84058C9D8AAF8D476D8C594E23630227 /* Sources */,
+				F55CD98F7DCCBC1F0799F92387691FCC /* Frameworks */,
+				EE03EE48D2193C73336EBA02BE00DF1B /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FoldingTabBar;
+			productName = FoldingTabBar;
+			productReference = 47E345075BD1252B415BB41398A44010 /* FoldingTabBar.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		2A4448146C785C426971111F117D773C /* JVFloatLabeledTextField */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8C414E0068C63C34D8BEC8252D016A1D /* Build configuration list for PBXNativeTarget "JVFloatLabeledTextField" */;
+			buildPhases = (
+				331CAB23E830D1AA0768D9AC301E22B6 /* Sources */,
+				5E402049C863BF5EA9D62EBFF1A1ACEC /* Frameworks */,
+				B1693C9073C80C3C23D870E146BB68E9 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JVFloatLabeledTextField;
+			productName = JVFloatLabeledTextField;
+			productReference = B4741204895C8F4A69C651FD51E8C23E /* JVFloatLabeledTextField.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		41FA54D12162DAD51D02FC58A2CD5034 /* MBProgressHUD */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CC1874913BA1F82C4953C3C7F551AB22 /* Build configuration list for PBXNativeTarget "MBProgressHUD" */;
+			buildPhases = (
+				FE8E0446C3B3B52779E8DE373E495A61 /* Sources */,
+				B57774E30FD88AE26F9037E1360E947B /* Frameworks */,
+				197B7877D5D346F405BDD059EF96DBDC /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MBProgressHUD;
+			productName = MBProgressHUD;
+			productReference = 10DE7BDEDF798806BA5E52F2E227EBAA /* MBProgressHUD.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		4C1BEA4CD86D4494B606051FB99E7119 /* CSStickyHeaderFlowLayout */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E4D759C733A5577C80B02E25B0F93FF4 /* Build configuration list for PBXNativeTarget "CSStickyHeaderFlowLayout" */;
+			buildPhases = (
+				7A571DE00E577949A97F84FAA8F0CD8A /* Sources */,
+				18C8035A9AEA52DCE9BC498B3CA5E7B8 /* Frameworks */,
+				9724938FC141852AC9CEB4DD375EAC2B /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CSStickyHeaderFlowLayout;
+			productName = CSStickyHeaderFlowLayout;
+			productReference = 378908305CEF6805EF39C5B138BA35A3 /* CSStickyHeaderFlowLayout.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		756C368C8C614D7C9E6F350B66E64780 /* Pods-HotelTree */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 99D8B73B0EC83D3A8CF74AD9103B0991 /* Build configuration list for PBXNativeTarget "Pods-HotelTree" */;
+			buildPhases = (
+				DAEB1956F35A77608FB2D570B9551C0F /* Sources */,
+				A7DC69493F7FB3FA37117495F4579BDF /* Frameworks */,
+				D24F6409FC8D0E05625C3B73967F2F86 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FE0FD218FEC6BB3BD0BD77E054542A8B /* PBXTargetDependency */,
+				C20FCBB61D8A2DAF0BB9654DCD64A2CD /* PBXTargetDependency */,
+				8DB9A3B27B1DB65F5E3E3E431CFF5795 /* PBXTargetDependency */,
+				018341AF6B7F76D48E0ECA6E2F1D4445 /* PBXTargetDependency */,
+				7CB3986CFC8F20363520B156120E564D /* PBXTargetDependency */,
+				692A3C5535F4961DEC47D271BA131E4D /* PBXTargetDependency */,
+				9B70D149D05B840D84D157B5536160F1 /* PBXTargetDependency */,
+				64180511BBEA1CBD6F890D52A517B7F5 /* PBXTargetDependency */,
+			);
+			name = "Pods-HotelTree";
+			productName = "Pods-HotelTree";
+			productReference = 84DCF495211521A5AF05A7430FFE47C1 /* Pods_HotelTree.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		965699190112DDBD9B7864D091660DBC /* ActionSheetPicker-3.0 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7E127E32D0465A08437982F8B2A3077E /* Build configuration list for PBXNativeTarget "ActionSheetPicker-3.0" */;
+			buildPhases = (
+				93F271AD7E26CF5BCFADCFB7A504897D /* Sources */,
+				66076240C2ED6C56B870D99D6432B3F4 /* Frameworks */,
+				7168AF4B49EE1459BCE8AC958F7EC526 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ActionSheetPicker-3.0";
+			productName = "ActionSheetPicker-3.0";
+			productReference = 3732AB3A201FFAA30DC5E4B34B99B633 /* ActionSheetPicker_3_0.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		B0F1D8B919EFE8BD20DCFBB4BE917267 /* TWMessageBarManager */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6AC669E1FCD44313E8138D7064D36398 /* Build configuration list for PBXNativeTarget "TWMessageBarManager" */;
+			buildPhases = (
+				22F0D7A146FC0579C8A0566676D3077F /* Sources */,
+				6E919F9572C05968DC9375DA6DF8CC14 /* Frameworks */,
+				E8D26E07ED9F340535A6CA4475D523CA /* Headers */,
+				F36838DB50FAC412086A52B44C1DB873 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TWMessageBarManager;
+			productName = TWMessageBarManager;
+			productReference = 44547D11CB08EA54DA90B87DA67306DA /* TWMessageBarManager.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		D88D87F9C08CC6014A19D5865226133B /* FlatUIKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 26CCCD51C100FAEF10DF7F47E354178D /* Build configuration list for PBXNativeTarget "FlatUIKit" */;
+			buildPhases = (
+				D64E74B976DE8444020910368EC52BF1 /* Sources */,
+				C910B338ADFF1C7F2DB62EA64AF8CA57 /* Frameworks */,
+				670E27EB325873D40494735697169E71 /* Headers */,
+				E70416119782FBEA94A08CE885326E4D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FlatUIKit;
+			productName = FlatUIKit;
+			productReference = 6FCEF8AD47F108BA4CBEB8305DC19DBA /* FlatUIKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = CBF9381DDFD952136CD9294F9DE719D5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				965699190112DDBD9B7864D091660DBC /* ActionSheetPicker-3.0 */,
+				4C1BEA4CD86D4494B606051FB99E7119 /* CSStickyHeaderFlowLayout */,
+				D88D87F9C08CC6014A19D5865226133B /* FlatUIKit */,
+				23EEF3C1D5525ED6D9D5A6414DD81BFA /* FoldingTabBar */,
+				2A4448146C785C426971111F117D773C /* JVFloatLabeledTextField */,
+				41FA54D12162DAD51D02FC58A2CD5034 /* MBProgressHUD */,
+				756C368C8C614D7C9E6F350B66E64780 /* Pods-HotelTree */,
+				B0F1D8B919EFE8BD20DCFBB4BE917267 /* TWMessageBarManager */,
+				0EA69E64579562F4220AC4B365321FCA /* UITextField+Shake */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E70416119782FBEA94A08CE885326E4D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9339894BFFC1FA62DDF64A7DA0433770 /* flat-ui-icons-regular.ttf in Resources */,
+				E2E30634F3C390BEDFA552FAE81C0D24 /* Lato-Bold.ttf in Resources */,
+				BDD1261B8BF3BD4D58EDA45AB884897B /* Lato-Italic.ttf in Resources */,
+				247927BBB9CAA77E5BB6D524BE442837 /* Lato-Light.ttf in Resources */,
+				199D3A62C22D95D1CCC0543B698DCC11 /* Lato-Regular.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F36838DB50FAC412086A52B44C1DB873 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				315EEFCFBE95D9EFCBD8BC57E2095C55 /* icon-error.png in Resources */,
+				63991EEBDCB928BC7B8E70759251896F /* icon-error@2x.png in Resources */,
+				0D3D6358B20579739131C2130E4D6235 /* icon-info.png in Resources */,
+				04C27F370851E8E8D45E079F05C525DA /* icon-info@2x.png in Resources */,
+				AA4C8EAFBB981B028BBB967383A46524 /* icon-success.png in Resources */,
+				4DD7BBF44076B323D23404F29A411A4D /* icon-success@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		22F0D7A146FC0579C8A0566676D3077F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E0FC296EA0550509B056B86DF80ED21 /* TWMessageBarManager-dummy.m in Sources */,
+				A63861D7A91EEEA1DD71362F36B58C62 /* TWMessageBarManager.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		331CAB23E830D1AA0768D9AC301E22B6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				224A85932487353D4FEB41D97AAA1273 /* JVFloatLabeledTextField-dummy.m in Sources */,
+				F4EBD72886837777AA1E6DF34E9610C9 /* JVFloatLabeledTextField.m in Sources */,
+				36A8635ACD8A411AA01830728549B534 /* JVFloatLabeledTextView.m in Sources */,
+				9A0FB2C71A306631C00AF04BE4DA3A76 /* NSString+TextDirectionality.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3CF0A41A85118ADF6019A0F3A06F4677 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				994F1F07164CE924A946C06310C114F8 /* UITextField+Shake-dummy.m in Sources */,
+				2864A54F4B5E0E28BA772871BEDDB484 /* UITextField+Shake.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7A571DE00E577949A97F84FAA8F0CD8A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				85BA12D4F1115BF8C1BFA8E4DBE79CC6 /* CSStickyHeaderFlowLayout-dummy.m in Sources */,
+				D6305F4FE3FA9C1B8D446EAE97383F89 /* CSStickyHeaderFlowLayout.m in Sources */,
+				0585263BE777243BAB3FB7FDE3D6A457 /* CSStickyHeaderFlowLayoutAttributes.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84058C9D8AAF8D476D8C594E23630227 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				80AF743E03C7C5CF6E30C26595CC56A1 /* CAAnimation+YALTabBarViewAnimations.m in Sources */,
+				8E21E19BBCA068E4661C503DAEA0E000 /* CATransaction+TransactionWithAnimationsAndCompletion.m in Sources */,
+				10B5BDA1193A5ABD5865175BA022F5D2 /* FoldingTabBar-dummy.m in Sources */,
+				A4DEE5D6EBF55350817AF6906D544FD1 /* Info.plist in Sources */,
+				7730A865D1CC9A82BB61BD1DD10957B9 /* YALAnimatingTabBarConstants.m in Sources */,
+				BF259051002400B9A16B93DD8510A48C /* YALCustomHeightTabBar.m in Sources */,
+				A93592B2BA35868C7FE6E00A3C727B9F /* YALFoldingTabBar.m in Sources */,
+				643184D5DEF202A7F8D64E43D3DD708F /* YALFoldingTabBarController.m in Sources */,
+				46D5FFCE5EBCB4AC5C395D99E730C7AA /* YALSpringAnimation.m in Sources */,
+				B87A8E5FDD58BB5E8B0162EC8FC63152 /* YALTabBarItem.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		93F271AD7E26CF5BCFADCFB7A504897D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9B867960879FDDD089A9E41F027E13B9 /* AbstractActionSheetPicker.m in Sources */,
+				E61ED7FAF083B75902728EB20AC4BD92 /* ActionSheetCustomPicker.m in Sources */,
+				1A0130E51AF422F68818416677EE6595 /* ActionSheetDatePicker.m in Sources */,
+				246DD685C951FFF04D55232211F076CD /* ActionSheetDistancePicker.m in Sources */,
+				430E0A46B42F47FF79AE16168D1613E9 /* ActionSheetLocalePicker.m in Sources */,
+				DA732A6C79E7252A25F23A1497ACD0FD /* ActionSheetMultipleStringPicker.m in Sources */,
+				29C34B43AFA7A1D88AB188801C76E08C /* ActionSheetPicker-3.0-dummy.m in Sources */,
+				C6CB72E223B27A0C2B06910EC0FADF67 /* ActionSheetStringPicker.m in Sources */,
+				3C8D2470783809376BA929A9603C21D9 /* DistancePickerView.m in Sources */,
+				E049CE807DA7A012BA222DE64920C3D1 /* SWActionSheet.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D64E74B976DE8444020910368EC52BF1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA9C0C6673E06CC4E645E0BDCBCCA61E /* FlatUIKit-dummy.m in Sources */,
+				F3EC47E7FED11EE580F81119C584E445 /* FUIAlertView.m in Sources */,
+				DE516DEC37CA57C0E368A29FE1C9D2D2 /* FUIButton.m in Sources */,
+				A9FDE3330428B8220FB31FA0A2AF146E /* FUICellBackgroundView.m in Sources */,
+				F1B2A8510309C2CA4BB69C6D2054FFEB /* FUIPopoverBackgroundView.m in Sources */,
+				72B0B27ACF89BE8DD95E4A6607C925D2 /* FUISegmentedControl.m in Sources */,
+				8E972E7ADD582B0C1A85FD5ADFE61CED /* FUISwitch.m in Sources */,
+				5D6D6054F82C2555FBF409FA0E5BB3AD /* FUITextField.m in Sources */,
+				01C7AC28D9B4FA46087139B1C42E2764 /* NSString+Icons.m in Sources */,
+				557F207112A89E962B4FA3DA95E62BB8 /* UIBarButtonItem+FlatUI.m in Sources */,
+				DF3210B3451BB6D6A3460A3C617A920A /* UIColor+FlatUI.m in Sources */,
+				AEA281A787013B608C7831E9DDACFD3E /* UIFont+FlatUI.m in Sources */,
+				7FE5BE6EB75843B0598B2FE69D4165EC /* UIImage+FlatUI.m in Sources */,
+				FFAEDB37941FC21A782B95E53201B46D /* UINavigationBar+FlatUI.m in Sources */,
+				AAB5657E30C0E44B44DFDB0010F86E35 /* UIPopoverController+FlatUI.m in Sources */,
+				E96A76744AF75EA3AB5CF1143E2D87D1 /* UIProgressView+FlatUI.m in Sources */,
+				B50B060E226C59635C4B67FA994144D7 /* UISlider+FlatUI.m in Sources */,
+				09D6C1C061263FF12620C2BAD4CD56D4 /* UIStepper+FlatUI.m in Sources */,
+				8E4FBDBA77DDDFAC490ABE9E28BED06F /* UITabBar+FlatUI.m in Sources */,
+				D0CA57562C7915FC1C0A502E19707116 /* UITableViewCell+FlatUI.m in Sources */,
+				07C44F7AB9C3311F11ED2104D35BB52F /* UIToolbar+FlatUI.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DAEB1956F35A77608FB2D570B9551C0F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5C30B14B81DD544C8CBEDC344CE7224E /* Pods-HotelTree-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FE8E0446C3B3B52779E8DE373E495A61 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0968524ED4DE8DF7834055C5B6089D72 /* MBProgressHUD-dummy.m in Sources */,
+				897C38C8E3C31950E2E93A4D6937CCC4 /* MBProgressHUD.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		018341AF6B7F76D48E0ECA6E2F1D4445 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = FoldingTabBar;
+			target = 23EEF3C1D5525ED6D9D5A6414DD81BFA /* FoldingTabBar */;
+			targetProxy = 3E8FBF3745F184E2DA65D22EB0A9CA54 /* PBXContainerItemProxy */;
+		};
+		64180511BBEA1CBD6F890D52A517B7F5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "UITextField+Shake";
+			target = 0EA69E64579562F4220AC4B365321FCA /* UITextField+Shake */;
+			targetProxy = 6C7920F0408EFAEFADA252CB007D795B /* PBXContainerItemProxy */;
+		};
+		692A3C5535F4961DEC47D271BA131E4D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MBProgressHUD;
+			target = 41FA54D12162DAD51D02FC58A2CD5034 /* MBProgressHUD */;
+			targetProxy = C903E8B92E2C8463627AD7AE301BB8DB /* PBXContainerItemProxy */;
+		};
+		7CB3986CFC8F20363520B156120E564D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = JVFloatLabeledTextField;
+			target = 2A4448146C785C426971111F117D773C /* JVFloatLabeledTextField */;
+			targetProxy = CD766FBA505B592518ECE30FAA732427 /* PBXContainerItemProxy */;
+		};
+		8DB9A3B27B1DB65F5E3E3E431CFF5795 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = FlatUIKit;
+			target = D88D87F9C08CC6014A19D5865226133B /* FlatUIKit */;
+			targetProxy = EB025093A3D6E837A63A7C5B841CCCDE /* PBXContainerItemProxy */;
+		};
+		9B70D149D05B840D84D157B5536160F1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = TWMessageBarManager;
+			target = B0F1D8B919EFE8BD20DCFBB4BE917267 /* TWMessageBarManager */;
+			targetProxy = 5FFC527A3D3D751391EF800CF94AE539 /* PBXContainerItemProxy */;
+		};
+		C20FCBB61D8A2DAF0BB9654DCD64A2CD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CSStickyHeaderFlowLayout;
+			target = 4C1BEA4CD86D4494B606051FB99E7119 /* CSStickyHeaderFlowLayout */;
+			targetProxy = 295BAABA18E8457F4ABD38F4604326CD /* PBXContainerItemProxy */;
+		};
+		FE0FD218FEC6BB3BD0BD77E054542A8B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "ActionSheetPicker-3.0";
+			target = 965699190112DDBD9B7864D091660DBC /* ActionSheetPicker-3.0 */;
+			targetProxy = E79FE53EC79DAD7F931C94585AFDCE2A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		05216E1F94778CA99402220B1E52ACF0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F85C0486ACB9C2EB42775999CBC7A17B /* FoldingTabBar.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/FoldingTabBar/FoldingTabBar-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/FoldingTabBar/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/FoldingTabBar/FoldingTabBar.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = FoldingTabBar;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		1086451ECB80705509807B2625A0A844 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5BE716D16CEAD700CBAF7D518675299F /* Pods-HotelTree.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-HotelTree/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-HotelTree/Pods-HotelTree.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_HotelTree;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		1DBA60B80813F7DB44606BE8BA4E0AAC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F91A7E84B2CE2274304EBE2E74506240 /* JVFloatLabeledTextField.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/JVFloatLabeledTextField/JVFloatLabeledTextField-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/JVFloatLabeledTextField/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/JVFloatLabeledTextField/JVFloatLabeledTextField.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = JVFloatLabeledTextField;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		29756D7B7C09FE8B9854E74443283B93 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F85C0486ACB9C2EB42775999CBC7A17B /* FoldingTabBar.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/FoldingTabBar/FoldingTabBar-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/FoldingTabBar/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/FoldingTabBar/FoldingTabBar.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = FoldingTabBar;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		2FA412A98CAFA537D6515D9346655D9F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1C79FDEAF0AF8DB96D587524742895EA /* CSStickyHeaderFlowLayout.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/CSStickyHeaderFlowLayout/CSStickyHeaderFlowLayout-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/CSStickyHeaderFlowLayout/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/CSStickyHeaderFlowLayout/CSStickyHeaderFlowLayout.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = CSStickyHeaderFlowLayout;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		3927BA1BACFA53B8DF6D265A2F371336 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 93CD3382FCCF9A75FDAB0CDEDEB314E7 /* ActionSheetPicker-3.0.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/ActionSheetPicker-3.0/ActionSheetPicker-3.0-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ActionSheetPicker-3.0/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/ActionSheetPicker-3.0/ActionSheetPicker-3.0.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = ActionSheetPicker_3_0;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		3C803C2C87C8FB21321CBFA97451AC77 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F91A7E84B2CE2274304EBE2E74506240 /* JVFloatLabeledTextField.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/JVFloatLabeledTextField/JVFloatLabeledTextField-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/JVFloatLabeledTextField/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/JVFloatLabeledTextField/JVFloatLabeledTextField.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = JVFloatLabeledTextField;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		59442915F26E7F2C0E2ACEDC17F82898 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C33174C5B7CEAD99F40C2E1E89127087 /* TWMessageBarManager.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/TWMessageBarManager/TWMessageBarManager-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/TWMessageBarManager/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/TWMessageBarManager/TWMessageBarManager.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = TWMessageBarManager;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		65D3A601A2FC3C4B5AECB021CC793F90 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 93CD3382FCCF9A75FDAB0CDEDEB314E7 /* ActionSheetPicker-3.0.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/ActionSheetPicker-3.0/ActionSheetPicker-3.0-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ActionSheetPicker-3.0/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/ActionSheetPicker-3.0/ActionSheetPicker-3.0.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = ActionSheetPicker_3_0;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		673254EEAF0B5BF4596080C749645884 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		679B973EA7AD405C207DDD569F65D749 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 17C819C5E6488A665C9774CF30DDD6CA /* MBProgressHUD.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/MBProgressHUD/MBProgressHUD-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/MBProgressHUD/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/MBProgressHUD/MBProgressHUD.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = MBProgressHUD;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		7396905B48DEE966C72EC93918C142E5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D5D995CFD52775CB884F40F3E16BACFA /* FlatUIKit.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/FlatUIKit/FlatUIKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/FlatUIKit/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/FlatUIKit/FlatUIKit.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = FlatUIKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		7B1230B2BA14E13BD851B1184FB2BC7E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 17C819C5E6488A665C9774CF30DDD6CA /* MBProgressHUD.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/MBProgressHUD/MBProgressHUD-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/MBProgressHUD/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/MBProgressHUD/MBProgressHUD.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = MBProgressHUD;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		7D64DD03CC3FBB9BA4A5B2DEBE7D6B5B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0A47A1FBA1DE64010E314DA3168162AA /* Pods-HotelTree.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-HotelTree/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-HotelTree/Pods-HotelTree.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_HotelTree;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		A739A4CEEF8B7651EA13CDC8BCED0EF7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C33174C5B7CEAD99F40C2E1E89127087 /* TWMessageBarManager.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/TWMessageBarManager/TWMessageBarManager-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/TWMessageBarManager/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/TWMessageBarManager/TWMessageBarManager.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = TWMessageBarManager;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		B2FB45CD36734E8910743AE1C8FEA3BF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D5D995CFD52775CB884F40F3E16BACFA /* FlatUIKit.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/FlatUIKit/FlatUIKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/FlatUIKit/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/FlatUIKit/FlatUIKit.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = FlatUIKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		D449750AD0057FA4A847246E7BBF5AE2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CEDAC64B766D7E04728365F8E3A779CF /* UITextField+Shake.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/UITextField+Shake/UITextField+Shake-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/UITextField+Shake/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/UITextField+Shake/UITextField+Shake.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = UITextField_Shake;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		E4F26E6EB105713A6A7E7E2E283AC2DF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		E78E46ABC26299D2623FC6FBC0D3CFE9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CEDAC64B766D7E04728365F8E3A779CF /* UITextField+Shake.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/UITextField+Shake/UITextField+Shake-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/UITextField+Shake/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/UITextField+Shake/UITextField+Shake.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = UITextField_Shake;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		F4F221529CA251DCCD10058C3D93DB0D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1C79FDEAF0AF8DB96D587524742895EA /* CSStickyHeaderFlowLayout.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/CSStickyHeaderFlowLayout/CSStickyHeaderFlowLayout-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/CSStickyHeaderFlowLayout/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/CSStickyHeaderFlowLayout/CSStickyHeaderFlowLayout.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = CSStickyHeaderFlowLayout;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		26CCCD51C100FAEF10DF7F47E354178D /* Build configuration list for PBXNativeTarget "FlatUIKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B2FB45CD36734E8910743AE1C8FEA3BF /* Debug */,
+				7396905B48DEE966C72EC93918C142E5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E4F26E6EB105713A6A7E7E2E283AC2DF /* Debug */,
+				673254EEAF0B5BF4596080C749645884 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6AC669E1FCD44313E8138D7064D36398 /* Build configuration list for PBXNativeTarget "TWMessageBarManager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				59442915F26E7F2C0E2ACEDC17F82898 /* Debug */,
+				A739A4CEEF8B7651EA13CDC8BCED0EF7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		730BAD4F35EBE2A0E849A66B66CB7100 /* Build configuration list for PBXNativeTarget "UITextField+Shake" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D449750AD0057FA4A847246E7BBF5AE2 /* Debug */,
+				E78E46ABC26299D2623FC6FBC0D3CFE9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7E127E32D0465A08437982F8B2A3077E /* Build configuration list for PBXNativeTarget "ActionSheetPicker-3.0" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				65D3A601A2FC3C4B5AECB021CC793F90 /* Debug */,
+				3927BA1BACFA53B8DF6D265A2F371336 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7EF6753966C20C30DEA67F9188B841D6 /* Build configuration list for PBXNativeTarget "FoldingTabBar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				29756D7B7C09FE8B9854E74443283B93 /* Debug */,
+				05216E1F94778CA99402220B1E52ACF0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8C414E0068C63C34D8BEC8252D016A1D /* Build configuration list for PBXNativeTarget "JVFloatLabeledTextField" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3C803C2C87C8FB21321CBFA97451AC77 /* Debug */,
+				1DBA60B80813F7DB44606BE8BA4E0AAC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		99D8B73B0EC83D3A8CF74AD9103B0991 /* Build configuration list for PBXNativeTarget "Pods-HotelTree" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7D64DD03CC3FBB9BA4A5B2DEBE7D6B5B /* Debug */,
+				1086451ECB80705509807B2625A0A844 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CC1874913BA1F82C4953C3C7F551AB22 /* Build configuration list for PBXNativeTarget "MBProgressHUD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				679B973EA7AD405C207DDD569F65D749 /* Debug */,
+				7B1230B2BA14E13BD851B1184FB2BC7E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E4D759C733A5577C80B02E25B0F93FF4 /* Build configuration list for PBXNativeTarget "CSStickyHeaderFlowLayout" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2FA412A98CAFA537D6515D9346655D9F /* Debug */,
+				F4F221529CA251DCCD10058C3D93DB0D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

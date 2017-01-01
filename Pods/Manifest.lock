@@ -1,0 +1,33 @@
+PODS:
+  - ActionSheetPicker-3.0 (2.2.0)
+  - CSStickyHeaderFlowLayout (0.2.11)
+  - FlatUIKit (1.6.2)
+  - FoldingTabBar (1.1)
+  - JVFloatLabeledTextField (1.1.1)
+  - MBProgressHUD (1.0.0)
+  - TWMessageBarManager (1.8.1)
+  - UITextField+Shake (1.1.2)
+
+DEPENDENCIES:
+  - ActionSheetPicker-3.0 (~> 2.2.0)
+  - CSStickyHeaderFlowLayout
+  - FlatUIKit
+  - FoldingTabBar (~> 1.1)
+  - JVFloatLabeledTextField
+  - MBProgressHUD (~> 1.0.0)
+  - TWMessageBarManager
+  - UITextField+Shake (~> 1.1)
+
+SPEC CHECKSUMS:
+  ActionSheetPicker-3.0: d11a4c12c6aaf704b8a3f56d179198c99f3e41e6
+  CSStickyHeaderFlowLayout: e9bcb1762413f49d7d09e5bd0ae5efd1100116b7
+  FlatUIKit: 1b41f0d4952ce8d970d8479ce79df54a960242c4
+  FoldingTabBar: 55a302cc5753755f917bf0e70b8083705fb2fe8c
+  JVFloatLabeledTextField: 0e5524b097f102036214dd8279edc8ecf08b5e18
+  MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
+  TWMessageBarManager: fd84e7948ba7968a2b5d9454859135761214ec56
+  UITextField+Shake: 47cc0429dafb3da580686339ad2da091249a8ea2
+
+PODFILE CHECKSUM: 39727b2f56724f2a5fa3ba286e19cb0169345611
+
+COCOAPODS: 1.2.0.beta.1
