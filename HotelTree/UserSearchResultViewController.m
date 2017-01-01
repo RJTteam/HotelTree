@@ -11,20 +11,26 @@
 
 static NSString *tablename = @"tbl_hotel";
 
+
+
 @interface UserSearchResultViewController ()<UISearchResultsUpdating, UISearchControllerDelegate>
 
 @property(strong, nonatomic)NSArray *searchResultsArray;
 @property(strong, nonatomic)UISearchController *searchControl;
 @property(strong, nonatomic)NSArray *searchDomains;
 
+
 @end
 
 @implementation UserSearchResultViewController
 //static NSString *createQuery = @"create table if not exists tbl_hotel(id integer primary key autoincrement, name varchar[100], address varchar[254], latitude double, longitude double);";
 //static NSString *insertTemplate = @"insert into tbl_hotel values(NULL, '%@', '%@', %f, %f);";
-
+#pragma mark - Lifecycle
 - (void)viewDidLoad {
     [super viewDidLoad];
+    //disable editing for table view
+    self.tableView.editing = NO;
+    //add searchController
     self.searchControl = [[UISearchController alloc] initWithSearchResultsController:nil];
     self.searchControl.dimsBackgroundDuringPresentation = NO;
     self.searchControl.searchResultsUpdater = self;
@@ -32,9 +38,17 @@ static NSString *tablename = @"tbl_hotel";
     self.tableView.tableHeaderView = self.searchControl.searchBar;
     //define search domains
     self.searchDomains = @[@"name",@"address"];
+    //set up navigation items
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSave target:self action:@selector(saveButtonClicked)];
     //query for test purpose, delete after finishing
     [[SQLiteManager shareInstance] executeQuery:createQuery];
 //    [self createQueryForTest];
+}
+
+- (void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    [self.searchControl setActive:YES];
+    [self.searchControl.searchBar becomeFirstResponder];
 }
 //query for test purpose, delete after finishing
 //- (void)createQueryForTest{
@@ -55,6 +69,12 @@ static NSString *tablename = @"tbl_hotel";
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - Private Methods
+
+- (void)saveButtonClicked{
+    
 }
 
 #pragma mark - UISearchResultsUpdating
@@ -122,6 +142,15 @@ static NSString *tablename = @"tbl_hotel";
     cell.textLabel.text = dict[@"name"];
     cell.detailTextLabel.text = dict[@"address"];
     return cell;
+}
+
+#pragma mark - UITableViewDelegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    NSDictionary *dict = self.searchResultsArray[indexPath.row];
+    if([self.delegate respondsToSelector:@selector(updateSearchContent:)]){
+        [self.delegate updateSearchContent:dict];
+    }
 }
 
 
