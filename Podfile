@@ -15,4 +15,5 @@ target 'HotelTree' do
 
   pod 'MBProgressHUD', '~> 1.0.0'
   pod 'TWMessageBarManager'
+  pod 'Google/SignIn'
 end
