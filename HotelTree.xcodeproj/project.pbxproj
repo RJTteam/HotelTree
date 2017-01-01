@@ -10,6 +10,9 @@
 		240B4AE0DDDF130530534838 /* Pods_HotelTree.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C92CA96825446B7E2AB3AA9 /* Pods_HotelTree.framework */; };
 		C3ADF57F1E19636500CCB7C8 /* SearchManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C3ADF57C1E19636500CCB7C8 /* SearchManager.m */; };
 		C3ADF5801E19636500CCB7C8 /* UserSearchResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3ADF57E1E19636500CCB7C8 /* UserSearchResultViewController.m */; };
+		C3ADF5831E19728E00CCB7C8 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3ADF5821E19728E00CCB7C8 /* MapViewController.m */; };
+		C3ADF5861E19738C00CCB7C8 /* Annotation.m in Sources */ = {isa = PBXBuildFile; fileRef = C3ADF5851E19738C00CCB7C8 /* Annotation.m */; };
+		C3ADF58C1E1975C100CCB7C8 /* MKMapView+regionMap.m in Sources */ = {isa = PBXBuildFile; fileRef = C3ADF58B1E1975C100CCB7C8 /* MKMapView+regionMap.m */; };
 		C3DA38361E16F5AC00E1AB83 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DA38351E16F5AC00E1AB83 /* main.m */; };
 		C3DA38391E16F5AC00E1AB83 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DA38381E16F5AC00E1AB83 /* AppDelegate.m */; };
 		C3DA383F1E16F5AC00E1AB83 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3DA383D1E16F5AC00E1AB83 /* Main.storyboard */; };
@@ -67,6 +70,12 @@
 		C3ADF57C1E19636500CCB7C8 /* SearchManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchManager.m; sourceTree = "<group>"; };
 		C3ADF57D1E19636500CCB7C8 /* UserSearchResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserSearchResultViewController.h; sourceTree = "<group>"; };
 		C3ADF57E1E19636500CCB7C8 /* UserSearchResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserSearchResultViewController.m; sourceTree = "<group>"; };
+		C3ADF5811E19728E00CCB7C8 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		C3ADF5821E19728E00CCB7C8 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		C3ADF5841E19738C00CCB7C8 /* Annotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Annotation.h; sourceTree = "<group>"; };
+		C3ADF5851E19738C00CCB7C8 /* Annotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Annotation.m; sourceTree = "<group>"; };
+		C3ADF58A1E1975C100CCB7C8 /* MKMapView+regionMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MKMapView+regionMap.h"; sourceTree = "<group>"; };
+		C3ADF58B1E1975C100CCB7C8 /* MKMapView+regionMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MKMapView+regionMap.m"; sourceTree = "<group>"; };
 		C3DA38311E16F5AC00E1AB83 /* HotelTree.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HotelTree.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3DA38351E16F5AC00E1AB83 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C3DA38371E16F5AC00E1AB83 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -156,8 +165,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C3DA39071E18B76900E1AB83 /* libsqlite3.0.tbd in Frameworks */,
 				C3DA38C01E18662E00E1AB83 /* MapKit.framework in Frameworks */,
+				C3DA39071E18B76900E1AB83 /* libsqlite3.0.tbd in Frameworks */,
 				C3DA38721E17646E00E1AB83 /* Bolts.framework in Frameworks */,
 				C3DA386E1E1763F800E1AB83 /* FBSDKCoreKit.framework in Frameworks */,
 				C3DA386F1E1763F800E1AB83 /* FBSDKLoginKit.framework in Frameworks */,
@@ -237,6 +246,8 @@
 			children = (
 				C3DA38591E175C6F00E1AB83 /* UIImageView+GIF.h */,
 				C3DA385A1E175C6F00E1AB83 /* UIImageView+GIF.m */,
+				C3ADF58A1E1975C100CCB7C8 /* MKMapView+regionMap.h */,
+				C3ADF58B1E1975C100CCB7C8 /* MKMapView+regionMap.m */,
 				C3DA38351E16F5AC00E1AB83 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -278,6 +289,8 @@
 				C3DA38EA1E18B66A00E1AB83 /* OrderConfirmViewController.m */,
 				C3DA38EB1E18B66A00E1AB83 /* PaymentConfirmViewController.h */,
 				C3DA38EC1E18B66A00E1AB83 /* PaymentConfirmViewController.m */,
+				C3ADF5811E19728E00CCB7C8 /* MapViewController.h */,
+				C3ADF5821E19728E00CCB7C8 /* MapViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -295,6 +308,8 @@
 		C3DA38B71E18520B00E1AB83 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				C3ADF5841E19738C00CCB7C8 /* Annotation.h */,
+				C3ADF5851E19738C00CCB7C8 /* Annotation.m */,
 				C3DA38B91E18527400E1AB83 /* UIColor+Hexadecimal.h */,
 				C3DA38BA1E18527400E1AB83 /* UIColor+Hexadecimal.m */,
 				C3DA38BC1E18563400E1AB83 /* UINavigationBar+Addition.h */,
@@ -330,6 +345,10 @@
 				C3DA38FB1E18B6F900E1AB83 /* WebService.m */,
 				C3DA38FC1E18B6F900E1AB83 /* WebServiceProvider.h */,
 				C3DA38FD1E18B6F900E1AB83 /* WebServiceProvider.m */,
+				C3DA38D81E18B5FC00E1AB83 /* ModelManager.h */,
+				C3DA38D91E18B5FC00E1AB83 /* ModelManager.m */,
+				C3DA38D61E18B5FC00E1AB83 /* ImageStoreManager.h */,
+				C3DA38D71E18B5FC00E1AB83 /* ImageStoreManager.m */,
 			);
 			name = Manager;
 			sourceTree = "<group>";
@@ -350,7 +369,6 @@
 		C3DA39091E18B83C00E1AB83 /* yang */ = {
 			isa = PBXGroup;
 			children = (
-				C3DA38D61E18B5FC00E1AB83 /* ImageStoreManager.h */,
 				C3DA38EF1E18B6F900E1AB83 /* BookingConfirm.h */,
 				C3DA38F01E18B6F900E1AB83 /* BookingConfirm.m */,
 				C3DA38F11E18B6F900E1AB83 /* BookingResult.h */,
@@ -361,9 +379,6 @@
 				C3DA38F61E18B6F900E1AB83 /* UserLogin.m */,
 				C3DA38F71E18B6F900E1AB83 /* UserRegister.h */,
 				C3DA38F81E18B6F900E1AB83 /* UserRegister.m */,
-				C3DA38D71E18B5FC00E1AB83 /* ImageStoreManager.m */,
-				C3DA38D81E18B5FC00E1AB83 /* ModelManager.h */,
-				C3DA38D91E18B5FC00E1AB83 /* ModelManager.m */,
 			);
 			name = yang;
 			sourceTree = "<group>";
@@ -499,7 +514,9 @@
 				C3DA38E01E18B5FC00E1AB83 /* ImageStoreManager.m in Sources */,
 				C3DA38ED1E18B66A00E1AB83 /* OrderConfirmViewController.m in Sources */,
 				C3DA39011E18B6F900E1AB83 /* UserLogin.m in Sources */,
+				C3ADF5831E19728E00CCB7C8 /* MapViewController.m in Sources */,
 				C3DA38FE1E18B6F900E1AB83 /* BookingConfirm.m in Sources */,
+				C3ADF5861E19738C00CCB7C8 /* Annotation.m in Sources */,
 				C3DA38EE1E18B66A00E1AB83 /* PaymentConfirmViewController.m in Sources */,
 				C3DA38BB1E18527400E1AB83 /* UIColor+Hexadecimal.m in Sources */,
 				C3DA39041E18B6F900E1AB83 /* WebServiceProvider.m in Sources */,
@@ -526,6 +543,7 @@
 				C3DA38CF1E18722300E1AB83 /* HomeTableCell.m in Sources */,
 				C3DA386A1E17627F00E1AB83 /* LoginViewController.m in Sources */,
 				C3DA385B1E175C6F00E1AB83 /* UIImageView+GIF.m in Sources */,
+				C3ADF58C1E1975C100CCB7C8 /* MKMapView+regionMap.m in Sources */,
 				C3DA38691E17627F00E1AB83 /* RegisterViewController.m in Sources */,
 				C3DA38D21E18723B00E1AB83 /* ListTableCell.m in Sources */,
 				C3DA39001E18B6F900E1AB83 /* HotelSearch.m in Sources */,
