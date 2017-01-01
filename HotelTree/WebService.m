@@ -20,7 +20,7 @@
     return mfs_Instance;
 }
 
--(NSArray*)returenUserLogin:(NSDictionary*)dic{
+-(NSString*)returenUserLogin:(NSDictionary*)dic{
 //    UserLogin* user = [[UserLogin alloc]init];
     
     NSData* output = [self.provider webServiceCall:@"ohr_login.php" with:dic];
@@ -39,7 +39,7 @@
 //    }
     
     NSArray* arr = [outDic objectForKey:@"msg"];
-    return arr;
+    return [arr objectAtIndex:0];
 }
 
 -(NSString*)returnUserRegister:(NSDictionary*)dic{
@@ -71,18 +71,20 @@
     NSDictionary* outDic = jsonOutput;
     NSArray* array = [outDic objectForKey:@"Hotels"];
     for(NSDictionary* d in array){
-        HotelSearch* hotel = [[HotelSearch alloc]init];
-        hotel.hotelId = [d objectForKey:@"hotelId"];
-        hotel.hotelName = [d objectForKey:@"hotelName"];
-        hotel.hotelPrice = [d objectForKey:@"price"];
-        hotel.hotelAddress = [d objectForKey:@"hotelAdd"];
-        hotel.hotelRating = [d objectForKey:@"hotelRating"];
-        hotel.hotelLatitude = [d objectForKey:@"hotelLat"];
-        hotel.hotelLongitude = [d objectForKey:@"hotelLong"];
-        hotel.hotelImages = [d objectForKey:@"hotelThumb"];
+        Hotel* hotel = [[Hotel alloc]initWithDictionary:d];
+        
+//        hotel.hotelId = [d objectForKey:@"hotelId"];
+//        hotel.hotelName = [d objectForKey:@"hotelName"];
+//        hotel.hotelPrice = [d objectForKey:@"price"];
+//        hotel.hotelAddress = [d objectForKey:@"hotelAdd"];
+//        hotel.hotelRating = [d objectForKey:@"hotelRating"];
+//        hotel.hotelLatitude = [d objectForKey:@"hotelLat"];
+//        hotel.hotelLongitude = [d objectForKey:@"hotelLong"];
+//        hotel.hotelImages = [d objectForKey:@"hotelThumb"];
+        
         [arr addObject:hotel];
     }
-    NSLog(@"from service %@",arr);
+    //NSLog(@"from service %@",arr);
     return arr;
 }
 
@@ -109,25 +111,27 @@
 //    if ([outDic objectForKey:@"Success"]) {
 //        //result = [[outDic objectForKey:@"Success"]objectForKey:@"orderID"];
 //    }
-    result = [outDic objectForKey:@"msg"];
+    result = [[outDic objectForKey:@"msg"]objectAtIndex:0];
     return result;
 }
 
--(BookingConfirm*)confirm:(NSDictionary*)dic{
-    BookingConfirm* result = [[BookingConfirm alloc]init];
+-(NSMutableArray*)confirm:(NSDictionary*)dic{
+    //BookingConfirm* result = [[BookingConfirm alloc]init];
+    Hotel* hotel = [[Hotel alloc]init];
+    Order* order = [[Order alloc]init];
     
     NSData* output = [self.provider webServiceCall:@"booking_confirmation.php" with:dic];
     
     id jsonOutput = [NSJSONSerialization JSONObjectWithData:output options:NSJSONReadingAllowFragments error:nil];
     NSDictionary* outDic = jsonOutput;
     NSArray* arr = [outDic objectForKey:@"Room Details"];
-    result.checkIn = [[arr objectAtIndex:0]objectForKey:@"checkIn"];
-    result.checkOut = [[arr objectAtIndex:0]objectForKey:@"checkOut"];
-    result.hotelName = [[arr objectAtIndex:0]objectForKey:@"hotelName"];
-    result.hotelRating = [[arr objectAtIndex:0]objectForKey:@"hotelRating"];
-    result.hotelLat = [[arr objectAtIndex:0]objectForKey:@"hotelLat"];
-    result.hotelLong = [[arr objectAtIndex:0]objectForKey:@"hotelLong"];
-    result.hotelAddress = [[arr objectAtIndex:0]objectForKey:@"hotelAdd"];
+    order.checkInDate = [order NSStringToNSDate:[[arr objectAtIndex:0]objectForKey:@"checkIn"]]; //[[arr objectAtIndex:0]objectForKey:@"checkIn"];
+    order.checkOutDate = [order NSStringToNSDate:[[arr objectAtIndex:0]objectForKey:@"checkOut"]];
+    hotel.hotelName = [[arr objectAtIndex:0]objectForKey:@"hotelName"];
+    hotel.hotelRating = [[arr objectAtIndex:0]objectForKey:@"hotelRating"];
+    hotel.hotelLatitude = [[arr objectAtIndex:0]objectForKey:@"hotelLat"];
+    hotel.hotelLongitude = [[arr objectAtIndex:0]objectForKey:@"hotelLong"];
+    hotel.hotelAddress = [[arr objectAtIndex:0]objectForKey:@"hotelAdd"];
     
 //    result.numOfRooms = [[arr objectAtIndex:0]objectForKey:@"room"];
 //    result.numOfAdults = [[arr objectAtIndex:0]objectForKey:@"adult"];
@@ -135,7 +139,10 @@
 //    result.hotelId = [[arr objectAtIndex:0]objectForKey:@"hotelID"];
 //    result.orderId = [[arr objectAtIndex:0]objectForKey:@"orderID"];
     
-    return result;
+    NSMutableArray* array = [[NSMutableArray alloc]init];
+    [array addObject:hotel];
+    [array addObject:order];
+    return array;
 }
 
 -(NSString*)manage:(NSDictionary*)dic{
@@ -163,6 +170,20 @@
 
 }
 
-
+-(NSMutableArray*)history:(NSDictionary*)dic{
+    NSMutableArray* arr = [[NSMutableArray alloc]init];
+    NSData* output = [self.provider webServiceCall:@"booking_history.php" with:dic];
+    
+    id jsonOutput = [NSJSONSerialization JSONObjectWithData:output options:NSJSONReadingAllowFragments error:nil];
+    NSDictionary* outDic = jsonOutput;
+    NSArray* result = [outDic objectForKey:@"Booking History"];
+    
+    for(NSDictionary* d in result){
+        Hotel* hotel = [[Hotel alloc]initWithDictionary:d];
+        [arr addObject:hotel];
+    }
+    return arr;
+}
+//"BookigId":"1170","hotelId":"413","hotelName":"Park\u00a0Hyatt","checkIn":"2016-12-17 00:00:00","checkOut":"2016-12-19 00:00:00","room":"0","adult":"50","child":"2"}
 
 @end

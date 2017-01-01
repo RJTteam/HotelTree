@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "WebService.h"
 #import "WebServiceProvider.h"
-#import "HotelSearch.h"
+#import "Hotel.h"
 
 
 @interface ViewController : UIViewController

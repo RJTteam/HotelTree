@@ -17,11 +17,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
     WebService* service = [WebService sharedInstance];
+    
 //
     
 // --------- register
-//    //hotelLat=28.6049&hotelLong=77.2235
+    //hotelLat=28.6049&hotelLong=77.2235
 //    NSDictionary* dic = @{
 //                          @"name":@"aamir",
 //                          @"email":@"aa@gmail.com",
@@ -39,22 +41,22 @@
 //                          @"hotelLong":@"77.2235"
 //                          };
 //    NSArray* arr = [service returnHotelSearch:dic];
-//    for(HotelSearch * h in arr){
-//        NSLog(@"%@",h.hotelImages);
+//    for(Hotel * h in arr){
+//        NSLog(@"%@",h.hotelThumb);
 //    }
     
     
 //-----------booking
-//    NSDictionary* dic = @{
-//                          @"id" : @"412",
-//                          @"checkIn":@"2016-12-17 00:00:00",
-//                          @"checkOut":@"2016-12-19 00:00:00",
-//                          @"room":@"2",
-//                          @"adult":@"2",
-//                          @"child":@"1",
-//                          @"booked":@"1"
-//                          };
-//    NSLog(@"%@",[service booking:dic]);
+    NSDictionary* dic = @{
+                          @"id" : @"412",
+                          @"checkIn":@"2016-12-17 00:00:00",
+                          @"checkOut":@"2016-12-19 00:00:00",
+                          @"room":@"2",
+                          @"adult":@"2",
+                          @"child":@"1",
+                          @"booked":@"1"
+                          };
+    NSLog(@"%@",[service booking:dic]);
     
 //----------- confirm
 //    NSDictionary* dic =@{
@@ -79,18 +81,29 @@
 //    NSLog(@"%@",[service resetPassword:dic]);
     
 //----------- manage booking
-    NSDictionary* dic = @{
-                          @"hotel_id":@"408",
-                          @"mobile":@"5555454",
-                          @"hotel_name":@"Park Hyatt",
-                          @"checkIn":@"2016-12-17 00:00:00",
-                          @"checkOut":@"2016-12-19 00:00:00",
-                          @"room":@"3",
-                          @"adult":@"4",
-                          @"child":@"2",
-                          @"booked":@"0"
-                          };
-    NSLog(@"%@",[service manage:dic]);
+//    NSDictionary* dic = @{
+//                          @"hotel_id":@"41134",
+//                          @"mobile":@"5555454",
+//                          @"hotel_name":@"ParkHyatt",
+//                          @"checkIn":@"2016-12-17 00:00:00",
+//                          @"checkOut":@"2016-12-19 00:00:00",
+//                          @"room":@"3",
+//                          @"adult":@"4",
+//                          @"child":@"2",
+//                          @"booked":@"0"
+//                          };
+//    NSLog(@"%@",[service manage:dic]);
+    
+    //http://rjtmobile.com/ansari/ohr/ohrapp/manage_booking.php?&hotel_id=408&hotel_name=Park Hyatt&checkIn=2016-12-17 00:00:00&checkOut=2016-12-19 00:00:00&room=3&adult=4&child=2&booked=0&mobile=5555454
+    
+    
+//------------ history
+//    NSDictionary* dic = @{
+//                          @"mobile":@"5555454"
+//                          };
+//    NSLog(@"%@",[service history:dic]);
+//
+//    //mobile=5555454
     
 }
 

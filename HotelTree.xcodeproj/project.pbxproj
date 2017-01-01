@@ -13,13 +13,11 @@
 		6C655BDA1E16FB8700088FAE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C655BD81E16FB8700088FAE /* Main.storyboard */; };
 		6C655BDC1E16FB8700088FAE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C655BDB1E16FB8700088FAE /* Assets.xcassets */; };
 		6C655BDF1E16FB8700088FAE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C655BDD1E16FB8700088FAE /* LaunchScreen.storyboard */; };
-		6C655BE81E16FC3800088FAE /* HotelSearch.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C655BE71E16FC3800088FAE /* HotelSearch.m */; };
-		6C655BEC1E16FEB300088FAE /* BookingResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C655BEB1E16FEB300088FAE /* BookingResult.m */; };
-		6C655BF21E18323F00088FAE /* UserLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C655BF11E18323F00088FAE /* UserLogin.m */; };
-		6C655BF51E1832B800088FAE /* UserRegister.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C655BF41E1832B800088FAE /* UserRegister.m */; };
 		6C655BFA1E18355400088FAE /* WebServiceProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C655BF91E18355400088FAE /* WebServiceProvider.m */; };
 		6C655BFD1E1837D000088FAE /* WebService.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C655BFC1E1837D000088FAE /* WebService.m */; };
-		6C655C001E184F6800088FAE /* BookingConfirm.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C655BFF1E184F6800088FAE /* BookingConfirm.m */; };
+		6CA10FC21E197D1100F7BDD4 /* Order.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CA10FC11E197D1100F7BDD4 /* Order.m */; };
+		6CA10FC51E197D2300F7BDD4 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CA10FC41E197D2300F7BDD4 /* User.m */; };
+		6CA10FC81E197D3600F7BDD4 /* Hotel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CA10FC71E197D3600F7BDD4 /* Hotel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,21 +31,17 @@
 		6C655BDB1E16FB8700088FAE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6C655BDE1E16FB8700088FAE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6C655BE01E16FB8700088FAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6C655BE61E16FC3800088FAE /* HotelSearch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HotelSearch.h; sourceTree = "<group>"; };
-		6C655BE71E16FC3800088FAE /* HotelSearch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HotelSearch.m; sourceTree = "<group>"; };
-		6C655BEA1E16FEB300088FAE /* BookingResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookingResult.h; sourceTree = "<group>"; };
-		6C655BEB1E16FEB300088FAE /* BookingResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookingResult.m; sourceTree = "<group>"; };
-		6C655BF01E18323F00088FAE /* UserLogin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserLogin.h; sourceTree = "<group>"; };
-		6C655BF11E18323F00088FAE /* UserLogin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserLogin.m; sourceTree = "<group>"; };
-		6C655BF31E1832B800088FAE /* UserRegister.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserRegister.h; sourceTree = "<group>"; };
-		6C655BF41E1832B800088FAE /* UserRegister.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserRegister.m; sourceTree = "<group>"; };
 		6C655BF71E1833B400088FAE /* WebCommunicatioin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebCommunicatioin.h; sourceTree = "<group>"; };
 		6C655BF81E18355400088FAE /* WebServiceProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebServiceProvider.h; sourceTree = "<group>"; };
 		6C655BF91E18355400088FAE /* WebServiceProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebServiceProvider.m; sourceTree = "<group>"; };
 		6C655BFB1E1837D000088FAE /* WebService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebService.h; sourceTree = "<group>"; };
 		6C655BFC1E1837D000088FAE /* WebService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebService.m; sourceTree = "<group>"; };
-		6C655BFE1E184F6800088FAE /* BookingConfirm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookingConfirm.h; sourceTree = "<group>"; };
-		6C655BFF1E184F6800088FAE /* BookingConfirm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookingConfirm.m; sourceTree = "<group>"; };
+		6CA10FC01E197D1100F7BDD4 /* Order.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Order.h; sourceTree = "<group>"; };
+		6CA10FC11E197D1100F7BDD4 /* Order.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Order.m; sourceTree = "<group>"; };
+		6CA10FC31E197D2300F7BDD4 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		6CA10FC41E197D2300F7BDD4 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		6CA10FC61E197D3600F7BDD4 /* Hotel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Hotel.h; sourceTree = "<group>"; };
+		6CA10FC71E197D3600F7BDD4 /* Hotel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Hotel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,16 +100,12 @@
 		6C655BE91E16FDA100088FAE /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				6C655BE61E16FC3800088FAE /* HotelSearch.h */,
-				6C655BE71E16FC3800088FAE /* HotelSearch.m */,
-				6C655BEA1E16FEB300088FAE /* BookingResult.h */,
-				6C655BEB1E16FEB300088FAE /* BookingResult.m */,
-				6C655BFE1E184F6800088FAE /* BookingConfirm.h */,
-				6C655BFF1E184F6800088FAE /* BookingConfirm.m */,
-				6C655BF01E18323F00088FAE /* UserLogin.h */,
-				6C655BF11E18323F00088FAE /* UserLogin.m */,
-				6C655BF31E1832B800088FAE /* UserRegister.h */,
-				6C655BF41E1832B800088FAE /* UserRegister.m */,
+				6CA10FC01E197D1100F7BDD4 /* Order.h */,
+				6CA10FC11E197D1100F7BDD4 /* Order.m */,
+				6CA10FC31E197D2300F7BDD4 /* User.h */,
+				6CA10FC41E197D2300F7BDD4 /* User.m */,
+				6CA10FC61E197D3600F7BDD4 /* Hotel.h */,
+				6CA10FC71E197D3600F7BDD4 /* Hotel.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -208,11 +198,9 @@
 				6C655BD71E16FB8700088FAE /* ViewController.m in Sources */,
 				6C655BFD1E1837D000088FAE /* WebService.m in Sources */,
 				6C655BD41E16FB8700088FAE /* AppDelegate.m in Sources */,
-				6C655BE81E16FC3800088FAE /* HotelSearch.m in Sources */,
-				6C655BEC1E16FEB300088FAE /* BookingResult.m in Sources */,
-				6C655C001E184F6800088FAE /* BookingConfirm.m in Sources */,
-				6C655BF51E1832B800088FAE /* UserRegister.m in Sources */,
-				6C655BF21E18323F00088FAE /* UserLogin.m in Sources */,
+				6CA10FC81E197D3600F7BDD4 /* Hotel.m in Sources */,
+				6CA10FC51E197D2300F7BDD4 /* User.m in Sources */,
+				6CA10FC21E197D1100F7BDD4 /* Order.m in Sources */,
 				6C655BD11E16FB8700088FAE /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -370,6 +358,7 @@
 				6C655BE51E16FB8700088FAE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
