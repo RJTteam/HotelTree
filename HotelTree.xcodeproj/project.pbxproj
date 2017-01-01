@@ -39,6 +39,22 @@
 		C3DA38CF1E18722300E1AB83 /* HomeTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DA38CE1E18722300E1AB83 /* HomeTableCell.m */; };
 		C3DA38D21E18723B00E1AB83 /* ListTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DA38D11E18723B00E1AB83 /* ListTableCell.m */; };
 		C3DA38D51E18725A00E1AB83 /* DetailTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DA38D41E18725A00E1AB83 /* DetailTableCell.m */; };
+		C3DA38E01E18B5FC00E1AB83 /* ImageStoreManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DA38D71E18B5FC00E1AB83 /* ImageStoreManager.m */; };
+		C3DA38E11E18B5FC00E1AB83 /* ModelManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DA38D91E18B5FC00E1AB83 /* ModelManager.m */; };
+		C3DA38E21E18B5FC00E1AB83 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DA38DB1E18B5FC00E1AB83 /* User.m */; };
+		C3DA38E31E18B5FC00E1AB83 /* Hotel.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DA38DD1E18B5FC00E1AB83 /* Hotel.m */; };
+		C3DA38E41E18B5FC00E1AB83 /* Order.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DA38DF1E18B5FC00E1AB83 /* Order.m */; };
+		C3DA38E81E18B63E00E1AB83 /* SQLiteManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DA38E71E18B63E00E1AB83 /* SQLiteManager.m */; };
+		C3DA38ED1E18B66A00E1AB83 /* OrderConfirmViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DA38EA1E18B66A00E1AB83 /* OrderConfirmViewController.m */; };
+		C3DA38EE1E18B66A00E1AB83 /* PaymentConfirmViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DA38EC1E18B66A00E1AB83 /* PaymentConfirmViewController.m */; };
+		C3DA38FE1E18B6F900E1AB83 /* BookingConfirm.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DA38F01E18B6F900E1AB83 /* BookingConfirm.m */; };
+		C3DA38FF1E18B6F900E1AB83 /* BookingResult.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DA38F21E18B6F900E1AB83 /* BookingResult.m */; };
+		C3DA39001E18B6F900E1AB83 /* HotelSearch.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DA38F41E18B6F900E1AB83 /* HotelSearch.m */; };
+		C3DA39011E18B6F900E1AB83 /* UserLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DA38F61E18B6F900E1AB83 /* UserLogin.m */; };
+		C3DA39021E18B6F900E1AB83 /* UserRegister.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DA38F81E18B6F900E1AB83 /* UserRegister.m */; };
+		C3DA39031E18B6F900E1AB83 /* WebService.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DA38FB1E18B6F900E1AB83 /* WebService.m */; };
+		C3DA39041E18B6F900E1AB83 /* WebServiceProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DA38FD1E18B6F900E1AB83 /* WebServiceProvider.m */; };
+		C3DA39071E18B76900E1AB83 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C3DA39061E18B76900E1AB83 /* libsqlite3.0.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -95,6 +111,38 @@
 		C3DA38D11E18723B00E1AB83 /* ListTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListTableCell.m; sourceTree = "<group>"; };
 		C3DA38D31E18725A00E1AB83 /* DetailTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailTableCell.h; sourceTree = "<group>"; };
 		C3DA38D41E18725A00E1AB83 /* DetailTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailTableCell.m; sourceTree = "<group>"; };
+		C3DA38D61E18B5FC00E1AB83 /* ImageStoreManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageStoreManager.h; sourceTree = "<group>"; };
+		C3DA38D71E18B5FC00E1AB83 /* ImageStoreManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageStoreManager.m; sourceTree = "<group>"; };
+		C3DA38D81E18B5FC00E1AB83 /* ModelManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModelManager.h; sourceTree = "<group>"; };
+		C3DA38D91E18B5FC00E1AB83 /* ModelManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModelManager.m; sourceTree = "<group>"; };
+		C3DA38DA1E18B5FC00E1AB83 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		C3DA38DB1E18B5FC00E1AB83 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		C3DA38DC1E18B5FC00E1AB83 /* Hotel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Hotel.h; sourceTree = "<group>"; };
+		C3DA38DD1E18B5FC00E1AB83 /* Hotel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Hotel.m; sourceTree = "<group>"; };
+		C3DA38DE1E18B5FC00E1AB83 /* Order.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Order.h; sourceTree = "<group>"; };
+		C3DA38DF1E18B5FC00E1AB83 /* Order.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Order.m; sourceTree = "<group>"; };
+		C3DA38E61E18B63E00E1AB83 /* SQLiteManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQLiteManager.h; sourceTree = "<group>"; };
+		C3DA38E71E18B63E00E1AB83 /* SQLiteManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQLiteManager.m; sourceTree = "<group>"; };
+		C3DA38E91E18B66A00E1AB83 /* OrderConfirmViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderConfirmViewController.h; sourceTree = "<group>"; };
+		C3DA38EA1E18B66A00E1AB83 /* OrderConfirmViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderConfirmViewController.m; sourceTree = "<group>"; };
+		C3DA38EB1E18B66A00E1AB83 /* PaymentConfirmViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaymentConfirmViewController.h; sourceTree = "<group>"; };
+		C3DA38EC1E18B66A00E1AB83 /* PaymentConfirmViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaymentConfirmViewController.m; sourceTree = "<group>"; };
+		C3DA38EF1E18B6F900E1AB83 /* BookingConfirm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookingConfirm.h; sourceTree = "<group>"; };
+		C3DA38F01E18B6F900E1AB83 /* BookingConfirm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookingConfirm.m; sourceTree = "<group>"; };
+		C3DA38F11E18B6F900E1AB83 /* BookingResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookingResult.h; sourceTree = "<group>"; };
+		C3DA38F21E18B6F900E1AB83 /* BookingResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookingResult.m; sourceTree = "<group>"; };
+		C3DA38F31E18B6F900E1AB83 /* HotelSearch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HotelSearch.h; sourceTree = "<group>"; };
+		C3DA38F41E18B6F900E1AB83 /* HotelSearch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HotelSearch.m; sourceTree = "<group>"; };
+		C3DA38F51E18B6F900E1AB83 /* UserLogin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserLogin.h; sourceTree = "<group>"; };
+		C3DA38F61E18B6F900E1AB83 /* UserLogin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserLogin.m; sourceTree = "<group>"; };
+		C3DA38F71E18B6F900E1AB83 /* UserRegister.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserRegister.h; sourceTree = "<group>"; };
+		C3DA38F81E18B6F900E1AB83 /* UserRegister.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserRegister.m; sourceTree = "<group>"; };
+		C3DA38F91E18B6F900E1AB83 /* WebCommunicatioin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebCommunicatioin.h; sourceTree = "<group>"; };
+		C3DA38FA1E18B6F900E1AB83 /* WebService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebService.h; sourceTree = "<group>"; };
+		C3DA38FB1E18B6F900E1AB83 /* WebService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebService.m; sourceTree = "<group>"; };
+		C3DA38FC1E18B6F900E1AB83 /* WebServiceProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebServiceProvider.h; sourceTree = "<group>"; };
+		C3DA38FD1E18B6F900E1AB83 /* WebServiceProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebServiceProvider.m; sourceTree = "<group>"; };
+		C3DA39061E18B76900E1AB83 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +150,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3DA39071E18B76900E1AB83 /* libsqlite3.0.tbd in Frameworks */,
 				C3DA38C01E18662E00E1AB83 /* MapKit.framework in Frameworks */,
 				C3DA38721E17646E00E1AB83 /* Bolts.framework in Frameworks */,
 				C3DA386E1E1763F800E1AB83 /* FBSDKCoreKit.framework in Frameworks */,
@@ -117,6 +166,7 @@
 		0C5A69AC0C3370E23F09137F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C3DA39061E18B76900E1AB83 /* libsqlite3.0.tbd */,
 				C3DA38BF1E18662E00E1AB83 /* MapKit.framework */,
 				C3DA38711E17646E00E1AB83 /* Bolts.framework */,
 				C3DA386B1E1763F800E1AB83 /* FBSDKCoreKit.framework */,
@@ -159,6 +209,8 @@
 			children = (
 				C3DA38371E16F5AC00E1AB83 /* AppDelegate.h */,
 				C3DA38381E16F5AC00E1AB83 /* AppDelegate.m */,
+				C3DA39051E18B73600E1AB83 /* Manager */,
+				C3DA38E51E18B60000E1AB83 /* Model */,
 				C3DA38B71E18520B00E1AB83 /* View */,
 				C3DA385C1E175C9300E1AB83 /* Controller */,
 				C3DA38581E175BA800E1AB83 /* Animation */,
@@ -214,6 +266,10 @@
 				C3DA38C51E186CBD00E1AB83 /* ListViewController.m */,
 				C3DA38CA1E186E9600E1AB83 /* DetailViewController.h */,
 				C3DA38CB1E186E9600E1AB83 /* DetailViewController.m */,
+				C3DA38E91E18B66A00E1AB83 /* OrderConfirmViewController.h */,
+				C3DA38EA1E18B66A00E1AB83 /* OrderConfirmViewController.m */,
+				C3DA38EB1E18B66A00E1AB83 /* PaymentConfirmViewController.h */,
+				C3DA38EC1E18B66A00E1AB83 /* PaymentConfirmViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -243,6 +299,63 @@
 				C3DA38D41E18725A00E1AB83 /* DetailTableCell.m */,
 			);
 			name = View;
+			sourceTree = "<group>";
+		};
+		C3DA38E51E18B60000E1AB83 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C3DA39091E18B83C00E1AB83 /* yang */,
+				C3DA39081E18B82900E1AB83 /* wang */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		C3DA39051E18B73600E1AB83 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				C3DA38E61E18B63E00E1AB83 /* SQLiteManager.h */,
+				C3DA38E71E18B63E00E1AB83 /* SQLiteManager.m */,
+				C3DA38F91E18B6F900E1AB83 /* WebCommunicatioin.h */,
+				C3DA38FA1E18B6F900E1AB83 /* WebService.h */,
+				C3DA38FB1E18B6F900E1AB83 /* WebService.m */,
+				C3DA38FC1E18B6F900E1AB83 /* WebServiceProvider.h */,
+				C3DA38FD1E18B6F900E1AB83 /* WebServiceProvider.m */,
+			);
+			name = Manager;
+			sourceTree = "<group>";
+		};
+		C3DA39081E18B82900E1AB83 /* wang */ = {
+			isa = PBXGroup;
+			children = (
+				C3DA38DA1E18B5FC00E1AB83 /* User.h */,
+				C3DA38DB1E18B5FC00E1AB83 /* User.m */,
+				C3DA38DC1E18B5FC00E1AB83 /* Hotel.h */,
+				C3DA38DD1E18B5FC00E1AB83 /* Hotel.m */,
+				C3DA38DE1E18B5FC00E1AB83 /* Order.h */,
+				C3DA38DF1E18B5FC00E1AB83 /* Order.m */,
+			);
+			name = wang;
+			sourceTree = "<group>";
+		};
+		C3DA39091E18B83C00E1AB83 /* yang */ = {
+			isa = PBXGroup;
+			children = (
+				C3DA38D61E18B5FC00E1AB83 /* ImageStoreManager.h */,
+				C3DA38EF1E18B6F900E1AB83 /* BookingConfirm.h */,
+				C3DA38F01E18B6F900E1AB83 /* BookingConfirm.m */,
+				C3DA38F11E18B6F900E1AB83 /* BookingResult.h */,
+				C3DA38F21E18B6F900E1AB83 /* BookingResult.m */,
+				C3DA38F31E18B6F900E1AB83 /* HotelSearch.h */,
+				C3DA38F41E18B6F900E1AB83 /* HotelSearch.m */,
+				C3DA38F51E18B6F900E1AB83 /* UserLogin.h */,
+				C3DA38F61E18B6F900E1AB83 /* UserLogin.m */,
+				C3DA38F71E18B6F900E1AB83 /* UserRegister.h */,
+				C3DA38F81E18B6F900E1AB83 /* UserRegister.m */,
+				C3DA38D71E18B5FC00E1AB83 /* ImageStoreManager.m */,
+				C3DA38D81E18B5FC00E1AB83 /* ModelManager.h */,
+				C3DA38D91E18B5FC00E1AB83 /* ModelManager.m */,
+			);
+			name = yang;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -373,24 +486,39 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3DA38E01E18B5FC00E1AB83 /* ImageStoreManager.m in Sources */,
+				C3DA38ED1E18B66A00E1AB83 /* OrderConfirmViewController.m in Sources */,
+				C3DA39011E18B6F900E1AB83 /* UserLogin.m in Sources */,
+				C3DA38FE1E18B6F900E1AB83 /* BookingConfirm.m in Sources */,
+				C3DA38EE1E18B66A00E1AB83 /* PaymentConfirmViewController.m in Sources */,
 				C3DA38BB1E18527400E1AB83 /* UIColor+Hexadecimal.m in Sources */,
+				C3DA39041E18B6F900E1AB83 /* WebServiceProvider.m in Sources */,
 				C3DA38681E17627F00E1AB83 /* ForgotPwdVC.m in Sources */,
+				C3DA39021E18B6F900E1AB83 /* UserRegister.m in Sources */,
+				C3DA38FF1E18B6F900E1AB83 /* BookingResult.m in Sources */,
 				C3DA38C61E186CBD00E1AB83 /* ListViewController.m in Sources */,
+				C3DA38E31E18B5FC00E1AB83 /* Hotel.m in Sources */,
 				C3DA38511E17538000E1AB83 /* SplashTitleAnimationView.m in Sources */,
 				C3DA38B51E18501E00E1AB83 /* CustomiseNavController.m in Sources */,
 				C3DA38D51E18725A00E1AB83 /* DetailTableCell.m in Sources */,
 				C3DA38CC1E186E9600E1AB83 /* DetailViewController.m in Sources */,
+				C3DA38E21E18B5FC00E1AB83 /* User.m in Sources */,
+				C3DA38E41E18B5FC00E1AB83 /* Order.m in Sources */,
 				C3DA38BE1E18563400E1AB83 /* UINavigationBar+Addition.m in Sources */,
 				C3DA38391E16F5AC00E1AB83 /* AppDelegate.m in Sources */,
 				C3DA38671E17627F00E1AB83 /* ResetViewController.m in Sources */,
 				C3DA38361E16F5AC00E1AB83 /* main.m in Sources */,
 				C3DA38A61E17737100E1AB83 /* SplashViewController.m in Sources */,
+				C3DA39031E18B6F900E1AB83 /* WebService.m in Sources */,
+				C3DA38E11E18B5FC00E1AB83 /* ModelManager.m in Sources */,
 				C3DA38CF1E18722300E1AB83 /* HomeTableCell.m in Sources */,
 				C3DA386A1E17627F00E1AB83 /* LoginViewController.m in Sources */,
 				C3DA385B1E175C6F00E1AB83 /* UIImageView+GIF.m in Sources */,
 				C3DA38691E17627F00E1AB83 /* RegisterViewController.m in Sources */,
 				C3DA38D21E18723B00E1AB83 /* ListTableCell.m in Sources */,
+				C3DA39001E18B6F900E1AB83 /* HotelSearch.m in Sources */,
 				C3DA38C31E186CA700E1AB83 /* HomeViewController.m in Sources */,
+				C3DA38E81E18B63E00E1AB83 /* SQLiteManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
