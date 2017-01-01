@@ -8,9 +8,22 @@
 
 #import "HomeViewController.h"
 #import "HomeTableCell.h"
+#import "RequirementViewController.h"
+#import "UserSearchResultViewController.h"
 
-@interface HomeViewController ()<UITableViewDelegate,UITableViewDataSource>
+@interface HomeViewController ()<UITableViewDelegate,UITableViewDataSource,SearchMenuToSearchDelegate,QuantitySetDelegate, UITextFieldDelegate>
 @property (strong,nonatomic) NSArray *homeArray;
+
+@property (weak, nonatomic) IBOutlet UILabel *checkInDisplayLabel;
+@property (weak, nonatomic) IBOutlet UILabel *checkOutDisplayLabel;
+@property (weak, nonatomic) IBOutlet UITextField *searchContentTextField;
+
+@property (nonatomic)double selectedLatitude;
+@property (nonatomic)double selectedLongitude;
+@property (weak, nonatomic) IBOutlet UILabel *roomQuantityLabel;
+@property (weak, nonatomic) IBOutlet UILabel *adultQuantityLabel;
+@property (weak, nonatomic) IBOutlet UILabel *childrenQuatityLabel;
+
 @end
 
 @implementation HomeViewController
@@ -47,6 +60,13 @@
 //    UIImage *image = [[UIImage alloc] initWithData:imgData];
 }
 
+- (void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    if([self.searchContentTextField isFirstResponder]){
+        [self.searchContentTextField resignFirstResponder];
+    }
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -64,14 +84,62 @@
     
     return cell;
 }
-/*
+#pragma mark - Event Methods
+
+- (IBAction)checkInDateButtonClicked {
+}
+
+- (IBAction)checkoutDateButtonClicked {
+}
+
+- (IBAction)searchButtonClicked {
+    BOOL searchResultEmpty = self.searchContentTextField.text.length == 0;
+    BOOL checkInDateEmpty = self.checkInDisplayLabel.text.length == 0;
+    BOOL checkOutDateEmpty = self.checkOutDisplayLabel.text.length == 0;
+    BOOL requirementsEmpty = self.roomQuantityLabel.text.length == 0 && self.adultQuantityLabel.text.length == 0 && self.childrenQuatityLabel.text.length == 0;
+    if(!searchResultEmpty && !checkInDateEmpty && !checkOutDateEmpty && !requirementsEmpty){
+        //TODO send search information to prepare segue
+        [self performSegueWithIdentifier:@"searchToListSegue" sender:nil];
+    }
+}
+
+#pragma mark - SearchMenuToSearchDelegate
+
+- (void)updateSearchContent:(NSDictionary *)content withText:(NSString *)text{
+    [self.searchContentTextField setText:text];
+    self.selectedLatitude = [content[@"latitude"] doubleValue];
+    self.selectedLongitude = [content[@"longitude"] doubleValue];
+}
+
+#pragma mark - QuantitySetDelegate
+
+- (void)sendDataBack:(NSInteger)rooms adults: (NSInteger)adults children:(NSInteger)children{
+    self.roomQuantityLabel.text = [NSString stringWithFormat:@"%lu", rooms];
+    self.adultQuantityLabel.text = [NSString stringWithFormat:@"%lu", adults];
+    self.childrenQuatityLabel.text = [NSString stringWithFormat:@"%lu",children];
+}
+
+#pragma mark - UITextFieldDelegate
+
+- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField{
+   [self performSegueWithIdentifier:@"toSearchMenuSegue" sender:nil];
+    return NO;
+}
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    if([segue.identifier isEqualToString:@"searchToListSegue"]){
+        //TODO perform search using ModelManager;
+    }else if ([segue.identifier isEqualToString:@"toSearchMenuSegue"]){
+        UserSearchResultViewController *vc = segue.destinationViewController;
+        vc.delegate = self;
+    }else if ([segue.identifier isEqualToString:@"toRequirementSetSegue"]){
+        RequirementViewController *vc = segue.destinationViewController;
+        vc.delegate = self;
+    }
 }
-*/
+
 
 @end
