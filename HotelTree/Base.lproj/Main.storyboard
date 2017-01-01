@@ -764,7 +764,7 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </mapView>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IDh-U4-RNw">
-                                                    <rect key="frame" x="218" y="0.0" width="172" height="89"/>
+                                                    <rect key="frame" x="234" y="8" width="149" height="67"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <state key="normal" title="OpenMap"/>
                                                     <connections>
@@ -870,6 +870,6 @@
         <image name="menu" width="22" height="22"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="SMV-8t-N0S"/>
+        <segue reference="0CV-sa-wEC"/>
     </inferredMetricsTieBreakers>
 </document>

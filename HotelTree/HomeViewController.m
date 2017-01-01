@@ -10,14 +10,41 @@
 #import "HomeTableCell.h"
 
 @interface HomeViewController ()<UITableViewDelegate,UITableViewDataSource>
-
+@property (strong,nonatomic) NSArray *homeArray;
 @end
 
 @implementation HomeViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+//    [self.fileManager fileExistsAtPath:self.diaryEntriesPath isDirectory:&isDirectory];
+//    
+//    if (isDirectory) {
+//        NSString *dItemPath = [self.diaryEntriesPath stringByAppendingPathComponent:dItem.title];
+//        
+//        if ([self.fileManager fileExistsAtPath:dItemPath isDirectory:nil]) {
+//            DiaryItem*rewriteDairy = [[DiaryItem alloc]init];
+//            rewriteDairy.content = dItem.content;
+//            NSData*data = [NSKeyedArchiver archivedDataWithRootObject:rewriteDairy];
+//            [data writeToFile:dItemPath atomically:YES];
+//        }
+//        else{
+//            //                [dItem.content writeToFile:dItemPath atomically:YES encoding:NSUTF8StringEncoding error:nil];
+//            //
+//            [self.filesOnDisk addObject:dItem.title];
+//            DiaryItem*newDairy = [[DiaryItem alloc]init];
+//            newDairy.title = dItem.title;
+//            newDairy.content = dItem.content;
+//            NSData*data = [NSKeyedArchiver archivedDataWithRootObject:newDairy];
+//            [data writeToFile:dItemPath atomically:YES];
+//            [self.delegate informationUpdated];
+//        }
+//    }
+//    else{
+//        NSLog(@"Directory notExist in the path: %@",self.diaryEntriesPath);
+//    }
+//    NSData *imgData = [NSData dataWithContentsOfFile:imgPath];
+//    UIImage *image = [[UIImage alloc] initWithData:imgData];
 }
 
 - (void)didReceiveMemoryWarning {
