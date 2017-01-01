@@ -86,7 +86,7 @@
     
     NSString *filePath = [imageStoreManager imageStore:hotelThumb hotelId:hotelId];
     
-    NSString *hotelQuery = [NSString stringWithFormat:@"insert into hotel values('%@','%@','%@','%@','%@','%@','%@','%@','%@');", hotelId, hotelName,hotelLatitude,hotelLongitude,hotelAddress,hotelRating,hotelPrice,filePath,hotelAvailableDate];
+    NSString *hotelQuery = [NSString stringWithFormat:@"insert into hotel values('%@','%@','%@','%@','%@','%@','%@','%@','%@');", hotelId, hotelName,hotelAddress,hotelLatitude,hotelLongitude,hotelRating,hotelPrice,filePath,hotelAvailableDate];
     
     //!!!hotelAvailableDate should returned by WebService!!!
     
