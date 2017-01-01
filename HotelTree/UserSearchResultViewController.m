@@ -33,7 +33,7 @@ static NSString *tablename = @"tbl_hotel";
     //define search domains
     self.searchDomains = @[@"name",@"address"];
     //query for test purpose, delete after finishing
-    [[SQLiteManager shareInstance] executeQuery:createQuery];
+    //[[SQLiteManager shareInstance] executeQuery:createQuery];
 //    [self createQueryForTest];
 }
 //query for test purpose, delete after finishing
@@ -65,12 +65,12 @@ static NSString *tablename = @"tbl_hotel";
     NSString *searchKey = nil;
     NSCharacterSet *stopSet = [NSCharacterSet characterSetWithCharactersInString:@", .:;"];
     [scanner scanUpToCharactersFromSet: stopSet intoString:&searchKey];
-    NSArray *result = [self searchUsingQueryWithKeys:searchDomains andKeyword: searchKey];
+    //NSArray *result = [self searchUsingQueryWithKeys:searchDomains andKeyword: searchKey];
     while(!scanner.isAtEnd){
         [scanner scanUpToCharactersFromSet:stopSet intoString:&searchKey];
-        result = [self searchArrayUsingPredicate:result withKeys:searchDomains andKeyword:searchKey];
+    //    result = [self searchArrayUsingPredicate:result withKeys:searchDomains andKeyword:searchKey];
     }
-    self.searchResultsArray = result;
+   // self.searchResultsArray = result;
     [self.tableView reloadData];
 }
 

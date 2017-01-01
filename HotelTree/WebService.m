@@ -70,6 +70,8 @@
     id jsonOutput = [NSJSONSerialization JSONObjectWithData:output options:NSJSONReadingAllowFragments error:nil];
     NSDictionary* outDic = jsonOutput;
     NSArray* array = [outDic objectForKey:@"Hotels"];
+    
+    
     for(NSDictionary* d in array){
 //        HotelSearch* hotel = [[HotelSearch alloc]init];
 //        hotel.hotelId = [d objectForKey:@"hotelId"];

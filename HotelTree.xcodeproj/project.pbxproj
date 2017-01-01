@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		240B4AE0DDDF130530534838 /* Pods_HotelTree.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C92CA96825446B7E2AB3AA9 /* Pods_HotelTree.framework */; };
+		60BB8B671E1971D300BB6B9E /* SortManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 60BB8B661E1971D300BB6B9E /* SortManager.m */; };
+		60BB8B6A1E1977D400BB6B9E /* ListViewController2.m in Sources */ = {isa = PBXBuildFile; fileRef = 60BB8B691E1977D400BB6B9E /* ListViewController2.m */; };
 		C3ADF57F1E19636500CCB7C8 /* SearchManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C3ADF57C1E19636500CCB7C8 /* SearchManager.m */; };
 		C3ADF5801E19636500CCB7C8 /* UserSearchResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3ADF57E1E19636500CCB7C8 /* UserSearchResultViewController.m */; };
 		C3DA38361E16F5AC00E1AB83 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DA38351E16F5AC00E1AB83 /* main.m */; };
@@ -63,6 +65,10 @@
 		0B6A92A0508B1EB474A6EC72 /* Pods-HotelTree.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HotelTree.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HotelTree/Pods-HotelTree.debug.xcconfig"; sourceTree = "<group>"; };
 		3C92CA96825446B7E2AB3AA9 /* Pods_HotelTree.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HotelTree.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		56D05E330B7EE64E6E7DAEB2 /* Pods-HotelTree.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HotelTree.release.xcconfig"; path = "Pods/Target Support Files/Pods-HotelTree/Pods-HotelTree.release.xcconfig"; sourceTree = "<group>"; };
+		60BB8B651E1971D300BB6B9E /* SortManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SortManager.h; sourceTree = "<group>"; };
+		60BB8B661E1971D300BB6B9E /* SortManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SortManager.m; sourceTree = "<group>"; };
+		60BB8B681E1977D400BB6B9E /* ListViewController2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListViewController2.h; sourceTree = "<group>"; };
+		60BB8B691E1977D400BB6B9E /* ListViewController2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListViewController2.m; sourceTree = "<group>"; };
 		C3ADF57B1E19636500CCB7C8 /* SearchManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchManager.h; sourceTree = "<group>"; };
 		C3ADF57C1E19636500CCB7C8 /* SearchManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchManager.m; sourceTree = "<group>"; };
 		C3ADF57D1E19636500CCB7C8 /* UserSearchResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserSearchResultViewController.h; sourceTree = "<group>"; };
@@ -269,9 +275,11 @@
 				C3DA38B31E18501E00E1AB83 /* CustomiseNavController.h */,
 				C3DA38B41E18501E00E1AB83 /* CustomiseNavController.m */,
 				C3DA38C11E186CA700E1AB83 /* HomeViewController.h */,
-				C3DA38C21E186CA700E1AB83 /* HomeViewController.m */,
+				60BB8B681E1977D400BB6B9E /* ListViewController2.h */,
+				60BB8B691E1977D400BB6B9E /* ListViewController2.m */,
 				C3DA38C41E186CBD00E1AB83 /* ListViewController.h */,
 				C3DA38C51E186CBD00E1AB83 /* ListViewController.m */,
+				C3DA38C21E186CA700E1AB83 /* HomeViewController.m */,
 				C3DA38CA1E186E9600E1AB83 /* DetailViewController.h */,
 				C3DA38CB1E186E9600E1AB83 /* DetailViewController.m */,
 				C3DA38E91E18B66A00E1AB83 /* OrderConfirmViewController.h */,
@@ -330,6 +338,8 @@
 				C3DA38FB1E18B6F900E1AB83 /* WebService.m */,
 				C3DA38FC1E18B6F900E1AB83 /* WebServiceProvider.h */,
 				C3DA38FD1E18B6F900E1AB83 /* WebServiceProvider.m */,
+				60BB8B651E1971D300BB6B9E /* SortManager.h */,
+				60BB8B661E1971D300BB6B9E /* SortManager.m */,
 			);
 			name = Manager;
 			sourceTree = "<group>";
@@ -511,11 +521,13 @@
 				C3DA38C61E186CBD00E1AB83 /* ListViewController.m in Sources */,
 				C3DA38E31E18B5FC00E1AB83 /* Hotel.m in Sources */,
 				C3DA38511E17538000E1AB83 /* SplashTitleAnimationView.m in Sources */,
+				60BB8B671E1971D300BB6B9E /* SortManager.m in Sources */,
 				C3DA38B51E18501E00E1AB83 /* CustomiseNavController.m in Sources */,
 				C3DA38D51E18725A00E1AB83 /* DetailTableCell.m in Sources */,
 				C3DA38CC1E186E9600E1AB83 /* DetailViewController.m in Sources */,
 				C3DA38E21E18B5FC00E1AB83 /* User.m in Sources */,
 				C3DA38E41E18B5FC00E1AB83 /* Order.m in Sources */,
+				60BB8B6A1E1977D400BB6B9E /* ListViewController2.m in Sources */,
 				C3DA38BE1E18563400E1AB83 /* UINavigationBar+Addition.m in Sources */,
 				C3DA38391E16F5AC00E1AB83 /* AppDelegate.m in Sources */,
 				C3DA38671E17627F00E1AB83 /* ResetViewController.m in Sources */,
