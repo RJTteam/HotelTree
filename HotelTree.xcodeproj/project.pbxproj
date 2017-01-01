@@ -57,6 +57,7 @@
 		C3DA39031E18B6F900E1AB83 /* WebService.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DA38FB1E18B6F900E1AB83 /* WebService.m */; };
 		C3DA39041E18B6F900E1AB83 /* WebServiceProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DA38FD1E18B6F900E1AB83 /* WebServiceProvider.m */; };
 		C3DA39071E18B76900E1AB83 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C3DA39061E18B76900E1AB83 /* libsqlite3.0.tbd */; };
+		E89635AA1E19661A00F234D3 /* RequirementViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E89635A91E19661A00F234D3 /* RequirementViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -149,6 +150,8 @@
 		C3DA38FC1E18B6F900E1AB83 /* WebServiceProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebServiceProvider.h; sourceTree = "<group>"; };
 		C3DA38FD1E18B6F900E1AB83 /* WebServiceProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebServiceProvider.m; sourceTree = "<group>"; };
 		C3DA39061E18B76900E1AB83 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		E89635A81E19661A00F234D3 /* RequirementViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequirementViewController.h; sourceTree = "<group>"; };
+		E89635A91E19661A00F234D3 /* RequirementViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RequirementViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -278,6 +281,8 @@
 				C3DA38EA1E18B66A00E1AB83 /* OrderConfirmViewController.m */,
 				C3DA38EB1E18B66A00E1AB83 /* PaymentConfirmViewController.h */,
 				C3DA38EC1E18B66A00E1AB83 /* PaymentConfirmViewController.m */,
+				E89635A81E19661A00F234D3 /* RequirementViewController.h */,
+				E89635A91E19661A00F234D3 /* RequirementViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -498,6 +503,7 @@
 			files = (
 				C3DA38E01E18B5FC00E1AB83 /* ImageStoreManager.m in Sources */,
 				C3DA38ED1E18B66A00E1AB83 /* OrderConfirmViewController.m in Sources */,
+				E89635AA1E19661A00F234D3 /* RequirementViewController.m in Sources */,
 				C3DA39011E18B6F900E1AB83 /* UserLogin.m in Sources */,
 				C3DA38FE1E18B6F900E1AB83 /* BookingConfirm.m in Sources */,
 				C3DA38EE1E18B66A00E1AB83 /* PaymentConfirmViewController.m in Sources */,
