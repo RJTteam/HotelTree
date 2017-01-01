@@ -10,9 +10,14 @@
 
 @interface User : NSObject
 
-@property(strong,nonatomic) NSString * userId;
+
+//stored in User DB, for login
+@property(strong,nonatomic) NSString * userId;  //mobile, use this for login
 @property(strong,nonatomic) NSString * password;
-@property(strong,nonatomic) NSString * userName;
+
+
+//stored in UserInfo DB, for user information details
+@property(strong,nonatomic) NSString * userName;  //just a nickname , stored at userInfo DB, not for login
 @property(strong,nonatomic) NSString * firstName;
 @property(strong,nonatomic) NSString * lastName;
 @property(strong,nonatomic) NSString * email;
