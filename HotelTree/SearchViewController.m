@@ -6,11 +6,11 @@
 //  Copyright © 2016 RJT. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "SearchViewController.h"
 #import "UserSearchResultViewController.h"
 #import "RequirementViewController.h"
 
-@interface ViewController ()<SearchMenuToSearchDelegate, QuantitySetDelegate>
+@interface SearchViewController ()<SearchMenuToSearchDelegate, QuantitySetDelegate>
 @property (weak, nonatomic) IBOutlet UILabel *checkInDisplayLabel;
 @property (weak, nonatomic) IBOutlet UILabel *checkOutDisplayLabel;
 @property (weak, nonatomic) IBOutlet UITextField *searchContentTextField;
