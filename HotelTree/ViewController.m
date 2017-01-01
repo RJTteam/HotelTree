@@ -17,7 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-//    WebService* service = [WebService sharedInstance];
+    WebService* service = [WebService sharedInstance];
 //
     
 // --------- register
@@ -38,7 +38,10 @@
 //                          @"hotelLat":@"28.6049",
 //                          @"hotelLong":@"77.2235"
 //                          };
-//    NSLog(@"%@",[service returnHotelSearch:dic]);
+//    NSArray* arr = [service returnHotelSearch:dic];
+//    for(HotelSearch * h in arr){
+//        NSLog(@"%@",h.hotelImages);
+//    }
     
     
 //-----------booking
@@ -76,11 +79,18 @@
 //    NSLog(@"%@",[service resetPassword:dic]);
     
 //----------- manage booking
-//    NSDictionary* dic = @{
-//                          @"id":@"412",
-//                          @"mobile":@"4565654"
-//                          };
-//    NSLog(@"%@",[service manage:dic]);
+    NSDictionary* dic = @{
+                          @"hotel_id":@"408",
+                          @"mobile":@"5555454",
+                          @"hotel_name":@"Park Hyatt",
+                          @"checkIn":@"2016-12-17 00:00:00",
+                          @"checkOut":@"2016-12-19 00:00:00",
+                          @"room":@"3",
+                          @"adult":@"4",
+                          @"child":@"2",
+                          @"booked":@"0"
+                          };
+    NSLog(@"%@",[service manage:dic]);
     
 }
 
@@ -90,13 +100,17 @@
 
 //http://rjtmobile.com/ansari/ohr/ohrapp/ohr_login.php?&mobile=123456789&password=789456
 
-//http://rjtmobile.com/ansari/ohr/ohrapp/booking_confirmation.php?&id=412&mobile=4564654
+
+//http://rjtmobile.com/ansari/ohr/ohrapp/manage_booking.php?&hotel_id=408&hotel_name=Park Hyatt&checkIn=2016-12-17 00:00:00&checkOut=2016-12-19 00:00:00&room=3&adult=4&child=2&booked=0&mobile=5555454
+
 
 //http://rjtmobile.com/ansari/ohr/ohrapp/booked_hotel.php?&id=412&checkIn=2016-12-17 00:00:00&checkOut=2016-12-19 00:00:00&room=2&adult=2&child=0&booked=1
 
 //http://rjtmobile.com/ansari/ohr/ohrapp/search_hotel.php?&hotelLat=28.6049&hotelLong=77.2235
 
 //http://rjtmobile.com/ansari/ohr/ohrapp/ohr_reg.php?&name=aamir&email=aa@gmail.com&mobile=55565454&password=7011&userAdd=Delhi
+
+//rheuhtuer
 
 
 - (void)didReceiveMemoryWarning {

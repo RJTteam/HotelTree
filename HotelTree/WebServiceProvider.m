@@ -31,7 +31,9 @@
     //http://rjtmobile.com/ansari/ohr/ohrapp/ohr_login.php?&mobile=123456789&password=789456
     //NSLog(@"feedback from server %@",data);
     
-    return [ NSData dataWithContentsOfURL: [ NSURL URLWithString: urlStr1 ] ];
+    NSData *result =[ NSData dataWithContentsOfURL: [ NSURL URLWithString: urlStr1 ] ];
+    
+    return result;
 }
 
 @end
