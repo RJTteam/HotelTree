@@ -10,26 +10,36 @@
 #import "HomeTableCell.h"
 #import "RequirementViewController.h"
 #import "UserSearchResultViewController.h"
+#import "PMCalendar.h"
 
-@interface HomeViewController ()<UITableViewDelegate,UITableViewDataSource,SearchMenuToSearchDelegate,QuantitySetDelegate, UITextFieldDelegate>
+@interface HomeViewController ()<UITableViewDelegate,UITableViewDataSource,SearchMenuToSearchDelegate,QuantitySetDelegate, UITextFieldDelegate, PMCalendarControllerDelegate>
 @property (strong,nonatomic) NSArray *homeArray;
 
 @property (weak, nonatomic) IBOutlet UILabel *checkInDisplayLabel;
 @property (weak, nonatomic) IBOutlet UILabel *checkOutDisplayLabel;
 @property (weak, nonatomic) IBOutlet UITextField *searchContentTextField;
 
-@property (nonatomic)double selectedLatitude;
-@property (nonatomic)double selectedLongitude;
 @property (weak, nonatomic) IBOutlet UILabel *roomQuantityLabel;
 @property (weak, nonatomic) IBOutlet UILabel *adultQuantityLabel;
 @property (weak, nonatomic) IBOutlet UILabel *childrenQuatityLabel;
 
+@property (weak, nonatomic) IBOutlet UIButton *checkInButton;
+@property (weak, nonatomic) IBOutlet UIButton *checkOutButton;
+
+@property (nonatomic)double selectedLatitude;
+@property (nonatomic)double selectedLongitude;
+@property (strong, nonatomic)PMCalendarController *inCalender;
 @end
 
 @implementation HomeViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.inCalender= [[PMCalendarController alloc] initWithSize:CGSizeMake(300, 170)];
+    self.inCalender.delegate = self;
+    [self.inCalender setAllowedPeriod:[PMPeriod periodWithStartDate:[NSDate date] endDate:[[NSDate date] dateByAddingMonths:12]]];
+    self.inCalender.showOnlyCurrentMonth = NO;
+
 //    [self.fileManager fileExistsAtPath:self.diaryEntriesPath isDirectory:&isDirectory];
 //    
 //    if (isDirectory) {
@@ -72,24 +82,14 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 3;
-}
 
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    HomeTableCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
-    
-    // Configure the cell...
-    
-    return cell;
-}
 #pragma mark - Event Methods
-
-- (IBAction)checkInDateButtonClicked {
-}
-
-- (IBAction)checkoutDateButtonClicked {
+- (IBAction)checkInButtonClicked:(UIButton *)sender {
+    if(self.inCalender.isCalendarVisible){
+        [self.inCalender dismissCalendarAnimated:YES];
+    }else{
+        [self.inCalender presentCalendarFromView:sender permittedArrowDirections:PMCalendarArrowDirectionUp animated:YES];
+    }
 }
 
 - (IBAction)searchButtonClicked {
@@ -124,6 +124,33 @@
 - (BOOL)textFieldShouldBeginEditing:(UITextField *)textField{
    [self performSegueWithIdentifier:@"toSearchMenuSegue" sender:nil];
     return NO;
+}
+#pragma mark - PMCalendarControllerDelegate
+
+- (BOOL)calendarControllerShouldDismissCalendar:(PMCalendarController *)calendarController{
+    NSDateFormatter *formater = [[NSDateFormatter alloc] init];
+    formater.timeZone = [NSTimeZone localTimeZone];
+    formater.dateStyle = NSDateFormatterMediumStyle;
+    formater.timeStyle = NSDateFormatterNoStyle;
+    NSString *checkin = [formater stringFromDate:calendarController.period.startDate];
+    NSString *checkout = [formater stringFromDate:calendarController.period.endDate];
+    self.checkInDisplayLabel.text = checkin;
+    self.checkOutDisplayLabel.text = checkout;
+    return YES;
+}
+
+#pragma mark -UITableViewDataSource
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 3;
+}
+
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    HomeTableCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+    
+    // Configure the cell...
+    
+    return cell;
 }
 
 #pragma mark - Navigation
