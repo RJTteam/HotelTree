@@ -17,8 +17,9 @@
 
 @interface ListViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property(strong,nonatomic)NSArray* hotelsArray;
-@property (weak, nonatomic) IBOutlet UITableView *listTable;
+@property(strong, nonatomic)NSDictionary *location;
 
+@property (weak, nonatomic) IBOutlet UITableView *listTable;
 @end
 
 @implementation ListViewController
@@ -26,15 +27,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    ModelManager *modelManager = [ModelManager sharedInstance];
-    NSDictionary* dic = @{
-                          @"hotelLat":@"28.6049",
-                          @"hotelLong":@"77.2235"
-                          };
-    
-    [modelManager hotelSearchFromWebService:dic];
-    
-    self.hotelsArray = [modelManager getAllHotel];
+    if(self.hotelsRawInfo != nil){
+        self.location = [NSDictionary dictionaryWithDictionary:(NSDictionary *)[self.hotelsRawInfo lastObject]];
+        [self.hotelsRawInfo removeLastObject];
+        self.hotelsArray = [NSArray arrayWithArray:self.hotelsRawInfo];
+    }
 //    NSLog(@"%@",self.hotelsArray);
     
 }
