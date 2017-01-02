@@ -13,7 +13,7 @@
 #import "SearchManager.h"
 
 
-//create table if not exists hotel(hotelId varchar(255)  primary key, hotelName varchar(255) not null,hotelAddress varchar(255) not null,hotelLatitude varchar(255) not null,hotelLongitude varchar(255) not null,hotelRating varchar(20) not null,hotelPrice varchar(255) not null,hotelThumb varchar(255) not null,hotelAvailableDate text not null);
+//create table if not exists hotel(hotelId varchar(255)  primary key, hotelName varchar(255) not null,hotelAddress varchar(255) not null,hotelLat varchar(255) not null,hotelLong varchar(255) not null,hotelRating varchar(20) not null,hotelPrice varchar(255) not null,hotelThumb varchar(255) not null,hotelAvailableDate text not null);
 
 
 @interface UserSearchResultViewController ()<UISearchResultsUpdating, UISearchControllerDelegate, UISearchBarDelegate>
@@ -94,8 +94,8 @@
                     NSString *address = [NSString stringWithFormat:@"%@", ABCreateStringWithAddressDictionary(plcmark.addressDictionary, YES)];
                     NSDictionary *dict = @{@"hotelName":plcmark.name,
                                            @"hotelAddress":address,
-                                           @"hotelLatitude":[NSNumber numberWithDouble:plcmark.location.coordinate.latitude],
-                                           @"hotelLongitude":[NSNumber numberWithDouble:plcmark.location.coordinate.longitude]};
+                                           @"hotelLat":[NSNumber numberWithDouble:plcmark.location.coordinate.latitude],
+                                           @"hotelLong":[NSNumber numberWithDouble:plcmark.location.coordinate.longitude]};
                     if(dict.count){
                         [array addObject:dict];
                     }
@@ -145,8 +145,8 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     NSDictionary *dict = self.searchResultsArray[indexPath.row];
-    self.locationDict = @{@"hotelLatitude":dict[@"hotelLatitude"],
-                          @"hotelLongitude":dict[@"hotelLongitude"]};
+    self.locationDict = @{@"hotelLat":dict[@"hotelLat"],
+                          @"hotelLong":dict[@"hotelLong"]};
 }
 
 

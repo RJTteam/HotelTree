@@ -12,6 +12,8 @@
 #import "RequirementViewController.h"
 #import "UserSearchResultViewController.h"
 #import "PMCalendar.h"
+#import "ModelManager.h"
+#import "ListViewController.h"
 
 @interface HomeViewController ()<UITableViewDelegate,UITableViewDataSource,SearchMenuToSearchDelegate,QuantitySetDelegate, UITextFieldDelegate, PMCalendarControllerDelegate>
 @property (strong,nonatomic) NSArray *homeArray;
@@ -110,8 +112,8 @@
 
 - (void)updateSearchContent:(NSDictionary *)content withText:(NSString *)text{
     [self.searchContentTextField setText:text];
-    double selectedLatitude = [content[@"hotelLatitude"] doubleValue];
-    double selectedLongitude = [content[@"hotelLongitude"] doubleValue];
+    double selectedLatitude = [content[@"hotelLat"] doubleValue];
+    double selectedLongitude = [content[@"hotelLong"] doubleValue];
     self.location = CLLocationCoordinate2DMake(selectedLatitude, selectedLongitude);
 }
 
@@ -164,6 +166,17 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if([segue.identifier isEqualToString:@"searchToListSegue"]){
         //TODO perform search using ModelManager;
+        ModelManager *modelManager = [ModelManager sharedInstance];
+        NSDictionary* dic = @{
+                              @"hotelLat":[NSString stringWithFormat:@"%f", self.location.latitude],
+                              @"hotelLong":[NSString stringWithFormat:@"%f", self.location.longitude]
+                              };
+        
+        [modelManager hotelSearchFromWebService:dic];
+        NSMutableArray *hotelsArray = [[modelManager getAllHotel] mutableCopy];
+        [hotelsArray addObject:dic];
+        ListViewController *vc = segue.destinationViewController;
+        vc.hotelsRawInfo = [NSMutableArray arrayWithArray:hotelsArray];
     }else if ([segue.identifier isEqualToString:@"toSearchMenuSegue"]){
         UserSearchResultViewController *vc = segue.destinationViewController;
         vc.delegate = self;
