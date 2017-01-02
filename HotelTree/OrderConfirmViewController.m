@@ -44,13 +44,13 @@
     NSArray *array = [modelManager getAllHotel];
     
     for(Hotel *hotel in array){
-    NSLog(@"%@,%@,%@",hotel.hotelThumb,hotel.hotelId,hotel.hotelLatitude);
+    NSLog(@"%@,%@,%@",hotel.hotelThumb,hotel.hotelId,hotel.hotelLat);
     }
     
     self.hotel = array[0];
     ImageStoreManager *imageStoreManager = [[ImageStoreManager alloc]init];
     self.hotelName.text = self.hotel.hotelName;
-    self.hotelAddress.text = self.hotel.hotelAddress;
+    self.hotelAddress.text = self.hotel.hotelAdd;
     self.hotelRating.text = [NSString stringWithFormat:@"This property has an excellent location score of %@, based on 691 guest reviews.",self.hotel.hotelRating];
     
     
@@ -61,7 +61,7 @@
     self.checkInDate.text = [self NSDateToNSString:self.order.checkInDate];
     self.checkOutDate.text = [self NSDateToNSString:self.order.checkOutDate];
     
-    self.hotelPrice.text = self.hotel.hotelPrice;
+    self.hotelPrice.text = self.hotel.price;
     
     self.firstNameTextField.text = self.user.firstName;
     self.lastNameTextField.text = self.user.lastName;

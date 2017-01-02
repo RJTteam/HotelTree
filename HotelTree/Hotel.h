@@ -12,11 +12,11 @@
 
 @property(strong,nonatomic) NSString * hotelId;
 @property(strong,nonatomic) NSString * hotelName;
-@property(strong,nonatomic) NSString * hotelAddress;
-@property(strong,nonatomic) NSString * hotelLatitude;  //hotelLat
-@property(strong,nonatomic) NSString * hotelLongitude;   //hotelLong
+@property(strong,nonatomic) NSString * hotelAdd;
+@property(strong,nonatomic) NSString * hotelLat;  //hotelLat
+@property(strong,nonatomic) NSString * hotelLong;   //hotelLong
 @property(strong,nonatomic) NSString * hotelRating;
-@property(strong,nonatomic) NSString * hotelPrice;
+@property(strong,nonatomic) NSString * price;
 @property(strong,nonatomic) NSString * hotelThumb;
 //@property(strong,nonatomic) NSArray<NSDate *> * hotelAvailableDate; //Server not support, always nil
 

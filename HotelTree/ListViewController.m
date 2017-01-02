@@ -11,10 +11,13 @@
 #import "ModelManager.h"
 #import "Order.h"
 #import "SortManager.h"
+#import "ImageStoreManager.h"
+#import "DetailViewController.h"
 
 
 @interface ListViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property(strong,nonatomic)NSArray* hotelsArray;
+@property (weak, nonatomic) IBOutlet UITableView *listTable;
 
 @end
 
@@ -32,24 +35,7 @@
     [modelManager hotelSearchFromWebService:dic];
     
     self.hotelsArray = [modelManager getAllHotel];
-    NSLog(@"%@",self.hotelsArray);
-    //    SortManager *sort = [[SortManager alloc]init];
-    //
-    //    NSArray *arrayByPrice =[sort sortHotelByPrice:array];
-    //    for(Hotel *hotel in arrayByPrice){
-    //        NSLog(@"%@,%@",hotel.hotelId,hotel.hotelPrice);
-    //    }
-    //
-    //    NSArray *arrayByRating = [sort sortHotelByRating:array];
-    //    for(Hotel *hotel in arrayByRating){
-    //        NSLog(@"%@,%@",hotel.hotelId,hotel.hotelRating);
-    //    }
-    //
-    //    NSArray *arrayByName = [sort sortHotelByName:array];
-    //    for(Hotel *hotel in arrayByName){
-    //        NSLog(@"%@,%@",hotel.hotelId,hotel.hotelName);
-    //    }
-    
+//    NSLog(@"%@",self.hotelsArray);
     
 }
 - (IBAction)sortButtonClicked:(UIButton *)sender {
@@ -69,9 +55,7 @@
         [sender setTitle:@"Sort:Name" forState:UIControlStateNormal];
     }
     
-    NSLog(@"%@",self.hotelsArray);
-    
-    
+//    NSLog(@"%@",self.hotelsArray);
 }
 
 
@@ -82,25 +66,38 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 3;
+    return self.hotelsArray.count;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     ListTableCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     
-    // Configure the cell...
+    Hotel *obj = [self.hotelsArray objectAtIndex:indexPath.row];
+    cell.nameLabel.text = obj.hotelName;
+    cell.rateLabel.text = obj.hotelRating;
+    cell.addressLabel.text = obj.hotelAdd;
+    cell.priceLabel.text = obj.price;
+    
+    cell.hotelImage.image = [UIImage imageWithContentsOfFile:[[[ImageStoreManager alloc]init] getImageStoreFilePathByHotelId:obj.hotelId]];
     
     return cell;
 }
-/*
+
  #pragma mark - Navigation
  
  // In a storyboard-based application, you will often want to do a little preparation before navigation
  - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
- // Get the new view controller using [segue destinationViewController].
- // Pass the selected object to the new view controller.
+     if ([segue.identifier isEqualToString:@"toHotelDetail"]) {
+         if ([sender isKindOfClass:[UITableViewCell class]]) {
+             NSIndexPath *indexPath = [self.listTable indexPathForSelectedRow];
+             DetailViewController *desitViewControl = segue.destinationViewController;             
+             desitViewControl.aHotel = [self.hotelsArray objectAtIndex:indexPath.row];
+         }
+         
+     }
+
  }
- */
+
 
 @end

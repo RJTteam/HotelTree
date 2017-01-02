@@ -34,7 +34,7 @@
     self.firstName.text = self.user.firstName;
     self.lastName.text = self.user.lastName;
     self.mobile.text = self.user.userId;
-    self.price.text = self.hotel.hotelPrice;
+    self.price.text = self.hotel.price;
 }
 
 - (void)didReceiveMemoryWarning {
