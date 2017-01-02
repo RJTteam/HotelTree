@@ -39,7 +39,6 @@
     self.inCalender.delegate = self;
     [self.inCalender setAllowedPeriod:[PMPeriod periodWithStartDate:[NSDate date] endDate:[[NSDate date] dateByAddingMonths:12]]];
     self.inCalender.showOnlyCurrentMonth = NO;
-
 //    [self.fileManager fileExistsAtPath:self.diaryEntriesPath isDirectory:&isDirectory];
 //    
 //    if (isDirectory) {
@@ -126,7 +125,11 @@
 #pragma mark - UITextFieldDelegate
 
 - (BOOL)textFieldShouldBeginEditing:(UITextField *)textField{
+<<<<<<< HEAD
    [self performSegueWithIdentifier:@"toSearchMenuSegue" sender:nil];
+=======
+    [self performSegueWithIdentifier:@"toSearchMenuSegue" sender:nil];
+>>>>>>> upstream/master
     return NO;
 }
 #pragma mark - PMCalendarControllerDelegate

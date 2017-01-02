@@ -26,10 +26,6 @@
     }
     NSString* urlStr = [ urlString substringToIndex: urlString.length - 1 ];
     NSString* urlStr1 = [urlStr stringByReplacingOccurrencesOfString:@" " withString:@"%20"];
-    NSLog(@"%@",urlStr);
-    
-    //http://rjtmobile.com/ansari/ohr/ohrapp/ohr_login.php?&mobile=123456789&password=789456
-    //NSLog(@"feedback from server %@",data);
     
     NSData *result =[ NSData dataWithContentsOfURL: [ NSURL URLWithString: urlStr1 ] ];
     

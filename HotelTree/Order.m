@@ -2,8 +2,8 @@
 //  Order.m
 //  HotelTree
 //
-//  Created by Shuai Wang on 12/31/16.
-//  Copyright © 2016 RJT. All rights reserved.
+//  Created by Yangbin on 1/1/17.
+//  Copyright © 2017 com.rjtcompuquest. All rights reserved.
 //
 
 #import "Order.h"
@@ -30,7 +30,5 @@
     [dateFormatter setDateFormat:@"yyyy-MM-dd"];
     return [dateFormatter dateFromString:stringDate];
 }
-
-
 
 @end

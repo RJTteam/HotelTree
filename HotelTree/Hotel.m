@@ -2,8 +2,8 @@
 //  Hotel.m
 //  HotelTree
 //
-//  Created by Shuai Wang on 12/31/16.
-//  Copyright © 2016 RJT. All rights reserved.
+//  Created by Yangbin on 1/1/17.
+//  Copyright © 2017 com.rjtcompuquest. All rights reserved.
 //
 
 #import "Hotel.h"
@@ -20,11 +20,10 @@
         _hotelRating = dic[@"hotelRating"];
         _hotelPrice = dic[@"hotelPrice"];
         _hotelThumb = dic[@"hotelThumb"];
-        _hotelAvailableDate = dic[@"hotelAvailableDate"];
+        //_hotelAvailableDate = dic[@"hotelAvailableDate"];
         
     }
     return self;
 }
-
 
 @end

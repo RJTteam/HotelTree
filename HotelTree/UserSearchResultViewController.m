@@ -41,7 +41,7 @@
     //set up navigation items
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Cancel" style:UIBarButtonItemStylePlain target:self action:@selector(cancelButtonClicked)];
     self.searchControl.hidesNavigationBarDuringPresentation = NO;
-  
+    
 }
 
 - (void)viewDidAppear:(BOOL)animated{
