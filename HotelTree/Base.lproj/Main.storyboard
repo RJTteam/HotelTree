@@ -783,7 +783,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="284" height="37"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <connections>
-                                                    <segue destination="vtn-t5-e8E" kind="show" id="1gg-KU-WdP"/>
+                                                    <segue destination="vtn-t5-e8E" kind="show" identifier="toRequirementSetSegue" id="1gg-KU-WdP"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -794,7 +794,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Search"/>
                                         <connections>
-                                            <segue destination="cJS-Pz-XLC" kind="show" id="chY-yp-4EL"/>
+                                            <segue destination="cJS-Pz-XLC" kind="show" identifier="searchToListSegue" id="chY-yp-4EL"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -809,6 +809,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="checkOutButton" destination="xT3-hp-yRj" id="MU4-Fa-wPX"/>
                         <segue destination="ReC-qI-RHG" kind="show" identifier="toSearchMenuSegue" id="NXP-7O-am3"/>
                     </connections>
                 </viewController>
@@ -825,7 +826,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="1wP-f2-MlQ">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="1wP-f2-MlQ">
                                 <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1wP-f2-MlQ" id="3sl-Qo-U4Z">
@@ -1498,6 +1499,6 @@
         <image name="menu" width="22" height="22"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="vfq-aD-wYq"/>
+        <segue reference="hcW-1Q-sqN"/>
     </inferredMetricsTieBreakers>
 </document>
