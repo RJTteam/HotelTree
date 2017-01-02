@@ -28,6 +28,7 @@
 		C3ADF5B41E1A218800CCB7C8 /* default.plist in Resources */ = {isa = PBXBuildFile; fileRef = C3ADF5B01E1A218800CCB7C8 /* default.plist */; };
 		C3ADF5B71E1A21A200CCB7C8 /* NSDate+Helpers.m in Sources */ = {isa = PBXBuildFile; fileRef = C3ADF5B61E1A21A200CCB7C8 /* NSDate+Helpers.m */; };
 		C3ADF5BB1E1A23CB00CCB7C8 /* RequirementViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3ADF5BA1E1A23CB00CCB7C8 /* RequirementViewController.m */; };
+		C3ADF5BE1E1AECE000CCB7C8 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3ADF5BD1E1AECE000CCB7C8 /* DetailViewController.m */; };
 		C3DA38361E16F5AC00E1AB83 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DA38351E16F5AC00E1AB83 /* main.m */; };
 		C3DA38391E16F5AC00E1AB83 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DA38381E16F5AC00E1AB83 /* AppDelegate.m */; };
 		C3DA383F1E16F5AC00E1AB83 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3DA383D1E16F5AC00E1AB83 /* Main.storyboard */; };
@@ -55,10 +56,8 @@
 		C3DA38C01E18662E00E1AB83 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3DA38BF1E18662E00E1AB83 /* MapKit.framework */; };
 		C3DA38C31E186CA700E1AB83 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DA38C21E186CA700E1AB83 /* HomeViewController.m */; };
 		C3DA38C61E186CBD00E1AB83 /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DA38C51E186CBD00E1AB83 /* ListViewController.m */; };
-		C3DA38CC1E186E9600E1AB83 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DA38CB1E186E9600E1AB83 /* DetailViewController.m */; };
 		C3DA38CF1E18722300E1AB83 /* HomeTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DA38CE1E18722300E1AB83 /* HomeTableCell.m */; };
 		C3DA38D21E18723B00E1AB83 /* ListTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DA38D11E18723B00E1AB83 /* ListTableCell.m */; };
-		C3DA38D51E18725A00E1AB83 /* DetailTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DA38D41E18725A00E1AB83 /* DetailTableCell.m */; };
 		C3DA38E01E18B5FC00E1AB83 /* ImageStoreManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DA38D71E18B5FC00E1AB83 /* ImageStoreManager.m */; };
 		C3DA38E11E18B5FC00E1AB83 /* ModelManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DA38D91E18B5FC00E1AB83 /* ModelManager.m */; };
 		C3DA38E21E18B5FC00E1AB83 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DA38DB1E18B5FC00E1AB83 /* User.m */; };
@@ -117,6 +116,8 @@
 		C3ADF5B61E1A21A200CCB7C8 /* NSDate+Helpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Helpers.m"; sourceTree = "<group>"; };
 		C3ADF5B91E1A23CB00CCB7C8 /* RequirementViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequirementViewController.h; sourceTree = "<group>"; };
 		C3ADF5BA1E1A23CB00CCB7C8 /* RequirementViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RequirementViewController.m; sourceTree = "<group>"; };
+		C3ADF5BC1E1AECE000CCB7C8 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		C3ADF5BD1E1AECE000CCB7C8 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		C3DA38311E16F5AC00E1AB83 /* HotelTree.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HotelTree.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3DA38351E16F5AC00E1AB83 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C3DA38371E16F5AC00E1AB83 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -159,14 +160,10 @@
 		C3DA38C21E186CA700E1AB83 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		C3DA38C41E186CBD00E1AB83 /* ListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListViewController.h; sourceTree = "<group>"; };
 		C3DA38C51E186CBD00E1AB83 /* ListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListViewController.m; sourceTree = "<group>"; };
-		C3DA38CA1E186E9600E1AB83 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
-		C3DA38CB1E186E9600E1AB83 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		C3DA38CD1E18722300E1AB83 /* HomeTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeTableCell.h; sourceTree = "<group>"; };
 		C3DA38CE1E18722300E1AB83 /* HomeTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeTableCell.m; sourceTree = "<group>"; };
 		C3DA38D01E18723B00E1AB83 /* ListTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListTableCell.h; sourceTree = "<group>"; };
 		C3DA38D11E18723B00E1AB83 /* ListTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListTableCell.m; sourceTree = "<group>"; };
-		C3DA38D31E18725A00E1AB83 /* DetailTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailTableCell.h; sourceTree = "<group>"; };
-		C3DA38D41E18725A00E1AB83 /* DetailTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailTableCell.m; sourceTree = "<group>"; };
 		C3DA38D61E18B5FC00E1AB83 /* ImageStoreManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageStoreManager.h; sourceTree = "<group>"; };
 		C3DA38D71E18B5FC00E1AB83 /* ImageStoreManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageStoreManager.m; sourceTree = "<group>"; };
 		C3DA38D81E18B5FC00E1AB83 /* ModelManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModelManager.h; sourceTree = "<group>"; };
@@ -361,8 +358,8 @@
 				C3DA38C21E186CA700E1AB83 /* HomeViewController.m */,
 				C3DA38C41E186CBD00E1AB83 /* ListViewController.h */,
 				C3DA38C51E186CBD00E1AB83 /* ListViewController.m */,
-				C3DA38CA1E186E9600E1AB83 /* DetailViewController.h */,
-				C3DA38CB1E186E9600E1AB83 /* DetailViewController.m */,
+				C3ADF5BC1E1AECE000CCB7C8 /* DetailViewController.h */,
+				C3ADF5BD1E1AECE000CCB7C8 /* DetailViewController.m */,
 				C3DA38E91E18B66A00E1AB83 /* OrderConfirmViewController.h */,
 				C3DA38EA1E18B66A00E1AB83 /* OrderConfirmViewController.m */,
 				C3DA38EB1E18B66A00E1AB83 /* PaymentConfirmViewController.h */,
@@ -398,8 +395,6 @@
 				C3DA38CE1E18722300E1AB83 /* HomeTableCell.m */,
 				C3DA38D01E18723B00E1AB83 /* ListTableCell.h */,
 				C3DA38D11E18723B00E1AB83 /* ListTableCell.m */,
-				C3DA38D31E18725A00E1AB83 /* DetailTableCell.h */,
-				C3DA38D41E18725A00E1AB83 /* DetailTableCell.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -578,6 +573,7 @@
 				C3ADF5861E19738C00CCB7C8 /* Annotation.m in Sources */,
 				C3DA38EE1E18B66A00E1AB83 /* PaymentConfirmViewController.m in Sources */,
 				C3DA38BB1E18527400E1AB83 /* UIColor+Hexadecimal.m in Sources */,
+				C3ADF5BE1E1AECE000CCB7C8 /* DetailViewController.m in Sources */,
 				C3DA39041E18B6F900E1AB83 /* WebServiceProvider.m in Sources */,
 				C3ADF57F1E19636500CCB7C8 /* SearchManager.m in Sources */,
 				C3DA38681E17627F00E1AB83 /* ForgotPwdVC.m in Sources */,
@@ -589,9 +585,7 @@
 				C3ADF5A51E1A215600CCB7C8 /* PMCalendarController.m in Sources */,
 				C3DA38511E17538000E1AB83 /* SplashTitleAnimationView.m in Sources */,
 				C3DA38B51E18501E00E1AB83 /* CustomiseNavController.m in Sources */,
-				C3DA38D51E18725A00E1AB83 /* DetailTableCell.m in Sources */,
 				C3ADF58F1E1A1A3600CCB7C8 /* SortManager.m in Sources */,
-				C3DA38CC1E186E9600E1AB83 /* DetailViewController.m in Sources */,
 				C3DA38E21E18B5FC00E1AB83 /* User.m in Sources */,
 				C3DA38E41E18B5FC00E1AB83 /* Order.m in Sources */,
 				C3ADF5A41E1A215600CCB7C8 /* PMCalendarBackgroundView.m in Sources */,

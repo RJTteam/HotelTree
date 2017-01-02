@@ -16,6 +16,7 @@
 
 
 @interface MapViewController ()<MKMapViewDelegate>
+@property (nonatomic,strong) NSArray *hotelArray;
 @end
 
 @implementation MapViewController{
@@ -34,12 +35,12 @@
     
     
     [modelManager hotelSearchFromWebService:dic];
-    NSArray *array = [modelManager getAllHotel];
+    self.hotelArray = [modelManager getAllHotel];
 
-    Hotel *hotelOnMapCenter = array[0];
-    _coordinate.longitude = [[NSString stringWithFormat:@"-%@",hotelOnMapCenter.hotelLongitude] doubleValue];
+    Hotel *hotelOnMapCenter = self.hotelArray[0];
+    _coordinate.longitude = [[NSString stringWithFormat:@"-%@",hotelOnMapCenter.hotelLong] doubleValue];
     
-    _coordinate.latitude = [hotelOnMapCenter.hotelLatitude doubleValue];
+    _coordinate.latitude = [hotelOnMapCenter.hotelLat doubleValue];
     MKMapView *MapPage = [[MKMapView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
     float ASPECTRATIONOFMAPKIT = MapPage.frame.size.width/MapPage.frame.size.height;
     MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(_coordinate, 0.8*METERS_PRE_MILE, 0.8*METERS_PRE_MILE*ASPECTRATIONOFMAPKIT);
@@ -51,9 +52,9 @@
     
 
     
-    for(Hotel *hotel in array){
-        NSLog(@"%@,%@,%@",hotel.hotelName,hotel.hotelLatitude,hotel.hotelLongitude);
-        [MapPage addAnnotation:[Annotation annotationWithLatitude:[hotel.hotelLatitude doubleValue] longitude:[[NSString stringWithFormat:@"-%@",hotel.hotelLongitude] doubleValue] title:hotel.hotelName subtitle:hotel.hotelAddress]];
+    for(Hotel *hotel in self.hotelArray){
+        NSLog(@"%@,%@,%@",hotel.hotelName,hotel.hotelLat,hotel.hotelLong);
+        [MapPage addAnnotation:[Annotation annotationWithLatitude:[hotel.hotelLat doubleValue] longitude:[[NSString stringWithFormat:@"-%@",hotel.hotelLong] doubleValue] title:hotel.hotelName subtitle:hotel.hotelAdd]];
     }
     
     [self.view addSubview:MapPage];
@@ -65,11 +66,15 @@
         hotelannotation = [ [ MKAnnotationView alloc ] initWithAnnotation: annotation reuseIdentifier:@"Hotels" ];
     else
         hotelannotation.annotation = annotation;
+    
+    NSUInteger index = [mapView.annotations indexOfObject:hotelannotation.annotation];
+    
     hotelannotation.canShowCallout = YES;
     hotelannotation.rightCalloutAccessoryView = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
     //mapToDetail
     UIImage *image = [ UIImage imageNamed: @"hotel" ];
     hotelannotation.image = image;
+    hotelannotation.tag = index;
     return hotelannotation;
 }
 
@@ -77,9 +82,10 @@
     if ([control isKindOfClass:[UIButton class]]) {
         [mapView deselectAnnotation:view.annotation animated:NO];
         [self performSegueWithIdentifier:@"mapToDetail" sender:view];
+        
     }
 }
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -87,6 +93,6 @@
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
 }
-*/
+
 
 @end

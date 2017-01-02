@@ -51,7 +51,7 @@
 }
 
 - (BOOL)createHotelDBIfNeeded{
-    NSString *hotelDBQuery = @"create table if not exists hotel(hotelId varchar(255)  primary key, hotelName varchar(255) not null,hotelAddress varchar(255) not null,hotelLatitude varchar(255) not null,hotelLongitude varchar(255) not null,hotelRating varchar(20) not null,hotelPrice varchar(255) not null,hotelThumb varchar(255) not null,hotelAvailableDate text not null);";
+    NSString *hotelDBQuery = @"create table if not exists hotel(hotelId varchar(255)  primary key, hotelName varchar(255) not null,hotelAdd varchar(255) not null,hotelLat varchar(255) not null,hotelLong varchar(255) not null,hotelRating varchar(20) not null,price varchar(255) not null,hotelThumb varchar(255) not null);";
     BOOL result = [[SQLiteManager shareInstance] executeQuery:hotelDBQuery];
     return result;
 }
@@ -86,7 +86,7 @@
     
     NSString *filePath = [imageStoreManager imageStore:hotelThumb hotelId:hotelId];
     
-    NSString *hotelQuery = [NSString stringWithFormat:@"insert into hotel values('%@','%@','%@','%@','%@','%@','%@','%@','%@');", hotelId, hotelName,hotelAddress,hotelLatitude,hotelLongitude,hotelRating,hotelPrice,filePath,hotelAvailableDate];
+    NSString *hotelQuery = [NSString stringWithFormat:@"insert into hotel values('%@','%@','%@','%@','%@','%@','%@','%@');", hotelId, hotelName,hotelAddress,hotelLatitude,hotelLongitude,hotelRating,hotelPrice,filePath];
     
     //!!!hotelAvailableDate should returned by WebService!!!
     
@@ -104,7 +104,7 @@
     
     //NSLog(@"%@",self.filePath);
     
-    NSString *hotelQuery = [NSString stringWithFormat:@"insert into hotel values('%@','%@','%@','%@','%@','%@','%@','%@');", hotel.hotelId, hotel.hotelName,hotel.hotelAddress,hotel.hotelLatitude,hotel.hotelLongitude,hotel.hotelRating,hotel.hotelPrice,filePath];
+    NSString *hotelQuery = [NSString stringWithFormat:@"insert into hotel values('%@','%@','%@','%@','%@','%@','%@','%@');", hotel.hotelId, hotel.hotelName,hotel.hotelAdd,hotel.hotelLat,hotel.hotelLong,hotel.hotelRating,hotel.price,filePath];
     
     //!!!hotelAvailableDate should returned by WebService!!!
     

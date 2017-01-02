@@ -129,9 +129,9 @@
     order.checkOutDate = [order NSStringToNSDate:[[arr objectAtIndex:0]objectForKey:@"checkOut"]];
     hotel.hotelName = [[arr objectAtIndex:0]objectForKey:@"hotelName"];
     hotel.hotelRating = [[arr objectAtIndex:0]objectForKey:@"hotelRating"];
-    hotel.hotelLatitude = [[arr objectAtIndex:0]objectForKey:@"hotelLat"];
-    hotel.hotelLongitude = [[arr objectAtIndex:0]objectForKey:@"hotelLong"];
-    hotel.hotelAddress = [[arr objectAtIndex:0]objectForKey:@"hotelAdd"];
+    hotel.hotelLat = [[arr objectAtIndex:0]objectForKey:@"hotelLat"];
+    hotel.hotelLong = [[arr objectAtIndex:0]objectForKey:@"hotelLong"];
+    hotel.hotelAdd = [[arr objectAtIndex:0]objectForKey:@"hotelAdd"];
     
     //    result.numOfRooms = [[arr objectAtIndex:0]objectForKey:@"room"];
     //    result.numOfAdults = [[arr objectAtIndex:0]objectForKey:@"adult"];
