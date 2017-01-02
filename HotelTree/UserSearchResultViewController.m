@@ -6,6 +6,8 @@
 //  Copyright © 2016 RJT. All rights reserved.
 //
 
+#import <CoreLocation/CoreLocation.h>
+#import <AddressBookUI/AddressBookUI.h>
 #import "UserSearchResultViewController.h"
 #import "SQLiteManager.h"
 #import "SearchManager.h"
@@ -14,11 +16,15 @@
 //create table if not exists hotel(hotelId varchar(255)  primary key, hotelName varchar(255) not null,hotelAddress varchar(255) not null,hotelLatitude varchar(255) not null,hotelLongitude varchar(255) not null,hotelRating varchar(20) not null,hotelPrice varchar(255) not null,hotelThumb varchar(255) not null,hotelAvailableDate text not null);
 
 
-@interface UserSearchResultViewController ()<UISearchResultsUpdating, UISearchControllerDelegate>
+@interface UserSearchResultViewController ()<UISearchResultsUpdating, UISearchControllerDelegate, UISearchBarDelegate>
 
 @property(strong, nonatomic)NSArray *searchResultsArray;
 @property(strong, nonatomic)UISearchController *searchControl;
 @property(strong, nonatomic)NSArray *searchDomains;
+
+@property(strong, nonatomic)NSDictionary *locationDict;
+
+@property(strong, nonatomic)CLGeocoder *coder;
 
 
 @end
@@ -35,13 +41,16 @@
     self.searchControl.dimsBackgroundDuringPresentation = NO;
     self.searchControl.searchResultsUpdater = self;
     self.definesPresentationContext = YES;
+    self.searchControl.searchBar.delegate = self;
     self.tableView.tableHeaderView = self.searchControl.searchBar;
     //define search domains
     self.searchDomains = @[@"hotelName",@"hotelAddress"];
     //set up navigation items
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Cancel" style:UIBarButtonItemStylePlain target:self action:@selector(cancelButtonClicked)];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Apply" style:UIBarButtonItemStylePlain target:self action:@selector(applyButtonClicked)];
     self.searchControl.hidesNavigationBarDuringPresentation = NO;
     
+    //initialize a geocoder
+    self.coder = [[CLGeocoder alloc] init];
 }
 
 - (void)viewDidAppear:(BOOL)animated{
@@ -57,11 +66,12 @@
 
 #pragma mark - Private Methods
 
-- (void)cancelButtonClicked{
-    if([self.delegate respondsToSelector:@selector(updateSearchContent:withText:)]){
-        [self.delegate updateSearchContent:@{} withText:@""];
+
+- (void) applyButtonClicked{
+    if([self.delegate respondsToSelector:@selector(updateSearchContent: withText:)]){
+        [self.delegate updateSearchContent:self.locationDict withText:self.searchControl.searchBar.text];
+        [self.navigationController popViewControllerAnimated:YES];
     }
-    [self.navigationController popViewControllerAnimated:YES];
 }
 #pragma mark - UISearchResultsUpdating
 
@@ -76,11 +86,41 @@
         [scanner scanUpToCharactersFromSet:stopSet intoString:&searchKey];
         result = [SearchManager searchArrayUsingPredicate:result withKeys:self.searchDomains andKeyword:searchKey];
     }
-    self.searchResultsArray = result;
-    [self.tableView reloadData];
+    if(result.count == 0 && searchController.searchBar.text.length >= 5){
+        [self.coder geocodeAddressString:searchController.searchBar.text completionHandler:^(NSArray<CLPlacemark *> * _Nullable placemarks, NSError * _Nullable error) {
+            NSMutableArray *array = [[NSMutableArray alloc] init];
+            if(placemarks){
+                for(CLPlacemark *plcmark in placemarks){
+                    NSString *address = [NSString stringWithFormat:@"%@", ABCreateStringWithAddressDictionary(plcmark.addressDictionary, YES)];
+                    NSDictionary *dict = @{@"hotelName":plcmark.name,
+                                           @"hotelAddress":address,
+                                           @"hotelLatitude":[NSNumber numberWithDouble:plcmark.location.coordinate.latitude],
+                                           @"hotelLongitude":[NSNumber numberWithDouble:plcmark.location.coordinate.longitude]};
+                    if(dict.count){
+                        [array addObject:dict];
+                    }
+                }
+            }
+            self.searchResultsArray = [array copy];
+            [self.tableView reloadData];
+        }];
+    }else{
+        self.searchResultsArray = result;
+        [self.tableView reloadData];
+    }
 }
 
+#pragma mark - UISearchControllerDelegate
 
+
+#pragma mark - UISearchBarDelegate
+
+- (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar{
+    if([self.delegate respondsToSelector:@selector(updateSearchContent:withText:)]){
+        [self.delegate updateSearchContent:@{} withText:@""];
+    }
+    [self.navigationController popViewControllerAnimated:YES];
+}
 
 #pragma mark - Table view data source
 
@@ -92,10 +132,10 @@
     return self.searchResultsArray ? self.searchResultsArray.count : 0;
 }
 
-
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
     NSDictionary *dict = self.searchResultsArray[indexPath.row];
+    
     cell.textLabel.text = dict[@"hotelName"];
     cell.detailTextLabel.text = dict[@"hotelAddress"];
     return cell;
@@ -105,9 +145,8 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     NSDictionary *dict = self.searchResultsArray[indexPath.row];
-    if([self.delegate respondsToSelector:@selector(updateSearchContent: withText:)]){
-        [self.delegate updateSearchContent:dict withText:self.searchControl.searchBar.text];
-    }
+    self.locationDict = @{@"hotelLatitude":dict[@"hotelLatitude"],
+                          @"hotelLongitude":dict[@"hotelLongitude"]};
 }
 
 

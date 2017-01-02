@@ -6,6 +6,7 @@
 //  Copyright © 2016 RJT. All rights reserved.
 //
 
+#import <CoreLocation/CoreLocation.h>
 #import "HomeViewController.h"
 #import "HomeTableCell.h"
 #import "RequirementViewController.h"
@@ -23,11 +24,10 @@
 @property (weak, nonatomic) IBOutlet UILabel *adultQuantityLabel;
 @property (weak, nonatomic) IBOutlet UILabel *childrenQuatityLabel;
 
-@property (weak, nonatomic) IBOutlet UIButton *checkInButton;
-@property (weak, nonatomic) IBOutlet UIButton *checkOutButton;
 
-@property (nonatomic)double selectedLatitude;
-@property (nonatomic)double selectedLongitude;
+@property (weak, nonatomic) IBOutlet UIButton *checkDateButton;
+
+@property (nonatomic)CLLocationCoordinate2D location;
 @property (strong, nonatomic)PMCalendarController *inCalender;
 @end
 
@@ -83,7 +83,7 @@
 
 
 #pragma mark - Event Methods
-- (IBAction)checkInButtonClicked:(UIButton *)sender {
+- (IBAction)checkDateButtonClicked:(UIButton *)sender {
     if(self.inCalender.isCalendarVisible){
         [self.inCalender dismissCalendarAnimated:YES];
     }else{
@@ -110,8 +110,9 @@
 
 - (void)updateSearchContent:(NSDictionary *)content withText:(NSString *)text{
     [self.searchContentTextField setText:text];
-    self.selectedLatitude = [content[@"latitude"] doubleValue];
-    self.selectedLongitude = [content[@"longitude"] doubleValue];
+    double selectedLatitude = [content[@"hotelLatitude"] doubleValue];
+    double selectedLongitude = [content[@"hotelLongitude"] doubleValue];
+    self.location = CLLocationCoordinate2DMake(selectedLatitude, selectedLongitude);
 }
 
 #pragma mark - QuantitySetDelegate
