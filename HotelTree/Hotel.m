@@ -14,11 +14,11 @@
     if(self = [super init]){
         _hotelId = dic[@"hotelId"];
         _hotelName = dic[@"hotelName"];
-        _hotelAddress = dic[@"hotelAddress"];
-        _hotelLatitude = dic[@"hotelLatitude"];
-        _hotelLongitude = dic[@"hotelLongitude"];
+        _hotelAdd = dic[@"hotelAdd"];
+        _hotelLat = dic[@"hotelLat"];
+        _hotelLong = dic[@"hotelLong"];
         _hotelRating = dic[@"hotelRating"];
-        _hotelPrice = dic[@"hotelPrice"];
+        _price = dic[@"price"];
         _hotelThumb = dic[@"hotelThumb"];
         //_hotelAvailableDate = dic[@"hotelAvailableDate"];
         

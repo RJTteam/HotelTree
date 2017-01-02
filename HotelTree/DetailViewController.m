@@ -2,84 +2,53 @@
 //  DetailViewController.m
 //  HotelTree
 //
-//  Created by Lucas Luo on 12/31/16.
-//  Copyright © 2016 RJT. All rights reserved.
+//  Created by Lucas Luo on 1/2/17.
+//  Copyright © 2017 RJT. All rights reserved.
 //
 
 #import "DetailViewController.h"
-#import "DetailTableCell.h"
+#import <CoreLocation/CoreLocation.h>
+#import <MapKit/MapKit.h>
+#import "Annotation.h"
 
-@interface DetailViewController ()<UITableViewDelegate,UITableViewDataSource>
+#define METERS_PRE_MILE 1609.34
 
+@interface DetailViewController ()
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+@property (weak, nonatomic) IBOutlet UIButton *toMapBtn;
+@property (weak, nonatomic) IBOutlet UILabel *priceLabel;
+@property (weak, nonatomic) IBOutlet UILabel *rantingLabel;
+
+@property (weak, nonatomic) IBOutlet MKMapView *aHotelMap;
 @end
 
-@implementation DetailViewController
+@implementation DetailViewController{
+    CLLocationCoordinate2D _coordinate;//instance Value
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.nameLabel.text = self.aHotel.hotelName;
+    self.priceLabel.text = self.aHotel.price;
+    self.rantingLabel.text = self.aHotel.hotelRating;
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
+    _coordinate.longitude = [[NSString stringWithFormat:@"-%@",self.aHotel.hotelLong] doubleValue];
     
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-}
+    _coordinate.latitude = [self.aHotel.hotelLat doubleValue];
+    
+    float ASPECTRATIONOFMAPKIT = self.aHotelMap.frame.size.width/self.aHotelMap.frame.size.height;
+    MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(_coordinate, 0.05*METERS_PRE_MILE, 0.05*METERS_PRE_MILE*ASPECTRATIONOFMAPKIT);
+    [self.aHotelMap setRegion:region];
+    self.aHotelMap.mapType = MKMapTypeStandard;
+    self.aHotelMap.zoomEnabled = NO;
+    self.aHotelMap.scrollEnabled = NO;
+    //    self.aHotelMap.delegate = self;
+    [self.aHotelMap addAnnotation:[Annotation annotationWithLatitude:[self.aHotel.hotelLat doubleValue] longitude:[[NSString stringWithFormat:@"-%@",self.aHotel.hotelLong] doubleValue] title:@"" subtitle:@""]];}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-#pragma mark - Table view data source
-
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 3;
-}
-
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    DetailTableCell *cell = [tableView dequeueReusableCellWithIdentifier:@"DetailCell" forIndexPath:indexPath];
-    
-    // Configure the cell...
-    
-    return cell;
-}
-
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
 
 /*
 #pragma mark - Navigation
