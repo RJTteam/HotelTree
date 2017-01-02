@@ -783,7 +783,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="284" height="37"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <connections>
-                                                    <segue destination="vtn-t5-e8E" kind="show" id="1gg-KU-WdP"/>
+                                                    <segue destination="vtn-t5-e8E" kind="show" identifier="toRequirementSetSegue" id="1gg-KU-WdP"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -794,7 +794,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Search"/>
                                         <connections>
-                                            <segue destination="cJS-Pz-XLC" kind="show" id="chY-yp-4EL"/>
+                                            <segue destination="cJS-Pz-XLC" kind="show" identifier="searchToListSegue" id="chY-yp-4EL"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -809,6 +809,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="checkOutButton" destination="xT3-hp-yRj" id="MU4-Fa-wPX"/>
                         <segue destination="ReC-qI-RHG" kind="show" identifier="toSearchMenuSegue" id="NXP-7O-am3"/>
                     </connections>
                 </viewController>

@@ -8,8 +8,11 @@
 
 #import "UserSearchResultViewController.h"
 #import "SQLiteManager.h"
+#import "SearchManager.h"
 
-static NSString *tablename = @"tbl_hotel";
+
+//create table if not exists hotel(hotelId varchar(255)  primary key, hotelName varchar(255) not null,hotelAddress varchar(255) not null,hotelLatitude varchar(255) not null,hotelLongitude varchar(255) not null,hotelRating varchar(20) not null,hotelPrice varchar(255) not null,hotelThumb varchar(255) not null,hotelAvailableDate text not null);
+
 
 @interface UserSearchResultViewController ()<UISearchResultsUpdating, UISearchControllerDelegate>
 
@@ -17,93 +20,67 @@ static NSString *tablename = @"tbl_hotel";
 @property(strong, nonatomic)UISearchController *searchControl;
 @property(strong, nonatomic)NSArray *searchDomains;
 
+
 @end
 
 @implementation UserSearchResultViewController
-//static NSString *createQuery = @"create table if not exists tbl_hotel(id integer primary key autoincrement, name varchar[100], address varchar[254], latitude double, longitude double);";
-//static NSString *insertTemplate = @"insert into tbl_hotel values(NULL, '%@', '%@', %f, %f);";
 
+#pragma mark - Lifecycle
 - (void)viewDidLoad {
     [super viewDidLoad];
+    //disable editing for table view
+    self.tableView.editing = NO;
+    //add searchController
     self.searchControl = [[UISearchController alloc] initWithSearchResultsController:nil];
     self.searchControl.dimsBackgroundDuringPresentation = NO;
     self.searchControl.searchResultsUpdater = self;
     self.definesPresentationContext = YES;
     self.tableView.tableHeaderView = self.searchControl.searchBar;
     //define search domains
-    self.searchDomains = @[@"name",@"address"];
-    //query for test purpose, delete after finishing
-//    [[SQLiteManager shareInstance] executeQuery:createQuery];
-//    [self createQueryForTest];
+    self.searchDomains = @[@"hotelName",@"hotelAddress"];
+    //set up navigation items
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Cancel" style:UIBarButtonItemStylePlain target:self action:@selector(cancelButtonClicked)];
+    self.searchControl.hidesNavigationBarDuringPresentation = NO;
+    
 }
-//query for test purpose, delete after finishing
-//- (void)createQueryForTest{
-//    
-//    NSString *hotel01 = [NSString stringWithFormat:insertTemplate, @"hotel01", @"211 main street, Boston, MA, 02148", 42.394, -71.483];
-//    NSString *hotel02 = [NSString stringWithFormat:insertTemplate, @"hotel02", @"211 main street, Chicago, IL, 01232", 32.394, -55.483];
-//    NSString *hotel03 = [NSString stringWithFormat:insertTemplate, @"hotel03", @"211 main street, San Francisco, CA, 03123", 42.394, -44.483];
-//    NSString *hotel04 = [NSString stringWithFormat:insertTemplate, @"hotel04", @"211 main street, St Charles, IL, 04323", 42.394, -33.483];
-//    NSString *hotel05 = [NSString stringWithFormat:insertTemplate, @"hotel05", @"211 main street, Orlando, FL, 02356", 42.394, -22.483];
-//    
-//    [[SQLiteManager shareInstance] executeQuery:hotel01];
-//    [[SQLiteManager shareInstance] executeQuery:hotel02];
-//    [[SQLiteManager shareInstance] executeQuery:hotel03];
-//    [[SQLiteManager shareInstance] executeQuery:hotel04];
-//    [[SQLiteManager shareInstance] executeQuery:hotel05];
-//}
+
+- (void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    [self.searchControl setActive:YES];
+    [self.searchControl.searchBar becomeFirstResponder];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - Private Methods
+
+- (void)cancelButtonClicked{
+    if([self.delegate respondsToSelector:@selector(updateSearchContent:withText:)]){
+        [self.delegate updateSearchContent:@{} withText:@""];
+    }
+    [self.navigationController popViewControllerAnimated:YES];
+}
 #pragma mark - UISearchResultsUpdating
 
 - (void)updateSearchResultsForSearchController:(UISearchController *)searchController{
-//    NSScanner *scanner = [[NSScanner alloc] initWithString:searchController.searchBar.text];
-//    
-//    NSString *searchKey = nil;
-//    NSCharacterSet *stopSet = [NSCharacterSet characterSetWithCharactersInString:@", .:;"];
-//    [scanner scanUpToCharactersFromSet: stopSet intoString:&searchKey];
-//    NSArray *result = [self searchUsingQueryWithKeys:searchDomains andKeyword: searchKey];
-//    while(!scanner.isAtEnd){
-//        [scanner scanUpToCharactersFromSet:stopSet intoString:&searchKey];
-//        result = [self searchArrayUsingPredicate:result withKeys:searchDomains andKeyword:searchKey];
-//    }
-//    self.searchResultsArray = result;
-//    [self.tableView reloadData];
+    NSScanner *scanner = [[NSScanner alloc] initWithString:searchController.searchBar.text];
+    
+    NSString *searchKey = nil;
+    NSCharacterSet *stopSet = [NSCharacterSet characterSetWithCharactersInString:@", .:;"];
+    [scanner scanUpToCharactersFromSet: stopSet intoString:&searchKey];
+    NSArray *result = [SearchManager searchUsingQueryWithKeys:self.searchDomains andKeyword: searchKey];
+    while(!scanner.isAtEnd){
+        [scanner scanUpToCharactersFromSet:stopSet intoString:&searchKey];
+        result = [SearchManager searchArrayUsingPredicate:result withKeys:self.searchDomains andKeyword:searchKey];
+    }
+    self.searchResultsArray = result;
+    [self.tableView reloadData];
 }
 
-- (NSArray *)searchArrayUsingPredicate:(NSArray *)array withKeys:(NSArray *)keys andKeyword:(NSString *)keyword{
-    if(!keyword){
-        return @[];
-    }
-    NSArray *result = nil;
-    for(NSString *key in keys){
-        if(!result){
-            NSString *format = [NSString stringWithFormat:@"%@ LIKE[c] '*%@*'",key, keyword];
-            NSPredicate *predicate = [NSPredicate predicateWithFormat:format];
-            result = [array filteredArrayUsingPredicate:predicate];
-            result = result.count == 0 ? nil : result;
-        }
-    }
-    return (result != nil) ? result : @[];
-}
 
-- (NSArray *)searchUsingQueryWithKeys:(NSArray *)keys andKeyword:(NSString *)keyword{
-    NSArray *result = nil;
-    if(!keyword){
-        return @[];
-    }
-    for(NSString *key in keys){
-        if(!result){
-            NSString *query = [NSString stringWithFormat:@"select * from %@ where %@ like '%%%@%%';",tablename, key,keyword];
-            result = [[SQLiteManager shareInstance] executeQueryWithStatement:query];
-            result = result.count == 0 ? nil : result;
-        }
-    }
-    return (result != nil) ? result : @[];
-}
 
 #pragma mark - Table view data source
 
@@ -119,9 +96,18 @@ static NSString *tablename = @"tbl_hotel";
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
     NSDictionary *dict = self.searchResultsArray[indexPath.row];
-    cell.textLabel.text = dict[@"name"];
-    cell.detailTextLabel.text = dict[@"address"];
+    cell.textLabel.text = dict[@"hotelName"];
+    cell.detailTextLabel.text = dict[@"hotelAddress"];
     return cell;
+}
+
+#pragma mark - UITableViewDelegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    NSDictionary *dict = self.searchResultsArray[indexPath.row];
+    if([self.delegate respondsToSelector:@selector(updateSearchContent: withText:)]){
+        [self.delegate updateSearchContent:dict withText:self.searchControl.searchBar.text];
+    }
 }
 
 

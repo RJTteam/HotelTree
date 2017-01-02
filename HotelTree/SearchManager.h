@@ -10,4 +10,7 @@
 
 @interface SearchManager : NSObject
 
++ (NSArray *)searchArrayUsingPredicate:(NSArray *)array withKeys:(NSArray *)keys andKeyword:(NSString *)keyword;
+
++ (NSArray *)searchUsingQueryWithKeys:(NSArray *)keys andKeyword:(NSString *)keyword;
 @end
