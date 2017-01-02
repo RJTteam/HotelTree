@@ -104,7 +104,7 @@
     
     //NSLog(@"%@",self.filePath);
     
-    NSString *hotelQuery = [NSString stringWithFormat:@"insert into hotel values('%@','%@','%@','%@','%@','%@','%@','%@','%@');", hotel.hotelId, hotel.hotelName,hotel.hotelAddress,hotel.hotelLatitude,hotel.hotelLongitude,hotel.hotelRating,hotel.hotelPrice,filePath,hotel.hotelAvailableDate];
+    NSString *hotelQuery = [NSString stringWithFormat:@"insert into hotel values('%@','%@','%@','%@','%@','%@','%@','%@');", hotel.hotelId, hotel.hotelName,hotel.hotelAddress,hotel.hotelLatitude,hotel.hotelLongitude,hotel.hotelRating,hotel.hotelPrice,filePath];
     
     //!!!hotelAvailableDate should returned by WebService!!!
     

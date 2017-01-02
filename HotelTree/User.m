@@ -1,9 +1,9 @@
 //
 //  User.m
-//  SQLITE3
+//  HotelTree
 //
-//  Created by Shuai Wang on 12/20/16.
-//  Copyright © 2016 Pranav Prakash. All rights reserved.
+//  Created by Yangbin on 1/1/17.
+//  Copyright © 2017 com.rjtcompuquest. All rights reserved.
 //
 
 #import "User.h"

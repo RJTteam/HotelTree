@@ -52,11 +52,6 @@
 		C3DA38E81E18B63E00E1AB83 /* SQLiteManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DA38E71E18B63E00E1AB83 /* SQLiteManager.m */; };
 		C3DA38ED1E18B66A00E1AB83 /* OrderConfirmViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DA38EA1E18B66A00E1AB83 /* OrderConfirmViewController.m */; };
 		C3DA38EE1E18B66A00E1AB83 /* PaymentConfirmViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DA38EC1E18B66A00E1AB83 /* PaymentConfirmViewController.m */; };
-		C3DA38FE1E18B6F900E1AB83 /* BookingConfirm.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DA38F01E18B6F900E1AB83 /* BookingConfirm.m */; };
-		C3DA38FF1E18B6F900E1AB83 /* BookingResult.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DA38F21E18B6F900E1AB83 /* BookingResult.m */; };
-		C3DA39001E18B6F900E1AB83 /* HotelSearch.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DA38F41E18B6F900E1AB83 /* HotelSearch.m */; };
-		C3DA39011E18B6F900E1AB83 /* UserLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DA38F61E18B6F900E1AB83 /* UserLogin.m */; };
-		C3DA39021E18B6F900E1AB83 /* UserRegister.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DA38F81E18B6F900E1AB83 /* UserRegister.m */; };
 		C3DA39031E18B6F900E1AB83 /* WebService.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DA38FB1E18B6F900E1AB83 /* WebService.m */; };
 		C3DA39041E18B6F900E1AB83 /* WebServiceProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DA38FD1E18B6F900E1AB83 /* WebServiceProvider.m */; };
 		C3DA39071E18B76900E1AB83 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C3DA39061E18B76900E1AB83 /* libsqlite3.0.tbd */; };
@@ -142,16 +137,6 @@
 		C3DA38EA1E18B66A00E1AB83 /* OrderConfirmViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderConfirmViewController.m; sourceTree = "<group>"; };
 		C3DA38EB1E18B66A00E1AB83 /* PaymentConfirmViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaymentConfirmViewController.h; sourceTree = "<group>"; };
 		C3DA38EC1E18B66A00E1AB83 /* PaymentConfirmViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaymentConfirmViewController.m; sourceTree = "<group>"; };
-		C3DA38EF1E18B6F900E1AB83 /* BookingConfirm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookingConfirm.h; sourceTree = "<group>"; };
-		C3DA38F01E18B6F900E1AB83 /* BookingConfirm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookingConfirm.m; sourceTree = "<group>"; };
-		C3DA38F11E18B6F900E1AB83 /* BookingResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookingResult.h; sourceTree = "<group>"; };
-		C3DA38F21E18B6F900E1AB83 /* BookingResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookingResult.m; sourceTree = "<group>"; };
-		C3DA38F31E18B6F900E1AB83 /* HotelSearch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HotelSearch.h; sourceTree = "<group>"; };
-		C3DA38F41E18B6F900E1AB83 /* HotelSearch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HotelSearch.m; sourceTree = "<group>"; };
-		C3DA38F51E18B6F900E1AB83 /* UserLogin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserLogin.h; sourceTree = "<group>"; };
-		C3DA38F61E18B6F900E1AB83 /* UserLogin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserLogin.m; sourceTree = "<group>"; };
-		C3DA38F71E18B6F900E1AB83 /* UserRegister.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserRegister.h; sourceTree = "<group>"; };
-		C3DA38F81E18B6F900E1AB83 /* UserRegister.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserRegister.m; sourceTree = "<group>"; };
 		C3DA38F91E18B6F900E1AB83 /* WebCommunicatioin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebCommunicatioin.h; sourceTree = "<group>"; };
 		C3DA38FA1E18B6F900E1AB83 /* WebService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebService.h; sourceTree = "<group>"; };
 		C3DA38FB1E18B6F900E1AB83 /* WebService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebService.m; sourceTree = "<group>"; };
@@ -327,8 +312,12 @@
 		C3DA38E51E18B60000E1AB83 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				C3DA39091E18B83C00E1AB83 /* yang */,
-				C3DA39081E18B82900E1AB83 /* wang */,
+				C3DA38DA1E18B5FC00E1AB83 /* User.h */,
+				C3DA38DB1E18B5FC00E1AB83 /* User.m */,
+				C3DA38DC1E18B5FC00E1AB83 /* Hotel.h */,
+				C3DA38DD1E18B5FC00E1AB83 /* Hotel.m */,
+				C3DA38DE1E18B5FC00E1AB83 /* Order.h */,
+				C3DA38DF1E18B5FC00E1AB83 /* Order.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -351,36 +340,6 @@
 				C3DA38D71E18B5FC00E1AB83 /* ImageStoreManager.m */,
 			);
 			name = Manager;
-			sourceTree = "<group>";
-		};
-		C3DA39081E18B82900E1AB83 /* wang */ = {
-			isa = PBXGroup;
-			children = (
-				C3DA38DA1E18B5FC00E1AB83 /* User.h */,
-				C3DA38DB1E18B5FC00E1AB83 /* User.m */,
-				C3DA38DC1E18B5FC00E1AB83 /* Hotel.h */,
-				C3DA38DD1E18B5FC00E1AB83 /* Hotel.m */,
-				C3DA38DE1E18B5FC00E1AB83 /* Order.h */,
-				C3DA38DF1E18B5FC00E1AB83 /* Order.m */,
-			);
-			name = wang;
-			sourceTree = "<group>";
-		};
-		C3DA39091E18B83C00E1AB83 /* yang */ = {
-			isa = PBXGroup;
-			children = (
-				C3DA38EF1E18B6F900E1AB83 /* BookingConfirm.h */,
-				C3DA38F01E18B6F900E1AB83 /* BookingConfirm.m */,
-				C3DA38F11E18B6F900E1AB83 /* BookingResult.h */,
-				C3DA38F21E18B6F900E1AB83 /* BookingResult.m */,
-				C3DA38F31E18B6F900E1AB83 /* HotelSearch.h */,
-				C3DA38F41E18B6F900E1AB83 /* HotelSearch.m */,
-				C3DA38F51E18B6F900E1AB83 /* UserLogin.h */,
-				C3DA38F61E18B6F900E1AB83 /* UserLogin.m */,
-				C3DA38F71E18B6F900E1AB83 /* UserRegister.h */,
-				C3DA38F81E18B6F900E1AB83 /* UserRegister.m */,
-			);
-			name = yang;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -513,17 +472,13 @@
 			files = (
 				C3DA38E01E18B5FC00E1AB83 /* ImageStoreManager.m in Sources */,
 				C3DA38ED1E18B66A00E1AB83 /* OrderConfirmViewController.m in Sources */,
-				C3DA39011E18B6F900E1AB83 /* UserLogin.m in Sources */,
 				C3ADF5831E19728E00CCB7C8 /* MapViewController.m in Sources */,
-				C3DA38FE1E18B6F900E1AB83 /* BookingConfirm.m in Sources */,
 				C3ADF5861E19738C00CCB7C8 /* Annotation.m in Sources */,
 				C3DA38EE1E18B66A00E1AB83 /* PaymentConfirmViewController.m in Sources */,
 				C3DA38BB1E18527400E1AB83 /* UIColor+Hexadecimal.m in Sources */,
 				C3DA39041E18B6F900E1AB83 /* WebServiceProvider.m in Sources */,
 				C3ADF57F1E19636500CCB7C8 /* SearchManager.m in Sources */,
 				C3DA38681E17627F00E1AB83 /* ForgotPwdVC.m in Sources */,
-				C3DA39021E18B6F900E1AB83 /* UserRegister.m in Sources */,
-				C3DA38FF1E18B6F900E1AB83 /* BookingResult.m in Sources */,
 				C3ADF5801E19636500CCB7C8 /* UserSearchResultViewController.m in Sources */,
 				C3DA38C61E186CBD00E1AB83 /* ListViewController.m in Sources */,
 				C3DA38E31E18B5FC00E1AB83 /* Hotel.m in Sources */,
@@ -546,7 +501,6 @@
 				C3ADF58C1E1975C100CCB7C8 /* MKMapView+regionMap.m in Sources */,
 				C3DA38691E17627F00E1AB83 /* RegisterViewController.m in Sources */,
 				C3DA38D21E18723B00E1AB83 /* ListTableCell.m in Sources */,
-				C3DA39001E18B6F900E1AB83 /* HotelSearch.m in Sources */,
 				C3DA38C31E186CA700E1AB83 /* HomeViewController.m in Sources */,
 				C3DA38E81E18B63E00E1AB83 /* SQLiteManager.m in Sources */,
 			);
