@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface ListViewController : UIViewController
+@property (strong, nonatomic) IBOutlet UIButton *SortButton;
 
 @end
