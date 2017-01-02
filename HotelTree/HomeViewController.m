@@ -125,11 +125,8 @@
 #pragma mark - UITextFieldDelegate
 
 - (BOOL)textFieldShouldBeginEditing:(UITextField *)textField{
-<<<<<<< HEAD
-   [self performSegueWithIdentifier:@"toSearchMenuSegue" sender:nil];
-=======
+
     [self performSegueWithIdentifier:@"toSearchMenuSegue" sender:nil];
->>>>>>> upstream/master
     return NO;
 }
 #pragma mark - PMCalendarControllerDelegate
