@@ -88,6 +88,10 @@
     if(self.inCalender.isCalendarVisible){
         [self.inCalender dismissCalendarAnimated:YES];
     }else{
+        self.inCalender= [[PMCalendarController alloc] initWithSize:CGSizeMake(300, 170)];
+        self.inCalender.delegate = self;
+        [self.inCalender setAllowedPeriod:[PMPeriod periodWithStartDate:[NSDate date] endDate:[[NSDate date] dateByAddingMonths:12]]];
+        self.inCalender.showOnlyCurrentMonth = NO;
         [self.inCalender presentCalendarFromView:sender permittedArrowDirections:PMCalendarArrowDirectionUp animated:YES];
     }
 }
