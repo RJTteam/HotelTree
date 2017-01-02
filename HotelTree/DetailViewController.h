@@ -2,12 +2,13 @@
 //  DetailViewController.h
 //  HotelTree
 //
-//  Created by Lucas Luo on 12/31/16.
-//  Copyright © 2016 RJT. All rights reserved.
+//  Created by Lucas Luo on 1/2/17.
+//  Copyright © 2017 RJT. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
+#import "Hotel.h"
 
-@interface DetailViewController : UITableViewController
-
+@interface DetailViewController : UIViewController
+@property(nonatomic,strong)Hotel* aHotel;
 @end
