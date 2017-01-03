@@ -15,4 +15,5 @@
 @property(strong,nonatomic)Order *order;
 @property(strong,nonatomic)User *user;
 @property(strong,nonatomic)Hotel *hotel;
+@property (strong, nonatomic)NSDictionary *bookingInfo;
 @end

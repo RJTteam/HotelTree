@@ -25,6 +25,7 @@
 @property (strong, nonatomic) IBOutlet UITextField *emailTextField;
 @property (strong, nonatomic) IBOutlet UITextField *phoneTextField;
 @property (weak, nonatomic) IBOutlet FUIButton *procceedBtn;
+@property (weak, nonatomic) IBOutlet UIImageView *rateImage;
 
 @end
 
@@ -40,9 +41,8 @@
     
     self.hotelImage.image = [UIImage imageWithContentsOfFile:[imageStoreManager getImageStoreFilePathByHotelId:self.hotel.hotelId]];
     
-    self.checkInDate.text = [self NSDateToNSString:self.order.checkInDate];
-    self.checkOutDate.text = [self NSDateToNSString:self.order.checkOutDate];
-    
+    self.checkInDate.text = self.bookingInfo[@"checkIn"];
+    self.checkOutDate.text = self.bookingInfo[@"checkOut"];
     self.hotelPrice.text = self.hotel.price;
     
     self.firstNameTextField.text = self.user.firstName;
