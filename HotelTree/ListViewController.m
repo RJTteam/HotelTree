@@ -17,8 +17,9 @@
 
 @interface ListViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property(strong,nonatomic)NSArray* hotelsArray;
-@property (weak, nonatomic) IBOutlet UITableView *listTable;
+@property(strong, nonatomic)NSDictionary *bookingInfo;
 
+@property (weak, nonatomic) IBOutlet UITableView *listTable;
 @end
 
 @implementation ListViewController
@@ -26,16 +27,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    ModelManager *modelManager = [ModelManager sharedInstance];
-    NSDictionary* dic = @{
-                          @"hotelLat":@"28.6049",
-                          @"hotelLong":@"77.2235"
-                          };
-    
-    [modelManager hotelSearchFromWebService:dic];
-    
-    self.hotelsArray = [modelManager getAllHotel];
-//    NSLog(@"%@",self.hotelsArray);
+    if(self.hotelsRawInfo != nil){
+        self.bookingInfo = [NSDictionary dictionaryWithDictionary:(NSDictionary *)[self.hotelsRawInfo lastObject]];
+        [self.hotelsRawInfo removeLastObject];
+        self.hotelsArray = [NSArray arrayWithArray:self.hotelsRawInfo];
+    }
+    //    NSLog(@"%@",self.hotelsArray);
     
 }
 - (IBAction)sortButtonClicked:(UIButton *)sender {
@@ -55,7 +52,7 @@
         [sender setTitle:@"Sort:Name" forState:UIControlStateNormal];
     }
     
-//    NSLog(@"%@",self.hotelsArray);
+    //    NSLog(@"%@",self.hotelsArray);
 }
 
 
@@ -84,20 +81,22 @@
     return cell;
 }
 
- #pragma mark - Navigation
- 
- // In a storyboard-based application, you will often want to do a little preparation before navigation
- - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-     if ([segue.identifier isEqualToString:@"toHotelDetail"]) {
-         if ([sender isKindOfClass:[UITableViewCell class]]) {
-             NSIndexPath *indexPath = [self.listTable indexPathForSelectedRow];
-             DetailViewController *desitViewControl = segue.destinationViewController;             
-             desitViewControl.aHotel = [self.hotelsArray objectAtIndex:indexPath.row];
-         }
-         
-     }
+#pragma mark - Navigation
 
- }
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"toHotelDetail"]) {
+        if ([sender isKindOfClass:[UITableViewCell class]]) {
+            NSIndexPath *indexPath = [self.listTable indexPathForSelectedRow];
+            DetailViewController *desitViewControl = segue.destinationViewController;
+            desitViewControl.aHotel = [self.hotelsArray objectAtIndex:indexPath.row];
+            desitViewControl.bookingInfo = self.bookingInfo;
+
+        }
+        
+    }
+    
+}
 
 
 @end

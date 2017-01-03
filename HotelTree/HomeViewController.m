@@ -6,14 +6,19 @@
 //  Copyright © 2016 RJT. All rights reserved.
 //
 
+#import <CoreLocation/CoreLocation.h>
 #import "HomeViewController.h"
 #import "HomeTableCell.h"
 #import "RequirementViewController.h"
 #import "UserSearchResultViewController.h"
 #import "PMCalendar.h"
+#import "ModelManager.h"
+#import "ListViewController.h"
+#import "WebService.h"
+#import "UIImageView+GIF.h"
 
 @interface HomeViewController ()<UITableViewDelegate,UITableViewDataSource,SearchMenuToSearchDelegate,QuantitySetDelegate, UITextFieldDelegate, PMCalendarControllerDelegate>
-@property (strong,nonatomic) NSArray *homeArray;
+@property (strong,nonatomic) NSMutableArray *homeArray;
 
 @property (weak, nonatomic) IBOutlet UILabel *checkInDisplayLabel;
 @property (weak, nonatomic) IBOutlet UILabel *checkOutDisplayLabel;
@@ -23,11 +28,10 @@
 @property (weak, nonatomic) IBOutlet UILabel *adultQuantityLabel;
 @property (weak, nonatomic) IBOutlet UILabel *childrenQuatityLabel;
 
-@property (weak, nonatomic) IBOutlet UIButton *checkInButton;
-@property (weak, nonatomic) IBOutlet UIButton *checkOutButton;
 
-@property (nonatomic)double selectedLatitude;
-@property (nonatomic)double selectedLongitude;
+@property (weak, nonatomic) IBOutlet UIButton *checkDateButton;
+
+@property (nonatomic)CLLocationCoordinate2D location;
 @property (strong, nonatomic)PMCalendarController *inCalender;
 @end
 
@@ -39,35 +43,13 @@
     self.inCalender.delegate = self;
     [self.inCalender setAllowedPeriod:[PMPeriod periodWithStartDate:[NSDate date] endDate:[[NSDate date] dateByAddingMonths:12]]];
     self.inCalender.showOnlyCurrentMonth = NO;
+//get order History
     
-    //    [self.fileManager fileExistsAtPath:self.diaryEntriesPath isDirectory:&isDirectory];
-    //
-    //    if (isDirectory) {
-    //        NSString *dItemPath = [self.diaryEntriesPath stringByAppendingPathComponent:dItem.title];
-    //
-    //        if ([self.fileManager fileExistsAtPath:dItemPath isDirectory:nil]) {
-    //            DiaryItem*rewriteDairy = [[DiaryItem alloc]init];
-    //            rewriteDairy.content = dItem.content;
-    //            NSData*data = [NSKeyedArchiver archivedDataWithRootObject:rewriteDairy];
-    //            [data writeToFile:dItemPath atomically:YES];
-    //        }
-    //        else{
-    //            //                [dItem.content writeToFile:dItemPath atomically:YES encoding:NSUTF8StringEncoding error:nil];
-    //            //
-    //            [self.filesOnDisk addObject:dItem.title];
-    //            DiaryItem*newDairy = [[DiaryItem alloc]init];
-    //            newDairy.title = dItem.title;
-    //            newDairy.content = dItem.content;
-    //            NSData*data = [NSKeyedArchiver archivedDataWithRootObject:newDairy];
-    //            [data writeToFile:dItemPath atomically:YES];
-    //            [self.delegate informationUpdated];
-    //        }
-    //    }
-    //    else{
-    //        NSLog(@"Directory notExist in the path: %@",self.diaryEntriesPath);
-    //    }
-    //    NSData *imgData = [NSData dataWithContentsOfFile:imgPath];
-    //    UIImage *image = [[UIImage alloc] initWithData:imgData];
+    NSDictionary *idDic = @{
+        @"mobile":@"1"
+    };
+    WebService *webService = [WebService sharedInstance];
+    self.homeArray = [webService history:idDic];
 }
 
 - (void)viewDidAppear:(BOOL)animated{
@@ -84,7 +66,7 @@
 
 
 #pragma mark - Event Methods
-- (IBAction)checkInButtonClicked:(UIButton *)sender {
+- (IBAction)checkDateButtonClicked:(UIButton *)sender {
     if(self.inCalender.isCalendarVisible){
         [self.inCalender dismissCalendarAnimated:YES];
     }else{
@@ -111,8 +93,9 @@
 
 - (void)updateSearchContent:(NSDictionary *)content withText:(NSString *)text{
     [self.searchContentTextField setText:text];
-    self.selectedLatitude = [content[@"latitude"] doubleValue];
-    self.selectedLongitude = [content[@"longitude"] doubleValue];
+    double selectedLatitude = [content[@"hotelLat"] doubleValue];
+    double selectedLongitude = [content[@"hotelLong"] doubleValue];
+    self.location = CLLocationCoordinate2DMake(selectedLatitude, selectedLongitude);
 }
 
 #pragma mark - QuantitySetDelegate
@@ -126,6 +109,7 @@
 #pragma mark - UITextFieldDelegate
 
 - (BOOL)textFieldShouldBeginEditing:(UITextField *)textField{
+    
     [self performSegueWithIdentifier:@"toSearchMenuSegue" sender:nil];
     return NO;
 }
@@ -144,17 +128,56 @@
 }
 
 #pragma mark -UITableViewDataSource
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    return 2;
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
+    NSString *sectionName;
+    switch (section) {
+        case 0:
+            sectionName = @"Place you stay";
+            break;
+       case 1:
+            sectionName = @"Advertisement";
+            break;
+    }
+    return sectionName;
+}
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 3;
+    if (section == 0) {
+        return self.homeArray.count;
+    }
+    else{
+        return 3;
+    }
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    HomeTableCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+    if (indexPath.section == 0) {
+        HomeTableCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+        History *obj = [self.homeArray objectAtIndex:indexPath.row];
+        cell.nameLabel.text = obj.hotelName;
+        cell.checkinLable.text = obj.checkInDate;
+        cell.checkoutLable.text = obj.checkOutDate;
+        
+        ImageStoreManager *imageGetter = [[ImageStoreManager alloc]init];
+        cell.hotelImage.image = [UIImage imageWithContentsOfFile:[imageGetter getImageStoreFilePathByHotelId:obj.hotelId]];
+        return cell;
+    }
+    else{
+        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"advCell"forIndexPath:indexPath];
+        
+        NSString *path = [[NSBundle mainBundle] pathForResource:[NSString stringWithFormat:@"adv%ld",indexPath.row] ofType:@"gif"];
+        UIImageView *imageView = [[UIImageView alloc]initWithFrame:CGRectMake(8, 0, 398, 183)];
+        [imageView showGifImageWithData:[NSData dataWithContentsOfFile:path]];
+        imageView.contentMode = UIViewContentModeScaleAspectFill;
+        [cell.contentView addSubview:imageView];
+        return cell;
+    }
     
-    // Configure the cell...
-    
-    return cell;
 }
 
 #pragma mark - Navigation
@@ -163,6 +186,22 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if([segue.identifier isEqualToString:@"searchToListSegue"]){
         //TODO perform search using ModelManager;
+        ModelManager *modelManager = [ModelManager sharedInstance];
+        NSDictionary* dic = @{
+                              @"hotelLat":[NSString stringWithFormat:@"%f", self.location.latitude],
+                              @"hotelLong":[NSString stringWithFormat:@"%f", self.location.longitude],
+                              @"checkIn": self.checkInDisplayLabel.text,
+                              @"checkOut": self.checkOutDisplayLabel.text,
+                              @"room": self.roomQuantityLabel.text,
+                              @"adult": self.adultQuantityLabel.text,
+                              @"child" : self.childrenQuatityLabel.text
+                              };
+        
+        [modelManager hotelSearchFromWebService:dic];
+        NSMutableArray *hotelsArray = [[modelManager getAllHotel] mutableCopy];
+        [hotelsArray addObject:dic];
+        ListViewController *vc = segue.destinationViewController;
+        vc.hotelsRawInfo = [NSMutableArray arrayWithArray:hotelsArray];
     }else if ([segue.identifier isEqualToString:@"toSearchMenuSegue"]){
         UserSearchResultViewController *vc = segue.destinationViewController;
         vc.delegate = self;

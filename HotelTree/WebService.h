@@ -12,6 +12,7 @@
 #import "Order.h"
 #import "User.h"
 #import "Hotel.h"
+#import "History.h"
 
 @interface WebService : NSObject
 
@@ -25,6 +26,6 @@
 -(NSMutableArray*)confirm:(NSDictionary*)dic;
 -(NSString*)manage:(NSDictionary*)dic;
 -(NSString*)resetPassword:(NSDictionary*)dic;
--(NSMutableArray*)history:(NSDictionary*)str;
+-(NSMutableArray*)history:(NSDictionary*)dic;
 
 @end

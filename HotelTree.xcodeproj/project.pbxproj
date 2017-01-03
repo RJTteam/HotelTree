@@ -29,6 +29,11 @@
 		C3ADF5B71E1A21A200CCB7C8 /* NSDate+Helpers.m in Sources */ = {isa = PBXBuildFile; fileRef = C3ADF5B61E1A21A200CCB7C8 /* NSDate+Helpers.m */; };
 		C3ADF5BB1E1A23CB00CCB7C8 /* RequirementViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3ADF5BA1E1A23CB00CCB7C8 /* RequirementViewController.m */; };
 		C3ADF5BE1E1AECE000CCB7C8 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3ADF5BD1E1AECE000CCB7C8 /* DetailViewController.m */; };
+		C3ADF5C11E1B2B3D00CCB7C8 /* History.m in Sources */ = {isa = PBXBuildFile; fileRef = C3ADF5C01E1B2B3D00CCB7C8 /* History.m */; };
+		C3ADF5C61E1B35E500CCB7C8 /* adv1.gif in Resources */ = {isa = PBXBuildFile; fileRef = C3ADF5C31E1B35E500CCB7C8 /* adv1.gif */; };
+		C3ADF5C71E1B35E500CCB7C8 /* adv2.gif in Resources */ = {isa = PBXBuildFile; fileRef = C3ADF5C41E1B35E500CCB7C8 /* adv2.gif */; };
+		C3ADF5C91E1B38DC00CCB7C8 /* adv0.gif in Resources */ = {isa = PBXBuildFile; fileRef = C3ADF5C81E1B38DC00CCB7C8 /* adv0.gif */; };
+		C3ADF5CB1E1B3E9D00CCB7C8 /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3ADF5CA1E1B3E9D00CCB7C8 /* AddressBookUI.framework */; };
 		C3DA38361E16F5AC00E1AB83 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DA38351E16F5AC00E1AB83 /* main.m */; };
 		C3DA38391E16F5AC00E1AB83 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DA38381E16F5AC00E1AB83 /* AppDelegate.m */; };
 		C3DA383F1E16F5AC00E1AB83 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3DA383D1E16F5AC00E1AB83 /* Main.storyboard */; };
@@ -117,6 +122,12 @@
 		C3ADF5BA1E1A23CB00CCB7C8 /* RequirementViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RequirementViewController.m; sourceTree = "<group>"; };
 		C3ADF5BC1E1AECE000CCB7C8 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		C3ADF5BD1E1AECE000CCB7C8 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		C3ADF5BF1E1B2B3D00CCB7C8 /* History.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = History.h; sourceTree = "<group>"; };
+		C3ADF5C01E1B2B3D00CCB7C8 /* History.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = History.m; sourceTree = "<group>"; };
+		C3ADF5C31E1B35E500CCB7C8 /* adv1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = adv1.gif; sourceTree = "<group>"; };
+		C3ADF5C41E1B35E500CCB7C8 /* adv2.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = adv2.gif; sourceTree = "<group>"; };
+		C3ADF5C81E1B38DC00CCB7C8 /* adv0.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = adv0.gif; sourceTree = "<group>"; };
+		C3ADF5CA1E1B3E9D00CCB7C8 /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
 		C3DA38311E16F5AC00E1AB83 /* HotelTree.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HotelTree.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3DA38351E16F5AC00E1AB83 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C3DA38371E16F5AC00E1AB83 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -192,6 +203,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3ADF5CB1E1B3E9D00CCB7C8 /* AddressBookUI.framework in Frameworks */,
 				C3DA38C01E18662E00E1AB83 /* MapKit.framework in Frameworks */,
 				C3DA39071E18B76900E1AB83 /* libsqlite3.0.tbd in Frameworks */,
 				C3DA38721E17646E00E1AB83 /* Bolts.framework in Frameworks */,
@@ -208,6 +220,7 @@
 		0C5A69AC0C3370E23F09137F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C3ADF5CA1E1B3E9D00CCB7C8 /* AddressBookUI.framework */,
 				C3DA39061E18B76900E1AB83 /* libsqlite3.0.tbd */,
 				C3DA38BF1E18662E00E1AB83 /* MapKit.framework */,
 				C3DA38711E17646E00E1AB83 /* Bolts.framework */,
@@ -299,6 +312,9 @@
 				C3DA383D1E16F5AC00E1AB83 /* Main.storyboard */,
 				C3DA385D1E175D1800E1AB83 /* splash.gif */,
 				C3DA38751E176C5A00E1AB83 /* loginBack.gif */,
+				C3ADF5C81E1B38DC00CCB7C8 /* adv0.gif */,
+				C3ADF5C31E1B35E500CCB7C8 /* adv1.gif */,
+				C3ADF5C41E1B35E500CCB7C8 /* adv2.gif */,
 				C3DA38421E16F5AC00E1AB83 /* LaunchScreen.storyboard */,
 				C3DA38451E16F5AC00E1AB83 /* Info.plist */,
 				C3DA38AE1E184C4400E1AB83 /* Assets.xcassets */,
@@ -402,6 +418,8 @@
 				C3DA38DD1E18B5FC00E1AB83 /* Hotel.m */,
 				C3DA38DE1E18B5FC00E1AB83 /* Order.h */,
 				C3DA38DF1E18B5FC00E1AB83 /* Order.m */,
+				C3ADF5BF1E1B2B3D00CCB7C8 /* History.h */,
+				C3ADF5C01E1B2B3D00CCB7C8 /* History.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -493,9 +511,12 @@
 				C3DA38441E16F5AC00E1AB83 /* LaunchScreen.storyboard in Resources */,
 				C3ADF5B31E1A218800CCB7C8 /* background@2x.png in Resources */,
 				C3ADF5B21E1A218800CCB7C8 /* background.png in Resources */,
+				C3ADF5C61E1B35E500CCB7C8 /* adv1.gif in Resources */,
 				C3DA385E1E175D1800E1AB83 /* splash.gif in Resources */,
 				C3DA38AD1E17738F00E1AB83 /* title3.png in Resources */,
 				C3DA38761E176C5A00E1AB83 /* loginBack.gif in Resources */,
+				C3ADF5C91E1B38DC00CCB7C8 /* adv0.gif in Resources */,
+				C3ADF5C71E1B35E500CCB7C8 /* adv2.gif in Resources */,
 				C3DA38AC1E17738F00E1AB83 /* title2.png in Resources */,
 				C3DA38AB1E17738F00E1AB83 /* title1.png in Resources */,
 				C3ADF5B41E1A218800CCB7C8 /* default.plist in Resources */,
@@ -598,6 +619,7 @@
 				C3ADF5B71E1A21A200CCB7C8 /* NSDate+Helpers.m in Sources */,
 				C3DA385B1E175C6F00E1AB83 /* UIImageView+GIF.m in Sources */,
 				C3ADF5A81E1A215600CCB7C8 /* PMPeriod.m in Sources */,
+				C3ADF5C11E1B2B3D00CCB7C8 /* History.m in Sources */,
 				C3ADF58C1E1975C100CCB7C8 /* MKMapView+regionMap.m in Sources */,
 				C3DA38691E17627F00E1AB83 /* RegisterViewController.m in Sources */,
 				C3DA38D21E18723B00E1AB83 /* ListTableCell.m in Sources */,

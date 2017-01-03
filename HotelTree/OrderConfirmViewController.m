@@ -30,25 +30,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
-    ModelManager *modelManager = [ModelManager sharedInstance];
-    NSDictionary* dic = @{
-                          @"hotelLat":@"28.6049",
-                          @"hotelLong":@"77.2235"
-                          };
-    [modelManager hotelSearchFromWebService:dic];
-    
-
-    //NSLog(@"%@",[modelManager hotelSearchFromWebService:dic]);
-    
-    NSArray *array = [modelManager getAllHotel];
-    
-    for(Hotel *hotel in array){
-    NSLog(@"%@,%@,%@",hotel.hotelThumb,hotel.hotelId,hotel.hotelLat);
-    }
-    
-    self.hotel = array[0];
-    ImageStoreManager *imageStoreManager = [[ImageStoreManager alloc]init];
+     ImageStoreManager *imageStoreManager = [[ImageStoreManager alloc]init];
     self.hotelName.text = self.hotel.hotelName;
     self.hotelAddress.text = self.hotel.hotelAdd;
     self.hotelRating.text = [NSString stringWithFormat:@"This property has an excellent location score of %@, based on 691 guest reviews.",self.hotel.hotelRating];
