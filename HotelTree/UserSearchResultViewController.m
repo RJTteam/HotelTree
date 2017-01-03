@@ -147,6 +147,8 @@
     NSDictionary *dict = self.searchResultsArray[indexPath.row];
     self.locationDict = @{@"hotelLat":dict[@"hotelLat"],
                           @"hotelLong":dict[@"hotelLong"]};
+    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    self.searchControl.searchBar.text = [cell.textLabel.text copy];
 }
 
 
