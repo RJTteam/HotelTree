@@ -71,9 +71,12 @@
 }
 
 - (IBAction)proceedButtonClicked:(id)sender {
-//    PaymentConfirmViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"PaymentConfirmViewController"];
-//    
-//    [self.navigationController pushViewController:vc animated:YES];
+    
+    
+    ModelManager *proceedOrder = [[ModelManager alloc]init];
+    BOOL isCreateOrder = [proceedOrder createOrder:self.order.checkInDate checkOutDate:self.order.checkOutDate roomNumber:self.order.roomNumber adultNumber:self.order.adultNumber childrenNumber:self.order.childrenNumber orderStauts:self.order.orderStauts userId:self.user.userId hotelId:self.hotel.hotelId];
+    NSLog(@"new order %@",isCreateOrder? @"yes":@"no");
+
 }
 
 - (void)didReceiveMemoryWarning {

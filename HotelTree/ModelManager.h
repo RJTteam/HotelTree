@@ -25,8 +25,21 @@
 //--- init end ---
 
 
+//--- loginValidate and Register start ---
+-(NSDictionary *)loginValidate:(NSDictionary *)loginDic;    //call web service to get the login information
+-(NSString *)userRegisterToServer:(NSDictionary *)registerInfo;  //send user register info to server, please use this method with createUser which insert user information to local sql DB
+//--- loginValidate and Register end ---
+
+//--- Web Service part start ---
+-(NSString*)booking:(NSDictionary*)dic;
+-(NSMutableArray*)confirm:(NSDictionary*)dic;
+-(NSString*)manage:(NSDictionary*)dic;
+-(NSString*)resetPassword:(NSDictionary*)dic;
+-(NSMutableArray*)history:(NSDictionary*)dic;
+//--- Web Service part start ---
+
 //--- UserManager start ---
-- (void)createUser:(NSString *)userId password: (NSString *) password userName :(NSString*)userName firstName : (NSString *)firstName lastName: (NSString *)lastName email : (NSString *) email userAddress: (NSString *)userAddress;
+- (void)createUser:(NSString *)userId password: (NSString *) password userName :(NSString*)userName firstName : (NSString *)firstName lastName: (NSString *)lastName email : (NSString *) email userAddress: (NSString *)userAddress isManager:(NSString*)isManager;
 - (NSArray*)getAllUser;
 - (BOOL)updateUser: (User *)user;
 - (BOOL)removeUser: (NSString*)userID;
@@ -38,6 +51,7 @@
 -(BOOL)createHotelByHotel:(Hotel *)hotel;
 - (NSArray*)getAllHotel;
 -(NSArray*)hotelSearchFromWebService:(NSDictionary*)dic;
+-(BOOL)clearHotelDB;
 //--- hotelManager end ---
 
 
@@ -45,6 +59,7 @@
 -(BOOL)createOrder:(NSDate *)checkInDate checkOutDate:(NSDate *)checkOutDate roomNumber:(NSString *)roomNumber adultNumber:(NSString *)adultNumber childrenNumber:(NSString *)childrenNumber orderStauts:(NSString *)orderStauts userId:(NSString *)userId hotelId:(NSString *)hotelId;
 
 - (NSArray*)getAllOrderByUserId:(NSString*)userId;
+-(BOOL)removeOrderByOrderId:(NSString*)orderId;
 //--- orderManager end ---
 
 @end
