@@ -39,7 +39,6 @@
     [self setUIButton:self.sortBtn WithColorHex:@"04ACFF" Font:[UIFont boldFlatFontOfSize:20]];
     [self setUIButton:self.filterBtn WithColorHex:@"04ACFF" Font:[UIFont boldFlatFontOfSize:20]];
     [self setUIButton:self.mapBtn WithColorHex:@"04ACFF" Font:[UIFont boldFlatFontOfSize:20]];
-
 }
 
 - (void)setUIButton:(FUIButton *)btn WithColorHex:(NSString*)hexColor Font:(UIFont*)font{
@@ -106,22 +105,19 @@
     return cell;
 }
 
-#pragma mark - Navigation
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+     if ([segue.identifier isEqualToString:@"toHotelDetail"]) {
+         if ([sender isKindOfClass:[UITableViewCell class]]) {
+             NSIndexPath *indexPath = [self.listTable indexPathForSelectedRow];
+             DetailViewController *desitViewControl = segue.destinationViewController;             
+             desitViewControl.aHotel = [self.hotelsArray objectAtIndex:indexPath.row];
+             desitViewControl.bookingInfo = self.bookingInfo;
+         }
+         
+     }
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([segue.identifier isEqualToString:@"toHotelDetail"]) {
-        if ([sender isKindOfClass:[UITableViewCell class]]) {
-            NSIndexPath *indexPath = [self.listTable indexPathForSelectedRow];
-            DetailViewController *desitViewControl = segue.destinationViewController;
-            desitViewControl.aHotel = [self.hotelsArray objectAtIndex:indexPath.row];
-            desitViewControl.bookingInfo = self.bookingInfo;
-
-        }
-        
-    }
-    
-}
-
-
+ }
 @end

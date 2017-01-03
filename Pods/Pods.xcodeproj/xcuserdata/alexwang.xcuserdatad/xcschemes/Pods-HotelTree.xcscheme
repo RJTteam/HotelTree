@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "C3DA38301E16F5AC00E1AB83"
-               BuildableName = "HotelTree.app"
-               BlueprintName = "HotelTree"
-               ReferencedContainer = "container:HotelTree.xcodeproj">
+               BlueprintIdentifier = "756C368C8C614D7C9E6F350B66E64780"
+               BuildableName = "Pods_HotelTree.framework"
+               BlueprintName = "Pods-HotelTree"
+               ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -29,15 +29,6 @@
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "C3DA38301E16F5AC00E1AB83"
-            BuildableName = "HotelTree.app"
-            BlueprintName = "HotelTree"
-            ReferencedContainer = "container:HotelTree.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -51,16 +42,15 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "C3DA38301E16F5AC00E1AB83"
-            BuildableName = "HotelTree.app"
-            BlueprintName = "HotelTree"
-            ReferencedContainer = "container:HotelTree.xcodeproj">
+            BlueprintIdentifier = "756C368C8C614D7C9E6F350B66E64780"
+            BuildableName = "Pods_HotelTree.framework"
+            BlueprintName = "Pods-HotelTree"
+            ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -70,16 +60,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "C3DA38301E16F5AC00E1AB83"
-            BuildableName = "HotelTree.app"
-            BlueprintName = "HotelTree"
-            ReferencedContainer = "container:HotelTree.xcodeproj">
+            BlueprintIdentifier = "756C368C8C614D7C9E6F350B66E64780"
+            BuildableName = "Pods_HotelTree.framework"
+            BlueprintName = "Pods-HotelTree"
+            ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

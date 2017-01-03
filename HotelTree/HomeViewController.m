@@ -17,7 +17,6 @@
 #import "WebService.h"
 #import "UIImageView+GIF.h"
 #import "FlatUIKit.h"
-
 @interface HomeViewController ()<UITableViewDelegate,UITableViewDataSource,SearchMenuToSearchDelegate,QuantitySetDelegate, UITextFieldDelegate, PMCalendarControllerDelegate>
 @property (strong,nonatomic) NSMutableArray *homeArray;
 
@@ -119,7 +118,6 @@
 #pragma mark - UITextFieldDelegate
 
 - (BOOL)textFieldShouldBeginEditing:(UITextField *)textField{
-    
     [self performSegueWithIdentifier:@"toSearchMenuSegue" sender:nil];
     return NO;
 }

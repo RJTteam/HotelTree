@@ -33,7 +33,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-     ImageStoreManager *imageStoreManager = [[ImageStoreManager alloc]init];
+    ImageStoreManager *imageStoreManager = [[ImageStoreManager alloc]init];
     self.hotelName.text = self.hotel.hotelName;
     self.hotelAddress.text = self.hotel.hotelAdd;
     self.hotelRating.text = [NSString stringWithFormat:@"This property has an excellent location score of %@, based on 691 guest reviews.",self.hotel.hotelRating];
