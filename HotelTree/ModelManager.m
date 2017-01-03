@@ -42,7 +42,7 @@
 
 - (BOOL)createUserDBIfNeeded{
     NSString *userDBQuery = @"create table if not exists user(userId varchar(255)  primary key, password varchar(255) not null);";
-    NSString *userInfoDBQuery = @"create table if not exists userInfo(userId varchar(255) primary key, userName varchar(255)  not null, firstName varchar(100) not null, lastName varchar(100) not null, email varchar(100), userAddress varchar(255), foreign key(userId) references user(userId));";
+    NSString *userInfoDBQuery = @"create table if not exists userInfo(userId varchar(255) primary key, userName varchar(255)  not null, firstName varchar(100) not null, lastName varchar(100) not null, email varchar(100), userAddress varchar(255), isManager varchar(10), foreign key(userId) references user(userId));";
     BOOL result = [[SQLiteManager shareInstance] executeQuery:userDBQuery];
     if(result){
         result = [[SQLiteManager shareInstance] executeQuery:userInfoDBQuery];
@@ -65,13 +65,13 @@
 
 
 
-- (void)createUser:(NSString *)userId password: (NSString *) password userName :(NSString*)userName firstName : (NSString *)firstName lastName: (NSString *)lastName email : (NSString *) email userAddress: (NSString *)userAddress{
+- (void)createUser:(NSString *)userId password: (NSString *) password userName :(NSString*)userName firstName : (NSString *)firstName lastName: (NSString *)lastName email : (NSString *) email userAddress: (NSString *)userAddress isManager:(NSString*)isManager{
     
     NSString *userQuery = [NSString stringWithFormat:@"insert into user values('%@','%@');", userId, password];
     BOOL result = [[SQLiteManager shareInstance] executeQuery:userQuery];
     if(result){
         
-        NSString *userInfoQuery = [NSString stringWithFormat:@"insert into userInfo values('%@', '%@','%@','%@','%@', '%@');", userId, userName, firstName, lastName, email, userAddress];
+        NSString *userInfoQuery = [NSString stringWithFormat:@"insert into userInfo values('%@', '%@','%@','%@','%@', '%@', '%@');", userId, userName, firstName, lastName, email, userAddress, isManager];
         [[SQLiteManager shareInstance] executeQuery:userInfoQuery];
         
         NSLog(@"Insert Finish");
@@ -156,6 +156,12 @@
     return allHotel;
 }
 
+-(BOOL)clearHotelDB{
+    NSString *removeQuery = [NSString stringWithFormat:@"delete * from hotel;"];
+    BOOL result = [[SQLiteManager shareInstance] executeQuery:removeQuery];
+    return result;
+}
+
 -(NSArray*)getAllOrderByUserId:(NSString *)userId{
     NSMutableArray *allOrder = [[NSMutableArray alloc]init];
     NSString *fetchQuery = [NSString stringWithFormat:@"select * from orders where userId = '%@';",userId];
@@ -166,6 +172,12 @@
         [allOrder addObject:order];
     }
     return allOrder;
+}
+
+-(BOOL)removeOrderByOrderId:(NSString*)orderId{
+    NSString *removeQuery = [NSString stringWithFormat:@"delete from orders where orderId='%@';", orderId];
+    BOOL result = [[SQLiteManager shareInstance] executeQuery:removeQuery];
+    return result;
 }
 
 - (BOOL)removeUser:(NSString*)userID{
