@@ -96,8 +96,7 @@ static NSString *tablename = @"hotel";
         [self.coder geocodeAddressString:searchController.searchBar.text completionHandler:^(NSArray<CLPlacemark *> * _Nullable placemarks, NSError * _Nullable error) {
             NSMutableArray *array = [[NSMutableArray alloc] init];
             if(placemarks){
-                for(CLPlacemark *plcmark in placemarks){
-                    NSString *address = [NSString stringWithFormat:@"%@", ABCreateStringWithAddressDictionary(plcmark.addressDictionary, YES)];
+                for(CLPlacemark *plcmark in placemarks){                    NSString *address = [NSString stringWithFormat:@"%@", ABCreateStringWithAddressDictionary(plcmark.addressDictionary, YES)];
                     NSDictionary *dict = @{@"hotelName":plcmark.name,
                                            @"hotelAddress":address,
                                            @"hotelLat":[NSNumber numberWithDouble:plcmark.location.coordinate.latitude],

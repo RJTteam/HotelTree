@@ -113,20 +113,20 @@
     if([segue.identifier isEqualToString:@"toOrderConfirmationSegue"]){
         OrderConfirmViewController *vc = segue.destinationViewController;
         vc.hotel = self.aHotel;
-        NSDictionary *dict = @{@"roomNumber": self.bookingInfo[@"room"],
-                               @"adultNumber": self.bookingInfo[@"adult"],
-                               @"childrenNumber": self.bookingInfo[@"child"],
-                               @"hotelId": self.aHotel.hotelId};
-        Order *currentOrder = [[Order alloc] initWithDictionary:dict];
-        NSDateFormatter *formater = [[NSDateFormatter alloc] init];
-        formater.timeZone = [NSTimeZone localTimeZone];
-        formater.dateStyle = NSDateFormatterMediumStyle;
-        formater.timeStyle = NSDateFormatterNoStyle;
-        NSDate *checkInDate = [formater dateFromString:self.bookingInfo[@"checkIn"]];
-        NSDate *checkOutDate = [formater dateFromString:self.bookingInfo[@"checkOut"]];
-        [currentOrder setCheckInDate:checkInDate];
-        [currentOrder setCheckOutDate:checkOutDate];
-        vc.order = currentOrder;
+//        NSDictionary *dict = @{@"roomNumber": self.bookingInfo[@"room"],
+//                               @"adultNumber": self.bookingInfo[@"adult"],
+//                               @"childrenNumber": self.bookingInfo[@"child"],
+//                               @"hotelId": self.aHotel.hotelId};
+//        Order *currentOrder = [[Order alloc] initWithDictionary:dict];
+//        NSDateFormatter *formater = [[NSDateFormatter alloc] init];
+//        formater.timeZone = [NSTimeZone localTimeZone];
+//        formater.dateStyle = NSDateFormatterMediumStyle;
+//        formater.timeStyle = NSDateFormatterNoStyle;
+//        NSDate *checkInDate = [formater dateFromString:self.bookingInfo[@"checkIn"]];
+//        NSDate *checkOutDate = [formater dateFromString:self.bookingInfo[@"checkOut"]];
+//        [currentOrder setCheckInDate:checkInDate];
+//        [currentOrder setCheckOutDate:checkOutDate];
+//        vc.order = currentOrder;
         vc.bookingInfo = self.bookingInfo;
 
     }
