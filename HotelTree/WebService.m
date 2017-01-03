@@ -179,8 +179,8 @@
     NSArray* result = [outDic objectForKey:@"Booking History"];
     
     for(NSDictionary* d in result){
-        Hotel* hotel = [[Hotel alloc]initWithDictionary:d];
-        [arr addObject:hotel];
+        History* history = [[History alloc]initWithDictionary:d];
+        [arr addObject:history];
     }
     return arr;
 }

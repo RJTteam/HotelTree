@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		240B4AE0DDDF130530534838 /* Pods_HotelTree.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C92CA96825446B7E2AB3AA9 /* Pods_HotelTree.framework */; };
+		6C1EE0C71E1B284900C126D2 /* History.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C1EE0C61E1B284900C126D2 /* History.m */; };
 		C3ADF57F1E19636500CCB7C8 /* SearchManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C3ADF57C1E19636500CCB7C8 /* SearchManager.m */; };
 		C3ADF5801E19636500CCB7C8 /* UserSearchResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3ADF57E1E19636500CCB7C8 /* UserSearchResultViewController.m */; };
 		C3ADF5831E19728E00CCB7C8 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3ADF5821E19728E00CCB7C8 /* MapViewController.m */; };
@@ -75,6 +76,8 @@
 		0B6A92A0508B1EB474A6EC72 /* Pods-HotelTree.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HotelTree.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HotelTree/Pods-HotelTree.debug.xcconfig"; sourceTree = "<group>"; };
 		3C92CA96825446B7E2AB3AA9 /* Pods_HotelTree.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HotelTree.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		56D05E330B7EE64E6E7DAEB2 /* Pods-HotelTree.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HotelTree.release.xcconfig"; path = "Pods/Target Support Files/Pods-HotelTree/Pods-HotelTree.release.xcconfig"; sourceTree = "<group>"; };
+		6C1EE0C51E1B284900C126D2 /* History.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = History.h; sourceTree = "<group>"; };
+		6C1EE0C61E1B284900C126D2 /* History.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = History.m; sourceTree = "<group>"; };
 		C3ADF57B1E19636500CCB7C8 /* SearchManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchManager.h; sourceTree = "<group>"; };
 		C3ADF57C1E19636500CCB7C8 /* SearchManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchManager.m; sourceTree = "<group>"; };
 		C3ADF57D1E19636500CCB7C8 /* UserSearchResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserSearchResultViewController.h; sourceTree = "<group>"; };
@@ -402,6 +405,8 @@
 				C3DA38DD1E18B5FC00E1AB83 /* Hotel.m */,
 				C3DA38DE1E18B5FC00E1AB83 /* Order.h */,
 				C3DA38DF1E18B5FC00E1AB83 /* Order.m */,
+				6C1EE0C51E1B284900C126D2 /* History.h */,
+				6C1EE0C61E1B284900C126D2 /* History.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -598,6 +603,7 @@
 				C3ADF5B71E1A21A200CCB7C8 /* NSDate+Helpers.m in Sources */,
 				C3DA385B1E175C6F00E1AB83 /* UIImageView+GIF.m in Sources */,
 				C3ADF5A81E1A215600CCB7C8 /* PMPeriod.m in Sources */,
+				6C1EE0C71E1B284900C126D2 /* History.m in Sources */,
 				C3ADF58C1E1975C100CCB7C8 /* MKMapView+regionMap.m in Sources */,
 				C3DA38691E17627F00E1AB83 /* RegisterViewController.m in Sources */,
 				C3DA38D21E18723B00E1AB83 /* ListTableCell.m in Sources */,

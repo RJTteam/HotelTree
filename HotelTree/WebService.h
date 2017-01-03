@@ -12,6 +12,7 @@
 #import "Order.h"
 #import "User.h"
 #import "Hotel.h"
+#import "History.h"
 
 @interface WebService : NSObject
 
