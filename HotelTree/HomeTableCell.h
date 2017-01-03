@@ -11,8 +11,8 @@
 @interface HomeTableCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UIImageView *hotelImage;
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
-@property (weak, nonatomic) IBOutlet UILabel *rateLabel;
-@property (weak, nonatomic) IBOutlet UILabel *addressLabel;
-@property (weak, nonatomic) IBOutlet UILabel *priceLabel;
+@property (weak, nonatomic) IBOutlet UILabel *checkinLable;
+@property (weak, nonatomic) IBOutlet UILabel *checkoutLable;
+@property (weak, nonatomic) IBOutlet UIView *cellView;
 
 @end

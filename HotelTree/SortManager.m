@@ -23,7 +23,7 @@
 }
 
 -(NSArray *)sortHotelByPrice:(NSArray *)hotels{
-    NSSortDescriptor *sortDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"hotelPrice" ascending:YES];
+    NSSortDescriptor *sortDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"price" ascending:YES];
     NSArray *result = [hotels sortedArrayUsingDescriptors:[NSArray arrayWithObject:sortDescriptor]];
     return result;
 }

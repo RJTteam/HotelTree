@@ -10,6 +10,8 @@
 #import "JVFloatLabeledTextField.h"
 #import "FlatUIKit.h"
 #import <TWMessageBarManager/TWMessageBarManager.h>
+#import "WebService.h"
+
 @import UITextField_Shake;
 
 @interface RegisterViewController ()
@@ -40,18 +42,25 @@
 
 
 - (IBAction)registerNewBtn:(id)sender {
-//    NSString *isregistered =[[WebServiceManager sharedInstance] registerWithID:self.phoneField.text Name:self.nameField.text Email:self.emailField.text AndPwd:self.passwordField.text];
-//    if ([isregistered isEqualToString:@"\nsuccessfully registered"]) {
-//        [[TWMessageBarManager sharedInstance] showMessageWithTitle:@"Account Info"
-//                                                   description:isregistered
-//                                                          type:TWMessageBarMessageTypeSuccess];
-//        }
-//    else{
-//        [[TWMessageBarManager sharedInstance] showMessageWithTitle:@"Account Info"
-//                                                       description:isregistered
-//                                                              type:TWMessageBarMessageTypeError];
-//        [self.phoneField shake];
-//    }
+    NSDictionary *registureInfo = @{
+                                    @"name":self.nameField.text,
+                                    @"email":self.emailField.text,
+                                    @"mobile":self.phoneField.text,
+                                    @"password":self.passwordField.text,
+                                    @"userAdd":@"Delhi"
+                                    };
+    NSString *isregistered =[[WebService sharedInstance] returnUserRegister:registureInfo];
+    if ([isregistered isEqualToString:@"\nsuccessfully registered"]) {
+        [[TWMessageBarManager sharedInstance] showMessageWithTitle:@"Account Info"
+                                                   description:isregistered
+                                                          type:TWMessageBarMessageTypeSuccess];
+        }
+    else{
+        [[TWMessageBarManager sharedInstance] showMessageWithTitle:@"Account Info"
+                                                       description:isregistered
+                                                              type:TWMessageBarMessageTypeError];
+        [self.phoneField shake];
+    }
 }
 
 - (void)setUIButton:(FUIButton *)btn WithColorHex:(NSString*)hexColor Font:(UIFont*)font{

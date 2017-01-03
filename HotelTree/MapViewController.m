@@ -11,6 +11,7 @@
 #import <CoreLocation/CoreLocation.h>
 #import "Annotation.h"
 #import "ModelManager.h"
+#import "DetailViewController.h"
 
 #define METERS_PRE_MILE 1609.34
 
@@ -71,9 +72,17 @@
     
     hotelannotation.canShowCallout = YES;
     hotelannotation.rightCalloutAccessoryView = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
-    //mapToDetail
-    UIImage *image = [ UIImage imageNamed: @"hotel" ];
-    hotelannotation.image = image;
+    
+    Hotel *obj = [self.hotelArray objectAtIndex:index];
+    ImageStoreManager *imageGetter = [[ImageStoreManager alloc]init];
+    UIImage *image = [UIImage imageWithContentsOfFile:[imageGetter getImageStoreFilePathByHotelId:obj.hotelId]];
+    
+    UIImageView *imageView = [[UIImageView alloc]initWithImage:image];
+    imageView.frame = CGRectMake(0, 0, 32, 32);
+    hotelannotation.leftCalloutAccessoryView = imageView;
+    
+    UIImage *pinimage = [ UIImage imageNamed: @"hotel" ];
+    hotelannotation.image = pinimage;
     hotelannotation.tag = index;
     return hotelannotation;
 }
@@ -90,9 +99,15 @@
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    if ([segue.identifier isEqualToString:@"mapToDetail"]) {
+            DetailViewController *desitViewControl = segue.destinationViewController;
+        if ([sender isKindOfClass:[MKAnnotationView class]]) {
+            MKAnnotationView *annotion = (MKAnnotationView *)sender;
+            desitViewControl.aHotel = [self.hotelArray objectAtIndex:annotion.tag];
+        }
+    }
 }
 
-
+-(IBAction)returnFromDetail:(UIStoryboardSegue *)unwindsegue {
+}
 @end

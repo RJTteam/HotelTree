@@ -14,9 +14,11 @@
 #import "PMCalendar.h"
 #import "ModelManager.h"
 #import "ListViewController.h"
-
+#import "WebService.h"
+#import "UIImageView+GIF.h"
+#import "FlatUIKit.h"
 @interface HomeViewController ()<UITableViewDelegate,UITableViewDataSource,SearchMenuToSearchDelegate,QuantitySetDelegate, UITextFieldDelegate, PMCalendarControllerDelegate>
-@property (strong,nonatomic) NSArray *homeArray;
+@property (strong,nonatomic) NSMutableArray *homeArray;
 
 @property (weak, nonatomic) IBOutlet UILabel *checkInDisplayLabel;
 @property (weak, nonatomic) IBOutlet UILabel *checkOutDisplayLabel;
@@ -28,6 +30,7 @@
 
 
 @property (weak, nonatomic) IBOutlet UIButton *checkDateButton;
+@property (weak, nonatomic) IBOutlet FUIButton *searchBtn;
 
 @property (nonatomic)CLLocationCoordinate2D location;
 @property (strong, nonatomic)PMCalendarController *inCalender;
@@ -41,34 +44,15 @@
     self.inCalender.delegate = self;
     [self.inCalender setAllowedPeriod:[PMPeriod periodWithStartDate:[NSDate date] endDate:[[NSDate date] dateByAddingMonths:12]]];
     self.inCalender.showOnlyCurrentMonth = NO;
-//    [self.fileManager fileExistsAtPath:self.diaryEntriesPath isDirectory:&isDirectory];
-//    
-//    if (isDirectory) {
-//        NSString *dItemPath = [self.diaryEntriesPath stringByAppendingPathComponent:dItem.title];
-//        
-//        if ([self.fileManager fileExistsAtPath:dItemPath isDirectory:nil]) {
-//            DiaryItem*rewriteDairy = [[DiaryItem alloc]init];
-//            rewriteDairy.content = dItem.content;
-//            NSData*data = [NSKeyedArchiver archivedDataWithRootObject:rewriteDairy];
-//            [data writeToFile:dItemPath atomically:YES];
-//        }
-//        else{
-//            //                [dItem.content writeToFile:dItemPath atomically:YES encoding:NSUTF8StringEncoding error:nil];
-//            //
-//            [self.filesOnDisk addObject:dItem.title];
-//            DiaryItem*newDairy = [[DiaryItem alloc]init];
-//            newDairy.title = dItem.title;
-//            newDairy.content = dItem.content;
-//            NSData*data = [NSKeyedArchiver archivedDataWithRootObject:newDairy];
-//            [data writeToFile:dItemPath atomically:YES];
-//            [self.delegate informationUpdated];
-//        }
-//    }
-//    else{
-//        NSLog(@"Directory notExist in the path: %@",self.diaryEntriesPath);
-//    }
-//    NSData *imgData = [NSData dataWithContentsOfFile:imgPath];
-//    UIImage *image = [[UIImage alloc] initWithData:imgData];
+//get order History
+    [self setUIButton:self.searchBtn WithColorHex:@"04ACFF" Font:[UIFont boldFlatFontOfSize:20]];
+
+    
+    NSDictionary *idDic = @{
+        @"mobile":@"5555454"
+    };
+    WebService *webService = [WebService sharedInstance];
+    self.homeArray = [webService history:idDic];
 }
 
 - (void)viewDidAppear:(BOOL)animated{
@@ -78,9 +62,15 @@
     }
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)setUIButton:(FUIButton *)btn WithColorHex:(NSString*)hexColor Font:(UIFont*)font{
+    btn.buttonColor = [UIColor colorFromHexCode:hexColor];
+    btn.shadowColor = [UIColor colorFromHexCode:@"4D68A2"];
+    btn.shadowHeight = 3.0f;
+    btn.cornerRadius = 4.0f;
+    btn.titleLabel.font = font;
+    [btn setTitleColor:[UIColor cloudsColor] forState:UIControlStateNormal];
+    [btn setTitleColor:[UIColor cloudsColor] forState:UIControlStateHighlighted];
+    //    return btn;
 }
 
 
@@ -128,7 +118,6 @@
 #pragma mark - UITextFieldDelegate
 
 - (BOOL)textFieldShouldBeginEditing:(UITextField *)textField{
-
     [self performSegueWithIdentifier:@"toSearchMenuSegue" sender:nil];
     return NO;
 }
@@ -147,17 +136,63 @@
 }
 
 #pragma mark -UITableViewDataSource
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    return 2;
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
+    NSString *sectionName;
+    switch (section) {
+        case 0:
+            sectionName = @"Place you stay";
+            break;
+       case 1:
+            sectionName = @"Advertisement";
+            break;
+    }
+    return sectionName;
+}
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 3;
+    if (section == 0) {
+        return self.homeArray.count;
+    }
+    else{
+        return 3;
+    }
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    HomeTableCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+    if (indexPath.section == 0) {
+        HomeTableCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+        History *obj = [self.homeArray objectAtIndex:indexPath.row];
+        cell.nameLabel.text = obj.hotelName;
+        cell.checkinLable.text = obj.checkInDate;
+        cell.checkoutLable.text = obj.checkOutDate;
+        
+        cell.cellView.layer.shadowOpacity = 0.5f;
+        cell.cellView.layer.shadowRadius = 3;
+        cell.cellView.layer.shadowOffset = CGSizeMake(2.0f, 4.0f);
+        cell.cellView.layer.shadowColor = [[UIColor blackColor] CGColor];
+        cell.cellView.layer.masksToBounds = NO;
+        cell.cellView.layer.cornerRadius = 3;
+
+        ImageStoreManager *imageGetter = [[ImageStoreManager alloc]init];
+        cell.hotelImage.image = [UIImage imageWithContentsOfFile:[imageGetter getImageStoreFilePathByHotelId:obj.hotelId]];
+        return cell;
+    }
+    else{
+        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"advCell"forIndexPath:indexPath];
+        
+        NSString *path = [[NSBundle mainBundle] pathForResource:[NSString stringWithFormat:@"adv%ld",indexPath.row] ofType:@"gif"];
+        UIImageView *imageView = [[UIImageView alloc]initWithFrame:CGRectMake(8, 0, 398, 183)];
+        [imageView showGifImageWithData:[NSData dataWithContentsOfFile:path]];
+        imageView.contentMode = UIViewContentModeScaleAspectFill;
+        [cell.contentView addSubview:imageView];
+        return cell;
+    }
     
-    // Configure the cell...
-    
-    return cell;
 }
 
 #pragma mark - Navigation

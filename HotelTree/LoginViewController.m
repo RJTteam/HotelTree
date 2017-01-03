@@ -13,6 +13,7 @@
 #import <TWMessageBarManager/TWMessageBarManager.h>
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
 #import <FBSDKLoginKit/FBSDKLoginKit.h>
+#import "WebService.h"
 
 @interface LoginViewController ()
 @property (weak, nonatomic) IBOutlet JVFloatLabeledTextField *phoneField;
@@ -60,36 +61,34 @@
 }
 
 - (IBAction)signInClicked:(id)sender {
-//    NSArray *signInUser = [[WebServiceManager sharedInstance] signUserWithID:self.phoneField.text AndPassword:self.passwordField.text];
-//
-//    
-//    NSLog(@"sign User %@",signInUser);
-//
-//    if ([[signInUser objectAtIndex:0] isKindOfClass:[NSString class]]) {
-//            if ([[signInUser objectAtIndex:0] isEqualToString:@"failure"]) {
-//        [[TWMessageBarManager sharedInstance] showMessageWithTitle:@"A Problem Occured!"
-//                                                       description:@"Your id or password is not correct."
-//                                                              type:TWMessageBarMessageTypeError duration:10.0];
-//            }
-//    }
-//
-//    else{
-//        if ([self.phoneField.text isEqualToString:@""] || [self.passwordField.text isEqualToString:@""]) {
-//            [[TWMessageBarManager sharedInstance] showMessageWithTitle:@"A Problem Occured!"
-//                                                           description:@"Your id or password cannot be empty."
-//                                                                  type:TWMessageBarMessageTypeError duration:5.0];
-//        }
-//        else{
-//            NSUserDefaults*userInfo = [NSUserDefaults standardUserDefaults];
-//            
-//            User *obj = [signInUser objectAtIndex:0];
-//            NSString *userName = obj.name;
-//            
-//            [userInfo setObject:self.phoneField.text forKey:@"userID"];
-//            [userInfo setObject:userName forKey:@"userName"];
-//            
-//        }
-//    }
+    NSDictionary *signInDic = @{
+                                @"mobile":self.phoneField.text,
+                                @"password":self.passwordField.text
+                                };
+    NSString *signInUser = [[WebService sharedInstance] returenUserLogin:signInDic];
+
+    
+    NSLog(@"sign User %@",signInUser);
+
+    if ([signInUser isEqualToString:@"failure"]) {
+        [[TWMessageBarManager sharedInstance] showMessageWithTitle:@"A Problem Occured!"
+                                                       description:@"Your id or password is not correct."
+                                                              type:TWMessageBarMessageTypeError duration:10.0];
+    }
+
+    else{
+        if ([self.phoneField.text isEqualToString:@""] || [self.passwordField.text isEqualToString:@""]) {
+            [[TWMessageBarManager sharedInstance] showMessageWithTitle:@"A Problem Occured!"
+                                                           description:@"Your id or password cannot be empty."
+                                                                  type:TWMessageBarMessageTypeError duration:5.0];
+        }
+        else{
+            NSUserDefaults*userInfo = [NSUserDefaults standardUserDefaults];
+            
+            [userInfo setObject:self.phoneField.text forKey:@"userID"];
+            [self performSegueWithIdentifier:@"loginToHome" sender:nil];
+        }
+    }
 }
 
 - (IBAction)facebookSignInBtn:(id)sender {
