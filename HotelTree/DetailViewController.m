@@ -106,37 +106,6 @@
     self.checkOutDateLabel.text = [formater stringFromDate:end];
     return YES;
 }
-#pragma mark - Event Methods
-
-- (IBAction)openCalendarButtonClicked:(UIButton *)sender {
-    if(self.calendar != nil && self.calendar.isCalendarVisible){
-        [self.calendar dismissCalendarAnimated:YES];
-    }else{
-        self.calendar = [[PMCalendarController alloc] initWithSize:CGSizeMake(300, 170)];
-        self.calendar.delegate = self;
-        [self.calendar setShowOnlyCurrentMonth:YES];
-        [self.calendar presentCalendarFromView:sender permittedArrowDirections:PMCalendarArrowDirectionDown animated:YES];
-    }
-}
-
-- (IBAction)bookButtonClicked:(UIButton *)sender {
-    [self performSegueWithIdentifier:@"toOrderConfirmationSegue" sender:sender];
-}
-
-#pragma mark - PMCalendarControllerDelegate
-
-- (BOOL)calendarControllerShouldDismissCalendar:(PMCalendarController *)calendarController{
-    PMPeriod *period = calendarController.period;
-    NSDate *start = period.startDate;
-    NSDate *end = period.endDate;
-    NSDateFormatter *formater = [[NSDateFormatter alloc] init];
-    formater.timeZone = [NSTimeZone localTimeZone];
-    formater.dateStyle = NSDateFormatterMediumStyle;
-    formater.timeStyle = NSDateFormatterNoStyle;
-    self.checkInDateLabel.text = [formater stringFromDate:start];
-    self.checkOutDateLabel.text = [formater stringFromDate:end];
-    return YES;
-}
 
 #pragma mark - Navigation
 

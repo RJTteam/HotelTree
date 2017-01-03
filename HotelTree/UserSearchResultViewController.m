@@ -149,7 +149,9 @@
                           @"hotelLong":dict[@"hotelLong"]};
     UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
     self.searchControl.searchBar.text = [cell.textLabel.text copy];
+    if([self.delegate respondsToSelector:@selector(updateSearchContent: withText:)]){
+        [self.delegate updateSearchContent:self.locationDict withText:self.searchControl.searchBar.text];
+        [self.navigationController popViewControllerAnimated:YES];
+    }
 }
-
-
 @end
