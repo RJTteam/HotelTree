@@ -34,6 +34,8 @@
 		C3ADF5C71E1B35E500CCB7C8 /* adv2.gif in Resources */ = {isa = PBXBuildFile; fileRef = C3ADF5C41E1B35E500CCB7C8 /* adv2.gif */; };
 		C3ADF5C91E1B38DC00CCB7C8 /* adv0.gif in Resources */ = {isa = PBXBuildFile; fileRef = C3ADF5C81E1B38DC00CCB7C8 /* adv0.gif */; };
 		C3ADF5CB1E1B3E9D00CCB7C8 /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3ADF5CA1E1B3E9D00CCB7C8 /* AddressBookUI.framework */; };
+		C3ADF5CD1E1B7A5000CCB7C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3ADF5CC1E1B7A5000CCB7C8 /* Assets.xcassets */; };
+		C3ADF5D31E1B821F00CCB7C8 /* background.gif in Resources */ = {isa = PBXBuildFile; fileRef = C3ADF5D21E1B821F00CCB7C8 /* background.gif */; };
 		C3DA38361E16F5AC00E1AB83 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DA38351E16F5AC00E1AB83 /* main.m */; };
 		C3DA38391E16F5AC00E1AB83 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DA38381E16F5AC00E1AB83 /* AppDelegate.m */; };
 		C3DA383F1E16F5AC00E1AB83 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3DA383D1E16F5AC00E1AB83 /* Main.storyboard */; };
@@ -54,7 +56,6 @@
 		C3DA38AB1E17738F00E1AB83 /* title1.png in Resources */ = {isa = PBXBuildFile; fileRef = C3DA38A81E17738F00E1AB83 /* title1.png */; };
 		C3DA38AC1E17738F00E1AB83 /* title2.png in Resources */ = {isa = PBXBuildFile; fileRef = C3DA38A91E17738F00E1AB83 /* title2.png */; };
 		C3DA38AD1E17738F00E1AB83 /* title3.png in Resources */ = {isa = PBXBuildFile; fileRef = C3DA38AA1E17738F00E1AB83 /* title3.png */; };
-		C3DA38AF1E184C4400E1AB83 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3DA38AE1E184C4400E1AB83 /* Assets.xcassets */; };
 		C3DA38B51E18501E00E1AB83 /* CustomiseNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DA38B41E18501E00E1AB83 /* CustomiseNavController.m */; };
 		C3DA38BB1E18527400E1AB83 /* UIColor+Hexadecimal.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DA38BA1E18527400E1AB83 /* UIColor+Hexadecimal.m */; };
 		C3DA38BE1E18563400E1AB83 /* UINavigationBar+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DA38BD1E18563400E1AB83 /* UINavigationBar+Addition.m */; };
@@ -128,6 +129,8 @@
 		C3ADF5C41E1B35E500CCB7C8 /* adv2.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = adv2.gif; sourceTree = "<group>"; };
 		C3ADF5C81E1B38DC00CCB7C8 /* adv0.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = adv0.gif; sourceTree = "<group>"; };
 		C3ADF5CA1E1B3E9D00CCB7C8 /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
+		C3ADF5CC1E1B7A5000CCB7C8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C3ADF5D21E1B821F00CCB7C8 /* background.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = background.gif; sourceTree = "<group>"; };
 		C3DA38311E16F5AC00E1AB83 /* HotelTree.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HotelTree.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3DA38351E16F5AC00E1AB83 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C3DA38371E16F5AC00E1AB83 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -158,7 +161,6 @@
 		C3DA38A81E17738F00E1AB83 /* title1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = title1.png; sourceTree = "<group>"; };
 		C3DA38A91E17738F00E1AB83 /* title2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = title2.png; sourceTree = "<group>"; };
 		C3DA38AA1E17738F00E1AB83 /* title3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = title3.png; sourceTree = "<group>"; };
-		C3DA38AE1E184C4400E1AB83 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C3DA38B31E18501E00E1AB83 /* CustomiseNavController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomiseNavController.h; sourceTree = "<group>"; };
 		C3DA38B41E18501E00E1AB83 /* CustomiseNavController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomiseNavController.m; sourceTree = "<group>"; };
 		C3DA38B91E18527400E1AB83 /* UIColor+Hexadecimal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Hexadecimal.h"; sourceTree = "<group>"; };
@@ -312,12 +314,13 @@
 				C3DA383D1E16F5AC00E1AB83 /* Main.storyboard */,
 				C3DA385D1E175D1800E1AB83 /* splash.gif */,
 				C3DA38751E176C5A00E1AB83 /* loginBack.gif */,
+				C3ADF5D21E1B821F00CCB7C8 /* background.gif */,
 				C3ADF5C81E1B38DC00CCB7C8 /* adv0.gif */,
 				C3ADF5C31E1B35E500CCB7C8 /* adv1.gif */,
 				C3ADF5C41E1B35E500CCB7C8 /* adv2.gif */,
 				C3DA38421E16F5AC00E1AB83 /* LaunchScreen.storyboard */,
 				C3DA38451E16F5AC00E1AB83 /* Info.plist */,
-				C3DA38AE1E184C4400E1AB83 /* Assets.xcassets */,
+				C3ADF5CC1E1B7A5000CCB7C8 /* Assets.xcassets */,
 				C3DA38A71E17738F00E1AB83 /* images */,
 				C3DA38341E16F5AC00E1AB83 /* Supporting Files */,
 			);
@@ -350,8 +353,6 @@
 		C3DA385C1E175C9300E1AB83 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				C3ADF57D1E19636500CCB7C8 /* UserSearchResultViewController.h */,
-				C3ADF57E1E19636500CCB7C8 /* UserSearchResultViewController.m */,
 				C3DA38A41E17737100E1AB83 /* SplashViewController.m */,
 				C3DA38A51E17737100E1AB83 /* SplashViewController.h */,
 				C3DA385F1E17627F00E1AB83 /* ResetViewController.h */,
@@ -378,6 +379,8 @@
 				C3ADF5821E19728E00CCB7C8 /* MapViewController.m */,
 				C3ADF5B91E1A23CB00CCB7C8 /* RequirementViewController.h */,
 				C3ADF5BA1E1A23CB00CCB7C8 /* RequirementViewController.m */,
+				C3ADF57D1E19636500CCB7C8 /* UserSearchResultViewController.h */,
+				C3ADF57E1E19636500CCB7C8 /* UserSearchResultViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -510,8 +513,10 @@
 			files = (
 				C3DA38441E16F5AC00E1AB83 /* LaunchScreen.storyboard in Resources */,
 				C3ADF5B31E1A218800CCB7C8 /* background@2x.png in Resources */,
+				C3ADF5D31E1B821F00CCB7C8 /* background.gif in Resources */,
 				C3ADF5B21E1A218800CCB7C8 /* background.png in Resources */,
 				C3ADF5C61E1B35E500CCB7C8 /* adv1.gif in Resources */,
+				C3ADF5CD1E1B7A5000CCB7C8 /* Assets.xcassets in Resources */,
 				C3DA385E1E175D1800E1AB83 /* splash.gif in Resources */,
 				C3DA38AD1E17738F00E1AB83 /* title3.png in Resources */,
 				C3DA38761E176C5A00E1AB83 /* loginBack.gif in Resources */,
@@ -520,7 +525,6 @@
 				C3DA38AC1E17738F00E1AB83 /* title2.png in Resources */,
 				C3DA38AB1E17738F00E1AB83 /* title1.png in Resources */,
 				C3ADF5B41E1A218800CCB7C8 /* default.plist in Resources */,
-				C3DA38AF1E184C4400E1AB83 /* Assets.xcassets in Resources */,
 				C3ADF5B11E1A218800CCB7C8 /* apple calendar.plist in Resources */,
 				C3DA383F1E16F5AC00E1AB83 /* Main.storyboard in Resources */,
 			);

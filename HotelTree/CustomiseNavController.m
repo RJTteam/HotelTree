@@ -25,6 +25,7 @@
     [self.navBar setBackgroundImage:[[UIImage alloc] init] forBarMetrics:UIBarMetricsDefault];
     self.navBar.backgroundColor = [UIColor colorWithHexString:@"13347B"];
     self.navBar.shadowImage = [UIImage new];
+    
 }
 
 - (void)didReceiveMemoryWarning {

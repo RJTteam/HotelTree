@@ -7,6 +7,8 @@
 //
 
 #import "RequirementViewController.h"
+#import "FlatUIKit.h"
+#import "UIImageView+GIF.h"
 
 @interface RequirementViewController ()
 
@@ -17,6 +19,15 @@
 @property (weak, nonatomic) IBOutlet UILabel *adultLabel;
 @property (weak, nonatomic) IBOutlet UILabel *childrenLabel;
 @property (weak, nonatomic) IBOutlet UILabel *roomLabel;
+@property (weak, nonatomic) IBOutlet UIButton *plus1;
+@property (weak, nonatomic) IBOutlet UIButton *plus2;
+@property (weak, nonatomic) IBOutlet UIButton *plus3;
+
+@property (weak, nonatomic) IBOutlet UIButton *minus1;
+@property (weak, nonatomic) IBOutlet UIButton *minus2;
+@property (weak, nonatomic) IBOutlet UIButton *minus3;
+
+@property (weak, nonatomic) IBOutlet UIImageView *backAnimation;
 
 @end
 
@@ -32,9 +43,17 @@
     self.adultNumber = 1;
     self.childNumber= 1;
     self.roomsNumber = 1;
-    
-    // Do any additional setup after loading the view.
-    
+
+    self.minus1.layer.cornerRadius = 15;
+    self.minus2.layer.cornerRadius = 15;
+    self.minus3.layer.cornerRadius = 15;
+
+    self.plus1.layer.cornerRadius = 15;
+    self.plus2.layer.cornerRadius = 15;
+    self.plus3.layer.cornerRadius = 15;
+
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"background" ofType:@"gif"];
+    [self.backAnimation showGifImageWithData:[NSData dataWithContentsOfFile:path]];
 }
 
 - (void)didReceiveMemoryWarning {

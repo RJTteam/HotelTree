@@ -16,6 +16,7 @@
 #import "ListViewController.h"
 #import "WebService.h"
 #import "UIImageView+GIF.h"
+#import "FlatUIKit.h"
 
 @interface HomeViewController ()<UITableViewDelegate,UITableViewDataSource,SearchMenuToSearchDelegate,QuantitySetDelegate, UITextFieldDelegate, PMCalendarControllerDelegate>
 @property (strong,nonatomic) NSMutableArray *homeArray;
@@ -30,6 +31,7 @@
 
 
 @property (weak, nonatomic) IBOutlet UIButton *checkDateButton;
+@property (weak, nonatomic) IBOutlet FUIButton *searchBtn;
 
 @property (nonatomic)CLLocationCoordinate2D location;
 @property (strong, nonatomic)PMCalendarController *inCalender;
@@ -44,9 +46,11 @@
     [self.inCalender setAllowedPeriod:[PMPeriod periodWithStartDate:[NSDate date] endDate:[[NSDate date] dateByAddingMonths:12]]];
     self.inCalender.showOnlyCurrentMonth = NO;
 //get order History
+    [self setUIButton:self.searchBtn WithColorHex:@"04ACFF" Font:[UIFont boldFlatFontOfSize:20]];
+
     
     NSDictionary *idDic = @{
-        @"mobile":@"1"
+        @"mobile":@"5555454"
     };
     WebService *webService = [WebService sharedInstance];
     self.homeArray = [webService history:idDic];
@@ -59,9 +63,15 @@
     }
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)setUIButton:(FUIButton *)btn WithColorHex:(NSString*)hexColor Font:(UIFont*)font{
+    btn.buttonColor = [UIColor colorFromHexCode:hexColor];
+    btn.shadowColor = [UIColor colorFromHexCode:@"4D68A2"];
+    btn.shadowHeight = 3.0f;
+    btn.cornerRadius = 4.0f;
+    btn.titleLabel.font = font;
+    [btn setTitleColor:[UIColor cloudsColor] forState:UIControlStateNormal];
+    [btn setTitleColor:[UIColor cloudsColor] forState:UIControlStateHighlighted];
+    //    return btn;
 }
 
 
@@ -163,6 +173,13 @@
         cell.checkinLable.text = obj.checkInDate;
         cell.checkoutLable.text = obj.checkOutDate;
         
+        cell.cellView.layer.shadowOpacity = 0.5f;
+        cell.cellView.layer.shadowRadius = 3;
+        cell.cellView.layer.shadowOffset = CGSizeMake(2.0f, 4.0f);
+        cell.cellView.layer.shadowColor = [[UIColor blackColor] CGColor];
+        cell.cellView.layer.masksToBounds = NO;
+        cell.cellView.layer.cornerRadius = 3;
+
         ImageStoreManager *imageGetter = [[ImageStoreManager alloc]init];
         cell.hotelImage.image = [UIImage imageWithContentsOfFile:[imageGetter getImageStoreFilePathByHotelId:obj.hotelId]];
         return cell;

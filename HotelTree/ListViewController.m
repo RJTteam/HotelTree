@@ -13,12 +13,15 @@
 #import "SortManager.h"
 #import "ImageStoreManager.h"
 #import "DetailViewController.h"
-
+#import "FlatUIKit.h"
 
 @interface ListViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property(strong,nonatomic)NSArray* hotelsArray;
 @property(strong, nonatomic)NSDictionary *bookingInfo;
 
+@property (weak, nonatomic) IBOutlet FUIButton *sortBtn;
+@property (weak, nonatomic) IBOutlet FUIButton *filterBtn;
+@property (weak, nonatomic) IBOutlet FUIButton *mapBtn;
 @property (weak, nonatomic) IBOutlet UITableView *listTable;
 @end
 
@@ -33,8 +36,23 @@
         self.hotelsArray = [NSArray arrayWithArray:self.hotelsRawInfo];
     }
     //    NSLog(@"%@",self.hotelsArray);
-    
+    [self setUIButton:self.sortBtn WithColorHex:@"04ACFF" Font:[UIFont boldFlatFontOfSize:20]];
+    [self setUIButton:self.filterBtn WithColorHex:@"04ACFF" Font:[UIFont boldFlatFontOfSize:20]];
+    [self setUIButton:self.mapBtn WithColorHex:@"04ACFF" Font:[UIFont boldFlatFontOfSize:20]];
+
 }
+
+- (void)setUIButton:(FUIButton *)btn WithColorHex:(NSString*)hexColor Font:(UIFont*)font{
+    btn.buttonColor = [UIColor colorFromHexCode:hexColor];
+    btn.shadowColor = [UIColor colorFromHexCode:@"4D68A2"];
+    btn.shadowHeight = 3.0f;
+    btn.cornerRadius = 4.0f;
+    btn.titleLabel.font = font;
+    [btn setTitleColor:[UIColor cloudsColor] forState:UIControlStateNormal];
+    [btn setTitleColor:[UIColor cloudsColor] forState:UIControlStateHighlighted];
+    //    return btn;
+}
+
 - (IBAction)sortButtonClicked:(UIButton *)sender {
     SortManager *sort = [[SortManager alloc]init];
     
@@ -78,6 +96,13 @@
     
     cell.hotelImage.image = [UIImage imageWithContentsOfFile:[[[ImageStoreManager alloc]init] getImageStoreFilePathByHotelId:obj.hotelId]];
     
+    cell.cellView.layer.shadowOpacity = 0.5f;
+    cell.cellView.layer.shadowRadius = 3;
+    cell.cellView.layer.shadowOffset = CGSizeMake(2.0f, 4.0f);
+    cell.cellView.layer.shadowColor = [[UIColor blackColor] CGColor];
+    cell.cellView.layer.masksToBounds = NO;
+    cell.cellView.layer.cornerRadius = 3;
+
     return cell;
 }
 
