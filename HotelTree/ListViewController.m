@@ -17,7 +17,7 @@
 
 @interface ListViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property(strong,nonatomic)NSArray* hotelsArray;
-@property(strong, nonatomic)NSDictionary *location;
+@property(strong, nonatomic)NSDictionary *bookingInfo;
 
 @property (weak, nonatomic) IBOutlet UITableView *listTable;
 @end
@@ -28,7 +28,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     if(self.hotelsRawInfo != nil){
-        self.location = [NSDictionary dictionaryWithDictionary:(NSDictionary *)[self.hotelsRawInfo lastObject]];
+        self.bookingInfo = [NSDictionary dictionaryWithDictionary:(NSDictionary *)[self.hotelsRawInfo lastObject]];
         [self.hotelsRawInfo removeLastObject];
         self.hotelsArray = [NSArray arrayWithArray:self.hotelsRawInfo];
     }
@@ -90,6 +90,7 @@
              NSIndexPath *indexPath = [self.listTable indexPathForSelectedRow];
              DetailViewController *desitViewControl = segue.destinationViewController;             
              desitViewControl.aHotel = [self.hotelsArray objectAtIndex:indexPath.row];
+             desitViewControl.bookingInfo = self.bookingInfo;
          }
          
      }

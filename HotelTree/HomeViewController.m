@@ -169,7 +169,12 @@
         ModelManager *modelManager = [ModelManager sharedInstance];
         NSDictionary* dic = @{
                               @"hotelLat":[NSString stringWithFormat:@"%f", self.location.latitude],
-                              @"hotelLong":[NSString stringWithFormat:@"%f", self.location.longitude]
+                              @"hotelLong":[NSString stringWithFormat:@"%f", self.location.longitude],
+                              @"checkIn": self.checkInDisplayLabel.text,
+                              @"checkOut": self.checkOutDisplayLabel.text,
+                              @"room": self.roomQuantityLabel.text,
+                              @"adult": self.adultQuantityLabel.text,
+                              @"child" : self.childrenQuatityLabel.text
                               };
         
         [modelManager hotelSearchFromWebService:dic];
