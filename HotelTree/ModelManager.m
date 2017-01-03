@@ -63,7 +63,18 @@
     
 }
 
+-(NSDictionary *)loginValidate:(NSDictionary *)loginDic{
+    //waiting Web Service update its return to NSDic
+    NSDictionary *result = [[WebService sharedInstance] returenUserLogin:loginDic];
+    return result;
+}
 
+-(NSString *)userRegisterToServer:(NSDictionary *)registerInfo{
+    NSString *result =[[WebService sharedInstance] returnUserRegister:registerInfo];
+    
+    return result;
+    
+}
 
 - (void)createUser:(NSString *)userId password: (NSString *) password userName :(NSString*)userName firstName : (NSString *)firstName lastName: (NSString *)lastName email : (NSString *) email userAddress: (NSString *)userAddress isManager:(NSString*)isManager{
     
@@ -78,6 +89,8 @@
     }
     
 }
+
+
 
 -(BOOL)createHotel:(NSString *)hotelId hotelName:(NSString *)hotelName hotelLatitude:(NSString *)hotelLatitude hotelLongitude:(NSString *)hotelLongitude hotelAddress:(NSString *)hotelAddress hotelRating:(NSString *)hotelRating hotelPrice:(NSString *)hotelPrice hotelThumb:(NSString *)hotelThumb hotelAvailableDate:(NSArray *)hotelAvailableDate{
     
