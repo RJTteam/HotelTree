@@ -11,4 +11,5 @@
 
 @interface DetailViewController : UIViewController
 @property(nonatomic,strong)Hotel* aHotel;
+@property (strong, nonatomic)NSDictionary *bookingInfo;
 @end
