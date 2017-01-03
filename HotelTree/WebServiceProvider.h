@@ -9,8 +9,15 @@
 #import <Foundation/Foundation.h>
 #import "WebCommunicatioin.h"
 
+//@protocol complete <NSObject>
+//
+//-(NSData*)passData:(NSData*)theData;
+//
+//@end
+
 @interface WebServiceProvider : NSObject<WebCommunicatioin>
 
-@property (strong,nonatomic) NSData* data;
+//@property (strong,nonatomic) NSData* data;
+//@property (weak,nonatomic) id <complete> delegate;
 
 @end

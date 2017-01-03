@@ -27,12 +27,21 @@
 //    NSDictionary* dic = @{
 //                          @"name":@"aamir",
 //                          @"email":@"aa@gmail.com",
-//                          @"mobile":@"55565454",
+//                          @"mobile":@"55555555",
 //                          @"password":@"7011",
-//                          @"userAdd":@"Delhi"
+//                          @"IsManager":@"0"
 //                          };
 //    
-//    NSLog(@"%@",[service returnUserRegister:dic]);
+//    //NSLog(@"%@",[service returnUserRegister:dic]);
+//    [service returnUserRegister:dic completionHandler:^(NSString* registerInfo, NSError* error,NSString* httpStatus){
+//        if( error && httpStatus )
+//        {
+//            NSLog(@"web connection wrong");
+//        }
+//        NSLog(@"register : %@",registerInfo);
+//    }];
+    
+////http://rjtmobile.com/ansari/hms/hmsapp/hms_reg.php?name=aamir&email=aa@gmail.com&mobile=55555555&password=7011&IsManage=0
     
     
 //------------search
@@ -40,45 +49,85 @@
 //                          @"hotelLat":@"28.6049",
 //                          @"hotelLong":@"77.2235"
 //                          };
-//    NSArray* arr = [service returnHotelSearch:dic];
-//    for(Hotel * h in arr){
-//        NSLog(@"%@",h.hotelThumb);
-//    }
+//    //NSArray* arr = [service returnHotelSearch:dic];
+//    [service returnHotelSearch:dic completionHandler:^(NSArray* array,NSError* error,NSString* httpStatus){
+//        if( error && httpStatus )
+//        {
+//            NSLog(@"web connection wrong");
+//        }else{
+//            for(Hotel * h in array){
+//                NSLog(@"%@",h.hotelThumb);
+//            }
+//        }
+//    }];
+    
     
     
 //-----------booking
-    NSDictionary* dic = @{
-                          @"id" : @"412",
-                          @"checkIn":@"2016-12-17 00:00:00",
-                          @"checkOut":@"2016-12-19 00:00:00",
-                          @"room":@"2",
-                          @"adult":@"2",
-                          @"child":@"1",
-                          @"booked":@"1"
-                          };
-    NSLog(@"%@",[service booking:dic]);
+//    NSDictionary* dic = @{
+//                          @"id" : @"412",
+//                          @"checkIn":@"2016-12-17 00:00:00",
+//                          @"checkOut":@"2016-12-19 00:00:00",
+//                          @"room":@"2",
+//                          @"adult":@"2",
+//                          @"child":@"1",
+//                          @"booked":@"1"
+//                          };
+//    [service booking:dic completionHandler:^(NSString* bookingIfo,NSError* error,NSString* httpStatus){
+//        if( error && httpStatus )
+//        {
+//            NSLog(@"web connection wrong");
+//        }else{
+//            NSLog(@"booking : %@",bookingIfo);
+//        }
+//    }];
+
     
 //----------- confirm
 //    NSDictionary* dic =@{
 //                         @"id":@"412",
 //                         @"mobile":@"4564654"
 //                         };
-//    NSLog(@"%@",[service confirm:dic]);
+//    [service confirm:dic completionHandler:^(NSMutableArray *confirmInfo,NSError* error,NSString* httpStatus) {
+//        if( error && httpStatus )
+//        {
+//            NSLog(@"web connection wrong");
+//        }else{
+//            NSLog(@"confirm: %@",confirmInfo);
+//        }
+//    }];
     
 //----------- login
 //    NSDictionary* dic=@{
-//                        @"mobile":@"123456789",
-//                        @"password":@"789456"
+//                        @"mobile":@"55555555",
+//                        @"password":@"7011",
+//                        @"IsManager":@"1"
 //                       };
-//    NSLog(@"%@",[service returenUserLogin:dic]);
+//    [service returenUserLogin:dic completionHandler:^(NSDictionary* loginInfo,NSError* error,NSString* httpStatus) {
+//        if( error && httpStatus )
+//        {
+//            NSLog(@"web connection wrong");
+//        }else{
+//            NSLog(@"%@",loginInfo);
+//        }
+//    }];
     
+    //http://rjtmobile.com/ansari/hms/hmsapp/hms_login.php?mobile=55555555&password=7011&IsManager=1
+
 //----------- reset password
-//    NSDictionary* dic = @{
-//                          @"mobile":@"55565454",
-//                          @"password":@"7011",
-//                          @"newpassword":@"7012"
-//                          };
-//    NSLog(@"%@",[service resetPassword:dic]);
+    NSDictionary* dic = @{
+                          @"mobile":@"55565454",
+                          @"password":@"7011",
+                          @"newpassword":@"7012"
+                          };
+    [service resetPassword:dic completionHandler:^(NSString *resetInfo,NSError* error,NSString* httpStatus) {
+        if( error && httpStatus )
+        {
+            NSLog(@"web connection wrong");
+        }else{
+            NSLog(@"%@",resetInfo);
+        }
+    }];
     
 //----------- manage booking
 //    NSDictionary* dic = @{
@@ -92,7 +141,14 @@
 //                          @"child":@"2",
 //                          @"booked":@"0"
 //                          };
-//    NSLog(@"%@",[service manage:dic]);
+//    [service manage:dic completionHandler:^(NSString *manageInfo,NSError* error,NSString* httpStatus) {
+//        if( error && httpStatus )
+//        {
+//            NSLog(@"web connection wrong");
+//        }else{
+//            NSLog(@"%@",manageInfo);
+//        }
+//    }];
     
     //http://rjtmobile.com/ansari/ohr/ohrapp/manage_booking.php?&hotel_id=408&hotel_name=Park Hyatt&checkIn=2016-12-17 00:00:00&checkOut=2016-12-19 00:00:00&room=3&adult=4&child=2&booked=0&mobile=5555454
     
@@ -101,29 +157,18 @@
 //    NSDictionary* dic = @{
 //                          @"mobile":@"5555454"
 //                          };
-//    NSLog(@"%@",[service history:dic]);
-//
-//    //mobile=5555454
+//    [service history:dic completionHandler:^(NSMutableArray *historyInfo,NSError* error,NSString* httpStatus) {
+//        if( error && httpStatus )
+//        {
+//            NSLog(@"web connection wrong");
+//        }else{
+//            NSLog(@"%@",historyInfo) ;
+//        }
+//    }];
+
     
 }
 
-//http://rjtmobile.com/ansari/ohr/ohrapp/booking_confirmation.php?&id=412&mobile=4564654
-
-//http://rjtmobile.com/ansari/ohr/ohrapp/ohr_reset_pass.php?&mobile=55565454&password=7011&newpassword=7012
-
-//http://rjtmobile.com/ansari/ohr/ohrapp/ohr_login.php?&mobile=123456789&password=789456
-
-
-//http://rjtmobile.com/ansari/ohr/ohrapp/manage_booking.php?&hotel_id=408&hotel_name=Park Hyatt&checkIn=2016-12-17 00:00:00&checkOut=2016-12-19 00:00:00&room=3&adult=4&child=2&booked=0&mobile=5555454
-
-
-//http://rjtmobile.com/ansari/ohr/ohrapp/booked_hotel.php?&id=412&checkIn=2016-12-17 00:00:00&checkOut=2016-12-19 00:00:00&room=2&adult=2&child=0&booked=1
-
-//http://rjtmobile.com/ansari/ohr/ohrapp/search_hotel.php?&hotelLat=28.6049&hotelLong=77.2235
-
-//http://rjtmobile.com/ansari/ohr/ohrapp/ohr_reg.php?&name=aamir&email=aa@gmail.com&mobile=55565454&password=7011&userAdd=Delhi
-
-//rheuhtuer
 
 
 - (void)didReceiveMemoryWarning {
