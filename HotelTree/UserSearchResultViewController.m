@@ -15,6 +15,7 @@
 
 //create table if not exists hotel(hotelId varchar(255)  primary key, hotelName varchar(255) not null,hotelAddress varchar(255) not null,hotelLat varchar(255) not null,hotelLong varchar(255) not null,hotelRating varchar(20) not null,hotelPrice varchar(255) not null,hotelThumb varchar(255) not null,hotelAvailableDate text not null);
 
+static NSString *tablename = @"hotel";
 
 @interface UserSearchResultViewController ()<UISearchResultsUpdating, UISearchControllerDelegate, UISearchBarDelegate>
 
@@ -66,10 +67,15 @@
 
 #pragma mark - Private Methods
 
+- (void)clearLocalHotelInfo{
+    NSString *clearQuery = [NSString stringWithFormat:@"delete * from %@", tablename];
+    [[SQLiteManager shareInstance] executeQuery:clearQuery];
+}
 
 - (void) applyButtonClicked{
     if([self.delegate respondsToSelector:@selector(updateSearchContent: withText:)]){
         [self.delegate updateSearchContent:self.locationDict withText:self.searchControl.searchBar.text];
+        [self clearLocalHotelInfo];
         [self.navigationController popViewControllerAnimated:YES];
     }
 }
@@ -151,6 +157,7 @@
     self.searchControl.searchBar.text = [cell.textLabel.text copy];
     if([self.delegate respondsToSelector:@selector(updateSearchContent: withText:)]){
         [self.delegate updateSearchContent:self.locationDict withText:self.searchControl.searchBar.text];
+        [self clearLocalHotelInfo];
         [self.navigationController popViewControllerAnimated:YES];
     }
 }

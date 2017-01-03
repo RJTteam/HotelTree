@@ -19,6 +19,7 @@
 #import "FlatUIKit.h"
 @interface HomeViewController ()<UITableViewDelegate,UITableViewDataSource,SearchMenuToSearchDelegate,QuantitySetDelegate, UITextFieldDelegate, PMCalendarControllerDelegate>
 @property (strong,nonatomic) NSMutableArray *homeArray;
+@property (weak, nonatomic) IBOutlet UIView *upperSideBackView;
 
 @property (weak, nonatomic) IBOutlet UILabel *checkInDisplayLabel;
 @property (weak, nonatomic) IBOutlet UILabel *checkOutDisplayLabel;
@@ -40,6 +41,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    //Set home backgound image
+    self.upperSideBackView.layer.contents = (__bridge id)[UIImage imageNamed:@"homeBackground"].CGImage;
+    self.upperSideBackView.layer.contentsGravity = kCAGravityResizeAspectFill;
+    UIVisualEffect *blurEffect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleRegular];
+    UIVisualEffectView *blurEffectView = [[UIVisualEffectView alloc] initWithEffect:blurEffect];
+    blurEffectView.frame = self.upperSideBackView.bounds;
+//    [self.upperSideBackView addSubview:blurEffectView];
+    [self.upperSideBackView insertSubview:blurEffectView atIndex:0];
     self.inCalender= [[PMCalendarController alloc] initWithSize:CGSizeMake(300, 170)];
     self.inCalender.delegate = self;
     [self.inCalender setAllowedPeriod:[PMPeriod periodWithStartDate:[NSDate date] endDate:[[NSDate date] dateByAddingMonths:12]]];
@@ -138,6 +147,9 @@
 #pragma mark -UITableViewDataSource
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    if(self.homeArray.count != 0){
+        return 1;
+    }
     return 2;
 }
 
@@ -168,18 +180,37 @@
         HomeTableCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
         History *obj = [self.homeArray objectAtIndex:indexPath.row];
         cell.nameLabel.text = obj.hotelName;
+//        cell.nameLabel.textColor = [UIColor whiteColor];
+        cell.nameLabel.backgroundColor = [UIColor whiteColor];
+        cell.nameLabel.alpha = 0.5f;
         cell.checkinLable.text = obj.checkInDate;
+//        cell.checkinLable.textColor = [UIColor whiteColor];
+        cell.checkinLable.backgroundColor = [UIColor whiteColor];
+        cell.checkinLable.alpha = 0.5f;
         cell.checkoutLable.text = obj.checkOutDate;
+//        cell.checkoutLable.textColor = [UIColor whiteColor];
+        cell.checkoutLable.backgroundColor = [UIColor whiteColor];
+        cell.checkoutLable.alpha = 0.5f;
         
         cell.cellView.layer.shadowOpacity = 0.5f;
         cell.cellView.layer.shadowRadius = 3;
         cell.cellView.layer.shadowOffset = CGSizeMake(2.0f, 4.0f);
         cell.cellView.layer.shadowColor = [[UIColor blackColor] CGColor];
         cell.cellView.layer.masksToBounds = NO;
-        cell.cellView.layer.cornerRadius = 3;
+        cell.cellView.layer.backgroundColor = [UIColor clearColor].CGColor;
 
         ImageStoreManager *imageGetter = [[ImageStoreManager alloc]init];
-        cell.hotelImage.image = [UIImage imageWithContentsOfFile:[imageGetter getImageStoreFilePathByHotelId:obj.hotelId]];
+        UIImage *cellBackImage = [UIImage imageWithContentsOfFile:[imageGetter getImageStoreFilePathByHotelId:obj.hotelId]];
+        CALayer *imageLayer = [CALayer layer];
+        imageLayer.frame = cell.cellView.layer.bounds;
+        imageLayer.contents = (__bridge id)cellBackImage.CGImage;
+        imageLayer.contentsGravity = kCAGravityResizeAspectFill;
+        imageLayer.masksToBounds = YES;
+        imageLayer.cornerRadius = 3.0f;
+        [cell.cellView.layer insertSublayer:imageLayer atIndex:0];
+        UIVisualEffect *blurEffect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleProminent];
+        UIVisualEffectView *blurEffectView = [[UIVisualEffectView alloc] initWithEffect:blurEffect];
+        [cell.cellView insertSubview:blurEffectView atIndex:0];
         return cell;
     }
     else{

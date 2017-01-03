@@ -9,7 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface HomeTableCell : UITableViewCell
-@property (weak, nonatomic) IBOutlet UIImageView *hotelImage;
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *checkinLable;
 @property (weak, nonatomic) IBOutlet UILabel *checkoutLable;
