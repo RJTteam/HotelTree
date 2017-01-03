@@ -39,7 +39,7 @@
     [[SQLiteManager shareInstance] closeDatabase];
 }
 
-
+//---DB creater start---
 - (BOOL)createUserDBIfNeeded{
     NSString *userDBQuery = @"create table if not exists user(userId varchar(255)  primary key, password varchar(255) not null);";
     NSString *userInfoDBQuery = @"create table if not exists userInfo(userId varchar(255) primary key, userName varchar(255)  not null, firstName varchar(100) not null, lastName varchar(100) not null, email varchar(100), userAddress varchar(255), isManager varchar(10), foreign key(userId) references user(userId));";
@@ -62,6 +62,8 @@
     return result;
     
 }
+//---DB creater end---
+
 
 -(NSDictionary *)loginValidate:(NSDictionary *)loginDic{
     //waiting Web Service update its return to NSDic
@@ -75,6 +77,24 @@
     return result;
     
 }
+
+//--- Web Service part start ---
+-(NSString*)booking:(NSDictionary*)dic{
+    return [[WebService sharedInstance] booking:dic];
+}
+-(NSMutableArray*)confirm:(NSDictionary*)dic{
+    return [[WebService sharedInstance] confirm:dic];
+}
+-(NSString*)manage:(NSDictionary*)dic{
+    return [[WebService sharedInstance] manage:dic];
+}
+-(NSString*)resetPassword:(NSDictionary*)dic{
+    return [[WebService sharedInstance] resetPassword:dic];
+}
+-(NSMutableArray*)history:(NSDictionary*)dic{
+    return [[WebService sharedInstance] history:dic];
+}
+//--- Web Service part start ---
 
 - (void)createUser:(NSString *)userId password: (NSString *) password userName :(NSString*)userName firstName : (NSString *)firstName lastName: (NSString *)lastName email : (NSString *) email userAddress: (NSString *)userAddress isManager:(NSString*)isManager{
     

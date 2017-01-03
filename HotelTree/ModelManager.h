@@ -25,10 +25,18 @@
 //--- init end ---
 
 
-//loginValidate start
+//--- loginValidate and Register start ---
 -(NSDictionary *)loginValidate:(NSDictionary *)loginDic;    //call web service to get the login information
 -(NSString *)userRegisterToServer:(NSDictionary *)registerInfo;  //send user register info to server, please use this method with createUser which insert user information to local sql DB
-//loginValidate end
+//--- loginValidate and Register end ---
+
+//--- Web Service part start ---
+-(NSString*)booking:(NSDictionary*)dic;
+-(NSMutableArray*)confirm:(NSDictionary*)dic;
+-(NSString*)manage:(NSDictionary*)dic;
+-(NSString*)resetPassword:(NSDictionary*)dic;
+-(NSMutableArray*)history:(NSDictionary*)dic;
+//--- Web Service part start ---
 
 //--- UserManager start ---
 - (void)createUser:(NSString *)userId password: (NSString *) password userName :(NSString*)userName firstName : (NSString *)firstName lastName: (NSString *)lastName email : (NSString *) email userAddress: (NSString *)userAddress isManager:(NSString*)isManager;
