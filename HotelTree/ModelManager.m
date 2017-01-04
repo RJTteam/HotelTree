@@ -65,34 +65,156 @@
 //---DB creater end---
 
 
--(NSDictionary *)loginValidate:(NSDictionary *)loginDic{
-    //waiting Web Service update its return to NSDic
-    NSDictionary *result = [[WebService sharedInstance] returenUserLogin:loginDic];
-    return result;
+-(void)loginValidate:(NSDictionary *)loginDic completionHandler:(void (^)(NSDictionary *))completionBlock{
+    
+    [[WebService sharedInstance] returenUserLogin:loginDic completionHandler:^(NSDictionary *loginInfo, NSError *error, NSString *httpStatus) {
+        
+        if(error){
+            NSLog(@"Error L%@",error.description);
+            return;
+        }
+        if([httpStatus isKindOfClass:[NSHTTPURLResponse class]]){
+            NSInteger statusCode = [(NSHTTPURLResponse*)httpStatus statusCode];
+            if( statusCode !=200){
+                NSLog(@"Error in HTTP Request:%ld",(long)statusCode);
+                return;
+            }
+            else{
+                completionBlock(loginInfo);
+            }
+        }
+        
+    }];
 }
 
--(NSString *)userRegisterToServer:(NSDictionary *)registerInfo{
-    NSString *result =[[WebService sharedInstance] returnUserRegister:registerInfo];
+
+-(void)userRegisterToServer:(NSDictionary *)registerInfo completionHandler:(void (^)(NSString *))completionBlock{
     
-    return result;
+    [[WebService sharedInstance] returnUserRegister:registerInfo completionHandler:^(NSString *registerInfo, NSError *error, NSString *httpStatus) {
+        
+        if(error){
+            NSLog(@"Error L%@",error.description);
+            return;
+        }
+        if([httpStatus isKindOfClass:[NSHTTPURLResponse class]]){
+            NSInteger statusCode = [(NSHTTPURLResponse*)httpStatus statusCode];
+            if( statusCode !=200){
+                NSLog(@"Error in HTTP Request:%ld",(long)statusCode);
+                return;
+            }
+            else{
+                completionBlock(registerInfo);
+            }
+        }
+        
+    }];
     
 }
 
 //--- Web Service part start ---
--(NSString*)booking:(NSDictionary*)dic{
-    return [[WebService sharedInstance] booking:dic];
+-(void)booking:(NSDictionary*)dic completionHandler:(void (^)(NSString *))completionBlock{
+    
+    [[WebService sharedInstance] booking:dic completionHandler:^(NSString *BookingInfo, NSError *error, NSString *httpStatus) {
+
+        if(error){
+            NSLog(@"Error L%@",error.description);
+            return;
+        }
+        if([httpStatus isKindOfClass:[NSHTTPURLResponse class]]){
+            NSInteger statusCode = [(NSHTTPURLResponse*)httpStatus statusCode];
+            if( statusCode !=200){
+                NSLog(@"Error in HTTP Request:%ld",(long)statusCode);
+                return;
+            }
+            else{
+                completionBlock(BookingInfo);
+            }
+        }
+        
+    }];
 }
--(NSMutableArray*)confirm:(NSDictionary*)dic{
-    return [[WebService sharedInstance] confirm:dic];
+
+-(void)confirm:(NSDictionary*)dic completionHandler:(void (^)(NSMutableArray *))completionBlock{
+    
+    [[WebService sharedInstance] confirm:dic completionHandler:^(NSMutableArray *confirmInfo, NSError *error, NSString *httpStatus) {
+        if(error){
+            NSLog(@"Error L%@",error.description);
+            return;
+        }
+        if([httpStatus isKindOfClass:[NSHTTPURLResponse class]]){
+            NSInteger statusCode = [(NSHTTPURLResponse*)httpStatus statusCode];
+            if( statusCode !=200){
+                NSLog(@"Error in HTTP Request:%ld",(long)statusCode);
+                return;
+            }
+            else{
+                completionBlock(confirmInfo);
+            }
+        }
+        
+    }];
 }
--(NSString*)manage:(NSDictionary*)dic{
-    return [[WebService sharedInstance] manage:dic];
+
+-(void)manage:(NSDictionary*)dic completionHandler:(void (^)(NSString *))completionBlock{
+    
+    [[WebService sharedInstance] manage:dic completionHandler:^(NSString *manageInfo, NSError *error, NSString *httpStatus) {
+        if(error){
+            NSLog(@"Error L%@",error.description);
+            return;
+        }
+        if([httpStatus isKindOfClass:[NSHTTPURLResponse class]]){
+            NSInteger statusCode = [(NSHTTPURLResponse*)httpStatus statusCode];
+            if( statusCode !=200){
+                NSLog(@"Error in HTTP Request:%ld",(long)statusCode);
+                return;
+            }
+            else{
+                completionBlock(manageInfo);
+            }
+        }
+        
+    }];
 }
--(NSString*)resetPassword:(NSDictionary*)dic{
-    return [[WebService sharedInstance] resetPassword:dic];
+
+-(void)resetPassword:(NSDictionary*)dic completionHandler:(void (^)(NSString *))completionBlock{
+    
+    [[WebService sharedInstance] resetPassword:dic completionHandler:^(NSString *resetInfo, NSError *error, NSString *httpStatus) {
+       if(error){
+            NSLog(@"Error L%@",error.description);
+            return;
+        }
+        if([httpStatus isKindOfClass:[NSHTTPURLResponse class]]){
+            NSInteger statusCode = [(NSHTTPURLResponse*)httpStatus statusCode];
+            if( statusCode !=200){
+                NSLog(@"Error in HTTP Request:%ld",(long)statusCode);
+                return;
+            }
+            else{
+                completionBlock(resetInfo);
+            }
+        }
+        
+    }];
 }
--(NSMutableArray*)history:(NSDictionary*)dic{
-    return [[WebService sharedInstance] history:dic];
+-(void)history:(NSDictionary*)dic completionHandler:(void (^)(NSMutableArray *))completionBlock{
+    
+    [[WebService sharedInstance] history:dic completionHandler:^(NSMutableArray *historyInfo, NSError *error, NSString *httpStatus) {
+        if(error){
+            NSLog(@"Error L%@",error.description);
+            return;
+        }
+        if([httpStatus isKindOfClass:[NSHTTPURLResponse class]]){
+            NSInteger statusCode = [(NSHTTPURLResponse*)httpStatus statusCode];
+            if( statusCode !=200){
+                NSLog(@"Error in HTTP Request:%ld",(long)statusCode);
+                return;
+            }
+            else{
+                completionBlock(historyInfo);
+            }
+        }
+        
+    }];
 }
 //--- Web Service part start ---
 
@@ -146,13 +268,29 @@
     return result;
 }
 
--(NSArray *)hotelSearchFromWebService:(NSDictionary *)dic{
-    WebService *service = [WebService sharedInstance];
-    NSArray* searchHotelResult = [service returnHotelSearch:dic];
-    for(Hotel *hotel in searchHotelResult){
-        [self createHotelByHotel:hotel];
-    }
-    return searchHotelResult;
+-(void)hotelSearchFromWebService:(NSDictionary *)dic completionHandler:(void (^)(NSArray *))completionBlock{
+
+    [[WebService sharedInstance] returnHotelSearch:dic completionHandler:^(NSArray *array, NSError *error, NSString *httpStatus) {
+        if(error){
+            NSLog(@"Error L%@",error.description);
+            return;
+        }
+        if([httpStatus isKindOfClass:[NSHTTPURLResponse class]]){
+            NSInteger statusCode = [(NSHTTPURLResponse*)httpStatus statusCode];
+            if( statusCode !=200){
+                NSLog(@"Error in HTTP Request:%ld",(long)statusCode);
+                return;
+            }
+            else{
+                for(Hotel *hotel in array){
+                    [self createHotelByHotel:hotel];
+                }
+                //completionBlock(historyInfo);
+            }
+        }
+
+        
+    }];
 }
 
 
@@ -191,6 +329,18 @@
 
 -(BOOL)clearHotelDB{
     NSString *removeQuery = [NSString stringWithFormat:@"delete * from hotel;"];
+    BOOL result = [[SQLiteManager shareInstance] executeQuery:removeQuery];
+    return result;
+}
+
+-(BOOL)clearUserDB{
+    NSString *removeQuery = [NSString stringWithFormat:@"delete * from user;"];
+    BOOL result = [[SQLiteManager shareInstance] executeQuery:removeQuery];
+    return result;
+}
+
+-(BOOL)clearOrderDB{
+    NSString *removeQuery = [NSString stringWithFormat:@"delete * from orders;"];
     BOOL result = [[SQLiteManager shareInstance] executeQuery:removeQuery];
     return result;
 }
