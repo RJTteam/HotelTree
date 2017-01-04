@@ -26,16 +26,16 @@
 
 
 //--- loginValidate and Register start ---
--(NSDictionary *)loginValidate:(NSDictionary *)loginDic;    //call web service to get the login information
--(NSString *)userRegisterToServer:(NSDictionary *)registerInfo;  //send user register info to server, please use this method with createUser which insert user information to local sql DB
+-(void)loginValidate:(NSDictionary *)loginDic completionHandler:(void(^)(NSDictionary *))completionBlock;//call web service to get the login information
+-(void)userRegisterToServer:(NSDictionary *)registerInfo  completionHandler:(void(^)(NSString *))completionBlock;  //send user register info to server, please use this method with createUser which insert user information to local sql DB
 //--- loginValidate and Register end ---
 
 //--- Web Service part start ---
--(NSString*)booking:(NSDictionary*)dic;
--(NSMutableArray*)confirm:(NSDictionary*)dic;
--(NSString*)manage:(NSDictionary*)dic;
--(NSString*)resetPassword:(NSDictionary*)dic;
--(NSMutableArray*)history:(NSDictionary*)dic;
+-(void)booking:(NSDictionary*)dic completionHandler:(void(^)(NSString *))completionBlock;
+-(void)confirm:(NSDictionary*)dic completionHandler:(void(^)(NSMutableArray *))completionBlock;
+-(void)manage:(NSDictionary*)dic completionHandler:(void(^)(NSString *))completionBlock;
+-(void)resetPassword:(NSDictionary*)dic completionHandler:(void(^)(NSString *))completionBlock;
+-(void)history:(NSDictionary*)dic completionHandler:(void(^)(NSMutableArray *))completionBlock;
 //--- Web Service part start ---
 
 //--- UserManager start ---
@@ -43,6 +43,7 @@
 - (NSArray*)getAllUser;
 - (BOOL)updateUser: (User *)user;
 - (BOOL)removeUser: (NSString*)userID;
+-(BOOL)clearUserDB;
 //--- UserManager end ---
 
 
@@ -50,7 +51,7 @@
 - (BOOL)createHotel:(NSString *)hotelId hotelName: (NSString *) hotelName hotelLatitude :(NSString*)hotelLatitude hotelLongitude : (NSString *)hotelLongitude hotelAddress: (NSString *)hotelAddress hotelRating : (NSString *) hotelRating hotelPrice: (NSString *)hotelPrice hotelThumb: (NSString *)hotelThumb hotelAvailableDate: (NSArray *)hotelAvailableDate;
 -(BOOL)createHotelByHotel:(Hotel *)hotel;
 - (NSArray*)getAllHotel;
--(NSArray*)hotelSearchFromWebService:(NSDictionary*)dic;
+-(void)hotelSearchFromWebService:(NSDictionary*)dic completionHandler:(void(^)(NSArray *))completionBlock;
 -(BOOL)clearHotelDB;
 //--- hotelManager end ---
 
@@ -60,6 +61,7 @@
 
 - (NSArray*)getAllOrderByUserId:(NSString*)userId;
 -(BOOL)removeOrderByOrderId:(NSString*)orderId;
+-(BOOL)clearOrderDB;
 //--- orderManager end ---
 
 @end

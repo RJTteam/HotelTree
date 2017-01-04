@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C68" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="SCd-SQ-cX0">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -420,7 +420,7 @@
                                         <rect key="frame" x="0.0" y="28" width="414" height="192"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="DSy-OB-hhH" id="Hju-A7-teM">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="191"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="191.66666666666666"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PX0-lk-HGh">
@@ -472,7 +472,7 @@
                                         <rect key="frame" x="0.0" y="220" width="414" height="192"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8Eb-tV-igK" id="VoA-ap-cOi">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="191"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="191.66666666666666"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vyG-Sa-Z8r">
@@ -685,7 +685,7 @@
                                 <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1wP-f2-MlQ" id="3sl-Qo-U4Z">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -726,7 +726,7 @@
                                         <rect key="frame" x="0.0" y="28" width="414" height="193"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Btc-eZ-GSn" id="U6W-ov-ZEA">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="192"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="192.66666666666666"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YUj-c5-k0V">
@@ -929,12 +929,6 @@
                                     <action selector="openCalendarButtonClicked:" destination="7tR-m5-5YK" eventType="touchUpInside" id="whK-wB-RwN"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a0N-BB-pM1">
-                                <rect key="frame" x="216" y="64" width="198" height="133"/>
-                                <connections>
-                                    <segue destination="x0Q-al-bic" kind="unwind" unwindAction="returnFromDetail:" id="px7-RA-keW"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f2t-Zt-ZiE">
                                 <rect key="frame" x="8" y="82" width="50" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -954,6 +948,12 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a0N-BB-pM1">
+                                <rect key="frame" x="216" y="64" width="198" height="133"/>
+                                <connections>
+                                    <segue destination="x0Q-al-bic" kind="unwind" unwindAction="returnFromDetail:" id="px7-RA-keW"/>
+                                </connections>
+                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Group5" translatesAutoresizingMaskIntoConstraints="NO" id="kSY-Pj-1Bw">
                                 <rect key="frame" x="63" y="161" width="120" height="20"/>
                                 <constraints>
@@ -1442,6 +1442,6 @@
         <image name="menu" width="22" height="22"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="XE2-gl-k00"/>
+        <segue reference="J9o-2V-ih1"/>
     </inferredMetricsTieBreakers>
 </document>
