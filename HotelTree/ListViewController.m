@@ -14,6 +14,7 @@
 #import "ImageStoreManager.h"
 #import "DetailViewController.h"
 #import "FlatUIKit.h"
+#import "SWRevealViewController.h"
 
 @interface ListViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property(strong,nonatomic)NSArray* hotelsArray;
@@ -23,6 +24,7 @@
 @property (weak, nonatomic) IBOutlet FUIButton *filterBtn;
 @property (weak, nonatomic) IBOutlet FUIButton *mapBtn;
 @property (weak, nonatomic) IBOutlet UITableView *listTable;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *sidebarButton;
 @end
 
 @implementation ListViewController
@@ -39,6 +41,14 @@
     [self setUIButton:self.sortBtn WithColorHex:@"04ACFF" Font:[UIFont boldFlatFontOfSize:20]];
     [self setUIButton:self.filterBtn WithColorHex:@"04ACFF" Font:[UIFont boldFlatFontOfSize:20]];
     [self setUIButton:self.mapBtn WithColorHex:@"04ACFF" Font:[UIFont boldFlatFontOfSize:20]];
+    
+    SWRevealViewController *revealViewController = self.revealViewController;
+    if ( revealViewController )
+    {
+        [self.sidebarButton setTarget: self.revealViewController];
+        [self.sidebarButton setAction: @selector( revealToggle: )];
+        [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
+    }
 }
 
 - (void)setUIButton:(FUIButton *)btn WithColorHex:(NSString*)hexColor Font:(UIFont*)font{

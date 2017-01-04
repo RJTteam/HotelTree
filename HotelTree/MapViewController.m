@@ -12,11 +12,13 @@
 #import "Annotation.h"
 #import "ModelManager.h"
 #import "DetailViewController.h"
+#import "SWRevealViewController.h"
 
 #define METERS_PRE_MILE 1609.34
 
 
 @interface MapViewController ()<MKMapViewDelegate>
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *sidebarButton;
 @property (nonatomic,strong) NSArray *hotelArray;
 @end
 
@@ -59,6 +61,14 @@
     }
     
     [self.view addSubview:MapPage];
+    
+    SWRevealViewController *revealViewController = self.revealViewController;
+    if ( revealViewController )
+    {
+        [self.sidebarButton setTarget: self.revealViewController];
+        [self.sidebarButton setAction: @selector( revealToggle: )];
+        [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
+    }
 }
 
 - (nullable MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation>)annotation{
@@ -108,6 +118,4 @@
     }
 }
 
--(IBAction)returnFromDetail:(UIStoryboardSegue *)unwindsegue {
-}
 @end

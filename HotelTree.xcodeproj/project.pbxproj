@@ -36,6 +36,8 @@
 		C3ADF5CB1E1B3E9D00CCB7C8 /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3ADF5CA1E1B3E9D00CCB7C8 /* AddressBookUI.framework */; };
 		C3ADF5CD1E1B7A5000CCB7C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3ADF5CC1E1B7A5000CCB7C8 /* Assets.xcassets */; };
 		C3ADF5D31E1B821F00CCB7C8 /* background.gif in Resources */ = {isa = PBXBuildFile; fileRef = C3ADF5D21E1B821F00CCB7C8 /* background.gif */; };
+		C3ADF6031E1CD86C00CCB7C8 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3ADF6001E1CD86C00CCB7C8 /* SWRevealViewController.m */; };
+		C3ADF6041E1CD86C00CCB7C8 /* SidebarTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3ADF6021E1CD86C00CCB7C8 /* SidebarTableViewController.m */; };
 		C3DA38361E16F5AC00E1AB83 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DA38351E16F5AC00E1AB83 /* main.m */; };
 		C3DA38391E16F5AC00E1AB83 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DA38381E16F5AC00E1AB83 /* AppDelegate.m */; };
 		C3DA383F1E16F5AC00E1AB83 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3DA383D1E16F5AC00E1AB83 /* Main.storyboard */; };
@@ -132,6 +134,10 @@
 		C3ADF5CA1E1B3E9D00CCB7C8 /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
 		C3ADF5CC1E1B7A5000CCB7C8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C3ADF5D21E1B821F00CCB7C8 /* background.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = background.gif; sourceTree = "<group>"; };
+		C3ADF5FF1E1CD86C00CCB7C8 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		C3ADF6001E1CD86C00CCB7C8 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		C3ADF6011E1CD86C00CCB7C8 /* SidebarTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SidebarTableViewController.h; sourceTree = "<group>"; };
+		C3ADF6021E1CD86C00CCB7C8 /* SidebarTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SidebarTableViewController.m; sourceTree = "<group>"; };
 		C3DA38311E16F5AC00E1AB83 /* HotelTree.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HotelTree.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3DA38351E16F5AC00E1AB83 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C3DA38371E16F5AC00E1AB83 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -357,6 +363,10 @@
 		C3DA385C1E175C9300E1AB83 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				C3ADF5FF1E1CD86C00CCB7C8 /* SWRevealViewController.h */,
+				C3ADF6001E1CD86C00CCB7C8 /* SWRevealViewController.m */,
+				C3ADF6011E1CD86C00CCB7C8 /* SidebarTableViewController.h */,
+				C3ADF6021E1CD86C00CCB7C8 /* SidebarTableViewController.m */,
 				C3DA38A41E17737100E1AB83 /* SplashViewController.m */,
 				C3DA38A51E17737100E1AB83 /* SplashViewController.h */,
 				C3DA385F1E17627F00E1AB83 /* ResetViewController.h */,
@@ -589,6 +599,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3ADF6041E1CD86C00CCB7C8 /* SidebarTableViewController.m in Sources */,
 				C3ADF5A61E1A215600CCB7C8 /* PMCalendarView.m in Sources */,
 				C3DA38E01E18B5FC00E1AB83 /* ImageStoreManager.m in Sources */,
 				C3DA38ED1E18B66A00E1AB83 /* OrderConfirmViewController.m in Sources */,
@@ -621,6 +632,7 @@
 				C3DA38361E16F5AC00E1AB83 /* main.m in Sources */,
 				C3DA38A61E17737100E1AB83 /* SplashViewController.m in Sources */,
 				C3DA39031E18B6F900E1AB83 /* WebService.m in Sources */,
+				C3ADF6031E1CD86C00CCB7C8 /* SWRevealViewController.m in Sources */,
 				C3DA38E11E18B5FC00E1AB83 /* ModelManager.m in Sources */,
 				C3DA38CF1E18722300E1AB83 /* HomeTableCell.m in Sources */,
 				C3DA386A1E17627F00E1AB83 /* LoginViewController.m in Sources */,
