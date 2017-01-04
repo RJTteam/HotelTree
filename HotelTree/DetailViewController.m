@@ -22,13 +22,13 @@
 @property (weak, nonatomic) IBOutlet UIButton *toMapBtn;
 @property (weak, nonatomic) IBOutlet FUIButton *orderBtn;
 @property (weak, nonatomic) IBOutlet UILabel *priceLabel;
-@property (weak, nonatomic) IBOutlet UILabel *rantingLabel;
 @property (weak, nonatomic) IBOutlet UILabel *checkInDateLabel;
 @property (weak, nonatomic) IBOutlet UILabel *checkOutDateLabel;
 
 @property (weak, nonatomic) IBOutlet MKMapView *aHotelMap;
 @property (weak, nonatomic) IBOutlet UIImageView *aHotelImage;
 @property (strong, nonatomic)PMCalendarController *calendar;
+@property (weak, nonatomic) IBOutlet UIImageView *rateImage;
 
 @end
 
@@ -40,7 +40,6 @@
     [super viewDidLoad];
     self.nameLabel.text = self.aHotel.hotelName;
     self.priceLabel.text = self.aHotel.price;
-    self.rantingLabel.text = self.aHotel.hotelRating;
     self.checkInDateLabel.text = self.bookingInfo[@"checkIn"];
     self.checkOutDateLabel.text = self.bookingInfo[@"checkOut"];
     [self setUIButton:self.orderBtn WithColorHex:@"04ACFF" Font:[UIFont boldFlatFontOfSize:20]];
@@ -114,20 +113,22 @@
     if([segue.identifier isEqualToString:@"toOrderConfirmationSegue"]){
         OrderConfirmViewController *vc = segue.destinationViewController;
         vc.hotel = self.aHotel;
-        NSDictionary *dict = @{@"roomNumber": self.bookingInfo[@"room"],
-                               @"adultNumber": self.bookingInfo[@"adult"],
-                               @"childrenNumber": self.bookingInfo[@"child"],
-                               @"hotelId": self.aHotel.hotelId};
-        Order *currentOrder = [[Order alloc] initWithDictionary:dict];
-        NSDateFormatter *formater = [[NSDateFormatter alloc] init];
-        formater.timeZone = [NSTimeZone localTimeZone];
-        formater.dateStyle = NSDateFormatterMediumStyle;
-        formater.timeStyle = NSDateFormatterNoStyle;
-        NSDate *checkInDate = [formater dateFromString:self.bookingInfo[@"checkIn"]];
-        NSDate *checkOutDate = [formater dateFromString:self.bookingInfo[@"checkOut"]];
-        [currentOrder setCheckInDate:checkInDate];
-        [currentOrder setCheckOutDate:checkOutDate];
-        vc.order = currentOrder;
+//        NSDictionary *dict = @{@"roomNumber": self.bookingInfo[@"room"],
+//                               @"adultNumber": self.bookingInfo[@"adult"],
+//                               @"childrenNumber": self.bookingInfo[@"child"],
+//                               @"hotelId": self.aHotel.hotelId};
+//        Order *currentOrder = [[Order alloc] initWithDictionary:dict];
+//        NSDateFormatter *formater = [[NSDateFormatter alloc] init];
+//        formater.timeZone = [NSTimeZone localTimeZone];
+//        formater.dateStyle = NSDateFormatterMediumStyle;
+//        formater.timeStyle = NSDateFormatterNoStyle;
+//        NSDate *checkInDate = [formater dateFromString:self.bookingInfo[@"checkIn"]];
+//        NSDate *checkOutDate = [formater dateFromString:self.bookingInfo[@"checkOut"]];
+//        [currentOrder setCheckInDate:checkInDate];
+//        [currentOrder setCheckOutDate:checkOutDate];
+//        vc.order = currentOrder;
+        vc.bookingInfo = self.bookingInfo;
+
     }
 }
 

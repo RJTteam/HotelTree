@@ -25,7 +25,9 @@
 @property (strong, nonatomic) IBOutlet UITextField *emailTextField;
 @property (strong, nonatomic) IBOutlet UITextField *phoneTextField;
 @property (weak, nonatomic) IBOutlet FUIButton *procceedBtn;
+@property (weak, nonatomic) IBOutlet UIImageView *rateImage;
 
+@property(strong,nonatomic)User *userinfo;
 @end
 
 @implementation OrderConfirmViewController
@@ -40,15 +42,19 @@
     
     self.hotelImage.image = [UIImage imageWithContentsOfFile:[imageStoreManager getImageStoreFilePathByHotelId:self.hotel.hotelId]];
     
-    self.checkInDate.text = [self NSDateToNSString:self.order.checkInDate];
-    self.checkOutDate.text = [self NSDateToNSString:self.order.checkOutDate];
-    
+    self.checkInDate.text = self.bookingInfo[@"checkIn"];
+    self.checkOutDate.text = self.bookingInfo[@"checkOut"];
     self.hotelPrice.text = self.hotel.price;
     
-    self.firstNameTextField.text = self.user.firstName;
-    self.lastNameTextField.text = self.user.lastName;
-    self.emailTextField.text = self.user.email;
-    self.phoneTextField.text = self.user.userId;
+    
+    ModelManager *userManager = [[ModelManager alloc]init];
+    NSArray*user = [userManager getAllUser];
+    self.userinfo = [user objectAtIndex:0];
+    
+    self.firstNameTextField.text = self.userinfo.firstName;
+    self.lastNameTextField.text = self.userinfo.lastName;
+    self.emailTextField.text = self.userinfo.email;
+    self.phoneTextField.text = self.userinfo.userId;
     
     [self setUIButton:self.procceedBtn WithColorHex:@"04ACFF" Font:[UIFont boldFlatFontOfSize:20]];
 }
@@ -74,7 +80,7 @@
     
     
     ModelManager *proceedOrder = [[ModelManager alloc]init];
-    BOOL isCreateOrder = [proceedOrder createOrder:self.order.checkInDate checkOutDate:self.order.checkOutDate roomNumber:self.order.roomNumber adultNumber:self.order.adultNumber childrenNumber:self.order.childrenNumber orderStauts:self.order.orderStauts userId:self.user.userId hotelId:self.hotel.hotelId];
+    BOOL isCreateOrder = [proceedOrder createOrder:self.bookingInfo[@"checkIn"] checkOutDate:self.bookingInfo[@"checkOut"] roomNumber:self.bookingInfo[@"room"] adultNumber:self.bookingInfo[@"adult"] childrenNumber:self.bookingInfo[@"child"] orderStauts:@"1" userId:self.userinfo.userId hotelId:self.hotel.hotelId];
     NSLog(@"new order %@",isCreateOrder? @"yes":@"no");
 
 }

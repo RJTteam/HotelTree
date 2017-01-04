@@ -89,7 +89,6 @@
     
     Hotel *obj = [self.hotelsArray objectAtIndex:indexPath.row];
     cell.nameLabel.text = obj.hotelName;
-    cell.rateLabel.text = obj.hotelRating;
     cell.addressLabel.text = obj.hotelAdd;
     cell.priceLabel.text = obj.price;
     
