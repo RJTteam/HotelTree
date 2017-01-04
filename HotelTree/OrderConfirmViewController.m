@@ -37,7 +37,7 @@
     // Do any additional setup after loading the view.
     ImageStoreManager *imageStoreManager = [[ImageStoreManager alloc]init];
     self.hotelName.text = self.hotel.hotelName;
-    self.hotelAddress.text = self.hotel.hotelAdd;
+    self.hotelAddress.text = self.hotel.hotelAddress;
     self.hotelRating.text = [NSString stringWithFormat:@"This property has an excellent location score of %@, based on 691 guest reviews.",self.hotel.hotelRating];
     
     self.hotelImage.image = [UIImage imageWithContentsOfFile:[imageStoreManager getImageStoreFilePathByHotelId:self.hotel.hotelId]];

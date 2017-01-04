@@ -45,9 +45,9 @@
     [self setUIButton:self.orderBtn WithColorHex:@"04ACFF" Font:[UIFont boldFlatFontOfSize:20]];
 
     
-    _coordinate.longitude = [[NSString stringWithFormat:@"-%@",self.aHotel.hotelLong] doubleValue];
+    _coordinate.longitude = [[NSString stringWithFormat:@"-%@",self.aHotel.hotelLongitude] doubleValue];
     
-    _coordinate.latitude = [self.aHotel.hotelLat doubleValue];
+    _coordinate.latitude = [self.aHotel.hotelLatitude doubleValue];
     
     float ASPECTRATIONOFMAPKIT = self.aHotelMap.frame.size.width/self.aHotelMap.frame.size.height;
     MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(_coordinate, 0.05*METERS_PRE_MILE, 0.05*METERS_PRE_MILE*ASPECTRATIONOFMAPKIT);
@@ -56,7 +56,7 @@
     self.aHotelMap.zoomEnabled = NO;
     self.aHotelMap.scrollEnabled = NO;
     //    self.aHotelMap.delegate = self;
-    [self.aHotelMap addAnnotation:[Annotation annotationWithLatitude:[self.aHotel.hotelLat doubleValue] longitude:[[NSString stringWithFormat:@"-%@",self.aHotel.hotelLong] doubleValue] title:@"" subtitle:@""]];
+    [self.aHotelMap addAnnotation:[Annotation annotationWithLatitude:[self.aHotel.hotelLatitude doubleValue] longitude:[[NSString stringWithFormat:@"-%@",self.aHotel.hotelLongitude] doubleValue] title:@"" subtitle:@""]];
 
     ImageStoreManager *imageStoreManager = [[ImageStoreManager alloc]init];
 
@@ -113,22 +113,19 @@
     if([segue.identifier isEqualToString:@"toOrderConfirmationSegue"]){
         OrderConfirmViewController *vc = segue.destinationViewController;
         vc.hotel = self.aHotel;
-//        NSDictionary *dict = @{@"roomNumber": self.bookingInfo[@"room"],
-//                               @"adultNumber": self.bookingInfo[@"adult"],
-//                               @"childrenNumber": self.bookingInfo[@"child"],
-//                               @"hotelId": self.aHotel.hotelId};
-//        Order *currentOrder = [[Order alloc] initWithDictionary:dict];
-//        NSDateFormatter *formater = [[NSDateFormatter alloc] init];
-//        formater.timeZone = [NSTimeZone localTimeZone];
-//        formater.dateStyle = NSDateFormatterMediumStyle;
-//        formater.timeStyle = NSDateFormatterNoStyle;
-//        NSDate *checkInDate = [formater dateFromString:self.bookingInfo[@"checkIn"]];
-//        NSDate *checkOutDate = [formater dateFromString:self.bookingInfo[@"checkOut"]];
-//        [currentOrder setCheckInDate:checkInDate];
-//        [currentOrder setCheckOutDate:checkOutDate];
-//        vc.order = currentOrder;
-        vc.bookingInfo = self.bookingInfo;
-
+        NSDictionary *dict = @{@"roomNumber": self.bookingInfo[@"room"],
+                               @"adultNumber": self.bookingInfo[@"adult"],
+                               @"childrenNumber": self.bookingInfo[@"child"],
+                               @"hotelId": self.aHotel.hotelId};
+        Order *currentOrder = [[Order alloc] initWithDictionary:dict];
+        NSDateFormatter *formater = [[NSDateFormatter alloc] init];
+        formater.timeZone = [NSTimeZone localTimeZone];
+        formater.dateFormat = @"MMM dd, yyyy";
+        NSDate *checkInDate = [formater dateFromString:self.bookingInfo[@"checkIn"]];
+        NSDate *checkOutDate = [formater dateFromString:self.bookingInfo[@"checkOut"]];
+        [currentOrder setCheckInDate:checkInDate];
+        [currentOrder setCheckOutDate:checkOutDate];
+        vc.order = currentOrder;
     }
 }
 

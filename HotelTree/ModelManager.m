@@ -67,23 +67,15 @@
 
 -(void)loginValidate:(NSDictionary *)loginDic completionHandler:(void (^)(NSDictionary *))completionBlock{
     
-    [[WebService sharedInstance] returenUserLogin:loginDic completionHandler:^(NSDictionary *loginInfo, NSError *error, NSString *httpStatus) {
+    [[WebService sharedInstance] returnUserLogin:loginDic completionHandler:^(NSDictionary *loginInfo, NSError *error, NSString *httpStatus) {
         
         if(error){
             NSLog(@"Error L%@",error.description);
             return;
         }
-        if([httpStatus isKindOfClass:[NSHTTPURLResponse class]]){
-            NSInteger statusCode = [(NSHTTPURLResponse*)httpStatus statusCode];
-            if( statusCode !=200){
-                NSLog(@"Error in HTTP Request:%ld",(long)statusCode);
-                return;
-            }
-            else{
-                completionBlock(loginInfo);
-            }
+        if(!httpStatus){
+            completionBlock(loginInfo);
         }
-        
     }];
 }
 
@@ -96,17 +88,9 @@
             NSLog(@"Error L%@",error.description);
             return;
         }
-        if([httpStatus isKindOfClass:[NSHTTPURLResponse class]]){
-            NSInteger statusCode = [(NSHTTPURLResponse*)httpStatus statusCode];
-            if( statusCode !=200){
-                NSLog(@"Error in HTTP Request:%ld",(long)statusCode);
-                return;
-            }
-            else{
-                completionBlock(registerInfo);
-            }
+         if(!httpStatus){
+             completionBlock(registerInfo);
         }
-        
     }];
     
 }
@@ -120,17 +104,9 @@
             NSLog(@"Error L%@",error.description);
             return;
         }
-        if([httpStatus isKindOfClass:[NSHTTPURLResponse class]]){
-            NSInteger statusCode = [(NSHTTPURLResponse*)httpStatus statusCode];
-            if( statusCode !=200){
-                NSLog(@"Error in HTTP Request:%ld",(long)statusCode);
-                return;
-            }
-            else{
-                completionBlock(BookingInfo);
-            }
+         if(!httpStatus){
+             completionBlock(BookingInfo);
         }
-        
     }];
 }
 
@@ -141,15 +117,8 @@
             NSLog(@"Error L%@",error.description);
             return;
         }
-        if([httpStatus isKindOfClass:[NSHTTPURLResponse class]]){
-            NSInteger statusCode = [(NSHTTPURLResponse*)httpStatus statusCode];
-            if( statusCode !=200){
-                NSLog(@"Error in HTTP Request:%ld",(long)statusCode);
-                return;
-            }
-            else{
+         if(!httpStatus){
                 completionBlock(confirmInfo);
-            }
         }
         
     }];
@@ -162,17 +131,9 @@
             NSLog(@"Error L%@",error.description);
             return;
         }
-        if([httpStatus isKindOfClass:[NSHTTPURLResponse class]]){
-            NSInteger statusCode = [(NSHTTPURLResponse*)httpStatus statusCode];
-            if( statusCode !=200){
-                NSLog(@"Error in HTTP Request:%ld",(long)statusCode);
-                return;
-            }
-            else{
+         if(!httpStatus){
                 completionBlock(manageInfo);
-            }
         }
-        
     }];
 }
 
@@ -183,15 +144,8 @@
             NSLog(@"Error L%@",error.description);
             return;
         }
-        if([httpStatus isKindOfClass:[NSHTTPURLResponse class]]){
-            NSInteger statusCode = [(NSHTTPURLResponse*)httpStatus statusCode];
-            if( statusCode !=200){
-                NSLog(@"Error in HTTP Request:%ld",(long)statusCode);
-                return;
-            }
-            else{
+         if(!httpStatus){
                 completionBlock(resetInfo);
-            }
         }
         
     }];
@@ -203,15 +157,8 @@
             NSLog(@"Error L%@",error.description);
             return;
         }
-        if([httpStatus isKindOfClass:[NSHTTPURLResponse class]]){
-            NSInteger statusCode = [(NSHTTPURLResponse*)httpStatus statusCode];
-            if( statusCode !=200){
-                NSLog(@"Error in HTTP Request:%ld",(long)statusCode);
-                return;
-            }
-            else{
+         if(!httpStatus){
                 completionBlock(historyInfo);
-            }
         }
         
     }];
@@ -259,7 +206,7 @@
     
     //NSLog(@"%@",self.filePath);
     
-    NSString *hotelQuery = [NSString stringWithFormat:@"insert into hotel values('%@','%@','%@','%@','%@','%@','%@','%@');", hotel.hotelId, hotel.hotelName,hotel.hotelAdd,hotel.hotelLat,hotel.hotelLong,hotel.hotelRating,hotel.price,filePath];
+    NSString *hotelQuery = [NSString stringWithFormat:@"insert into hotel values('%@','%@','%@','%@','%@','%@','%@','%@');", hotel.hotelId, hotel.hotelName,hotel.hotelAddress,hotel.hotelLatitude,hotel.hotelLongitude,hotel.hotelRating,hotel.price,filePath];
     
     //!!!hotelAvailableDate should returned by WebService!!!
     
@@ -275,21 +222,12 @@
             NSLog(@"Error L%@",error.description);
             return;
         }
-        if([httpStatus isKindOfClass:[NSHTTPURLResponse class]]){
-            NSInteger statusCode = [(NSHTTPURLResponse*)httpStatus statusCode];
-            if( statusCode !=200){
-                NSLog(@"Error in HTTP Request:%ld",(long)statusCode);
-                return;
-            }
-            else{
+         if(!httpStatus){
                 for(Hotel *hotel in array){
                     [self createHotelByHotel:hotel];
                 }
-                //completionBlock(historyInfo);
-            }
+                completionBlock(array);
         }
-
-        
     }];
 }
 

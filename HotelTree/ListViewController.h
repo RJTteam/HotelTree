@@ -10,5 +10,7 @@
 
 @interface ListViewController : UIViewController
 @property (strong, nonatomic) IBOutlet UIButton *SortButton;
-@property (strong, nonatomic)NSMutableArray *hotelsRawInfo;
+@property(strong,nonatomic)NSArray* hotelsArray;
+@property(strong, nonatomic)NSDictionary *bookingInfo;
+@property (weak, nonatomic) IBOutlet UITableView *listTable;
 @end

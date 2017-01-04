@@ -16,13 +16,11 @@
 #import "FlatUIKit.h"
 
 @interface ListViewController ()<UITableViewDelegate,UITableViewDataSource>
-@property(strong,nonatomic)NSArray* hotelsArray;
-@property(strong, nonatomic)NSDictionary *bookingInfo;
 
 @property (weak, nonatomic) IBOutlet FUIButton *sortBtn;
 @property (weak, nonatomic) IBOutlet FUIButton *filterBtn;
 @property (weak, nonatomic) IBOutlet FUIButton *mapBtn;
-@property (weak, nonatomic) IBOutlet UITableView *listTable;
+
 @end
 
 @implementation ListViewController
@@ -30,11 +28,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    if(self.hotelsRawInfo != nil){
-        self.bookingInfo = [NSDictionary dictionaryWithDictionary:(NSDictionary *)[self.hotelsRawInfo lastObject]];
-        [self.hotelsRawInfo removeLastObject];
-        self.hotelsArray = [NSArray arrayWithArray:self.hotelsRawInfo];
-    }
     //    NSLog(@"%@",self.hotelsArray);
     [self setUIButton:self.sortBtn WithColorHex:@"04ACFF" Font:[UIFont boldFlatFontOfSize:20]];
     [self setUIButton:self.filterBtn WithColorHex:@"04ACFF" Font:[UIFont boldFlatFontOfSize:20]];
@@ -89,7 +82,7 @@
     
     Hotel *obj = [self.hotelsArray objectAtIndex:indexPath.row];
     cell.nameLabel.text = obj.hotelName;
-    cell.addressLabel.text = obj.hotelAdd;
+    cell.addressLabel.text = obj.hotelAddress;
     cell.priceLabel.text = obj.price;
     
     cell.hotelImage.image = [UIImage imageWithContentsOfFile:[[[ImageStoreManager alloc]init] getImageStoreFilePathByHotelId:obj.hotelId]];

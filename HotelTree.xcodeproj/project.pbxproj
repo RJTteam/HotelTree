@@ -72,10 +72,10 @@
 		C3DA38E81E18B63E00E1AB83 /* SQLiteManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DA38E71E18B63E00E1AB83 /* SQLiteManager.m */; };
 		C3DA38ED1E18B66A00E1AB83 /* OrderConfirmViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DA38EA1E18B66A00E1AB83 /* OrderConfirmViewController.m */; };
 		C3DA38EE1E18B66A00E1AB83 /* PaymentConfirmViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DA38EC1E18B66A00E1AB83 /* PaymentConfirmViewController.m */; };
-		C3DA39031E18B6F900E1AB83 /* WebService.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DA38FB1E18B6F900E1AB83 /* WebService.m */; };
 		C3DA39041E18B6F900E1AB83 /* WebServiceProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DA38FD1E18B6F900E1AB83 /* WebServiceProvider.m */; };
 		C3DA39071E18B76900E1AB83 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C3DA39061E18B76900E1AB83 /* libsqlite3.0.tbd */; };
-		E8CC58781E1C06AA0098ED8D /* FlatUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8CC58771E1C06AA0098ED8D /* FlatUIKit.framework */; };
+		E8CC58781E1C06AA0098ED8D /* FlatUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8CC58771E1C06AA0098ED8D /* FlatUIKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		E8CC587D1E1C9C1E0098ED8D /* WebService.m in Sources */ = {isa = PBXBuildFile; fileRef = E8CC587C1E1C9C1E0098ED8D /* WebService.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -195,11 +195,11 @@
 		C3DA38EC1E18B66A00E1AB83 /* PaymentConfirmViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaymentConfirmViewController.m; sourceTree = "<group>"; };
 		C3DA38F91E18B6F900E1AB83 /* WebCommunicatioin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebCommunicatioin.h; sourceTree = "<group>"; };
 		C3DA38FA1E18B6F900E1AB83 /* WebService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebService.h; sourceTree = "<group>"; };
-		C3DA38FB1E18B6F900E1AB83 /* WebService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebService.m; sourceTree = "<group>"; };
 		C3DA38FC1E18B6F900E1AB83 /* WebServiceProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebServiceProvider.h; sourceTree = "<group>"; };
 		C3DA38FD1E18B6F900E1AB83 /* WebServiceProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebServiceProvider.m; sourceTree = "<group>"; };
 		C3DA39061E18B76900E1AB83 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		E8CC58771E1C06AA0098ED8D /* FlatUIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FlatUIKit.framework; path = "Pods/../build/Release-iphoneos/FlatUIKit/FlatUIKit.framework"; sourceTree = "<group>"; };
+		E8CC587C1E1C9C1E0098ED8D /* WebService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebService.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -440,7 +440,7 @@
 				C3DA38E71E18B63E00E1AB83 /* SQLiteManager.m */,
 				C3DA38F91E18B6F900E1AB83 /* WebCommunicatioin.h */,
 				C3DA38FA1E18B6F900E1AB83 /* WebService.h */,
-				C3DA38FB1E18B6F900E1AB83 /* WebService.m */,
+				E8CC587C1E1C9C1E0098ED8D /* WebService.m */,
 				C3DA38FC1E18B6F900E1AB83 /* WebServiceProvider.h */,
 				C3DA38FD1E18B6F900E1AB83 /* WebServiceProvider.m */,
 				C3DA38D81E18B5FC00E1AB83 /* ModelManager.h */,
@@ -620,10 +620,10 @@
 				C3ADF5A91E1A215600CCB7C8 /* PMSelectionView.m in Sources */,
 				C3DA38361E16F5AC00E1AB83 /* main.m in Sources */,
 				C3DA38A61E17737100E1AB83 /* SplashViewController.m in Sources */,
-				C3DA39031E18B6F900E1AB83 /* WebService.m in Sources */,
 				C3DA38E11E18B5FC00E1AB83 /* ModelManager.m in Sources */,
 				C3DA38CF1E18722300E1AB83 /* HomeTableCell.m in Sources */,
 				C3DA386A1E17627F00E1AB83 /* LoginViewController.m in Sources */,
+				E8CC587D1E1C9C1E0098ED8D /* WebService.m in Sources */,
 				C3ADF5B71E1A21A200CCB7C8 /* NSDate+Helpers.m in Sources */,
 				C3DA385B1E175C6F00E1AB83 /* UIImageView+GIF.m in Sources */,
 				C3ADF5A81E1A215600CCB7C8 /* PMPeriod.m in Sources */,

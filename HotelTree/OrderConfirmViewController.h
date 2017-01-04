@@ -12,7 +12,7 @@
 #import "Hotel.h"
 
 @interface OrderConfirmViewController : UIViewController
-//@property(strong,nonatomic)Order *order;
+@property(strong,nonatomic)Order *order;
 @property(strong,nonatomic)Hotel *hotel;
 @property (strong, nonatomic)NSDictionary *bookingInfo;
 @end
