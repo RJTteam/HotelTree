@@ -18,6 +18,7 @@
 
 @interface ListViewController ()<UITableViewDelegate,UITableViewDataSource>
 
+@property (strong, nonatomic) IBOutlet UIView *listView;
 @property (weak, nonatomic) IBOutlet FUIButton *sortBtn;
 @property (weak, nonatomic) IBOutlet FUIButton *filterBtn;
 @property (weak, nonatomic) IBOutlet FUIButton *mapBtn;
@@ -30,6 +31,15 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     //    NSLog(@"%@",self.hotelsArray);
+    //Set home backgound image
+    self.listView.layer.contents = (__bridge id)[UIImage imageNamed:@"homeBackground"].CGImage;
+    self.listView.layer.contentsGravity = kCAGravityResizeAspectFill;
+    UIVisualEffect *blurEffect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleRegular];
+    UIVisualEffectView *blurEffectView = [[UIVisualEffectView alloc] initWithEffect:blurEffect];
+    blurEffectView.frame = self.listView.bounds;
+    //    [self.upperSideBackView addSubview:blurEffectView];
+    [self.listView insertSubview:blurEffectView atIndex:0];
+    
     [self setUIButton:self.sortBtn WithColorHex:@"04ACFF" Font:[UIFont boldFlatFontOfSize:20]];
     [self setUIButton:self.filterBtn WithColorHex:@"04ACFF" Font:[UIFont boldFlatFontOfSize:20]];
     [self setUIButton:self.mapBtn WithColorHex:@"04ACFF" Font:[UIFont boldFlatFontOfSize:20]];

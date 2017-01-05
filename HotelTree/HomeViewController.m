@@ -241,6 +241,37 @@
     
 }
 
+-(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    return 68;
+}
+
+-(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
+    if (section == 0) {
+        UILabel *headerLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 19, 406, 44)];
+        headerLabel.text = @"Order History";
+        headerLabel.textColor = [UIColor whiteColor];
+        headerLabel.alpha = 0.64;
+        headerLabel.textAlignment = NSTextAlignmentCenter;
+        headerLabel.shadowColor = [UIColor lightGrayColor];
+        headerLabel.shadowOffset = CGSizeMake(-2, -1);
+        headerLabel.backgroundColor = [self.homeTableView backgroundColor];
+        headerLabel.font = [UIFont boldSystemFontOfSize:15];
+        return headerLabel;
+    }
+    else{
+        UILabel *headerLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 19, 406, 44)];
+        headerLabel.text = @"Place you should stay";
+        headerLabel.textColor = [UIColor whiteColor];
+        headerLabel.alpha = 0.64;
+        headerLabel.textAlignment = NSTextAlignmentCenter;
+        headerLabel.shadowColor = [UIColor lightGrayColor];
+        headerLabel.shadowOffset = CGSizeMake(-2, -1);
+        headerLabel.backgroundColor = [self.homeTableView backgroundColor];
+        headerLabel.font = [UIFont boldSystemFontOfSize:20];
+        return headerLabel;
+    }
+}
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation

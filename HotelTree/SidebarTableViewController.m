@@ -11,6 +11,7 @@
 #import "LoginViewController.h"
 
 @interface SidebarTableViewController ()
+@property (strong, nonatomic) IBOutlet UITableView *sideBarBackView;
 
 @end
 
@@ -20,7 +21,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    //Set home backgound image
+    self.sideBarBackView.layer.contents = (__bridge id)[UIImage imageNamed:@"homeBackground"].CGImage;
+    self.sideBarBackView.layer.contentsGravity = kCAGravityResizeAspectFill;
+    UIVisualEffect *blurEffect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleRegular];
+    UIVisualEffectView *blurEffectView = [[UIVisualEffectView alloc] initWithEffect:blurEffect];
+    blurEffectView.frame = self.sideBarBackView.bounds;
+    //    [self.upperSideBackView addSubview:blurEffectView];
+    [self.sideBarBackView insertSubview:blurEffectView atIndex:0];
 
     menuItems = @[@"title",@"menuHome",@"menuLogOut"];
 }

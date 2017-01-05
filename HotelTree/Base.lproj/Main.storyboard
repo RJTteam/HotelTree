@@ -270,7 +270,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="81" sectionHeaderHeight="28" sectionFooterHeight="28" id="i7g-LZ-YQh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="title" rowHeight="81" id="Ucx-1I-zlI">
                                 <rect key="frame" x="0.0" y="28" width="414" height="81"/>
@@ -285,6 +285,7 @@
                                         </imageView>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.55650684931506844" colorSpace="calibratedRGB"/>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="menuHome" rowHeight="81" id="bEn-YF-avU">
                                 <rect key="frame" x="0.0" y="109" width="414" height="81"/>
@@ -297,11 +298,13 @@
                                             <rect key="frame" x="15" y="27" width="107" height="27"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" weight="medium" pointSize="31"/>
-                                            <nil key="textColor"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <segue destination="SCd-SQ-cX0" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="4OH-MQ-lFl"/>
                                 </connections>
@@ -317,11 +320,12 @@
                                             <rect key="frame" x="17" y="27" width="112" height="37"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" weight="medium" pointSize="31"/>
-                                            <nil key="textColor"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -329,6 +333,9 @@
                             <outlet property="delegate" destination="iyo-tg-Ecb" id="mSA-95-PXa"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="sideBarBackView" destination="i7g-LZ-YQh" id="26D-zA-R4W"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E3d-Pu-6Un" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -572,7 +579,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vyG-Sa-Z8r">
-                                                    <rect key="frame" x="8" y="0.0" width="398" height="183"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="183"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                             </subviews>
@@ -877,7 +884,7 @@
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         </imageView>
                                                     </subviews>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="backgroundColor" white="1" alpha="0.65713291952054798" colorSpace="calibratedWhite"/>
                                                 </view>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -934,7 +941,6 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.074509803921568626" green="0.20392156862745098" blue="0.4823529411764706" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
                     <navigationItem key="navigationItem" id="dLj-KB-X4z">
                         <nil key="title"/>
@@ -945,6 +951,7 @@
                     <connections>
                         <outlet property="filterBtn" destination="0TV-Ox-yzP" id="nEf-j9-XOF"/>
                         <outlet property="listTable" destination="VC9-RX-sn6" id="oPX-uU-YFn"/>
+                        <outlet property="listView" destination="fjX-3F-iRa" id="DHv-tW-QJx"/>
                         <outlet property="mapBtn" destination="CMJ-GP-w66" id="7JA-nc-vt2"/>
                         <outlet property="sidebarButton" destination="Wmf-0O-NNy" id="FFd-aT-ApV"/>
                         <outlet property="sortBtn" destination="jCG-zf-jdZ" id="QFJ-Hj-Pf4"/>
@@ -1123,6 +1130,7 @@
                         <outlet property="aHotelMap" destination="KYp-FY-3XZ" id="qNF-tn-VBJ"/>
                         <outlet property="checkInDateLabel" destination="UyM-95-oXR" id="VoR-gP-G8v"/>
                         <outlet property="checkOutDateLabel" destination="1TC-e3-Zrr" id="bNN-X0-DJA"/>
+                        <outlet property="detailView" destination="UYY-QB-Apt" id="dUz-x4-CAr"/>
                         <outlet property="nameLabel" destination="Vxi-la-FZo" id="cgk-Ah-ImH"/>
                         <outlet property="orderBtn" destination="XQh-Hb-sNt" id="VSJ-Tr-o6C"/>
                         <outlet property="priceLabel" destination="LEr-W5-pyB" id="vHB-zS-3hE"/>
@@ -1307,6 +1315,7 @@
                         <outlet property="hotelName" destination="rSN-j0-fwo" id="RlH-fR-bbB"/>
                         <outlet property="hotelPrice" destination="ybi-iO-NOc" id="SoX-ue-Tuy"/>
                         <outlet property="hotelRating" destination="zCs-Xm-1m0" id="U5P-eo-fJS"/>
+                        <outlet property="orderView" destination="rjz-bM-QBV" id="mkt-C3-Dl6"/>
                         <outlet property="phoneTextField" destination="gRo-AO-Ck8" id="wG8-fb-kpO"/>
                         <outlet property="procceedBtn" destination="kX0-fM-VqK" id="Czs-4O-Wbh"/>
                         <outlet property="rateImage" destination="fLd-Mq-OW9" id="TFv-KG-7MH"/>
@@ -1529,7 +1538,7 @@
         <image name="menu" width="22" height="22"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="wxQ-sD-aHp"/>
-        <segue reference="XE2-gl-k00"/>
+        <segue reference="4OH-MQ-lFl"/>
+        <segue reference="J9o-2V-ih1"/>
     </inferredMetricsTieBreakers>
 </document>

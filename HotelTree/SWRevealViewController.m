@@ -887,6 +887,7 @@ const int FrontViewPositionNone = 0xff;
 
 - (void)setFrontViewShadowOffset:(CGSize)frontViewShadowOffset
 {
+    frontViewShadowOffset = CGSizeMake(0, 0);
     _frontViewShadowOffset = frontViewShadowOffset;
     [_contentView reloadShadow];
 }
