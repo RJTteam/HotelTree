@@ -12,6 +12,6 @@
 
 -(NSString*)baseURL;
 
--(NSData*)webServiceCall:(NSString*) methodName with:(NSDictionary*) parameter;
+-(void)webServiceCall:(NSString*) methodName with:(NSDictionary*) parameter withHandler:(void (^)(NSData* data, NSError* error,NSString* httpStatus ))returnData;
 
 @end

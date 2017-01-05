@@ -11,6 +11,5 @@
 
 @interface WebServiceProvider : NSObject<WebCommunicatioin>
 
-@property (strong,nonatomic) NSData* data;
 
 @end
