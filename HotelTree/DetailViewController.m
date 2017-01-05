@@ -14,12 +14,12 @@
 #import "OrderConfirmViewController.h"
 #import "ImageStoreManager.h"
 #import "FlatUIKit.h"
+#import "SWRevealViewController.h"
 
 #define METERS_PRE_MILE 1609.34
 
 @interface DetailViewController ()<PMCalendarControllerDelegate>
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
-@property (weak, nonatomic) IBOutlet UIButton *toMapBtn;
 @property (weak, nonatomic) IBOutlet FUIButton *orderBtn;
 @property (weak, nonatomic) IBOutlet UILabel *priceLabel;
 @property (weak, nonatomic) IBOutlet UILabel *checkInDateLabel;
@@ -29,6 +29,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *aHotelImage;
 @property (strong, nonatomic)PMCalendarController *calendar;
 @property (weak, nonatomic) IBOutlet UIImageView *rateImage;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *sidebarButton;
 
 @end
 
@@ -39,7 +40,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.nameLabel.text = self.aHotel.hotelName;
-    self.priceLabel.text = self.aHotel.price;
+    self.priceLabel.text = [NSString stringWithFormat:@"$%@ per night",self.aHotel.price];
     self.checkInDateLabel.text = self.bookingInfo[@"checkIn"];
     self.checkOutDateLabel.text = self.bookingInfo[@"checkOut"];
     [self setUIButton:self.orderBtn WithColorHex:@"04ACFF" Font:[UIFont boldFlatFontOfSize:20]];
@@ -61,6 +62,14 @@
     ImageStoreManager *imageStoreManager = [[ImageStoreManager alloc]init];
 
     self.aHotelImage.image = [UIImage imageWithContentsOfFile:[imageStoreManager getImageStoreFilePathByHotelId:self.aHotel.hotelId]];
+    
+    SWRevealViewController *revealViewController = self.revealViewController;
+    if ( revealViewController )
+    {
+        [self.sidebarButton setTarget: self.revealViewController];
+        [self.sidebarButton setAction: @selector( revealToggle: )];
+        [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
+    }
 }
 
 - (void)setUIButton:(FUIButton *)btn WithColorHex:(NSString*)hexColor Font:(UIFont*)font{

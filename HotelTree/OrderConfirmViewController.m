@@ -42,9 +42,9 @@
     
     self.hotelImage.image = [UIImage imageWithContentsOfFile:[imageStoreManager getImageStoreFilePathByHotelId:self.hotel.hotelId]];
     
-    self.checkInDate.text = self.bookingInfo[@"checkIn"];
-    self.checkOutDate.text = self.bookingInfo[@"checkOut"];
-    self.hotelPrice.text = self.hotel.price;
+    self.checkInDate.text = self.order.checkInDate;
+    self.checkOutDate.text = self.order.checkOutDate;
+    self.hotelPrice.text = [NSString stringWithFormat:@"$ %@",self.hotel.price];
     
     
     ModelManager *userManager = [[ModelManager alloc]init];
@@ -80,7 +80,7 @@
     
     
     ModelManager *proceedOrder = [[ModelManager alloc]init];
-    BOOL isCreateOrder = [proceedOrder createOrder:self.bookingInfo[@"checkIn"] checkOutDate:self.bookingInfo[@"checkOut"] roomNumber:self.bookingInfo[@"room"] adultNumber:self.bookingInfo[@"adult"] childrenNumber:self.bookingInfo[@"child"] orderStauts:@"1" userId:self.userinfo.userId hotelId:self.hotel.hotelId];
+    BOOL isCreateOrder = [proceedOrder createOrder:self.order.checkInDate checkOutDate:self.order.checkOutDate roomNumber:self.order.roomNumber adultNumber:self.order.adultNumber childrenNumber:self.order.childrenNumber orderStauts:@"1" userId:self.userinfo.userId hotelId:self.hotel.hotelId];
     NSLog(@"new order %@",isCreateOrder? @"yes":@"no");
 
 }

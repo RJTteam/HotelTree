@@ -12,11 +12,13 @@
 #import "Annotation.h"
 #import "ModelManager.h"
 #import "DetailViewController.h"
+#import "SWRevealViewController.h"
 
 #define METERS_PRE_MILE 1609.34
 
 
 @interface MapViewController ()<MKMapViewDelegate>
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *sidebarButton;
 @property (nonatomic,strong) NSArray *hotelArray;
 @end
 
@@ -35,30 +37,38 @@
                           };
     
     
-    [modelManager hotelSearchFromWebService:dic completionHandler:^(NSArray *array) {
-        self.hotelArray = [array copy];
-        Hotel *hotelOnMapCenter = self.hotelArray[0];
-        _coordinate.longitude = [[NSString stringWithFormat:@"-%@",hotelOnMapCenter.hotelLongitude] doubleValue];
-        
-        _coordinate.latitude = [hotelOnMapCenter.hotelLatitude doubleValue];
-        MKMapView *MapPage = [[MKMapView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
-        float ASPECTRATIONOFMAPKIT = MapPage.frame.size.width/MapPage.frame.size.height;
-        MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(_coordinate, 0.8*METERS_PRE_MILE, 0.8*METERS_PRE_MILE*ASPECTRATIONOFMAPKIT);
-        [MapPage setRegion:region];
-        MapPage.mapType = MKMapTypeStandard;
-        MapPage.zoomEnabled = YES;
-        MapPage.scrollEnabled = YES;
-        MapPage.delegate = self;
-        
-        
-        
-        for(Hotel *hotel in self.hotelArray){
-            NSLog(@"%@,%@,%@",hotel.hotelName,hotel.hotelLatitude,hotel.hotelLongitude);
-            [MapPage addAnnotation:[Annotation annotationWithLatitude:[hotel.hotelLatitude doubleValue] longitude:[[NSString stringWithFormat:@"-%@",hotel.hotelLongitude] doubleValue] title:hotel.hotelName subtitle:hotel.hotelAddress]];
-        }
-        
-        [self.view addSubview:MapPage];
-    }];
+    [modelManager hotelSearchFromWebService:dic];
+    self.hotelArray = [modelManager getAllHotel];
+
+    Hotel *hotelOnMapCenter = self.hotelArray[0];
+    _coordinate.longitude = [[NSString stringWithFormat:@"-%@",hotelOnMapCenter.hotelLong] doubleValue];
+    
+    _coordinate.latitude = [hotelOnMapCenter.hotelLat doubleValue];
+    MKMapView *MapPage = [[MKMapView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
+    float ASPECTRATIONOFMAPKIT = MapPage.frame.size.width/MapPage.frame.size.height;
+    MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(_coordinate, 0.8*METERS_PRE_MILE, 0.8*METERS_PRE_MILE*ASPECTRATIONOFMAPKIT);
+    [MapPage setRegion:region];
+    MapPage.mapType = MKMapTypeStandard;
+    MapPage.zoomEnabled = YES;
+    MapPage.scrollEnabled = YES;
+    MapPage.delegate = self;
+    
+
+    
+    for(Hotel *hotel in self.hotelArray){
+        NSLog(@"%@,%@,%@",hotel.hotelName,hotel.hotelLat,hotel.hotelLong);
+        [MapPage addAnnotation:[Annotation annotationWithLatitude:[hotel.hotelLat doubleValue] longitude:[[NSString stringWithFormat:@"-%@",hotel.hotelLong] doubleValue] title:hotel.hotelName subtitle:hotel.hotelAdd]];
+    }
+    
+    [self.view addSubview:MapPage];
+    
+    SWRevealViewController *revealViewController = self.revealViewController;
+    if ( revealViewController )
+    {
+        [self.sidebarButton setTarget: self.revealViewController];
+        [self.sidebarButton setAction: @selector( revealToggle: )];
+        [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
+    }
 }
 
 - (nullable MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation>)annotation{
@@ -108,6 +118,4 @@
     }
 }
 
--(IBAction)returnFromDetail:(UIStoryboardSegue *)unwindsegue {
-}
 @end

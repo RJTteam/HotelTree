@@ -16,9 +16,13 @@
 #import "ListViewController.h"
 #import "UIImageView+GIF.h"
 #import "FlatUIKit.h"
+#import "SWRevealViewController.h"
+#import "SidebarTableViewController.h"
+
 @interface HomeViewController ()<UITableViewDelegate,UITableViewDataSource,SearchMenuToSearchDelegate,QuantitySetDelegate, UITextFieldDelegate, PMCalendarControllerDelegate>
 @property (strong,nonatomic) NSMutableArray *homeArray;
 @property (weak, nonatomic) IBOutlet UIView *upperSideBackView;
+@property (weak, nonatomic) IBOutlet UITableView *homeTableView;
 
 @property (weak, nonatomic) IBOutlet UILabel *checkInDisplayLabel;
 @property (weak, nonatomic) IBOutlet UILabel *checkOutDisplayLabel;
@@ -34,6 +38,8 @@
 
 @property (nonatomic)CLLocationCoordinate2D location;
 @property (strong, nonatomic)PMCalendarController *inCalender;
+
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *sideBarBtn;
 @end
 
 @implementation HomeViewController
@@ -62,6 +68,13 @@
     [[ModelManager sharedInstance] history:idDic completionHandler:^(NSMutableArray *array) {
         self.homeArray = [array copy];
     }];
+    SWRevealViewController *revealViewController = self.revealViewController;
+    if ( revealViewController )
+    {
+        [self.sideBarBtn setTarget: self.revealViewController];
+        [self.sideBarBtn setAction: @selector( revealToggle: )];
+        [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
+    }
 }
 
 - (void)viewDidAppear:(BOOL)animated{
@@ -223,6 +236,7 @@
         [cell.contentView addSubview:imageView];
         return cell;
     }
+    
     
 }
 
