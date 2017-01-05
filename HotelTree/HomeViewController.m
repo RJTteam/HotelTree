@@ -14,7 +14,6 @@
 #import "PMCalendar.h"
 #import "ModelManager.h"
 #import "ListViewController.h"
-#import "WebService.h"
 #import "UIImageView+GIF.h"
 #import "FlatUIKit.h"
 #import "SWRevealViewController.h"
@@ -66,9 +65,9 @@
     NSDictionary *idDic = @{
         @"mobile":@"5555454"
     };
-    WebService *webService = [WebService sharedInstance];
-    self.homeArray = [webService history:idDic];
-    
+    [[ModelManager sharedInstance] history:idDic completionHandler:^(NSMutableArray *array) {
+        self.homeArray = [array copy];
+    }];
     SWRevealViewController *revealViewController = self.revealViewController;
     if ( revealViewController )
     {
@@ -76,7 +75,6 @@
         [self.sideBarBtn setAction: @selector( revealToggle: )];
         [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
     }
-
 }
 
 - (void)viewDidAppear:(BOOL)animated{
@@ -248,8 +246,9 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if([segue.identifier isEqualToString:@"searchToListSegue"]){
         //TODO perform search using ModelManager;
+        ListViewController *vc = segue.destinationViewController;
         ModelManager *modelManager = [ModelManager sharedInstance];
-        NSDictionary* dic = @{
+        NSDictionary* dict = @{
                               @"hotelLat":[NSString stringWithFormat:@"%f", self.location.latitude],
                               @"hotelLong":[NSString stringWithFormat:@"%f", self.location.longitude],
                               @"checkIn": self.checkInDisplayLabel.text,
@@ -259,11 +258,12 @@
                               @"child" : self.childrenQuatityLabel.text
                               };
         
-        [modelManager hotelSearchFromWebService:dic];
-        NSMutableArray *hotelsArray = [[modelManager getAllHotel] mutableCopy];
-        [hotelsArray addObject:dic];
-        ListViewController *vc = segue.destinationViewController;
-        vc.hotelsRawInfo = [NSMutableArray arrayWithArray:hotelsArray];
+        [modelManager hotelSearchFromWebService:dict completionHandler:^(NSArray *array) {
+            
+            vc.hotelsArray = [array copy];
+            vc.bookingInfo = dict;
+            [vc.listTable reloadData];
+        }];
     }else if ([segue.identifier isEqualToString:@"toSearchMenuSegue"]){
         UserSearchResultViewController *vc = segue.destinationViewController;
         vc.delegate = self;

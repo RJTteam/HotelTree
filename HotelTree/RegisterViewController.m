@@ -10,7 +10,7 @@
 #import "JVFloatLabeledTextField.h"
 #import "FlatUIKit.h"
 #import <TWMessageBarManager/TWMessageBarManager.h>
-#import "WebService.h"
+#import "ModelManager.h"
 
 @import UITextField_Shake;
 
@@ -47,20 +47,19 @@
                                     @"email":self.emailField.text,
                                     @"mobile":self.phoneField.text,
                                     @"password":self.passwordField.text,
-                                    @"userAdd":@"Delhi"
+                                    @"IsManage":@"1"
                                     };
-    NSString *isregistered =[[WebService sharedInstance] returnUserRegister:registureInfo];
-    if ([isregistered isEqualToString:@"\nsuccessfully registered"]) {
-        [[TWMessageBarManager sharedInstance] showMessageWithTitle:@"Account Info"
-                                                   description:isregistered
-                                                          type:TWMessageBarMessageTypeSuccess];
+    [[ModelManager sharedInstance] userRegisterToServer:registureInfo completionHandler:^(NSString *status) {
+        if(![status containsString:@"success"]){
+            [[TWMessageBarManager sharedInstance] showMessageWithTitle:@"Account Info" description:status type:TWMessageBarMessageTypeError];
+            [self.phoneField shake];
+            return;
         }
-    else{
-        [[TWMessageBarManager sharedInstance] showMessageWithTitle:@"Account Info"
-                                                       description:isregistered
-                                                              type:TWMessageBarMessageTypeError];
-        [self.phoneField shake];
-    }
+        [[TWMessageBarManager sharedInstance] showMessageWithTitle:@"Account Info" description:status type:TWMessageBarMessageTypeSuccess];
+        NSUserDefaults*userInfo = [NSUserDefaults standardUserDefaults];
+        [userInfo setObject:registureInfo[@"mobile"] forKey:@"userID"];
+        [self dismissViewControllerAnimated:YES completion:nil];
+    }];
 }
 
 - (void)setUIButton:(FUIButton *)btn WithColorHex:(NSString*)hexColor Font:(UIFont*)font{

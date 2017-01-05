@@ -77,7 +77,6 @@
 		C3DA39031E18B6F900E1AB83 /* WebService.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DA38FB1E18B6F900E1AB83 /* WebService.m */; };
 		C3DA39041E18B6F900E1AB83 /* WebServiceProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DA38FD1E18B6F900E1AB83 /* WebServiceProvider.m */; };
 		C3DA39071E18B76900E1AB83 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C3DA39061E18B76900E1AB83 /* libsqlite3.0.tbd */; };
-		E8CC58781E1C06AA0098ED8D /* FlatUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8CC58771E1C06AA0098ED8D /* FlatUIKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -213,7 +212,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E8CC58781E1C06AA0098ED8D /* FlatUIKit.framework in Frameworks */,
 				C3ADF5CB1E1B3E9D00CCB7C8 /* AddressBookUI.framework in Frameworks */,
 				C3DA38C01E18662E00E1AB83 /* MapKit.framework in Frameworks */,
 				C3DA39071E18B76900E1AB83 /* libsqlite3.0.tbd in Frameworks */,
