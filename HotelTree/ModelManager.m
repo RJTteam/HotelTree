@@ -42,7 +42,7 @@
 //---DB creater start---
 - (BOOL)createUserDBIfNeeded{
     NSString *userDBQuery = @"create table if not exists user(userId varchar(255)  primary key, password varchar(255) not null);";
-    NSString *userInfoDBQuery = @"create table if not exists userInfo(userId varchar(255) primary key, userName varchar(255)  not null, firstName varchar(100) not null, lastName varchar(100) not null, email varchar(100), userAddress varchar(255), isManager varchar(10), foreign key(userId) references user(userId));";
+    NSString *userInfoDBQuery = @"create table if not exists userInfo(userId varchar(255) primary key, userName varchar(255)  not null, firstName varchar(100), lastName varchar(100), email varchar(100) not null, userAddress varchar(255), isManager varchar(10), foreign key(userId) references user(userId));";
     BOOL result = [[SQLiteManager shareInstance] executeQuery:userDBQuery];
     if(result){
         result = [[SQLiteManager shareInstance] executeQuery:userInfoDBQuery];
@@ -266,19 +266,23 @@
 }
 
 -(BOOL)clearHotelDB{
-    NSString *removeQuery = [NSString stringWithFormat:@"delete * from hotel;"];
+    NSString *removeQuery = [NSString stringWithFormat:@"delete from hotel;"];
     BOOL result = [[SQLiteManager shareInstance] executeQuery:removeQuery];
     return result;
 }
 
 -(BOOL)clearUserDB{
-    NSString *removeQuery = [NSString stringWithFormat:@"delete * from user;"];
+    NSString *removeQuery = [NSString stringWithFormat:@"delete from user;"];
+    NSString *removeInfo = [NSString stringWithFormat:@"delete from userInfo"];
     BOOL result = [[SQLiteManager shareInstance] executeQuery:removeQuery];
+    if(result){
+        result = [[SQLiteManager shareInstance] executeQuery:removeInfo];
+    }
     return result;
 }
 
 -(BOOL)clearOrderDB{
-    NSString *removeQuery = [NSString stringWithFormat:@"delete * from orders;"];
+    NSString *removeQuery = [NSString stringWithFormat:@"delete from orders;"];
     BOOL result = [[SQLiteManager shareInstance] executeQuery:removeQuery];
     return result;
 }
