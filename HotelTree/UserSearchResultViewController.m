@@ -68,7 +68,7 @@ static NSString *tablename = @"hotel";
 #pragma mark - Private Methods
 
 - (void)clearLocalHotelInfo{
-    NSString *clearQuery = [NSString stringWithFormat:@"delete * from %@", tablename];
+    NSString *clearQuery = [NSString stringWithFormat:@"delete from %@", tablename];
     [[SQLiteManager shareInstance] executeQuery:clearQuery];
 }
 

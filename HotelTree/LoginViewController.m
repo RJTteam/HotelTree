@@ -79,7 +79,7 @@
             return;
         }
         if([status isKindOfClass:[NSArray class]]){
-            if(![status containsString:@"success"]){
+            if(![[(NSArray *)status objectAtIndex:0] containsString:@"success"]){
                 [[TWMessageBarManager sharedInstance] showMessageWithTitle:@"Incorrect userId or password" description:@"The phone number or password is not valid, please try again" type:TWMessageBarMessageTypeError duration:3.0];
                 return;
             }
@@ -89,6 +89,7 @@
             if([status containsString:@"success"]){
                 NSUserDefaults*userInfo = [NSUserDefaults standardUserDefaults];
                 [userInfo setObject:loginInfo[@"UserMobile"] forKey:@"userID"];
+                [[ModelManager sharedInstance] createUser:loginInfo[@"UserMobile"] password:signInDic[@"password"] userName:loginInfo[@"UserName"] firstName:nil lastName:nil email:loginInfo[@"UserEmail"] userAddress:nil isManager:loginInfo[@"IsManager"]];
                 [self performSegueWithIdentifier:@"loginToHome" sender:nil];
             }
         }
