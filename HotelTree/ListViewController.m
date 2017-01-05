@@ -21,7 +21,6 @@
 @property (weak, nonatomic) IBOutlet FUIButton *sortBtn;
 @property (weak, nonatomic) IBOutlet FUIButton *filterBtn;
 @property (weak, nonatomic) IBOutlet FUIButton *mapBtn;
-@property (weak, nonatomic) IBOutlet UITableView *listTable;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *sidebarButton;
 @end
 

@@ -32,18 +32,18 @@
     // Do any additional setup after loading the view.
     ModelManager *modelManager = [ModelManager sharedInstance];
     NSDictionary* dic = @{  //TODO: set user search coordinate
-                          @"hotelLat":@"28.6049",
+                          @"hotelLatitude":@"28.6049",
                           @"hotelLong":@"77.2235"
                           };
     
     
-    [modelManager hotelSearchFromWebService:dic];
+    [modelManager hotelSearchFromWebService:dic completionHandler:^(NSArray *array) {}];
     self.hotelArray = [modelManager getAllHotel];
 
     Hotel *hotelOnMapCenter = self.hotelArray[0];
-    _coordinate.longitude = [[NSString stringWithFormat:@"-%@",hotelOnMapCenter.hotelLong] doubleValue];
+    _coordinate.longitude = [[NSString stringWithFormat:@"-%@",hotelOnMapCenter.hotelLongitude] doubleValue];
     
-    _coordinate.latitude = [hotelOnMapCenter.hotelLat doubleValue];
+    _coordinate.latitude = [hotelOnMapCenter.hotelLatitude doubleValue];
     MKMapView *MapPage = [[MKMapView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
     float ASPECTRATIONOFMAPKIT = MapPage.frame.size.width/MapPage.frame.size.height;
     MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(_coordinate, 0.8*METERS_PRE_MILE, 0.8*METERS_PRE_MILE*ASPECTRATIONOFMAPKIT);
@@ -56,8 +56,8 @@
 
     
     for(Hotel *hotel in self.hotelArray){
-        NSLog(@"%@,%@,%@",hotel.hotelName,hotel.hotelLat,hotel.hotelLong);
-        [MapPage addAnnotation:[Annotation annotationWithLatitude:[hotel.hotelLat doubleValue] longitude:[[NSString stringWithFormat:@"-%@",hotel.hotelLong] doubleValue] title:hotel.hotelName subtitle:hotel.hotelAdd]];
+        NSLog(@"%@,%@,%@",hotel.hotelName,hotel.hotelLatitude,hotel.hotelLongitude);
+        [MapPage addAnnotation:[Annotation annotationWithLatitude:[hotel.hotelLatitude doubleValue] longitude:[[NSString stringWithFormat:@"-%@",hotel.hotelLongitude] doubleValue] title:hotel.hotelName subtitle:hotel.hotelAddress]];
     }
     
     [self.view addSubview:MapPage];

@@ -33,14 +33,19 @@
         //NSLog(@"data : %@",data);
         self.output = data;
         id jsonOutput = [NSJSONSerialization JSONObjectWithData:self.output options:NSJSONReadingAllowFragments error:nil];
-        NSArray* arr = jsonOutput;
-        
-        NSDictionary* dic = [arr objectAtIndex:0];
-        if(completionBlock) {
-            completionBlock(dic,error,httpStatus);
+        if([jsonOutput isKindOfClass:[NSArray class]]){
+            NSArray* arr = jsonOutput;
+            NSDictionary* dic = [arr objectAtIndex:0];
+            if(completionBlock){
+                completionBlock(dic, error, httpStatus);
+            }
         }
-        
-        
+        if([jsonOutput isKindOfClass:[NSDictionary class]]){
+            NSDictionary *dic = (NSDictionary *)jsonOutput;
+            if(completionBlock) {
+                completionBlock(dic,error,httpStatus);
+            }
+        }
     }];
     //NSLog(@"from wevservice data : %@",self.output);
     

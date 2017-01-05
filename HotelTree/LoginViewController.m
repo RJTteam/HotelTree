@@ -78,14 +78,19 @@
                                                                                type:TWMessageBarMessageTypeError duration:5.0];
             return;
         }
-        if(![status containsString:@"success"]){
-            [[TWMessageBarManager sharedInstance] showMessageWithTitle:@"Incorrect userId or password" description:@"The phone number or password is not valid, please try again" type:TWMessageBarMessageTypeError duration:3.0];
-            return;
+        if([status isKindOfClass:[NSArray class]]){
+            if(![status containsString:@"success"]){
+                [[TWMessageBarManager sharedInstance] showMessageWithTitle:@"Incorrect userId or password" description:@"The phone number or password is not valid, please try again" type:TWMessageBarMessageTypeError duration:3.0];
+                return;
+            }
         }
-        if([status containsString:@"success"]){
-            NSUserDefaults*userInfo = [NSUserDefaults standardUserDefaults];
-            [userInfo setObject:loginInfo[@"UserMobile"] forKey:@"userID"];
-            [self performSegueWithIdentifier:@"loginToHome" sender:nil];
+        
+        if([status isKindOfClass:[NSString class]]){
+            if([status containsString:@"success"]){
+                NSUserDefaults*userInfo = [NSUserDefaults standardUserDefaults];
+                [userInfo setObject:loginInfo[@"UserMobile"] forKey:@"userID"];
+                [self performSegueWithIdentifier:@"loginToHome" sender:nil];
+            }
         }
     }];
 }
