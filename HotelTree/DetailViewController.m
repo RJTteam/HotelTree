@@ -139,7 +139,7 @@
         Order *currentOrder = [[Order alloc] initWithDictionary:dict];
         NSDateFormatter *formater = [[NSDateFormatter alloc] init];
         formater.timeZone = [NSTimeZone localTimeZone];
-        formater.dateFormat = @"MMM dd, yyyy";
+        formater.dateFormat = @"EEE, MMM, yyyy";
         NSDate *checkInDate = [formater dateFromString:self.bookingInfo[@"checkIn"]];
         NSDate *checkOutDate = [formater dateFromString:self.bookingInfo[@"checkOut"]];
         [currentOrder setCheckInDate:checkInDate];

@@ -18,7 +18,7 @@
         _hotelLatitude = dic[@"hotelLat"];
         _hotelLongitude = dic[@"hotelLong"];
         _hotelRating = dic[@"hotelRating"];
-        _price = dic[@"Price"];
+        _price = dic[@"price"];
         _hotelThumb = dic[@"hotelThumb"];
         //_hotelAvailableDate = dic[@"hotelAvailableDate"];
         

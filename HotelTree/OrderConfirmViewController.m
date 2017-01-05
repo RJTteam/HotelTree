@@ -52,26 +52,28 @@
     
     self.hotelImage.image = [UIImage imageWithContentsOfFile:[imageStoreManager getImageStoreFilePathByHotelId:self.hotel.hotelId]];
     
-    self.checkInDate.text = self.order.checkInDate;
-    self.checkOutDate.text = self.order.checkOutDate;
+    self.checkInDate.text = [self NSDateToNSString:self.order.checkInDate];
+    self.checkOutDate.text = [self NSDateToNSString:self.order.checkOutDate ];
     self.hotelPrice.text = [NSString stringWithFormat:@"$ %@",self.hotel.price];
     
     
-    ModelManager *userManager = [[ModelManager alloc]init];
-    NSArray*user = [userManager getAllUser];
-    self.userinfo = [user objectAtIndex:0];
-    
-    self.firstNameTextField.text = self.userinfo.firstName;
-    self.lastNameTextField.text = self.userinfo.lastName;
-    self.emailTextField.text = self.userinfo.email;
-    self.phoneTextField.text = self.userinfo.userId;
-    
+    ModelManager *userManager = [ModelManager sharedInstance];
+    NSArray *users = [userManager getAllUser];
+    if(users.count != 0){
+        self.userinfo = users[0];
+        self.firstNameTextField.text = self.userinfo.firstName;
+        self.lastNameTextField.text = self.userinfo.lastName;
+        self.emailTextField.text = self.userinfo.email;
+        self.phoneTextField.text = self.userinfo.userId;
+    }
     [self setUIButton:self.procceedBtn WithColorHex:@"04ACFF" Font:[UIFont boldFlatFontOfSize:20]];
 }
 
 -(NSString*)NSDateToNSString:(NSDate*)date{
     NSDateFormatter *dateFormatter  = [[NSDateFormatter alloc]init];
-    [dateFormatter setDateFormat:@"yyyy-MM-dd"];
+    dateFormatter.dateStyle = NSDateFormatterMediumStyle;
+    dateFormatter.timeStyle = NSDateFormatterNoStyle;
+    dateFormatter.timeZone = [NSTimeZone localTimeZone];
     return [dateFormatter stringFromDate:date];
 }
 

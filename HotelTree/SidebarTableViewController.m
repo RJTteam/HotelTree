@@ -9,6 +9,7 @@
 #import "SidebarTableViewController.h"
 #import "SWRevealViewController.h"
 #import "LoginViewController.h"
+#import "ModelManager.h"
 
 @interface SidebarTableViewController ()
 @property (strong, nonatomic) IBOutlet UITableView *sideBarBackView;
@@ -56,6 +57,7 @@
     if ([CellIdentifier isEqualToString:@"menuLogOut"]) {
         UIStoryboard *myStoryBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
         LoginViewController *loginVC = [myStoryBoard instantiateViewControllerWithIdentifier:@"LoginViewController"];
+        [[ModelManager sharedInstance] clearUserDB];
         [self presentViewController:loginVC animated:YES completion:nil];
     }
     else;
