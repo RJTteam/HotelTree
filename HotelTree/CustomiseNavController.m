@@ -23,7 +23,7 @@
 //    [[UINavigationBar appearance]setBarTintColor:[UIColor colorWithHexString:@"13347B"]];
     [self.navBar setTranslucent:YES];
     [self.navBar setBackgroundImage:[[UIImage alloc] init] forBarMetrics:UIBarMetricsDefault];
-    self.navBar.backgroundColor = [UIColor colorWithHexString:@"13347B"];
+    self.navBar.backgroundColor = [UIColor clearColor];
     self.navBar.shadowImage = [UIImage new];
     
 }

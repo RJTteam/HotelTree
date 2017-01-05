@@ -21,7 +21,7 @@
 
 @interface HomeViewController ()<UITableViewDelegate,UITableViewDataSource,SearchMenuToSearchDelegate,QuantitySetDelegate, UITextFieldDelegate, PMCalendarControllerDelegate>
 @property (strong,nonatomic) NSMutableArray *homeArray;
-@property (weak, nonatomic) IBOutlet UIView *upperSideBackView;
+@property (weak, nonatomic) IBOutlet UIView *homeBackView;
 @property (weak, nonatomic) IBOutlet UITableView *homeTableView;
 
 @property (weak, nonatomic) IBOutlet UILabel *checkInDisplayLabel;
@@ -47,13 +47,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     //Set home backgound image
-    self.upperSideBackView.layer.contents = (__bridge id)[UIImage imageNamed:@"homeBackground"].CGImage;
-    self.upperSideBackView.layer.contentsGravity = kCAGravityResizeAspectFill;
+    self.homeBackView.layer.contents = (__bridge id)[UIImage imageNamed:@"homeBackground"].CGImage;
+    self.homeBackView.layer.contentsGravity = kCAGravityResizeAspectFill;
     UIVisualEffect *blurEffect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleRegular];
     UIVisualEffectView *blurEffectView = [[UIVisualEffectView alloc] initWithEffect:blurEffect];
-    blurEffectView.frame = self.upperSideBackView.bounds;
+    blurEffectView.frame = self.homeBackView.bounds;
 //    [self.upperSideBackView addSubview:blurEffectView];
-    [self.upperSideBackView insertSubview:blurEffectView atIndex:0];
+    [self.homeBackView insertSubview:blurEffectView atIndex:0];
+    
     self.inCalender= [[PMCalendarController alloc] initWithSize:CGSizeMake(300, 170)];
     self.inCalender.delegate = self;
     [self.inCalender setAllowedPeriod:[PMPeriod periodWithStartDate:[NSDate date] endDate:[[NSDate date] dateByAddingMonths:12]]];
