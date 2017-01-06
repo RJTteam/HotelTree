@@ -30,6 +30,7 @@
 @property (strong, nonatomic)PMCalendarController *calendar;
 @property (weak, nonatomic) IBOutlet UIImageView *rateImage;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *sidebarButton;
+@property (strong, nonatomic) IBOutlet UIView *detailView;
 
 @end
 
@@ -39,6 +40,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    //Set home backgound image
+    self.detailView.layer.contents = (__bridge id)[UIImage imageNamed:@"homeBackground"].CGImage;
+    self.detailView.layer.contentsGravity = kCAGravityResizeAspectFill;
+    UIVisualEffect *blurEffect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleRegular];
+    UIVisualEffectView *blurEffectView = [[UIVisualEffectView alloc] initWithEffect:blurEffect];
+    blurEffectView.frame = self.detailView.bounds;
+    //    [self.upperSideBackView addSubview:blurEffectView];
+    [self.detailView insertSubview:blurEffectView atIndex:0];
+    
     self.nameLabel.text = self.aHotel.hotelName;
     self.priceLabel.text = [NSString stringWithFormat:@"$%@ per night",self.aHotel.price];
     self.checkInDateLabel.text = self.bookingInfo[@"checkIn"];

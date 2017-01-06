@@ -21,7 +21,7 @@
 
 @interface HomeViewController ()<UITableViewDelegate,UITableViewDataSource,SearchMenuToSearchDelegate,QuantitySetDelegate, UITextFieldDelegate, PMCalendarControllerDelegate>
 @property (strong,nonatomic) NSMutableArray *homeArray;
-@property (weak, nonatomic) IBOutlet UIView *upperSideBackView;
+@property (weak, nonatomic) IBOutlet UIView *homeBackView;
 @property (weak, nonatomic) IBOutlet UITableView *homeTableView;
 
 @property (weak, nonatomic) IBOutlet UILabel *checkInDisplayLabel;
@@ -47,13 +47,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     //Set home backgound image
-    self.upperSideBackView.layer.contents = (__bridge id)[UIImage imageNamed:@"homeBackground"].CGImage;
-    self.upperSideBackView.layer.contentsGravity = kCAGravityResizeAspectFill;
+    self.homeBackView.layer.contents = (__bridge id)[UIImage imageNamed:@"homeBackground"].CGImage;
+    self.homeBackView.layer.contentsGravity = kCAGravityResizeAspectFill;
     UIVisualEffect *blurEffect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleRegular];
     UIVisualEffectView *blurEffectView = [[UIVisualEffectView alloc] initWithEffect:blurEffect];
-    blurEffectView.frame = self.upperSideBackView.bounds;
+    blurEffectView.frame = self.homeBackView.bounds;
 //    [self.upperSideBackView addSubview:blurEffectView];
-    [self.upperSideBackView insertSubview:blurEffectView atIndex:0];
+    [self.homeBackView insertSubview:blurEffectView atIndex:0];
+    
+    self.homeTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    
     self.inCalender= [[PMCalendarController alloc] initWithSize:CGSizeMake(300, 170)];
     self.inCalender.delegate = self;
     [self.inCalender setAllowedPeriod:[PMPeriod periodWithStartDate:[NSDate date] endDate:[[NSDate date] dateByAddingMonths:12]]];
@@ -238,6 +241,37 @@
     }
     
     
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    return 68;
+}
+
+-(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
+    if (section == 0) {
+        UILabel *headerLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 19, 406, 44)];
+        headerLabel.text = @"Order History";
+        headerLabel.textColor = [UIColor whiteColor];
+        headerLabel.alpha = 0.64;
+        headerLabel.textAlignment = NSTextAlignmentCenter;
+        headerLabel.shadowColor = [UIColor lightGrayColor];
+        headerLabel.shadowOffset = CGSizeMake(-2, -1);
+        headerLabel.backgroundColor = [self.homeTableView backgroundColor];
+        headerLabel.font = [UIFont boldSystemFontOfSize:15];
+        return headerLabel;
+    }
+    else{
+        UILabel *headerLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 19, 406, 44)];
+        headerLabel.text = @"Place you should stay";
+        headerLabel.textColor = [UIColor whiteColor];
+        headerLabel.alpha = 0.64;
+        headerLabel.textAlignment = NSTextAlignmentCenter;
+        headerLabel.shadowColor = [UIColor lightGrayColor];
+        headerLabel.shadowOffset = CGSizeMake(-2, -1);
+        headerLabel.backgroundColor = [self.homeTableView backgroundColor];
+        headerLabel.font = [UIFont boldSystemFontOfSize:20];
+        return headerLabel;
+    }
 }
 
 #pragma mark - Navigation

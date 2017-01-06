@@ -27,7 +27,6 @@
 @property (weak, nonatomic) IBOutlet UIButton *minus2;
 @property (weak, nonatomic) IBOutlet UIButton *minus3;
 
-@property (weak, nonatomic) IBOutlet UIImageView *backAnimation;
 
 @end
 
@@ -52,8 +51,6 @@
     self.plus2.layer.cornerRadius = 15;
     self.plus3.layer.cornerRadius = 15;
 
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"background" ofType:@"gif"];
-    [self.backAnimation showGifImageWithData:[NSData dataWithContentsOfFile:path]];
 }
 
 - (void)didReceiveMemoryWarning {

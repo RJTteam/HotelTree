@@ -28,6 +28,7 @@
 @property (strong, nonatomic) IBOutlet UITextField *phoneTextField;
 @property (weak, nonatomic) IBOutlet FUIButton *procceedBtn;
 @property (weak, nonatomic) IBOutlet UIImageView *rateImage;
+@property (strong, nonatomic) IBOutlet UIView *orderView;
 
 @property (strong, nonatomic)PayPalConfiguration *paypalConfig;
 @property (nonatomic)NSInteger numberOfDays;
@@ -40,6 +41,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    //Set home backgound image
+    self.orderView.layer.contents = (__bridge id)[UIImage imageNamed:@"homeBackground"].CGImage;
+    self.orderView.layer.contentsGravity = kCAGravityResizeAspectFill;
+    UIVisualEffect *blurEffect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleRegular];
+    UIVisualEffectView *blurEffectView = [[UIVisualEffectView alloc] initWithEffect:blurEffect];
+    blurEffectView.frame = self.orderView.bounds;
+    //    [self.upperSideBackView addSubview:blurEffectView];
+    [self.orderView insertSubview:blurEffectView atIndex:0];
+    
     ImageStoreManager *imageStoreManager = [[ImageStoreManager alloc]init];
     self.hotelName.text = self.hotel.hotelName;
     self.hotelAddress.text = self.hotel.hotelAddress;

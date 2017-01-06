@@ -12,6 +12,7 @@
 #import "ModelManager.h"
 
 @interface SidebarTableViewController ()
+@property (strong, nonatomic) IBOutlet UITableView *sideBarBackView;
 
 @end
 
@@ -21,9 +22,26 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    //Set home backgound image
+    self.sideBarBackView.layer.contents = (__bridge id)[UIImage imageNamed:@"homeBackground"].CGImage;
+    self.sideBarBackView.layer.contentsGravity = kCAGravityResizeAspectFill;
+    UIVisualEffect *blurEffect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleRegular];
+    UIVisualEffectView *blurEffectView = [[UIVisualEffectView alloc] initWithEffect:blurEffect];
+    blurEffectView.frame = self.sideBarBackView.bounds;
+    //    [self.upperSideBackView addSubview:blurEffectView];
+    [self.sideBarBackView insertSubview:blurEffectView atIndex:0];
+    
+    NSUserDefaults*userInfo = [NSUserDefaults standardUserDefaults];
+    NSString *userID = [userInfo stringForKey:@"userID"];
+    if (!userID) {
+        menuItems = @[@"title",@"menuHome",@"menuSignIn"];
+    }
+    else{
+        menuItems = @[@"title",@"menuHome",@"menuLogOut"];
+    }
+    
+    self.sideBarBackView.separatorStyle = UITableViewCellSeparatorStyleNone;
 
-
-    menuItems = @[@"title",@"menuHome",@"menuLogOut"];
 }
 
 
@@ -52,6 +70,10 @@
         [[ModelManager sharedInstance] clearUserDB];
         [self presentViewController:loginVC animated:YES completion:nil];
     }
-    else;
+    else if ([CellIdentifier isEqualToString:@"menuSignIn"]){
+        UIStoryboard *myStoryBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        LoginViewController *loginVC = [myStoryBoard instantiateViewControllerWithIdentifier:@"LoginViewController"];
+        [self presentViewController:loginVC animated:YES completion:nil];
+    }
 }
 @end
