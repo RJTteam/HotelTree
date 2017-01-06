@@ -55,6 +55,8 @@
 //    [self.upperSideBackView addSubview:blurEffectView];
     [self.homeBackView insertSubview:blurEffectView atIndex:0];
     
+    self.homeTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    
     self.inCalender= [[PMCalendarController alloc] initWithSize:CGSizeMake(300, 170)];
     self.inCalender.delegate = self;
     [self.inCalender setAllowedPeriod:[PMPeriod periodWithStartDate:[NSDate date] endDate:[[NSDate date] dateByAddingMonths:12]]];

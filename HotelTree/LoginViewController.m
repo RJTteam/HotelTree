@@ -20,8 +20,8 @@
 @property (weak, nonatomic) IBOutlet JVFloatLabeledTextField *passwordField;
 
 @property (weak, nonatomic) IBOutlet FUIButton *signinButton;
-@property (weak, nonatomic) IBOutlet FUIButton *signinGoogle;
 @property (weak, nonatomic) IBOutlet FBSDKLoginButton *signinFacebook;
+@property (weak, nonatomic) IBOutlet UIButton *skipButton;
 
 @property (weak, nonatomic) IBOutlet UIButton *resetPWDButton;
 @property (weak, nonatomic) IBOutlet UIButton *registerButton;
@@ -35,8 +35,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setUIButton:self.signinButton WithColorHex:@"0099FF" Font:[UIFont boldFlatFontOfSize:20]];
-    [self setUIButton:self.signinGoogle WithColorHex:@"E04934" Font:[UIFont boldFlatFontOfSize:20]];
-    
+    [[self.skipButton layer] setBorderWidth:2.0f];
+    [[self.skipButton layer] setBorderColor:[UIColor whiteColor].CGColor];
     NSString *path = [[NSBundle mainBundle] pathForResource:@"loginBack" ofType:@"gif"];
     [self.loginGifbackView showGifImageWithData:[NSData dataWithContentsOfFile:path]];
     [TWMessageBarManager sharedInstance];
@@ -52,6 +52,7 @@
     @[@"public_profile", @"email", @"user_friends"];
     
 //     [GIDSignIn sharedInstance].uiDelegate = self;
+    self.passwordField.secureTextEntry = YES;
 }
 
 - (void)setUIButton:(FUIButton *)btn WithColorHex:(NSString*)hexColor Font:(UIFont*)font{
@@ -103,10 +104,15 @@
     FBSDKLoginManager *loginManager = [[FBSDKLoginManager alloc]init];
     [loginManager logInWithReadPermissions:@[@"email"]fromViewController:self handler:^(FBSDKLoginManagerLoginResult *result, NSError *error) {
         NSLog(@"result is %@",result);
-
+        
     }];
 }
 
+- (IBAction)skipBtnClick:(id)sender {
+    [self performSegueWithIdentifier:@"loginToHome" sender:nil];
+    NSUserDefaults*userInfo = [NSUserDefaults standardUserDefaults];
+    [userInfo removeObjectForKey:@"userID"];
+}
 
 -(IBAction)exitFromReset:(UIStoryboardSegue *)unwindsegue {
 }

@@ -30,8 +30,18 @@
     blurEffectView.frame = self.sideBarBackView.bounds;
     //    [self.upperSideBackView addSubview:blurEffectView];
     [self.sideBarBackView insertSubview:blurEffectView atIndex:0];
+    
+    NSUserDefaults*userInfo = [NSUserDefaults standardUserDefaults];
+    NSString *userID = [userInfo stringForKey:@"userID"];
+    if (!userID) {
+        menuItems = @[@"title",@"menuHome",@"menuSignIn"];
+    }
+    else{
+        menuItems = @[@"title",@"menuHome",@"menuLogOut"];
+    }
+    
+    self.sideBarBackView.separatorStyle = UITableViewCellSeparatorStyleNone;
 
-    menuItems = @[@"title",@"menuHome",@"menuLogOut"];
 }
 
 
@@ -60,6 +70,10 @@
         [[ModelManager sharedInstance] clearUserDB];
         [self presentViewController:loginVC animated:YES completion:nil];
     }
-    else;
+    else if ([CellIdentifier isEqualToString:@"menuSignIn"]){
+        UIStoryboard *myStoryBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        LoginViewController *loginVC = [myStoryBoard instantiateViewControllerWithIdentifier:@"LoginViewController"];
+        [self presentViewController:loginVC animated:YES completion:nil];
+    }
 }
 @end
