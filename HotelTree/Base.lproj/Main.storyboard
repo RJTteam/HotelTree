@@ -960,7 +960,7 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.1017765410958904" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
                     </view>
@@ -1560,6 +1560,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="wxQ-sD-aHp"/>
-        <segue reference="J9o-2V-ih1"/>
+        <segue reference="XE2-gl-k00"/>
     </inferredMetricsTieBreakers>
 </document>
