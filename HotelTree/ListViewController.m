@@ -53,6 +53,11 @@
     }
 }
 
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [self.listTable reloadData];
+}
+
 - (void)setUIButton:(FUIButton *)btn WithColorHex:(NSString*)hexColor Font:(UIFont*)font{
     btn.buttonColor = [UIColor colorFromHexCode:hexColor];
     btn.shadowColor = [UIColor colorFromHexCode:@"4D68A2"];

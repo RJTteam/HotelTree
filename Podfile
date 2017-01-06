@@ -12,6 +12,8 @@ target 'HotelTree' do
   pod 'ActionSheetPicker-3.0', '~> 2.2.0'
   pod 'FoldingTabBar', '~> 1.1'
   pod "CSStickyHeaderFlowLayout"
+  pod 'PayPal-iOS-SDK'
+  pod 'Stripe', '~> 9.2'
 
   pod 'MBProgressHUD', '~> 1.0.0'
   pod 'TWMessageBarManager'
