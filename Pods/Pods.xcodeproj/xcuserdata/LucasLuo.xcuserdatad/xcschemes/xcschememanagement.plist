@@ -8,89 +8,66 @@
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>1</integer>
 		</dict>
 		<key>CSStickyHeaderFlowLayout.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>2</integer>
 		</dict>
 		<key>FlatUIKit.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>3</integer>
 		</dict>
 		<key>FoldingTabBar.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>4</integer>
-		</dict>
-		<key>GTMOAuth2.xcscheme</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>11</integer>
-		</dict>
-		<key>GTMSessionFetcher.xcscheme</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>12</integer>
-		</dict>
-		<key>GoogleToolboxForMac.xcscheme</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>10</integer>
 		</dict>
 		<key>JVFloatLabeledTextField.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>5</integer>
 		</dict>
 		<key>MBProgressHUD.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>6</integer>
 		</dict>
 		<key>Pods-HotelTree.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>7</integer>
+		</dict>
+		<key>Stripe-Stripe.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Stripe.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>TWMessageBarManager.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>8</integer>
 		</dict>
 		<key>UITextField+Shake.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>9</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>0EA69E64579562F4220AC4B365321FCA</key>
+		<key>0B79C4098DD05B02CD977AC200AFB782</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>107A9565F9DF88517DFD3E28C05B2B96</key>
+		<key>1CAF8D83686B3B600E03972CE7E8E3C7</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -100,12 +77,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>2A4448146C785C426971111F117D773C</key>
+		<key>274980BF08705F3D9A203BC3FDB20161</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>319AE6D5120D5F497551A65B757719E2</key>
+		<key>279221BDD46FD1D75FB0AB20502B9220</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>2A4448146C785C426971111F117D773C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -120,37 +102,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>681BE6E3D02A43F9BA63777AC435C8FD</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>756C368C8C614D7C9E6F350B66E64780</key>
+		<key>86E5168AD38DDA29D04430C2419CF44B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>965699190112DDBD9B7864D091660DBC</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>97A9C6748D28BFB99C243ED29AEDF755</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>B0F1D8B919EFE8BD20DCFBB4BE917267</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>B1C4AAFAF49036C7007633DAA3C806AD</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>D5863C3EBA703B7E738B8FD738F54695</key>
 		<dict>
 			<key>primary</key>
 			<true/>

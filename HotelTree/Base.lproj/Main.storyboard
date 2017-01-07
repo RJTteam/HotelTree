@@ -1537,7 +1537,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="SCd-SQ-cX0" customClass="CustomiseNavController" sceneMemberID="viewController">
                     <toolbarItems/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="qmb-Yg-qHr">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="qmb-Yg-qHr">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>

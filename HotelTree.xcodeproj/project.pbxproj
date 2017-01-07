@@ -38,6 +38,7 @@
 		C3ADF5D31E1B821F00CCB7C8 /* background.gif in Resources */ = {isa = PBXBuildFile; fileRef = C3ADF5D21E1B821F00CCB7C8 /* background.gif */; };
 		C3ADF6031E1CD86C00CCB7C8 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3ADF6001E1CD86C00CCB7C8 /* SWRevealViewController.m */; };
 		C3ADF6041E1CD86C00CCB7C8 /* SidebarTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3ADF6021E1CD86C00CCB7C8 /* SidebarTableViewController.m */; };
+		C3ADF6711E204EC500CCB7C8 /* StripePaymentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3ADF6701E204EC500CCB7C8 /* StripePaymentViewController.m */; };
 		C3DA38361E16F5AC00E1AB83 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DA38351E16F5AC00E1AB83 /* main.m */; };
 		C3DA38391E16F5AC00E1AB83 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DA38381E16F5AC00E1AB83 /* AppDelegate.m */; };
 		C3DA383F1E16F5AC00E1AB83 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3DA383D1E16F5AC00E1AB83 /* Main.storyboard */; };
@@ -137,6 +138,8 @@
 		C3ADF6001E1CD86C00CCB7C8 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		C3ADF6011E1CD86C00CCB7C8 /* SidebarTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SidebarTableViewController.h; sourceTree = "<group>"; };
 		C3ADF6021E1CD86C00CCB7C8 /* SidebarTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SidebarTableViewController.m; sourceTree = "<group>"; };
+		C3ADF66F1E204EC500CCB7C8 /* StripePaymentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StripePaymentViewController.h; sourceTree = "<group>"; };
+		C3ADF6701E204EC500CCB7C8 /* StripePaymentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StripePaymentViewController.m; sourceTree = "<group>"; };
 		C3DA38311E16F5AC00E1AB83 /* HotelTree.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HotelTree.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3DA38351E16F5AC00E1AB83 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C3DA38371E16F5AC00E1AB83 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -393,6 +396,8 @@
 				C3ADF5BA1E1A23CB00CCB7C8 /* RequirementViewController.m */,
 				C3ADF57D1E19636500CCB7C8 /* UserSearchResultViewController.h */,
 				C3ADF57E1E19636500CCB7C8 /* UserSearchResultViewController.m */,
+				C3ADF66F1E204EC500CCB7C8 /* StripePaymentViewController.h */,
+				C3ADF6701E204EC500CCB7C8 /* StripePaymentViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -599,6 +604,7 @@
 			files = (
 				C3ADF6041E1CD86C00CCB7C8 /* SidebarTableViewController.m in Sources */,
 				C3ADF5A61E1A215600CCB7C8 /* PMCalendarView.m in Sources */,
+				C3ADF6711E204EC500CCB7C8 /* StripePaymentViewController.m in Sources */,
 				C3DA38E01E18B5FC00E1AB83 /* ImageStoreManager.m in Sources */,
 				C3DA38ED1E18B66A00E1AB83 /* OrderConfirmViewController.m in Sources */,
 				C3ADF5831E19728E00CCB7C8 /* MapViewController.m in Sources */,

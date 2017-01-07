@@ -15,5 +15,7 @@ target 'HotelTree' do
 
   pod 'MBProgressHUD', '~> 1.0.0'
   pod 'TWMessageBarManager'
-  pod 'Google/SignIn'
+
+  pod 'PayPal-iOS-SDK'
+  pod 'Stripe'
 end
