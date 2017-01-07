@@ -23,7 +23,8 @@
 @property (strong, nonatomic) IBOutlet UILabel *checkInDate;
 @property (strong, nonatomic) IBOutlet UILabel *checkOutDate;
 @property (strong, nonatomic) IBOutlet UILabel *hotelPrice;
-
+@property (strong, nonatomic) IBOutlet UITextField *firstNameTextField;
+@property (strong, nonatomic) IBOutlet UITextField *lastNameTextField;
 @property (strong, nonatomic) IBOutlet UITextField *emailTextField;
 @property (strong, nonatomic) IBOutlet UITextField *phoneTextField;
 @property (weak, nonatomic) IBOutlet FUIButton *procceedBtn;
@@ -101,11 +102,11 @@
 - (IBAction)proceedButtonClicked:(id)sender {
     
     
-
+    
     if(self.userinfo){
         [self proceedWithActionSheet];
     }
-
+    
 }
 
 - (void)proceedWithActionSheet{
@@ -117,7 +118,7 @@
         payment.amount = [[NSDecimalNumber alloc] initWithDouble: totalPrice];
         payment.delegate = self;
         [self.navigationController pushViewController:payment animated:YES];
-       
+        
         NSLog(@"pay with credit card");
     }];
     UIAlertAction *paypal = [UIAlertAction actionWithTitle:@"Paypal" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
@@ -178,18 +179,9 @@
     if(error){
         [[TWMessageBarManager sharedInstance] showMessageWithTitle:@"Payment Error!" description:error.localizedDescription type:TWMessageBarMessageTypeError duration:4.0f];
     }else{
-       [[TWMessageBarManager sharedInstance] showMessageWithTitle:@"Payment Success!" description:@"Your payment is accepted!"  type:TWMessageBarMessageTypeSuccess duration:4.0f];
+        [[TWMessageBarManager sharedInstance] showMessageWithTitle:@"Payment Success!" description:@"Your payment is accepted!"  type:TWMessageBarMessageTypeSuccess duration:4.0f];
         [self.navigationController popToViewController:self.navigationController.viewControllers[1] animated:YES];
     }
 }
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
