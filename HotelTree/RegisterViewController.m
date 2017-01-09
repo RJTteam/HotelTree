@@ -35,8 +35,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self setUIButton:self.registerBtn WithColorHex:@"FFFFFF" Font:[UIFont boldFlatFontOfSize:20]];
-    [self.registerBtn setTitleColor:[UIColor colorFromHexCode:@"CC3333"] forState:UIControlStateNormal];
+    [self setUIButton:self.registerBtn WithColorHex:@"009051" Font:[UIFont boldFlatFontOfSize:20]];
+    [self.registerBtn setTitleColor:[UIColor colorFromHexCode:@"FFFFFF"] forState:UIControlStateNormal];
     [self.registerBtn setTitleColor:[UIColor colorFromHexCode:@"CC3333"] forState:UIControlStateHighlighted];
     [self setUIButton:self.backToSignin WithColorHex:@"CC3333" Font:[UIFont boldFlatFontOfSize:20]];
     

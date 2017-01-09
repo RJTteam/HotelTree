@@ -15,6 +15,7 @@
 #import "DetailViewController.h"
 #import "FlatUIKit.h"
 #import "SWRevealViewController.h"
+#import "MapViewController.h"
 
 @interface ListViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -179,6 +180,9 @@
              desitViewControl.bookingInfo = self.bookingInfo;
          }
          
+     }else if([segue.identifier isEqualToString:@"toMapSegue"]){
+         MapViewController *destination = segue.destinationViewController;
+         destination.bookingInfo = self.bookingInfo;
      }
 
  }

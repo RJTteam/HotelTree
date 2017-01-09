@@ -31,9 +31,8 @@
     //    [self.upperSideBackView addSubview:blurEffectView];
     [self.sideBarBackView insertSubview:blurEffectView atIndex:0];
     
-    NSUserDefaults*userInfo = [NSUserDefaults standardUserDefaults];
-    NSString *userID = [userInfo stringForKey:@"userID"];
-    if (!userID) {
+    NSArray *users = [[ModelManager sharedInstance] getAllUser];
+    if (users.count == 0) {
         menuItems = @[@"title",@"menuHome",@"menuSignIn"];
     }
     else{
