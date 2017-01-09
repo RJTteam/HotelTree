@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "PayPalMobile.h"
 #import <CoreLocation/CoreLocation.h>
+#import "ModelManager.h"
 
 static NSString *client_id = @"ATRCTb8tL2oIqDtUKQy0hNU7HD23I3GkxPcMhaJXY6CPYH_uqUKaPWrVftzzccHkd7POK9o7iKzXDmPT";
 @interface AppDelegate ()
@@ -48,6 +49,11 @@ static NSString *client_id = @"ATRCTb8tL2oIqDtUKQy0hNU7HD23I3GkxPcMhaJXY6CPYH_uq
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
+    NSString *mobile = [userDefault objectForKey:@"userID"];
+    if(mobile){
+        [[ModelManager sharedInstance] removeUser:mobile];
+    }
 }
 
 
