@@ -46,9 +46,9 @@
     [[self.skipButton layer] setBorderWidth:2.0f];
     [[self.skipButton layer] setBorderColor:[UIColor whiteColor].CGColor];
     [[self.resetPWDButton layer] setBorderWidth:2.0f];
-    [[self.resetPWDButton layer] setBorderColor:[UIColor colorFromHexCode:@"0066FF"].CGColor];
+    [[self.resetPWDButton layer] setBorderColor:[UIColor whiteColor].CGColor];
     [[self.registerButton layer] setBorderWidth:2.0f];
-    [[self.registerButton layer] setBorderColor:[UIColor colorFromHexCode:@"0066FF"].CGColor];
+    [[self.registerButton layer] setBorderColor:[UIColor whiteColor].CGColor];
     [TWMessageBarManager sharedInstance];
     NSUserDefaults *savedUserInfo = [NSUserDefaults standardUserDefaults];
     NSString *mobile = [savedUserInfo objectForKey:@"userID"];

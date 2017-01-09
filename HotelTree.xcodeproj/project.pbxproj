@@ -80,6 +80,7 @@
 		C3DA39031E18B6F900E1AB83 /* WebService.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DA38FB1E18B6F900E1AB83 /* WebService.m */; };
 		C3DA39041E18B6F900E1AB83 /* WebServiceProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DA38FD1E18B6F900E1AB83 /* WebServiceProvider.m */; };
 		C3DA39071E18B76900E1AB83 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C3DA39061E18B76900E1AB83 /* libsqlite3.0.tbd */; };
+		E878D89A1E236B6D00A7DCC8 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E878D8991E236B6D00A7DCC8 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -212,6 +213,7 @@
 		C3DA38FC1E18B6F900E1AB83 /* WebServiceProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebServiceProvider.h; sourceTree = "<group>"; };
 		C3DA38FD1E18B6F900E1AB83 /* WebServiceProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebServiceProvider.m; sourceTree = "<group>"; };
 		C3DA39061E18B76900E1AB83 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		E878D8991E236B6D00A7DCC8 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		E8CC58771E1C06AA0098ED8D /* FlatUIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FlatUIKit.framework; path = "Pods/../build/Release-iphoneos/FlatUIKit/FlatUIKit.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -220,6 +222,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E878D89A1E236B6D00A7DCC8 /* CoreLocation.framework in Frameworks */,
 				C3ADF5CB1E1B3E9D00CCB7C8 /* AddressBookUI.framework in Frameworks */,
 				C3DA38C01E18662E00E1AB83 /* MapKit.framework in Frameworks */,
 				C3DA39071E18B76900E1AB83 /* libsqlite3.0.tbd in Frameworks */,
@@ -237,6 +240,7 @@
 		0C5A69AC0C3370E23F09137F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E878D8991E236B6D00A7DCC8 /* CoreLocation.framework */,
 				E8CC58771E1C06AA0098ED8D /* FlatUIKit.framework */,
 				C3ADF5CA1E1B3E9D00CCB7C8 /* AddressBookUI.framework */,
 				C3DA39061E18B76900E1AB83 /* libsqlite3.0.tbd */,

@@ -145,7 +145,18 @@
     cell.priceLabel.text = obj.price;
     
     cell.hotelImage.image = [UIImage imageWithContentsOfFile:[[[ImageStoreManager alloc]init] getImageStoreFilePathByHotelId:obj.hotelId]];
-    
+    if(obj.hotelRating.intValue >= 0 && obj.hotelRating.intValue < 1){
+        cell.rateImage.image = [UIImage imageNamed:@"Group0"];
+    }else if(obj.hotelRating.intValue >= 1 && obj.hotelRating.intValue < 2){
+        cell.rateImage.image = [UIImage imageNamed:@"Group3"];
+    }else if(obj.hotelRating.intValue >= 2 && obj.hotelRating.intValue < 3){
+        cell.rateImage.image = [UIImage imageNamed:@"Group3"];
+    }else if(obj.hotelRating.intValue >= 3 && obj.hotelRating.intValue < 4){
+        cell.rateImage.image = [UIImage imageNamed:@"Group4"];
+    }else if(obj.hotelRating.intValue >= 4 && obj.hotelRating.intValue < 5){
+        cell.rateImage.image = [UIImage imageNamed:@"Group5"];
+        
+    }
     cell.cellView.layer.shadowOpacity = 0.5f;
     cell.cellView.layer.shadowRadius = 3;
     cell.cellView.layer.shadowOffset = CGSizeMake(2.0f, 4.0f);

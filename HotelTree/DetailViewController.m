@@ -25,6 +25,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *priceLabel;
 @property (weak, nonatomic) IBOutlet UILabel *checkInDateLabel;
 @property (weak, nonatomic) IBOutlet UILabel *checkOutDateLabel;
+@property (weak, nonatomic) IBOutlet UIScrollView *backScrollView;
 
 @property (weak, nonatomic) IBOutlet MKMapView *aHotelMap;
 @property (weak, nonatomic) IBOutlet UIImageView *aHotelImage;
@@ -55,7 +56,8 @@
     self.checkInDateLabel.text = self.bookingInfo[@"checkIn"];
     self.checkOutDateLabel.text = self.bookingInfo[@"checkOut"];
     [self setUIButton:self.orderBtn WithColorHex:@"04ACFF" Font:[UIFont boldFlatFontOfSize:20]];
-
+    
+    self.backScrollView.contentSize = CGSizeMake(self.view.bounds.size.width, self.backScrollView.frame.size.height);
     
     _coordinate.longitude = [[NSString stringWithFormat:@"-%@",self.aHotel.hotelLongitude] doubleValue];
     
@@ -80,6 +82,21 @@
         [self.sidebarButton setTarget: self.revealViewController];
         [self.sidebarButton setAction: @selector( revealToggle: )];
         [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
+    }
+}
+
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    if(self.aHotel.hotelRating.intValue >= 0 && self.aHotel.hotelRating.intValue < 1){
+        self.rateImage.image = [UIImage imageNamed:@"Group0"];
+    }else if(self.aHotel.hotelRating.intValue >= 1 && self.aHotel.hotelRating.intValue < 2){
+        self.rateImage.image = [UIImage imageNamed:@"Group3"];
+    }else if(self.aHotel.hotelRating.intValue >= 2 && self.aHotel.hotelRating.intValue < 3){
+        self.rateImage.image = [UIImage imageNamed:@"Group3"];
+    }else if(self.aHotel.hotelRating.intValue >= 3 && self.aHotel.hotelRating.intValue < 4){
+        self.rateImage.image = [UIImage imageNamed:@"Group4"];
+    }else if(self.aHotel.hotelRating.intValue >= 4 && self.aHotel.hotelRating.intValue < 5){
+        self.rateImage.image = [UIImage imageNamed:@"Group5"];
     }
 }
 
@@ -123,6 +140,11 @@
     formater.timeStyle = NSDateFormatterNoStyle;
     self.checkInDateLabel.text = [formater stringFromDate:start];
     self.checkOutDateLabel.text = [formater stringFromDate:end];
+    NSMutableDictionary *dict = [self.bookingInfo mutableCopy];
+    self.bookingInfo = nil;
+    [dict setValue:self.checkInDateLabel.text forKey:@"checkIn"];
+    [dict setValue:self.checkOutDateLabel.text forKey:@"checkOut"];
+    self.bookingInfo = [NSDictionary dictionaryWithDictionary:dict];
     return YES;
 }
 
@@ -140,7 +162,7 @@
         Order *currentOrder = [[Order alloc] initWithDictionary:dict];
         NSDateFormatter *formater = [[NSDateFormatter alloc] init];
         formater.timeZone = [NSTimeZone localTimeZone];
-        formater.dateFormat = @"EEE, MMM, yyyy";
+        formater.dateFormat = @"EEE MMM, yyyy";
         NSDate *checkInDate = [formater dateFromString:self.bookingInfo[@"checkIn"]];
         NSDate *checkOutDate = [formater dateFromString:self.bookingInfo[@"checkOut"]];
         [currentOrder setCheckInDate:checkInDate];
