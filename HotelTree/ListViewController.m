@@ -23,6 +23,8 @@
 @property (weak, nonatomic) IBOutlet FUIButton *filterBtn;
 @property (weak, nonatomic) IBOutlet FUIButton *mapBtn;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *sidebarButton;
+
+@property (strong, nonatomic)NSArray *originalArray;
 @end
 
 @implementation ListViewController
@@ -84,6 +86,44 @@
     //    NSLog(@"%@",self.hotelsArray);
 }
 
+- (IBAction)filter:(UIButton *)sender {
+    
+    UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Filter" message:@"Input the range of price" preferredStyle:UIAlertControllerStyleAlert];
+    
+    [alert addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
+        textField.placeholder = @"Max Price";
+        textField.borderStyle = UITextBorderStyleLine;
+    }];
+    
+    [alert addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
+        textField.placeholder = @"Min Price";
+        textField.borderStyle = UITextBorderStyleLine;
+    }];
+    
+    UIAlertAction* cancle = [UIAlertAction actionWithTitle:@"Cancle" style:UIAlertActionStyleCancel handler:nil];
+    
+    UIAlertAction* set = [UIAlertAction actionWithTitle:@"Set" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        NSString *maxPrice = alert.textFields[0].text;
+        NSString *minPrice = alert.textFields[1].text;
+        if(minPrice.intValue > maxPrice.intValue){
+            NSString *tmp = minPrice;
+            minPrice = maxPrice;
+            maxPrice = tmp;
+            alert.textFields[0].text = maxPrice;
+            alert.textFields[1].text = minPrice;
+        }else{
+            SortManager *sort = [[SortManager alloc]init];
+            self.hotelsArray = [sort filterHotelByPrice:self.hotelsArray withMinPrice:alert.textFields[1].text andMaxPrice:alert.textFields[0].text];
+            [self.listTable reloadData];
+        }
+    }];
+    
+    [alert addAction:set];
+    [alert addAction:cancle];
+    
+    [self presentViewController:alert animated:YES completion:nil];
+    
+}
 
 
 - (void)didReceiveMemoryWarning {

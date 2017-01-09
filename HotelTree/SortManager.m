@@ -28,6 +28,12 @@
     return result;
 }
 
+-(NSArray *)filterHotelByPrice:(NSArray *)hotels withMinPrice:(NSString*)min andMaxPrice:(NSString*)max{
+    NSPredicate* filterPredicate = [NSPredicate predicateWithFormat:@"price.intValue BETWEEN {%d,%d}",min.intValue,max.intValue];
+    NSArray *result = [hotels filteredArrayUsingPredicate:filterPredicate];
+    return result;
+}
+
 
 //please copy the follow method to target view controller for Button click stratge
 /*
