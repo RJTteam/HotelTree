@@ -9,7 +9,7 @@
 #import "LoginViewController.h"
 #import "JVFloatLabeledTextField.h"
 #import "FlatUIKit.h"
-#import "UIImageView+GIF.h"
+#import "HotelBack0View.h"
 #import <TWMessageBarManager/TWMessageBarManager.h>
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
 #import <FBSDKLoginKit/FBSDKLoginKit.h>
@@ -26,7 +26,6 @@
 @property (weak, nonatomic) IBOutlet UIButton *resetPWDButton;
 @property (weak, nonatomic) IBOutlet UIButton *registerButton;
 
-@property (weak, nonatomic) IBOutlet UIImageView *loginGifbackView;
 
 @property (nonatomic)BOOL keyboardIsShowing;
 @property (nonatomic)CGFloat keyboardMovingOffset;
@@ -37,14 +36,19 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    HotelBack0View *backview = [[HotelBack0View alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
+    [backview addHotelBackGroundAnimation];
+    [self.view insertSubview:backview atIndex:0];
     self.keyboardIsShowing = NO;
     self.phoneField.delegate = self;
     self.passwordField.delegate = self;
     [self setUIButton:self.signinButton WithColorHex:@"0099FF" Font:[UIFont boldFlatFontOfSize:20]];
     [[self.skipButton layer] setBorderWidth:2.0f];
     [[self.skipButton layer] setBorderColor:[UIColor whiteColor].CGColor];
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"loginBack" ofType:@"gif"];
-    [self.loginGifbackView showGifImageWithData:[NSData dataWithContentsOfFile:path]];
+    [[self.resetPWDButton layer] setBorderWidth:2.0f];
+    [[self.resetPWDButton layer] setBorderColor:[UIColor colorFromHexCode:@"0066FF"].CGColor];
+    [[self.registerButton layer] setBorderWidth:2.0f];
+    [[self.registerButton layer] setBorderColor:[UIColor colorFromHexCode:@"0066FF"].CGColor];
     [TWMessageBarManager sharedInstance];
     NSUserDefaults *savedUserInfo = [NSUserDefaults standardUserDefaults];
     NSString *mobile = [savedUserInfo objectForKey:@"userID"];
