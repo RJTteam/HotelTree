@@ -15,6 +15,7 @@
 #import "ImageStoreManager.h"
 #import "FlatUIKit.h"
 #import "SWRevealViewController.h"
+#import "MapViewController.h"
 
 #define METERS_PRE_MILE 1609.34
 
@@ -145,6 +146,9 @@
         [currentOrder setCheckInDate:checkInDate];
         [currentOrder setCheckOutDate:checkOutDate];
         vc.order = currentOrder;
+    }else if([segue.identifier isEqualToString:@"toMapSegue"]){
+        MapViewController *vc = segue.destinationViewController;
+        vc.bookingInfo = self.bookingInfo;
     }
 }
 

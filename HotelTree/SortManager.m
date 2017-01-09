@@ -11,7 +11,7 @@
 @implementation SortManager
 
 -(NSArray *)sortHotelByName:(NSArray *)hotels{
-    NSSortDescriptor *sortDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"hotelName" ascending:YES];
+    NSSortDescriptor *sortDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"hotelName" ascending:YES selector:@selector(caseInsensitiveCompare:)];
     NSArray *result = [hotels sortedArrayUsingDescriptors:[NSArray arrayWithObject:sortDescriptor]];
     return result;
 }
