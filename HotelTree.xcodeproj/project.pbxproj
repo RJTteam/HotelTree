@@ -39,6 +39,8 @@
 		C3ADF6031E1CD86C00CCB7C8 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3ADF6001E1CD86C00CCB7C8 /* SWRevealViewController.m */; };
 		C3ADF6041E1CD86C00CCB7C8 /* SidebarTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3ADF6021E1CD86C00CCB7C8 /* SidebarTableViewController.m */; };
 		C3ADF6711E204EC500CCB7C8 /* StripePaymentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3ADF6701E204EC500CCB7C8 /* StripePaymentViewController.m */; };
+		C3ADF6891E232EB600CCB7C8 /* HotelBack0View.m in Sources */ = {isa = PBXBuildFile; fileRef = C3ADF6881E232EB600CCB7C8 /* HotelBack0View.m */; };
+		C3ADF68B1E232F5D00CCB7C8 /* galerry_grand-hotel-el-mirador-introduction-hotels-image-3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C3ADF68A1E232F5D00CCB7C8 /* galerry_grand-hotel-el-mirador-introduction-hotels-image-3.jpg */; };
 		C3DA38361E16F5AC00E1AB83 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DA38351E16F5AC00E1AB83 /* main.m */; };
 		C3DA38391E16F5AC00E1AB83 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DA38381E16F5AC00E1AB83 /* AppDelegate.m */; };
 		C3DA383F1E16F5AC00E1AB83 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3DA383D1E16F5AC00E1AB83 /* Main.storyboard */; };
@@ -140,6 +142,9 @@
 		C3ADF6021E1CD86C00CCB7C8 /* SidebarTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SidebarTableViewController.m; sourceTree = "<group>"; };
 		C3ADF66F1E204EC500CCB7C8 /* StripePaymentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StripePaymentViewController.h; sourceTree = "<group>"; };
 		C3ADF6701E204EC500CCB7C8 /* StripePaymentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StripePaymentViewController.m; sourceTree = "<group>"; };
+		C3ADF6871E232EB600CCB7C8 /* HotelBack0View.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HotelBack0View.h; sourceTree = "<group>"; };
+		C3ADF6881E232EB600CCB7C8 /* HotelBack0View.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HotelBack0View.m; sourceTree = "<group>"; };
+		C3ADF68A1E232F5D00CCB7C8 /* galerry_grand-hotel-el-mirador-introduction-hotels-image-3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "galerry_grand-hotel-el-mirador-introduction-hotels-image-3.jpg"; sourceTree = "<group>"; };
 		C3DA38311E16F5AC00E1AB83 /* HotelTree.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HotelTree.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3DA38351E16F5AC00E1AB83 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C3DA38371E16F5AC00E1AB83 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -357,6 +362,8 @@
 			children = (
 				C3DA384F1E17538000E1AB83 /* SplashTitleAnimationView.h */,
 				C3DA38501E17538000E1AB83 /* SplashTitleAnimationView.m */,
+				C3ADF6871E232EB600CCB7C8 /* HotelBack0View.h */,
+				C3ADF6881E232EB600CCB7C8 /* HotelBack0View.m */,
 			);
 			name = Animation;
 			sourceTree = "<group>";
@@ -408,6 +415,7 @@
 				C3DA38A81E17738F00E1AB83 /* title1.png */,
 				C3DA38A91E17738F00E1AB83 /* title2.png */,
 				C3DA38AA1E17738F00E1AB83 /* title3.png */,
+				C3ADF68A1E232F5D00CCB7C8 /* galerry_grand-hotel-el-mirador-introduction-hotels-image-3.jpg */,
 			);
 			path = images;
 			sourceTree = "<group>";
@@ -534,6 +542,7 @@
 				C3ADF5B21E1A218800CCB7C8 /* background.png in Resources */,
 				C3ADF5C61E1B35E500CCB7C8 /* adv1.gif in Resources */,
 				C3ADF5CD1E1B7A5000CCB7C8 /* Assets.xcassets in Resources */,
+				C3ADF68B1E232F5D00CCB7C8 /* galerry_grand-hotel-el-mirador-introduction-hotels-image-3.jpg in Resources */,
 				C3DA385E1E175D1800E1AB83 /* splash.gif in Resources */,
 				C3DA38AD1E17738F00E1AB83 /* title3.png in Resources */,
 				C3DA38761E176C5A00E1AB83 /* loginBack.gif in Resources */,
@@ -605,6 +614,7 @@
 				C3ADF6041E1CD86C00CCB7C8 /* SidebarTableViewController.m in Sources */,
 				C3ADF5A61E1A215600CCB7C8 /* PMCalendarView.m in Sources */,
 				C3ADF6711E204EC500CCB7C8 /* StripePaymentViewController.m in Sources */,
+				C3ADF6891E232EB600CCB7C8 /* HotelBack0View.m in Sources */,
 				C3DA38E01E18B5FC00E1AB83 /* ImageStoreManager.m in Sources */,
 				C3DA38ED1E18B66A00E1AB83 /* OrderConfirmViewController.m in Sources */,
 				C3ADF5831E19728E00CCB7C8 /* MapViewController.m in Sources */,
