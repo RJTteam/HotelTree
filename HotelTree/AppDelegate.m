@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "PayPalMobile.h"
+#import <CoreLocation/CoreLocation.h>
 
 static NSString *client_id = @"ATRCTb8tL2oIqDtUKQy0hNU7HD23I3GkxPcMhaJXY6CPYH_uqUKaPWrVftzzccHkd7POK9o7iKzXDmPT";
 @interface AppDelegate ()
@@ -15,7 +16,6 @@ static NSString *client_id = @"ATRCTb8tL2oIqDtUKQy0hNU7HD23I3GkxPcMhaJXY6CPYH_uq
 @end
 
 @implementation AppDelegate
-
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.

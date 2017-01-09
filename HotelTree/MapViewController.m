@@ -32,8 +32,8 @@
     // Do any additional setup after loading the view.
     ModelManager *modelManager = [ModelManager sharedInstance];
     NSDictionary* dic = @{  //TODO: set user search coordinate
-                          @"hotelLatitude":@"28.6049",
-                          @"hotelLong":@"77.2235"
+                          @"hotelLatitude":self.bookingInfo[@"hotelLat"],
+                          @"hotelLong":self.bookingInfo[@"hotelLong"]
                           };
     
     

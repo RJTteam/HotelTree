@@ -15,7 +15,7 @@
 #import "StripePaymentViewController.h"
 #import "TWMessageBarManager.h"
 
-@interface OrderConfirmViewController ()<PayPalPaymentDelegate,PaymentViewControllerDelegate>
+@interface OrderConfirmViewController ()<PayPalPaymentDelegate,PaymentViewControllerDelegate, UITextFieldDelegate>
 @property (strong, nonatomic) IBOutlet UILabel *hotelName;
 @property (strong, nonatomic) IBOutlet UILabel *hotelAddress;
 @property (strong, nonatomic) IBOutlet UILabel *hotelRating;
@@ -23,8 +23,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *checkInDate;
 @property (strong, nonatomic) IBOutlet UILabel *checkOutDate;
 @property (strong, nonatomic) IBOutlet UILabel *hotelPrice;
-@property (strong, nonatomic) IBOutlet UITextField *firstNameTextField;
-@property (strong, nonatomic) IBOutlet UITextField *lastNameTextField;
+
 @property (strong, nonatomic) IBOutlet UITextField *emailTextField;
 @property (strong, nonatomic) IBOutlet UITextField *phoneTextField;
 @property (weak, nonatomic) IBOutlet FUIButton *procceedBtn;
@@ -63,6 +62,7 @@
     self.checkOutDate.text = [self NSDateToNSString:self.order.checkOutDate ];
     NSTimeInterval timeinterval = [self.order.checkOutDate timeIntervalSinceDate:self.order.checkInDate];
     self.numberOfDays = timeinterval / (24 * 3600);
+    self.numberOfDays = self.numberOfDays == 0 ? 1 : self.numberOfDays;
     self.hotelPrice.text = [NSString stringWithFormat:@"$ %.00f",[self.hotel.price doubleValue] * self.numberOfDays];
     
     ModelManager *userManager = [ModelManager sharedInstance];
@@ -88,6 +88,21 @@
     self.paypalConfig.merchantName = @"Hotel Tree";
     self.paypalConfig.merchantPrivacyPolicyURL = [NSURL URLWithString:@"https://www.paypal.com/webapps/mpp/ua/privacy-full"];
     self.paypalConfig.merchantUserAgreementURL = [NSURL URLWithString:@"https://www.paypal.com/webapps/mpp/ua/useragreement-full"];
+}
+
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    if(self.hotel.hotelRating.intValue >= 0 && self.hotel.hotelRating.intValue < 1){
+        self.rateImage.image = [UIImage imageNamed:@"Group0"];
+    }else if(self.hotel.hotelRating.intValue >= 1 && self.hotel.hotelRating.intValue < 2){
+        self.rateImage.image = [UIImage imageNamed:@"Group3"];
+    }else if(self.hotel.hotelRating.intValue >= 2 && self.hotel.hotelRating.intValue < 3){
+        self.rateImage.image = [UIImage imageNamed:@"Group3"];
+    }else if(self.hotel.hotelRating.intValue >= 3 && self.hotel.hotelRating.intValue < 4){
+        self.rateImage.image = [UIImage imageNamed:@"Group4"];
+    }else if(self.hotel.hotelRating.intValue >= 4 && self.hotel.hotelRating.intValue < 5){
+        self.rateImage.image = [UIImage imageNamed:@"Group5"];
+    }
 }
 
 -(NSString*)NSDateToNSString:(NSDate*)date{
@@ -128,11 +143,15 @@
 }
 
 - (IBAction)proceedButtonClicked:(id)sender {
-    
-    
-    
+    if(self.emailTextField.text.length != 0 && self.phoneTextField.text.length != 0 && !self.userinfo){
+        self.userinfo = [[User alloc] init];
+        self.userinfo.email = self.emailTextField.text;
+        self.userinfo.userId = self.phoneTextField.text;
+    }
     if(self.userinfo){
         [self proceedWithActionSheet];
+    }else{
+         [[TWMessageBarManager sharedInstance] showMessageWithTitle:@"Invalid input" description:@"Please input the both email and mobile phone!" type:TWMessageBarMessageTypeError duration:3.0];
     }
     
 }
@@ -173,6 +192,14 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+#pragma mark - UITextFieldDelegate
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField{
+    [textField resignFirstResponder];
+    return YES;
+}
+
 
 #pragma mark - PayPalPaymentDelegate methods
 

@@ -18,8 +18,10 @@
 #import "FlatUIKit.h"
 #import "SWRevealViewController.h"
 #import "SidebarTableViewController.h"
+#import <CoreLocation/CoreLocation.h>
 
-@interface HomeViewController ()<UITableViewDelegate,UITableViewDataSource,SearchMenuToSearchDelegate,QuantitySetDelegate, UITextFieldDelegate, PMCalendarControllerDelegate>
+
+@interface HomeViewController ()<UITableViewDelegate,UITableViewDataSource,SearchMenuToSearchDelegate,QuantitySetDelegate, UITextFieldDelegate, PMCalendarControllerDelegate, CLLocationManagerDelegate>
 @property (strong,nonatomic) NSMutableArray *homeArray;
 @property (weak, nonatomic) IBOutlet UIView *homeBackView;
 @property (weak, nonatomic) IBOutlet UITableView *homeTableView;
@@ -40,6 +42,8 @@
 @property (strong, nonatomic)PMCalendarController *inCalender;
 
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *sideBarBtn;
+
+@property (strong, nonatomic)CLLocationManager *locManager;
 @end
 
 @implementation HomeViewController
@@ -65,12 +69,21 @@
     [self setUIButton:self.searchBtn WithColorHex:@"04ACFF" Font:[UIFont boldFlatFontOfSize:20]];
 
     
-    NSDictionary *idDic = @{
-        @"mobile":@"5555454"
-    };
-    [[ModelManager sharedInstance] history:idDic completionHandler:^(NSMutableArray *array) {
-        self.homeArray = [array copy];
-    }];
+    NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
+    NSString *mobile = [userDefault objectForKey:@"userID"];
+    if(!mobile){
+        NSDictionary *idDic = @{
+                                @"mobile":@"5555454"
+                                };
+        [[ModelManager sharedInstance] history:idDic completionHandler:^(NSMutableArray *array) {
+            self.homeArray = [array copy];
+        }];
+    }else{
+        [[ModelManager sharedInstance] history:@{@"mobile":mobile} completionHandler:^(NSMutableArray *array) {
+            self.homeArray = [array copy];
+        }];
+    }
+
     SWRevealViewController *revealViewController = self.revealViewController;
     if ( revealViewController )
     {
@@ -78,6 +91,20 @@
         [self.sideBarBtn setAction: @selector( revealToggle: )];
         [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
     }
+    
+    self.locManager = [[CLLocationManager alloc] init];
+    self.locManager.delegate = self;
+    [self.locManager requestWhenInUseAuthorization];
+}
+
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    NSDateFormatter *formater = [[NSDateFormatter alloc] init];
+    formater.dateStyle = NSDateFormatterMediumStyle;
+    formater.timeStyle = NSDateFormatterNoStyle;
+    formater.timeZone = [NSTimeZone localTimeZone];
+    self.checkInDisplayLabel.text = [formater stringFromDate:[NSDate date]];
+    self.checkOutDisplayLabel.text = [formater stringFromDate:[NSDate date]];
 }
 
 - (void)viewDidAppear:(BOOL)animated{
@@ -113,11 +140,10 @@
 }
 
 - (IBAction)searchButtonClicked {
-    BOOL searchResultEmpty = self.searchContentTextField.text.length == 0;
     BOOL checkInDateEmpty = self.checkInDisplayLabel.text.length == 0;
     BOOL checkOutDateEmpty = self.checkOutDisplayLabel.text.length == 0;
     BOOL requirementsEmpty = self.roomQuantityLabel.text.length == 0 && self.adultQuantityLabel.text.length == 0 && self.childrenQuatityLabel.text.length == 0;
-    if(!searchResultEmpty && !checkInDateEmpty && !checkOutDateEmpty && !requirementsEmpty){
+    if(!checkInDateEmpty && !checkOutDateEmpty && !requirementsEmpty){
         //TODO send search information to prepare segue
         [self performSegueWithIdentifier:@"searchToListSegue" sender:nil];
     }
@@ -307,5 +333,26 @@
     }
 }
 
+#pragma mark - CLLocationManagerDelegate
+
+- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray<CLLocation *> *)locations{
+    if(locations.count > 0){
+        CLLocation *curLoc = locations.lastObject;
+        NSDate *timestamp = curLoc.timestamp;
+        NSTimeInterval interval = [timestamp timeIntervalSinceNow];
+        if(interval < 15){
+            self.location = CLLocationCoordinate2DMake(curLoc.coordinate.latitude, curLoc.coordinate.longitude);
+            [manager stopUpdatingLocation];
+        }
+    }
+}
+
+- (void)locationManager:(CLLocationManager *)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status{
+    if(status == kCLAuthorizationStatusAuthorizedWhenInUse || status == kCLAuthorizationStatusAuthorizedAlways){
+        [manager startUpdatingLocation];
+    }else{
+        [manager stopUpdatingLocation];
+    }
+}
 
 @end
