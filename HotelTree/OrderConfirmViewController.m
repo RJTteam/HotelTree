@@ -34,6 +34,8 @@
 @property (strong, nonatomic)PayPalConfiguration *paypalConfig;
 @property (nonatomic)NSInteger numberOfDays;
 
+@property (nonatomic)BOOL keyboardIsShowing;
+@property (nonatomic)CGFloat keyboardMovingOffset;
 @property(strong,nonatomic)User *userinfo;
 @end
 
@@ -72,6 +74,14 @@
     }
     [self setUIButton:self.procceedBtn WithColorHex:@"04ACFF" Font:[UIFont boldFlatFontOfSize:20]];
     
+    //add keyboard will show notification to the notification center
+    self.keyboardIsShowing = NO;
+    self.keyboardMovingOffset = (self.view.bounds.size.height - self.procceedBtn.frame.origin.y - self.procceedBtn.frame.size.height);
+    
+    NSNotificationCenter *center = [NSNotificationCenter defaultCenter];
+    [center addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
+    [center addObserver:self selector:@selector(keyboradWillHide:) name:UIKeyboardWillHideNotification object:nil];
+    
     //Prepare for paypal payment
     self.paypalConfig = [[PayPalConfiguration alloc] init];
     self.paypalConfig.acceptCreditCards = YES;
@@ -97,6 +107,24 @@
     [btn setTitleColor:[UIColor cloudsColor] forState:UIControlStateNormal];
     [btn setTitleColor:[UIColor cloudsColor] forState:UIControlStateHighlighted];
     //    return btn;
+}
+
+- (void)keyboardWillShow:(NSNotification *)notification{
+    CGSize keyboardSize = [[notification.userInfo objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
+    CGFloat moveOffset = keyboardSize.height - self.keyboardMovingOffset;
+    if(!self.keyboardIsShowing){
+        self.view.frame = CGRectMake(0.0f, 0.0f, self.view.frame.size.width, self.view.frame.size.height - moveOffset);
+        self.keyboardIsShowing = YES;
+    }
+}
+
+- (void)keyboradWillHide:(NSNotification *)notification{
+    if(self.keyboardIsShowing){
+        CGSize keyboardSize = [[notification.userInfo objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
+        CGFloat moveOffset = keyboardSize.height - self.keyboardMovingOffset;
+        self.view.frame = CGRectMake(0.0f, 0.0f, self.view.frame.size.width, self.view.frame.size.height + moveOffset);
+        self.keyboardIsShowing = NO;
+    }
 }
 
 - (IBAction)proceedButtonClicked:(id)sender {

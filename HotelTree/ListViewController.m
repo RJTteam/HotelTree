@@ -68,7 +68,7 @@
     SortManager *sort = [[SortManager alloc]init];
     
     if(sender.tag==0){
-        self.hotelsArray = [sort sortHotelByRating:self.hotelsArray];//send current hotels list to this method;
+        self.hotelsArray = [sort sortHotelByName:self.hotelsArray];//send current hotels list to this method;
         sender.tag++; //make Button tag = 1 --> sort by rating;
         [sender setTitle:@"Sort:Rating" forState:UIControlStateNormal];
     }else if(sender.tag==1){
@@ -80,7 +80,7 @@
         sender.tag=0; //make Button tag = 0 --> back to default sort, by name;
         [sender setTitle:@"Sort:Name" forState:UIControlStateNormal];
     }
-    
+    [self.listTable reloadData];
     //    NSLog(@"%@",self.hotelsArray);
 }
 

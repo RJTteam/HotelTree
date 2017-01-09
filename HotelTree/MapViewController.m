@@ -114,6 +114,7 @@
         if ([sender isKindOfClass:[MKAnnotationView class]]) {
             MKAnnotationView *annotion = (MKAnnotationView *)sender;
             desitViewControl.aHotel = [self.hotelArray objectAtIndex:annotion.tag];
+            desitViewControl.bookingInfo = self.bookingInfo;
         }
     }
 }

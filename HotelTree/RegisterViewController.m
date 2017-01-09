@@ -14,7 +14,7 @@
 
 @import UITextField_Shake;
 
-@interface RegisterViewController ()
+@interface RegisterViewController ()<UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet JVFloatLabeledTextField *nameField;
 @property (weak, nonatomic) IBOutlet JVFloatLabeledTextField *phoneField;
@@ -24,6 +24,9 @@
 @property (weak, nonatomic) IBOutlet FUIButton *registerBtn;
 
 @property (weak, nonatomic) IBOutlet FUIButton *backToSignin;
+
+@property (nonatomic)BOOL keyboardIsShowing;
+@property (nonatomic)CGFloat keyboardMovingOffset;
 
 @end
 
@@ -38,6 +41,11 @@
     [self setUIButton:self.backToSignin WithColorHex:@"CC3333" Font:[UIFont boldFlatFontOfSize:20]];
     
     [TWMessageBarManager sharedInstance];
+    self.keyboardIsShowing = NO;
+    self.keyboardMovingOffset = self.view.bounds.size.height - self.backToSignin.frame.origin.y - self.backToSignin.frame.size.height;
+    NSNotificationCenter *center = [NSNotificationCenter defaultCenter];
+    [center addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
+    [center addObserver:self selector:@selector(keyboradWillHide:) name:UIKeyboardWillHideNotification object:nil];
 }
 
 
@@ -60,6 +68,33 @@
         [userInfo setObject:registureInfo[@"mobile"] forKey:@"userID"];
         [self dismissViewControllerAnimated:YES completion:nil];
     }];
+    
+   
+}
+
+- (void)viewDidDisappear:(BOOL)animated{
+    [super viewDidDisappear:animated];
+    NSNotificationCenter *center = [NSNotificationCenter defaultCenter];
+    [center removeObserver:self name:UIKeyboardWillShowNotification object:nil];
+    [center removeObserver:self name:UIKeyboardWillHideNotification object:nil];
+}
+
+- (void)keyboardWillShow:(NSNotification *)notification{
+    CGSize keyboardSize = [[notification.userInfo objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
+    CGFloat moveOffset = keyboardSize.height - self.keyboardMovingOffset;
+    if(!self.keyboardIsShowing){
+        self.view.frame = CGRectMake(0.0f, 0.0f, self.view.frame.size.width, self.view.frame.size.height- moveOffset);
+        self.keyboardIsShowing = YES;
+    }
+}
+
+- (void)keyboradWillHide:(NSNotification *)notification{
+    CGSize keyboardSize = [[notification.userInfo objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
+    CGFloat moveOffset = keyboardSize.height - self.keyboardMovingOffset;
+    if(self.keyboardIsShowing){
+        self.view.frame = CGRectMake(0.0f, 0.0f, self.view.frame.size.width, self.view.frame.size.height + moveOffset);
+        self.keyboardIsShowing = NO;
+    }
 }
 
 - (void)setUIButton:(FUIButton *)btn WithColorHex:(NSString*)hexColor Font:(UIFont*)font{
@@ -71,6 +106,13 @@
     [btn setTitleColor:[UIColor cloudsColor] forState:UIControlStateNormal];
     [btn setTitleColor:[UIColor cloudsColor] forState:UIControlStateHighlighted];
     //    return btn;
+}
+
+#pragma mark - UITextFieldDelegate
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField{
+    [textField resignFirstResponder];
+    return YES;
 }
 
 /*
