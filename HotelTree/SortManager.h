@@ -14,6 +14,6 @@
 -(NSArray*)sortHotelByName:(NSArray*)hotels;
 -(NSArray*)sortHotelByPrice:(NSArray*)hotels;
 -(NSArray*)sortHotelByRating:(NSArray*)hotels;
-
+-(NSArray *)filterHotelByPrice:(NSArray *)hotels withMinPrice:(NSString*)min andMaxPrice:(NSString*)max;
 //-(id)SortButtonClicked:(id)sender;  //for view controller
 @end
